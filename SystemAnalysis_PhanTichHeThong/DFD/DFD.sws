@@ -4,7 +4,8 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{B72D076E-3B14-41BA-A6F3-381E8167CDFD}" Name="DFD_SalesManager_QLBanHang" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" URL="DFD_SalesManager_QLBanHang2.bpm"/>
+		<Model Expanded="Yes" ID="{B72D076E-3B14-41BA-A6F3-381E8167CDFD}" Loaded="No" Name="DFD_SalesManager_QLBanHang" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" URL="DFD_SalesManager_QLBanHang2.bpm"/>
+		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Name="ERD" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="../ERD/ERD.cdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
