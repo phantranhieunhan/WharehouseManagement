@@ -63,6 +63,12 @@
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Report\XtraUserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Report\XtraUserControl2.Designer.cs">
+      <DependentUpon>XtraUserControl2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Stock\XtraUserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\Employee\" />
-    <Folder Include="Form\Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
