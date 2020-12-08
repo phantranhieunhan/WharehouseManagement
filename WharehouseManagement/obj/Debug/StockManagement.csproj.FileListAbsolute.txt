@@ -50,3 +50,6 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe.licenses
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.pdb
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.MainForm.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\StockManagement.exe.config
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.exe
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.pdb
