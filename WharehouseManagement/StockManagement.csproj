@@ -63,10 +63,28 @@
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Supplier\MainSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Supplier\MainSupplier.Designer.cs">
+      <DependentUpon>MainSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Supplier\StockInReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Supplier\StockInReturn.Designer.cs">
+      <DependentUpon>StockInReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\MainSupplier.resx">
+      <DependentUpon>MainSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\StockInReturn.resx">
+      <DependentUpon>StockInReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -95,7 +113,6 @@
     <Folder Include="Form\Employee\" />
     <Folder Include="Form\Report\" />
     <Folder Include="Form\Stock\" />
-    <Folder Include="Form\Supplier\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
