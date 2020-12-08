@@ -63,6 +63,12 @@
     <Compile Include="Form\Employee\XtraUserControl2.Designer.cs">
       <DependentUpon>XtraUserControl2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Employee\XtraUserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Employee\XtraUserControl3.Designer.cs">
+      <DependentUpon>XtraUserControl3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
