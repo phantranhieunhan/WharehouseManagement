@@ -50,3 +50,5 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe.licenses
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.pdb
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.MainForm.resources
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Images.v18.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Supplier.MainSupplier.resources
