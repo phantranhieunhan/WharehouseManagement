@@ -15,6 +15,7 @@ namespace StockManagement
         [STAThread]
         static void Main()
         {
+            //new brand
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
