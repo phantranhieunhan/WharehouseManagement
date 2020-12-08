@@ -57,6 +57,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Employee\XtraUserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Employee\XtraUserControl2.Designer.cs">
+      <DependentUpon>XtraUserControl2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +122,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Form\Employee\" />
     <Folder Include="Form\Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
