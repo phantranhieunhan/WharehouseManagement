@@ -57,52 +57,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Employee\XtraUserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form\Employee\XtraUserControl2.Designer.cs">
-      <DependentUpon>XtraUserControl2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Employee\XtraUserControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form\Employee\XtraUserControl3.Designer.cs">
-      <DependentUpon>XtraUserControl3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Stock\XtraUserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form\Stock\XtraUserControl1.Designer.cs">
-      <DependentUpon>XtraUserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Supplier\MainSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Supplier\MainSupplier.Designer.cs">
-      <DependentUpon>MainSupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Supplier\StockInReturn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Supplier\StockInReturn.Designer.cs">
-      <DependentUpon>StockInReturn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Supplier\MainSupplier.resx">
-      <DependentUpon>MainSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Supplier\StockInReturn.resx">
-      <DependentUpon>StockInReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -130,6 +94,8 @@
   <ItemGroup>
     <Folder Include="Form\Employee\" />
     <Folder Include="Form\Report\" />
+    <Folder Include="Form\Stock\" />
+    <Folder Include="Form\Supplier\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

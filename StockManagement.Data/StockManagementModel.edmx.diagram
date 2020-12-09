@@ -25,7 +25,7 @@
         <EntityTypeShape EntityType="WharehouseManagementModel.StockInType" Width="1.5" PointX="3.75" PointY="18" IsExpanded="true" />
         <EntityTypeShape EntityType="WharehouseManagementModel.StockInTransfer" Width="1.5" PointX="11.25" PointY="30.25" IsExpanded="true" />
         <EntityTypeShape EntityType="WharehouseManagementModel.StockOut" Width="1.5" PointX="3" PointY="24.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="WharehouseManagementModel.StockOutDestroy" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WharehouseManagementModel.StockOutDestroy" Width="2.375" PointX="5.25" PointY="21.25" IsExpanded="true" />
         <EntityTypeShape EntityType="WharehouseManagementModel.StockOutDetail" Width="1.5" PointX="5.25" PointY="35.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WharehouseManagementModel.StockOutReturn" Width="1.5" PointX="10.75" PointY="34.625" IsExpanded="true" />
         <EntityTypeShape EntityType="WharehouseManagementModel.StockOutSaleAndDonate" Width="1.5" PointX="8.25" PointY="24.375" IsExpanded="true" />
