@@ -65,6 +65,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Authentication\Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Authentication\Check.Designer.cs">
+      <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Employee\RegisterAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\Authentication\Check.resx">
+      <DependentUpon>Check.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Employee\RegisterAccount.resx">
       <DependentUpon>RegisterAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,7 +130,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Form\Authentication\" />
     <Folder Include="Form\Report\" />
     <Folder Include="Form\Stock\" />
     <Folder Include="Form\Supplier\" />
