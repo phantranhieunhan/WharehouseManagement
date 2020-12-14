@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0796663d46ca4021a558c87b70e09ca0" Name="Diagram1">
+        <EntityTypeShape EntityType="StockManagementModel.Customer" Width="1.5" PointX="8" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.GroupCustomer" Width="1.5" PointX="5.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.Permission" Width="1.5" PointX="3" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.Product" Width="1.5" PointX="0.75" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.ProductCategory" Width="1.5" PointX="1.5" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.ProductOnStock" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.ProductType" Width="1.5" PointX="1.5" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.ProductUnit" Width="1.5" PointX="1.5" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.PurchaseOrder" Width="1.5" PointX="5.25" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.PurchaseOrderDetail" Width="1.5" PointX="7.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.SaleOrder" Width="1.5" PointX="10.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.SaleOrderDetail" Width="1.5" PointX="12.5" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.Stock" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.StockIn" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.StockInDetail" Width="1.5" PointX="8.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.StockInType" Width="1.5" PointX="3.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.StockOut" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.StockOutDetail" Width="1.5" PointX="5.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.StockOutType" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.Supplier" Width="1.5" PointX="7.5" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.SupplierProduct" Width="1.5" PointX="9.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.User" Width="1.5" PointX="3" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.UserPermission" Width="1.5" PointX="5.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.UserProfile" Width="1.5" PointX="5.25" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.UserType" Width="1.5" PointX="0.75" PointY="23.25" IsExpanded="true" />
+        <AssociationConnector Association="StockManagementModel.FK_CUSTOMER_RELATIONS_GROUPCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SALEORDE_RELATIONS_CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_USERPERM_RELATIONS_PERMISSI" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PRODUCT_RELATIONS_PRODUCTC" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PRODUCT_RELATIONS_PRODUCTT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PRODUCT_RELATIONS_PRODUCTU" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PRODUCTO_RELATIONS_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PURCHASE_RELATIONS_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SALEORDE_RELATIONS_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SUPPLIER_RELATIONS_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PRODUCTO_RELATIONS_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PRODUCTT_GROUP_PRODUCTT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PURCHASE_RELATIONS_PURCHASE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_PURCHASE_RELATIONS_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKIN_RELATIONS_PURCHASE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SUPPLIER_RELATIONS_PURCHASE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SALEORDE_CREATEDBY_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SALEORDE_RELATIONS_SALEORDE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUT_RELATIONS_SALEORDE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKIN_RELATIONS_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUT_RELATIONS_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUT_WAREHOUSE_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_USER_RELATIONS_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKIN_RELATIONS_STOCKINTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKIN_RELATIONS_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKINDDETAIL_RELATIONS_STOCKIN" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKINT_RELATIONS_STOCKINT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUT_RELATIONS_SUPPLIER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUT_RELATIONS_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_SUPPLIER_RELATIONS_SUPPLIER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_USER_RELATIONS_USERPROF" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_USER_RELATIONS_USERTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_USERPERM_RELATIONS_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="StockManagementModel.FK_USERPROF_RELATIONS_USER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
