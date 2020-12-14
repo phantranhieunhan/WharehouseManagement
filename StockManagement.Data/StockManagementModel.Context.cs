@@ -13,10 +13,10 @@ namespace StockManagement.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StockManagementEntities : DbContext
+    public partial class WharehouseManagementEntities : DbContext
     {
-        public StockManagementEntities()
-            : base("name=StockManagementEntities")
+        public WharehouseManagementEntities()
+            : base("name=WharehouseManagementEntities")
         {
         }
     
@@ -40,10 +40,17 @@ namespace StockManagement.Data
         public virtual DbSet<Stock> Stock { get; set; }
         public virtual DbSet<StockIn> StockIn { get; set; }
         public virtual DbSet<StockInDetail> StockInDetail { get; set; }
+        public virtual DbSet<StockInPurchaseAndDonate> StockInPurchaseAndDonate { get; set; }
+        public virtual DbSet<StockInReturn> StockInReturn { get; set; }
         public virtual DbSet<StockInType> StockInType { get; set; }
+        public virtual DbSet<StockInTransfer> StockInTransfer { get; set; }
         public virtual DbSet<StockOut> StockOut { get; set; }
+        public virtual DbSet<StockOutDestroy> StockOutDestroy { get; set; }
         public virtual DbSet<StockOutDetail> StockOutDetail { get; set; }
+        public virtual DbSet<StockOutReturn> StockOutReturn { get; set; }
+        public virtual DbSet<StockOutSaleAndDonate> StockOutSaleAndDonate { get; set; }
         public virtual DbSet<StockOutType> StockOutType { get; set; }
+        public virtual DbSet<StockOutTransfer> StockOutTransfer { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<SupplierProduct> SupplierProduct { get; set; }
         public virtual DbSet<User> User { get; set; }

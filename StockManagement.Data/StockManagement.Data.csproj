@@ -38,10 +38,6 @@
       <HintPath>..\WharehouseManagement\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Scrypt, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\WharehouseManagement\packages\Scrypt.NET.1.3.0\lib\net20\Scrypt.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -102,6 +98,15 @@
     <Compile Include="StockInDetail.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="StockInPurchaseAndDonate.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockInReturn.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockInTransfer.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="StockInType.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
@@ -123,7 +128,19 @@
     <Compile Include="StockOut.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="StockOutDestroy.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="StockOutDetail.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutReturn.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutSaleAndDonate.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutTransfer.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="StockOutType.cs">
@@ -155,9 +172,7 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="StockManagementModel.edmx.diagram">
       <DependentUpon>StockManagementModel.edmx</DependentUpon>

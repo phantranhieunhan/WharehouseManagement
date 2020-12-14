@@ -1,0 +1,13 @@
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\StockManagement.Bussiness.dll.config
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\StockManagement.Bussiness.dll
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\StockManagement.Bussiness.pdb
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\EntityFramework.dll
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\EntityFramework.SqlServer.dll
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\Scrypt.dll
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\StockManagement.Data.dll
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\StockManagement.Data.pdb
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\EntityFramework.xml
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\obj\Debug\StockManagement.Bussiness.csprojResolveAssemblyReference.cache
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\obj\Debug\StockManagement.Bussiness.dll
+D:\DoAnTotNghiep\WharehouseManagement\StockManagement.Bussiness\obj\Debug\StockManagement.Bussiness.pdb

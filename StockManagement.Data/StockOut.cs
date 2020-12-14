@@ -21,27 +21,23 @@ namespace StockManagement.Data
         }
     
         public System.Guid StockOutId { get; set; }
-        public Nullable<System.Guid> FromStock { get; set; }
-        public Nullable<System.Guid> ToStock { get; set; }
+        public Nullable<System.Guid> StockId { get; set; }
         public Nullable<System.Guid> StockOutType { get; set; }
-        public Nullable<System.Guid> SupplierId { get; set; }
-        public Nullable<System.Guid> CreatedBy { get; set; }
-        public Nullable<System.Guid> SaleOrderId { get; set; }
+        public Nullable<System.Guid> UserId { get; set; }
         public string StockOutCode { get; set; }
         public Nullable<decimal> Status { get; set; }
         public string Note { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string PercentComplete { get; set; }
-        public string DestroyReason { get; set; }
-        public string ReasonReturn { get; set; }
     
-        public virtual SaleOrder SaleOrder { get; set; }
         public virtual Stock Stock { get; set; }
-        public virtual Stock Stock1 { get; set; }
         public virtual StockOutType StockOutType1 { get; set; }
-        public virtual Supplier Supplier { get; set; }
         public virtual User User { get; set; }
+        public virtual StockOutDestroy StockOutDestroy { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockOutDetail> StockOutDetail { get; set; }
+        public virtual StockOutSaleAndDonate StockOutSaleAndDonate { get; set; }
+        public virtual StockOutTransfer StockOutTransfer { get; set; }
+        public virtual StockOutReturn StockOutReturn { get; set; }
     }
 }

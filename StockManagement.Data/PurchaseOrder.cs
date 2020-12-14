@@ -18,12 +18,12 @@ namespace StockManagement.Data
         public PurchaseOrder()
         {
             this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
-            this.StockIn = new HashSet<StockIn>();
+            this.StockInPurchaseAndDonate = new HashSet<StockInPurchaseAndDonate>();
             this.Supplier = new HashSet<Supplier>();
         }
     
         public System.Guid PurchaseOrderId { get; set; }
-        public Nullable<System.Guid> CreatedBy { get; set; }
+        public Nullable<System.Guid> UserId { get; set; }
         public string PurchaseOrderCode { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<decimal> Status { get; set; }
@@ -33,7 +33,7 @@ namespace StockManagement.Data
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockIn> StockIn { get; set; }
+        public virtual ICollection<StockInPurchaseAndDonate> StockInPurchaseAndDonate { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Supplier> Supplier { get; set; }
     }

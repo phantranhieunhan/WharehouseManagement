@@ -1,0 +1,13 @@
+D:\DoAnTotNghiep\StockManagement.Business\obj\Debug\StockManagement.Business.csprojResolveAssemblyReference.cache
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\StockManagement.Business.dll.config
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\StockManagement.Business.dll
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\StockManagement.Business.pdb
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\EntityFramework.dll
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\Scrypt.dll
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\StockManagement.Data.dll
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\StockManagement.Data.pdb
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\EntityFramework.xml
+D:\DoAnTotNghiep\StockManagement.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAnTotNghiep\StockManagement.Business\obj\Debug\StockManagement.Business.dll
+D:\DoAnTotNghiep\StockManagement.Business\obj\Debug\StockManagement.Business.pdb
