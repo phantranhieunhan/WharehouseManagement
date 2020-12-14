@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-using StockManagement.Bussiness;
+using StockManagement.Business;
 using StockManagement.Data;
 
 namespace StockManagement.Form
@@ -19,15 +19,16 @@ namespace StockManagement.Form
         public Login()
         {
             InitializeComponent();
-            LoginBO loginBO = new LoginBO();
-        //    loginBO.Register(new User() {
-        //        UserId = Guid.NewGuid(),
-        //        UserName = "nhandora123",
-        //        Password = "123456",
-        //        CreatedDate = DateTime.Now,
-        //        IsActive = true,
-        //        IsAdmin = true
-        //});
+            ABC loginBO = new ABC();
+            loginBO.Register(new User()
+            {
+                UserId = Guid.NewGuid(),
+                UserName = "nhandora123",
+                Password = "123456",
+                CreatedDate = DateTime.Now,
+                IsActive = true,
+                IsAdmin = true
+            });
         }
 
         private void bt_submit_Click(object sender, EventArgs e)
