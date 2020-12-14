@@ -61,12 +61,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\StockManagement.Data\StockManagement.Data.csproj">
-      <Project>{6fca7220-f7a0-4473-9891-6144a9c4c7ce}</Project>
-      <Name>StockManagement.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
