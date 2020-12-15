@@ -20,14 +20,15 @@ namespace StockManagement.Form
         {
             InitializeComponent();
             LoginBO loginBO = new LoginBO();
-        //    loginBO.Register(new User() {
-        //        UserId = Guid.NewGuid(),
-        //        UserName = "nhandora123",
-        //        Password = "123456",
-        //        CreatedDate = DateTime.Now,
-        //        IsActive = true,
-        //        IsAdmin = true
-        //});
+            loginBO.Register(new User()
+            {
+                UserId = Guid.NewGuid(),
+                UserName = "nhandora123",
+                Password = "123456",
+                CreatedDate = DateTime.Now,
+                IsActive = true,
+                IsAdmin = true
+            });
         }
 
         private void bt_submit_Click(object sender, EventArgs e)

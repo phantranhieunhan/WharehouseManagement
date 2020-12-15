@@ -8,5 +8,6 @@ namespace StockManagement.Data
 {
     public class Class1
     {
+
     }
 }
