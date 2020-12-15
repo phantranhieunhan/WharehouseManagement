@@ -98,15 +98,6 @@
     <Compile Include="StockInDetail.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="StockInPurchaseAndDonate.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockInReturn.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockInTransfer.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="StockInType.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
@@ -128,19 +119,7 @@
     <Compile Include="StockOut.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="StockOutDestroy.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="StockOutDetail.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockOutReturn.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockOutSaleAndDonate.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockOutTransfer.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="StockOutType.cs">

@@ -22,7 +22,7 @@ namespace StockManagement.Data
         }
     
         public System.Guid StockInTypeId { get; set; }
-        public Nullable<System.Guid> StoStockintypeid { get; set; }
+        public Nullable<System.Guid> GroupBy { get; set; }
         public string StockInTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

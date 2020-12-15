@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WharehouseManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="StockManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -79,7 +79,7 @@
             <PropertyRef Name="ProductTypeId" />
           </Key>
           <Property Name="ProductTypeId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ProProducttypeid" Type="uniqueidentifier" />
+          <Property Name="GroupBy" Type="uniqueidentifier" />
           <Property Name="ProductTypeCode" Type="char" MaxLength="50" />
           <Property Name="ProductTypeName" Type="varchar" MaxLength="100" />
           <Property Name="Note" Type="text" />
@@ -98,7 +98,7 @@
             <PropertyRef Name="PurchaseOrderId" />
           </Key>
           <Property Name="PurchaseOrderId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="PurchaseOrderCode" Type="char" MaxLength="50" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
@@ -121,7 +121,7 @@
             <PropertyRef Name="SaleOrderId" />
           </Key>
           <Property Name="SaleOrderId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="CustomerId" Type="uniqueidentifier" />
           <Property Name="SaleOrderCode" Type="char" MaxLength="50" />
           <Property Name="ShipAddress" Type="varchar" MaxLength="100" />
@@ -159,8 +159,10 @@
             <PropertyRef Name="StockInId" />
           </Key>
           <Property Name="StockInId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="FromStock" Type="uniqueidentifier" />
+          <Property Name="ToStock" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="PurchaseOrderId" Type="uniqueidentifier" />
           <Property Name="StockInTypeId" Type="uniqueidentifier" />
           <Property Name="StockInCode" Type="char" MaxLength="50" />
           <Property Name="CreatedDate" Type="datetime" />
@@ -168,6 +170,7 @@
           <Property Name="Note" Type="text" />
           <Property Name="AccountingDate" Type="datetime" />
           <Property Name="PercentComplete" Type="char" MaxLength="50" />
+          <Property Name="ReasonReturn" Type="text" />
         </EntityType>
         <EntityType Name="StockInDetail">
           <Key>
@@ -179,90 +182,32 @@
           <Property Name="Quanlity" Type="numeric" Precision="18" Scale="0" />
           <Property Name="Note" Type="text" />
         </EntityType>
-        <EntityType Name="StockInPurchaseAndDonate">
-          <Key>
-            <PropertyRef Name="StockInId" />
-          </Key>
-          <Property Name="StockInId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="PurchaseOrderId" Type="uniqueidentifier" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockInTypeId" Type="uniqueidentifier" />
-          <Property Name="StockInCode" Type="char" MaxLength="50" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="AccountingDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="StockInReturn">
-          <Key>
-            <PropertyRef Name="StockInId" />
-          </Key>
-          <Property Name="StockInId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockInTypeId" Type="uniqueidentifier" />
-          <Property Name="StockInCode" Type="char" MaxLength="50" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="AccountingDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
-          <Property Name="ReasonReturn" Type="text" />
-        </EntityType>
         <EntityType Name="StockInType">
           <Key>
             <PropertyRef Name="StockInTypeId" />
           </Key>
           <Property Name="StockInTypeId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StoStockintypeid" Type="uniqueidentifier" />
+          <Property Name="GroupBy" Type="uniqueidentifier" />
           <Property Name="StockInTypeName" Type="varchar" MaxLength="24" />
-        </EntityType>
-        <EntityType Name="StockInTransfer">
-          <Key>
-            <PropertyRef Name="StockInId" />
-          </Key>
-          <Property Name="StockInId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="Sto_StockId" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockInTypeId" Type="uniqueidentifier" />
-          <Property Name="StockInCode" Type="char" MaxLength="50" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="AccountingDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
         </EntityType>
         <EntityType Name="StockOut">
           <Key>
             <PropertyRef Name="StockOutId" />
           </Key>
           <Property Name="StockOutId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockId" Type="uniqueidentifier" />
+          <Property Name="FromStock" Type="uniqueidentifier" />
+          <Property Name="ToStock" Type="uniqueidentifier" />
           <Property Name="StockOutType" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockOutCode" Type="char" MaxLength="50" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="StockOutDestroy">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="StockOutType" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="SupplierId" Type="uniqueidentifier" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="SaleOrderId" Type="uniqueidentifier" />
           <Property Name="StockOutCode" Type="char" MaxLength="50" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
           <Property Name="Note" Type="text" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="PercentComplete" Type="char" MaxLength="50" />
           <Property Name="DestroyReason" Type="text" />
+          <Property Name="ReasonReturn" Type="text" />
         </EntityType>
         <EntityType Name="StockOutDetail">
           <Key>
@@ -272,58 +217,13 @@
           <Property Name="StockOutId" Type="uniqueidentifier" />
           <Property Name="Quanlity" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
-        <EntityType Name="StockOutReturn">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="SupplierId" Type="uniqueidentifier" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="StockOutType" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockOutCode" Type="char" MaxLength="50" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
-          <Property Name="ReasonReturn" Type="text" />
-        </EntityType>
-        <EntityType Name="StockOutSaleAndDonate">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="SaleOrderId" Type="uniqueidentifier" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="StockOutType" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockOutCode" Type="char" MaxLength="50" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
-        </EntityType>
         <EntityType Name="StockOutType">
           <Key>
             <PropertyRef Name="StockOutType" />
           </Key>
           <Property Name="StockOutType" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GroupBy" Type="uniqueidentifier" />
           <Property Name="StockOutTypeName" Type="varchar" MaxLength="255" />
-        </EntityType>
-        <EntityType Name="StockOutTransfer">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="Sto_StockId" Type="uniqueidentifier" />
-          <Property Name="StockOutType" Type="uniqueidentifier" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="StockOutCode" Type="char" MaxLength="50" />
-          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Note" Type="text" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
         </EntityType>
         <EntityType Name="Supplier">
           <Key>
@@ -471,7 +371,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PRODUCTT_NHOM_PRODUCTT">
+        <Association Name="FK_PRODUCTT_GROUP_PRODUCTT">
           <End Role="ProductType" Type="Self.ProductType" Multiplicity="0..1" />
           <End Role="ProductType1" Type="Self.ProductType" Multiplicity="*" />
           <ReferentialConstraint>
@@ -479,7 +379,7 @@
               <PropertyRef Name="ProductTypeId" />
             </Principal>
             <Dependent Role="ProductType1">
-              <PropertyRef Name="ProProducttypeid" />
+              <PropertyRef Name="GroupBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -515,7 +415,7 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="PurchaseOrder">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -527,7 +427,7 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="SaleOrder">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -567,6 +467,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_STOCKIN_RELATIONS_PURCHASE">
+          <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
+          <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder">
+              <PropertyRef Name="PurchaseOrderId" />
+            </Principal>
+            <Dependent Role="StockIn">
+              <PropertyRef Name="PurchaseOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_STOCKIN_RELATIONS_STOCK">
           <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
           <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
@@ -575,11 +487,11 @@
               <PropertyRef Name="StockId" />
             </Principal>
             <Dependent Role="StockIn">
-              <PropertyRef Name="StockId" />
+              <PropertyRef Name="ToStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKIN_RELATIONS_STOCKINT">
+        <Association Name="FK_STOCKIN_RELATIONS_STOCKINTYPE">
           <End Role="StockInType" Type="Self.StockInType" Multiplicity="0..1" />
           <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
           <ReferentialConstraint>
@@ -599,11 +511,23 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="StockIn">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKIND_RELATIONS_STOCKIN">
+        <Association Name="FK_STOCKIN_TO_STOCK_RELATIONS_STOCK">
+          <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
+          <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="StockId" />
+            </Principal>
+            <Dependent Role="StockIn">
+              <PropertyRef Name="FromStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STOCKINDDETAIL_RELATIONS_STOCKIN">
           <End Role="StockIn" Type="Self.StockIn" Multiplicity="0..1" />
           <End Role="StockInDetail" Type="Self.StockInDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -615,66 +539,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKINP_INHERITAN_STOCKIN">
-          <End Role="StockIn" Type="Self.StockIn" Multiplicity="1" />
-          <End Role="StockInPurchaseAndDonate" Type="Self.StockInPurchaseAndDonate" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockIn">
-              <PropertyRef Name="StockInId" />
-            </Principal>
-            <Dependent Role="StockInPurchaseAndDonate">
-              <PropertyRef Name="StockInId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINP_RELATIONS_PURCHASE">
-          <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
-          <End Role="StockInPurchaseAndDonate" Type="Self.StockInPurchaseAndDonate" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PurchaseOrder">
-              <PropertyRef Name="PurchaseOrderId" />
-            </Principal>
-            <Dependent Role="StockInPurchaseAndDonate">
-              <PropertyRef Name="PurchaseOrderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINR_INHERITAN_STOCKIN">
-          <End Role="StockIn" Type="Self.StockIn" Multiplicity="1" />
-          <End Role="StockInReturn" Type="Self.StockInReturn" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockIn">
-              <PropertyRef Name="StockInId" />
-            </Principal>
-            <Dependent Role="StockInReturn">
-              <PropertyRef Name="StockInId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINT_INHERITAN_STOCKIN">
-          <End Role="StockIn" Type="Self.StockIn" Multiplicity="1" />
-          <End Role="StockInTransfer" Type="Self.StockInTransfer" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockIn">
-              <PropertyRef Name="StockInId" />
-            </Principal>
-            <Dependent Role="StockInTransfer">
-              <PropertyRef Name="StockInId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINT_RELATIONS_STOCK">
-          <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
-          <End Role="StockInTransfer" Type="Self.StockInTransfer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Stock">
-              <PropertyRef Name="StockId" />
-            </Principal>
-            <Dependent Role="StockInTransfer">
-              <PropertyRef Name="StockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_STOCKINT_RELATIONS_STOCKINT">
           <End Role="StockInType" Type="Self.StockInType" Multiplicity="0..1" />
           <End Role="StockInType1" Type="Self.StockInType" Multiplicity="*" />
@@ -683,31 +547,31 @@
               <PropertyRef Name="StockInTypeId" />
             </Principal>
             <Dependent Role="StockInType1">
-              <PropertyRef Name="StoStockintypeid" />
+              <PropertyRef Name="GroupBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_SALEORDE">
           <End Role="SaleOrder" Type="Self.SaleOrder" Multiplicity="0..1" />
-          <End Role="StockOutSaleAndDonate" Type="Self.StockOutSaleAndDonate" Multiplicity="*" />
+          <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SaleOrder">
               <PropertyRef Name="SaleOrderId" />
             </Principal>
-            <Dependent Role="StockOutSaleAndDonate">
+            <Dependent Role="StockOut">
               <PropertyRef Name="SaleOrderId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_STOCK">
           <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
-          <End Role="StockOutTransfer" Type="Self.StockOutTransfer" Multiplicity="*" />
+          <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Stock">
               <PropertyRef Name="StockId" />
             </Principal>
-            <Dependent Role="StockOutTransfer">
-              <PropertyRef Name="StockId" />
+            <Dependent Role="StockOut">
+              <PropertyRef Name="ToStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -725,12 +589,12 @@
         </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_SUPPLIER">
           <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
-          <End Role="StockOutReturn" Type="Self.StockOutReturn" Multiplicity="*" />
+          <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Supplier">
               <PropertyRef Name="SupplierId" />
             </Principal>
-            <Dependent Role="StockOutReturn">
+            <Dependent Role="StockOut">
               <PropertyRef Name="SupplierId" />
             </Dependent>
           </ReferentialConstraint>
@@ -743,7 +607,7 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="StockOut">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -755,19 +619,7 @@
               <PropertyRef Name="StockId" />
             </Principal>
             <Dependent Role="StockOut">
-              <PropertyRef Name="StockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutDestroy" Type="Self.StockOutDestroy" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
-            </Principal>
-            <Dependent Role="StockOutDestroy">
-              <PropertyRef Name="StockOutId" />
+              <PropertyRef Name="FromStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -783,39 +635,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutSaleAndDonate" Type="Self.StockOutSaleAndDonate" Multiplicity="0..1" />
+        <Association Name="FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE">
+          <End Role="StockOutType" Type="Self.StockOutType" Multiplicity="0..1" />
+          <End Role="StockOutType1" Type="Self.StockOutType" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
+            <Principal Role="StockOutType">
+              <PropertyRef Name="StockOutType" />
             </Principal>
-            <Dependent Role="StockOutSaleAndDonate">
-              <PropertyRef Name="StockOutId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutTransfer" Type="Self.StockOutTransfer" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
-            </Principal>
-            <Dependent Role="StockOutTransfer">
-              <PropertyRef Name="StockOutId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUTRETURN_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutReturn" Type="Self.StockOutReturn" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
-            </Principal>
-            <Dependent Role="StockOutReturn">
-              <PropertyRef Name="StockOutId" />
+            <Dependent Role="StockOutType1">
+              <PropertyRef Name="GroupBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -927,7 +755,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WharehouseManagementModelStoreContainer">
+        <EntityContainer Name="StockManagementModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permission" EntityType="Self.Permission" Schema="dbo" store:Type="Tables" />
@@ -943,17 +771,10 @@
           <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockIn" EntityType="Self.StockIn" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockInDetail" EntityType="Self.StockInDetail" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockInPurchaseAndDonate" EntityType="Self.StockInPurchaseAndDonate" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockInReturn" EntityType="Self.StockInReturn" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockInType" EntityType="Self.StockInType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockInTransfer" EntityType="Self.StockInTransfer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockOut" EntityType="Self.StockOut" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockOutDestroy" EntityType="Self.StockOutDestroy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockOutDetail" EntityType="Self.StockOutDetail" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockOutReturn" EntityType="Self.StockOutReturn" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockOutSaleAndDonate" EntityType="Self.StockOutSaleAndDonate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockOutType" EntityType="Self.StockOutType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StockOutTransfer" EntityType="Self.StockOutTransfer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SupplierProduct" EntityType="Self.SupplierProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -984,7 +805,7 @@
             <End Role="Stock" EntitySet="Stock" />
             <End Role="ProductOnStock" EntitySet="ProductOnStock" />
           </AssociationSet>
-          <AssociationSet Name="FK_PRODUCTT_NHOM_PRODUCTT" Association="Self.FK_PRODUCTT_NHOM_PRODUCTT">
+          <AssociationSet Name="FK_PRODUCTT_GROUP_PRODUCTT" Association="Self.FK_PRODUCTT_GROUP_PRODUCTT">
             <End Role="ProductType" EntitySet="ProductType" />
             <End Role="ProductType1" EntitySet="ProductType" />
           </AssociationSet>
@@ -1016,11 +837,15 @@
             <End Role="SaleOrder" EntitySet="SaleOrder" />
             <End Role="SaleOrderDetail" EntitySet="SaleOrderDetail" />
           </AssociationSet>
+          <AssociationSet Name="FK_STOCKIN_RELATIONS_PURCHASE" Association="Self.FK_STOCKIN_RELATIONS_PURCHASE">
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+            <End Role="StockIn" EntitySet="StockIn" />
+          </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCK" Association="Self.FK_STOCKIN_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
             <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCKINT" Association="Self.FK_STOCKIN_RELATIONS_STOCKINT">
+          <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCKINTYPE" Association="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE">
             <End Role="StockInType" EntitySet="StockInType" />
             <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
@@ -1028,29 +853,13 @@
             <End Role="User" EntitySet="User" />
             <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKIND_RELATIONS_STOCKIN" Association="Self.FK_STOCKIND_RELATIONS_STOCKIN">
+          <AssociationSet Name="FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" Association="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockIn" EntitySet="StockIn" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STOCKINDDETAIL_RELATIONS_STOCKIN" Association="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN">
             <End Role="StockIn" EntitySet="StockIn" />
             <End Role="StockInDetail" EntitySet="StockInDetail" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINP_INHERITAN_STOCKIN" Association="Self.FK_STOCKINP_INHERITAN_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIn" />
-            <End Role="StockInPurchaseAndDonate" EntitySet="StockInPurchaseAndDonate" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINP_RELATIONS_PURCHASE" Association="Self.FK_STOCKINP_RELATIONS_PURCHASE">
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
-            <End Role="StockInPurchaseAndDonate" EntitySet="StockInPurchaseAndDonate" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINR_INHERITAN_STOCKIN" Association="Self.FK_STOCKINR_INHERITAN_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIn" />
-            <End Role="StockInReturn" EntitySet="StockInReturn" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINT_INHERITAN_STOCKIN" Association="Self.FK_STOCKINT_INHERITAN_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIn" />
-            <End Role="StockInTransfer" EntitySet="StockInTransfer" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINT_RELATIONS_STOCK" Association="Self.FK_STOCKINT_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stock" />
-            <End Role="StockInTransfer" EntitySet="StockInTransfer" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKINT_RELATIONS_STOCKINT" Association="Self.FK_STOCKINT_RELATIONS_STOCKINT">
             <End Role="StockInType" EntitySet="StockInType" />
@@ -1058,11 +867,11 @@
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_SALEORDE" Association="Self.FK_STOCKOUT_RELATIONS_SALEORDE">
             <End Role="SaleOrder" EntitySet="SaleOrder" />
-            <End Role="StockOutSaleAndDonate" EntitySet="StockOutSaleAndDonate" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCK" Association="Self.FK_STOCKOUT_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
-            <End Role="StockOutTransfer" EntitySet="StockOutTransfer" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" Association="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE">
             <End Role="StockOutType" EntitySet="StockOutType" />
@@ -1070,7 +879,7 @@
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_SUPPLIER" Association="Self.FK_STOCKOUT_RELATIONS_SUPPLIER">
             <End Role="Supplier" EntitySet="Supplier" />
-            <End Role="StockOutReturn" EntitySet="StockOutReturn" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_USER" Association="Self.FK_STOCKOUT_RELATIONS_USER">
             <End Role="User" EntitySet="User" />
@@ -1080,25 +889,13 @@
             <End Role="Stock" EntitySet="Stock" />
             <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutDestroy" EntitySet="StockOutDestroy" />
-          </AssociationSet>
           <AssociationSet Name="FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" Association="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT">
             <End Role="StockOut" EntitySet="StockOut" />
             <End Role="StockOutDetail" EntitySet="StockOutDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutSaleAndDonate" EntitySet="StockOutSaleAndDonate" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutTransfer" EntitySet="StockOutTransfer" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTRETURN_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTRETURN_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutReturn" EntitySet="StockOutReturn" />
+          <AssociationSet Name="FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" Association="Self.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE">
+            <End Role="StockOutType" EntitySet="StockOutType" />
+            <End Role="StockOutType1" EntitySet="StockOutType" />
           </AssociationSet>
           <AssociationSet Name="FK_SUPPLIER_RELATIONS_PRODUCT" Association="Self.FK_SUPPLIER_RELATIONS_PRODUCT">
             <End Role="Product" EntitySet="Product" />
@@ -1141,7 +938,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="WharehouseManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="StockManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -1230,13 +1027,13 @@
             <PropertyRef Name="ProductTypeId" />
           </Key>
           <Property Name="ProductTypeId" Type="Guid" Nullable="false" />
-          <Property Name="ProProducttypeid" Type="Guid" />
+          <Property Name="GroupBy" Type="Guid" />
           <Property Name="ProductTypeCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="ProductTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTT" FromRole="ProductType" ToRole="Product" />
-          <NavigationProperty Name="ProductType1" Relationship="Self.FK_PRODUCTT_NHOM_PRODUCTT" FromRole="ProductType" ToRole="ProductType1" />
-          <NavigationProperty Name="ProductType2" Relationship="Self.FK_PRODUCTT_NHOM_PRODUCTT" FromRole="ProductType1" ToRole="ProductType" />
+          <NavigationProperty Name="ProductType1" Relationship="Self.FK_PRODUCTT_GROUP_PRODUCTT" FromRole="ProductType" ToRole="ProductType1" />
+          <NavigationProperty Name="ProductType2" Relationship="Self.FK_PRODUCTT_GROUP_PRODUCTT" FromRole="ProductType1" ToRole="ProductType" />
         </EntityType>
         <EntityType Name="ProductUnit">
           <Key>
@@ -1253,14 +1050,14 @@
             <PropertyRef Name="PurchaseOrderId" />
           </Key>
           <Property Name="PurchaseOrderId" Type="Guid" Nullable="false" />
-          <Property Name="UserId" Type="Guid" />
+          <Property Name="CreatedBy" Type="Guid" />
           <Property Name="PurchaseOrderCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="IsPay" Type="Boolean" />
           <NavigationProperty Name="PurchaseOrderDetail" Relationship="Self.FK_PURCHASE_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="PurchaseOrderDetail" />
           <NavigationProperty Name="User" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="PurchaseOrder" ToRole="User" />
-          <NavigationProperty Name="StockInPurchaseAndDonate" Relationship="Self.FK_STOCKINP_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="StockInPurchaseAndDonate" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="StockIn" />
           <NavigationProperty Name="Supplier" Relationship="Self.FK_SUPPLIER_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="Supplier" />
         </EntityType>
         <EntityType Name="PurchaseOrderDetail">
@@ -1282,7 +1079,7 @@
             <PropertyRef Name="SaleOrderId" />
           </Key>
           <Property Name="SaleOrderId" Type="Guid" Nullable="false" />
-          <Property Name="UserId" Type="Guid" />
+          <Property Name="CreatedBy" Type="Guid" />
           <Property Name="CustomerId" Type="Guid" />
           <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="ShipAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -1296,7 +1093,7 @@
           <NavigationProperty Name="Customer" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="SaleOrder" ToRole="Customer" />
           <NavigationProperty Name="User" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="SaleOrder" ToRole="User" />
           <NavigationProperty Name="SaleOrderDetail" Relationship="Self.FK_SALEORDE_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="SaleOrderDetail" />
-          <NavigationProperty Name="StockOutSaleAndDonate" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="StockOutSaleAndDonate" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="StockOut" />
         </EntityType>
         <EntityType Name="SaleOrderDetail">
           <Key>
@@ -1322,9 +1119,9 @@
           <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ProductOnStock" Relationship="Self.FK_PRODUCTO_RELATIONS_STOCK" FromRole="Stock" ToRole="ProductOnStock" />
           <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
-          <NavigationProperty Name="StockInTransfer" Relationship="Self.FK_STOCKINT_RELATIONS_STOCK" FromRole="Stock" ToRole="StockInTransfer" />
-          <NavigationProperty Name="StockOutTransfer" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="Stock" ToRole="StockOutTransfer" />
-          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="Stock" ToRole="StockOut" />
+          <NavigationProperty Name="StockIn1" Relationship="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="Stock" ToRole="StockOut" />
+          <NavigationProperty Name="StockOut1" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="Stock" ToRole="StockOut" />
           <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_STOCK" FromRole="Stock" ToRole="User" />
         </EntityType>
         <EntityType Name="StockIn">
@@ -1332,8 +1129,10 @@
             <PropertyRef Name="StockInId" />
           </Key>
           <Property Name="StockInId" Type="Guid" Nullable="false" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
+          <Property Name="FromStock" Type="Guid" />
+          <Property Name="ToStock" Type="Guid" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="PurchaseOrderId" Type="Guid" />
           <Property Name="StockInTypeId" Type="Guid" />
           <Property Name="StockInCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
@@ -1341,13 +1140,13 @@
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="AccountingDate" Type="DateTime" Precision="3" />
           <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="ReasonReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="StockIn" ToRole="PurchaseOrder" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKIN_RELATIONS_STOCK" FromRole="StockIn" ToRole="Stock" />
-          <NavigationProperty Name="StockInType" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINT" FromRole="StockIn" ToRole="StockInType" />
+          <NavigationProperty Name="Stock1" Relationship="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" FromRole="StockIn" ToRole="Stock" />
+          <NavigationProperty Name="StockInType" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE" FromRole="StockIn" ToRole="StockInType" />
           <NavigationProperty Name="User" Relationship="Self.FK_STOCKIN_RELATIONS_USER" FromRole="StockIn" ToRole="User" />
-          <NavigationProperty Name="StockInDetail" Relationship="Self.FK_STOCKIND_RELATIONS_STOCKIN" FromRole="StockIn" ToRole="StockInDetail" />
-          <NavigationProperty Name="StockInPurchaseAndDonate" Relationship="Self.FK_STOCKINP_INHERITAN_STOCKIN" FromRole="StockIn" ToRole="StockInPurchaseAndDonate" />
-          <NavigationProperty Name="StockInReturn" Relationship="Self.FK_STOCKINR_INHERITAN_STOCKIN" FromRole="StockIn" ToRole="StockInReturn" />
-          <NavigationProperty Name="StockInTransfer" Relationship="Self.FK_STOCKINT_INHERITAN_STOCKIN" FromRole="StockIn" ToRole="StockInTransfer" />
+          <NavigationProperty Name="StockInDetail" Relationship="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN" FromRole="StockIn" ToRole="StockInDetail" />
         </EntityType>
         <EntityType Name="StockInDetail">
           <Key>
@@ -1358,109 +1157,44 @@
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Quanlity" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIND_RELATIONS_STOCKIN" FromRole="StockInDetail" ToRole="StockIn" />
-        </EntityType>
-        <EntityType Name="StockInPurchaseAndDonate">
-          <Key>
-            <PropertyRef Name="StockInId" />
-          </Key>
-          <Property Name="StockInId" Type="Guid" Nullable="false" />
-          <Property Name="PurchaseOrderId" Type="Guid" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockInTypeId" Type="Guid" />
-          <Property Name="StockInCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="AccountingDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_STOCKINP_RELATIONS_PURCHASE" FromRole="StockInPurchaseAndDonate" ToRole="PurchaseOrder" />
-          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKINP_INHERITAN_STOCKIN" FromRole="StockInPurchaseAndDonate" ToRole="StockIn" />
-        </EntityType>
-        <EntityType Name="StockInReturn">
-          <Key>
-            <PropertyRef Name="StockInId" />
-          </Key>
-          <Property Name="StockInId" Type="Guid" Nullable="false" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockInTypeId" Type="Guid" />
-          <Property Name="StockInCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="AccountingDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ReasonReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKINR_INHERITAN_STOCKIN" FromRole="StockInReturn" ToRole="StockIn" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN" FromRole="StockInDetail" ToRole="StockIn" />
         </EntityType>
         <EntityType Name="StockInType">
           <Key>
             <PropertyRef Name="StockInTypeId" />
           </Key>
           <Property Name="StockInTypeId" Type="Guid" Nullable="false" />
-          <Property Name="StoStockintypeid" Type="Guid" />
+          <Property Name="GroupBy" Type="Guid" />
           <Property Name="StockInTypeName" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINT" FromRole="StockInType" ToRole="StockIn" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE" FromRole="StockInType" ToRole="StockIn" />
           <NavigationProperty Name="StockInType1" Relationship="Self.FK_STOCKINT_RELATIONS_STOCKINT" FromRole="StockInType" ToRole="StockInType1" />
           <NavigationProperty Name="StockInType2" Relationship="Self.FK_STOCKINT_RELATIONS_STOCKINT" FromRole="StockInType1" ToRole="StockInType" />
-        </EntityType>
-        <EntityType Name="StockInTransfer">
-          <Key>
-            <PropertyRef Name="StockInId" />
-          </Key>
-          <Property Name="StockInId" Type="Guid" Nullable="false" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="Sto_StockId" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockInTypeId" Type="Guid" />
-          <Property Name="StockInCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="AccountingDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKINT_RELATIONS_STOCK" FromRole="StockInTransfer" ToRole="Stock" />
-          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKINT_INHERITAN_STOCKIN" FromRole="StockInTransfer" ToRole="StockIn" />
         </EntityType>
         <EntityType Name="StockOut">
           <Key>
             <PropertyRef Name="StockOutId" />
           </Key>
           <Property Name="StockOutId" Type="Guid" Nullable="false" />
-          <Property Name="StockId" Type="Guid" />
+          <Property Name="FromStock" Type="Guid" />
+          <Property Name="ToStock" Type="Guid" />
           <Property Name="StockOutType" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="StockOut" ToRole="Stock" />
-          <NavigationProperty Name="StockOutType1" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOut" ToRole="StockOutType" />
-          <NavigationProperty Name="User" Relationship="Self.FK_STOCKOUT_RELATIONS_USER" FromRole="StockOut" ToRole="User" />
-          <NavigationProperty Name="StockOutDestroy" Relationship="Self.FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT" FromRole="StockOut" ToRole="StockOutDestroy" />
-          <NavigationProperty Name="StockOutDetail" Relationship="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" FromRole="StockOut" ToRole="StockOutDetail" />
-          <NavigationProperty Name="StockOutSaleAndDonate" Relationship="Self.FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT" FromRole="StockOut" ToRole="StockOutSaleAndDonate" />
-          <NavigationProperty Name="StockOutTransfer" Relationship="Self.FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT" FromRole="StockOut" ToRole="StockOutTransfer" />
-          <NavigationProperty Name="StockOutReturn" Relationship="Self.FK_STOCKOUTRETURN_INHERITAN_STOCKOUT" FromRole="StockOut" ToRole="StockOutReturn" />
-        </EntityType>
-        <EntityType Name="StockOutDestroy">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="Guid" Nullable="false" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="StockOutType" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
+          <Property Name="SupplierId" Type="Guid" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="SaleOrderId" Type="Guid" />
           <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="DestroyReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT" FromRole="StockOutDestroy" ToRole="StockOut" />
+          <Property Name="ReasonReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SaleOrder" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="StockOut" ToRole="SaleOrder" />
+          <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="StockOut" ToRole="Stock" />
+          <NavigationProperty Name="Stock1" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="StockOut" ToRole="Stock" />
+          <NavigationProperty Name="StockOutType1" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOut" ToRole="StockOutType" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="StockOut" ToRole="Supplier" />
+          <NavigationProperty Name="User" Relationship="Self.FK_STOCKOUT_RELATIONS_USER" FromRole="StockOut" ToRole="User" />
+          <NavigationProperty Name="StockOutDetail" Relationship="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" FromRole="StockOut" ToRole="StockOutDetail" />
         </EntityType>
         <EntityType Name="StockOutDetail">
           <Key>
@@ -1471,65 +1205,16 @@
           <Property Name="Quanlity" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" FromRole="StockOutDetail" ToRole="StockOut" />
         </EntityType>
-        <EntityType Name="StockOutReturn">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="Guid" Nullable="false" />
-          <Property Name="SupplierId" Type="Guid" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="StockOutType" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ReasonReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUTRETURN_INHERITAN_STOCKOUT" FromRole="StockOutReturn" ToRole="StockOut" />
-          <NavigationProperty Name="Supplier" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="StockOutReturn" ToRole="Supplier" />
-        </EntityType>
-        <EntityType Name="StockOutSaleAndDonate">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="Guid" Nullable="false" />
-          <Property Name="SaleOrderId" Type="Guid" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="StockOutType" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="SaleOrder" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="StockOutSaleAndDonate" ToRole="SaleOrder" />
-          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT" FromRole="StockOutSaleAndDonate" ToRole="StockOut" />
-        </EntityType>
         <EntityType Name="StockOutType">
           <Key>
             <PropertyRef Name="StockOutType1" />
           </Key>
           <Property Name="StockOutType1" Type="Guid" Nullable="false" />
+          <Property Name="GroupBy" Type="Guid" />
           <Property Name="StockOutTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType" ToRole="StockOut" />
-        </EntityType>
-        <EntityType Name="StockOutTransfer">
-          <Key>
-            <PropertyRef Name="StockOutId" />
-          </Key>
-          <Property Name="StockOutId" Type="Guid" Nullable="false" />
-          <Property Name="StockId" Type="Guid" />
-          <Property Name="Sto_StockId" Type="Guid" />
-          <Property Name="StockOutType" Type="Guid" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="StockOutTransfer" ToRole="Stock" />
-          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT" FromRole="StockOutTransfer" ToRole="StockOut" />
+          <NavigationProperty Name="StockOutType11" Relationship="Self.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType" ToRole="StockOutType1" />
+          <NavigationProperty Name="StockOutType2" Relationship="Self.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType1" ToRole="StockOutType" />
         </EntityType>
         <EntityType Name="Supplier">
           <Key>
@@ -1545,7 +1230,7 @@
           <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_SUPPLIER_RELATIONS_PURCHASE" FromRole="Supplier" ToRole="PurchaseOrder" />
-          <NavigationProperty Name="StockOutReturn" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="StockOutReturn" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="StockOut" />
           <NavigationProperty Name="SupplierProduct" Relationship="Self.FK_SUPPLIER_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="SupplierProduct" />
         </EntityType>
         <EntityType Name="SupplierProduct">
@@ -1756,7 +1441,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PRODUCTT_NHOM_PRODUCTT">
+        <Association Name="FK_PRODUCTT_GROUP_PRODUCTT">
           <End Role="ProductType" Type="Self.ProductType" Multiplicity="0..1" />
           <End Role="ProductType1" Type="Self.ProductType" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1764,7 +1449,7 @@
               <PropertyRef Name="ProductTypeId" />
             </Principal>
             <Dependent Role="ProductType1">
-              <PropertyRef Name="ProProducttypeid" />
+              <PropertyRef Name="GroupBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1788,18 +1473,18 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="PurchaseOrder">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKINP_RELATIONS_PURCHASE">
+        <Association Name="FK_STOCKIN_RELATIONS_PURCHASE">
           <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
-          <End Role="StockInPurchaseAndDonate" Type="Self.StockInPurchaseAndDonate" Multiplicity="*" />
+          <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PurchaseOrder">
               <PropertyRef Name="PurchaseOrderId" />
             </Principal>
-            <Dependent Role="StockInPurchaseAndDonate">
+            <Dependent Role="StockIn">
               <PropertyRef Name="PurchaseOrderId" />
             </Dependent>
           </ReferentialConstraint>
@@ -1824,7 +1509,7 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="SaleOrder">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1842,12 +1527,12 @@
         </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_SALEORDE">
           <End Role="SaleOrder" Type="Self.SaleOrder" Multiplicity="0..1" />
-          <End Role="StockOutSaleAndDonate" Type="Self.StockOutSaleAndDonate" Multiplicity="*" />
+          <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SaleOrder">
               <PropertyRef Name="SaleOrderId" />
             </Principal>
-            <Dependent Role="StockOutSaleAndDonate">
+            <Dependent Role="StockOut">
               <PropertyRef Name="SaleOrderId" />
             </Dependent>
           </ReferentialConstraint>
@@ -1860,31 +1545,31 @@
               <PropertyRef Name="StockId" />
             </Principal>
             <Dependent Role="StockIn">
-              <PropertyRef Name="StockId" />
+              <PropertyRef Name="ToStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKINT_RELATIONS_STOCK">
+        <Association Name="FK_STOCKIN_TO_STOCK_RELATIONS_STOCK">
           <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
-          <End Role="StockInTransfer" Type="Self.StockInTransfer" Multiplicity="*" />
+          <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Stock">
               <PropertyRef Name="StockId" />
             </Principal>
-            <Dependent Role="StockInTransfer">
-              <PropertyRef Name="StockId" />
+            <Dependent Role="StockIn">
+              <PropertyRef Name="FromStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_STOCK">
           <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
-          <End Role="StockOutTransfer" Type="Self.StockOutTransfer" Multiplicity="*" />
+          <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Stock">
               <PropertyRef Name="StockId" />
             </Principal>
-            <Dependent Role="StockOutTransfer">
-              <PropertyRef Name="StockId" />
+            <Dependent Role="StockOut">
+              <PropertyRef Name="ToStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1896,7 +1581,7 @@
               <PropertyRef Name="StockId" />
             </Principal>
             <Dependent Role="StockOut">
-              <PropertyRef Name="StockId" />
+              <PropertyRef Name="FromStock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1912,7 +1597,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKIN_RELATIONS_STOCKINT">
+        <Association Name="FK_STOCKIN_RELATIONS_STOCKINTYPE">
           <End Role="StockInType" Type="Self.StockInType" Multiplicity="0..1" />
           <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1932,11 +1617,11 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="StockIn">
-              <PropertyRef Name="UserId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKIND_RELATIONS_STOCKIN">
+        <Association Name="FK_STOCKINDDETAIL_RELATIONS_STOCKIN">
           <End Role="StockIn" Type="Self.StockIn" Multiplicity="0..1" />
           <End Role="StockInDetail" Type="Self.StockInDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1944,42 +1629,6 @@
               <PropertyRef Name="StockInId" />
             </Principal>
             <Dependent Role="StockInDetail">
-              <PropertyRef Name="StockInId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINP_INHERITAN_STOCKIN">
-          <End Role="StockIn" Type="Self.StockIn" Multiplicity="1" />
-          <End Role="StockInPurchaseAndDonate" Type="Self.StockInPurchaseAndDonate" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockIn">
-              <PropertyRef Name="StockInId" />
-            </Principal>
-            <Dependent Role="StockInPurchaseAndDonate">
-              <PropertyRef Name="StockInId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINR_INHERITAN_STOCKIN">
-          <End Role="StockIn" Type="Self.StockIn" Multiplicity="1" />
-          <End Role="StockInReturn" Type="Self.StockInReturn" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockIn">
-              <PropertyRef Name="StockInId" />
-            </Principal>
-            <Dependent Role="StockInReturn">
-              <PropertyRef Name="StockInId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKINT_INHERITAN_STOCKIN">
-          <End Role="StockIn" Type="Self.StockIn" Multiplicity="1" />
-          <End Role="StockInTransfer" Type="Self.StockInTransfer" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockIn">
-              <PropertyRef Name="StockInId" />
-            </Principal>
-            <Dependent Role="StockInTransfer">
               <PropertyRef Name="StockInId" />
             </Dependent>
           </ReferentialConstraint>
@@ -1992,7 +1641,7 @@
               <PropertyRef Name="StockInTypeId" />
             </Principal>
             <Dependent Role="StockInType1">
-              <PropertyRef Name="StoStockintypeid" />
+              <PropertyRef Name="GroupBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2008,6 +1657,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_STOCKOUT_RELATIONS_SUPPLIER">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="StockOut">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_USER">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
@@ -2016,19 +1677,7 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="StockOut">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutDestroy" Type="Self.StockOutDestroy" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
-            </Principal>
-            <Dependent Role="StockOutDestroy">
-              <PropertyRef Name="StockOutId" />
+              <PropertyRef Name="CreatedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2044,51 +1693,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutSaleAndDonate" Type="Self.StockOutSaleAndDonate" Multiplicity="0..1" />
+        <Association Name="FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE">
+          <End Role="StockOutType" Type="Self.StockOutType" Multiplicity="0..1" />
+          <End Role="StockOutType1" Type="Self.StockOutType" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
+            <Principal Role="StockOutType">
+              <PropertyRef Name="StockOutType1" />
             </Principal>
-            <Dependent Role="StockOutSaleAndDonate">
-              <PropertyRef Name="StockOutId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutTransfer" Type="Self.StockOutTransfer" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
-            </Principal>
-            <Dependent Role="StockOutTransfer">
-              <PropertyRef Name="StockOutId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUTRETURN_INHERITAN_STOCKOUT">
-          <End Role="StockOut" Type="Self.StockOut" Multiplicity="1" />
-          <End Role="StockOutReturn" Type="Self.StockOutReturn" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="StockOut">
-              <PropertyRef Name="StockOutId" />
-            </Principal>
-            <Dependent Role="StockOutReturn">
-              <PropertyRef Name="StockOutId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_STOCKOUT_RELATIONS_SUPPLIER">
-          <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
-          <End Role="StockOutReturn" Type="Self.StockOutReturn" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Supplier">
-              <PropertyRef Name="SupplierId" />
-            </Principal>
-            <Dependent Role="StockOutReturn">
-              <PropertyRef Name="SupplierId" />
+            <Dependent Role="StockOutType1">
+              <PropertyRef Name="GroupBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2152,7 +1765,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WharehouseManagementEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="StockManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customer" EntityType="Self.Customer" />
           <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" />
           <EntitySet Name="Permission" EntityType="Self.Permission" />
@@ -2168,17 +1781,10 @@
           <EntitySet Name="Stock" EntityType="Self.Stock" />
           <EntitySet Name="StockIn" EntityType="Self.StockIn" />
           <EntitySet Name="StockInDetail" EntityType="Self.StockInDetail" />
-          <EntitySet Name="StockInPurchaseAndDonate" EntityType="Self.StockInPurchaseAndDonate" />
-          <EntitySet Name="StockInReturn" EntityType="Self.StockInReturn" />
           <EntitySet Name="StockInType" EntityType="Self.StockInType" />
-          <EntitySet Name="StockInTransfer" EntityType="Self.StockInTransfer" />
           <EntitySet Name="StockOut" EntityType="Self.StockOut" />
-          <EntitySet Name="StockOutDestroy" EntityType="Self.StockOutDestroy" />
           <EntitySet Name="StockOutDetail" EntityType="Self.StockOutDetail" />
-          <EntitySet Name="StockOutReturn" EntityType="Self.StockOutReturn" />
-          <EntitySet Name="StockOutSaleAndDonate" EntityType="Self.StockOutSaleAndDonate" />
           <EntitySet Name="StockOutType" EntityType="Self.StockOutType" />
-          <EntitySet Name="StockOutTransfer" EntityType="Self.StockOutTransfer" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" />
           <EntitySet Name="SupplierProduct" EntityType="Self.SupplierProduct" />
           <EntitySet Name="User" EntityType="Self.User" />
@@ -2229,7 +1835,7 @@
             <End Role="Stock" EntitySet="Stock" />
             <End Role="ProductOnStock" EntitySet="ProductOnStock" />
           </AssociationSet>
-          <AssociationSet Name="FK_PRODUCTT_NHOM_PRODUCTT" Association="Self.FK_PRODUCTT_NHOM_PRODUCTT">
+          <AssociationSet Name="FK_PRODUCTT_GROUP_PRODUCTT" Association="Self.FK_PRODUCTT_GROUP_PRODUCTT">
             <End Role="ProductType" EntitySet="ProductType" />
             <End Role="ProductType1" EntitySet="ProductType" />
           </AssociationSet>
@@ -2241,9 +1847,9 @@
             <End Role="User" EntitySet="User" />
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKINP_RELATIONS_PURCHASE" Association="Self.FK_STOCKINP_RELATIONS_PURCHASE">
+          <AssociationSet Name="FK_STOCKIN_RELATIONS_PURCHASE" Association="Self.FK_STOCKIN_RELATIONS_PURCHASE">
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
-            <End Role="StockInPurchaseAndDonate" EntitySet="StockInPurchaseAndDonate" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_SUPPLIER_RELATIONS_PURCHASE" Association="Self.FK_SUPPLIER_RELATIONS_PURCHASE">
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
@@ -2259,19 +1865,19 @@
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_SALEORDE" Association="Self.FK_STOCKOUT_RELATIONS_SALEORDE">
             <End Role="SaleOrder" EntitySet="SaleOrder" />
-            <End Role="StockOutSaleAndDonate" EntitySet="StockOutSaleAndDonate" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCK" Association="Self.FK_STOCKIN_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
             <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKINT_RELATIONS_STOCK" Association="Self.FK_STOCKINT_RELATIONS_STOCK">
+          <AssociationSet Name="FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" Association="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
-            <End Role="StockInTransfer" EntitySet="StockInTransfer" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCK" Association="Self.FK_STOCKOUT_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
-            <End Role="StockOutTransfer" EntitySet="StockOutTransfer" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_WAREHOUSE_STOCK" Association="Self.FK_STOCKOUT_WAREHOUSE_STOCK">
             <End Role="Stock" EntitySet="Stock" />
@@ -2281,7 +1887,7 @@
             <End Role="Stock" EntitySet="Stock" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCKINT" Association="Self.FK_STOCKIN_RELATIONS_STOCKINT">
+          <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCKINTYPE" Association="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE">
             <End Role="StockInType" EntitySet="StockInType" />
             <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
@@ -2289,21 +1895,9 @@
             <End Role="User" EntitySet="User" />
             <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKIND_RELATIONS_STOCKIN" Association="Self.FK_STOCKIND_RELATIONS_STOCKIN">
+          <AssociationSet Name="FK_STOCKINDDETAIL_RELATIONS_STOCKIN" Association="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN">
             <End Role="StockIn" EntitySet="StockIn" />
             <End Role="StockInDetail" EntitySet="StockInDetail" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINP_INHERITAN_STOCKIN" Association="Self.FK_STOCKINP_INHERITAN_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIn" />
-            <End Role="StockInPurchaseAndDonate" EntitySet="StockInPurchaseAndDonate" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINR_INHERITAN_STOCKIN" Association="Self.FK_STOCKINR_INHERITAN_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIn" />
-            <End Role="StockInReturn" EntitySet="StockInReturn" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKINT_INHERITAN_STOCKIN" Association="Self.FK_STOCKINT_INHERITAN_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIn" />
-            <End Role="StockInTransfer" EntitySet="StockInTransfer" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKINT_RELATIONS_STOCKINT" Association="Self.FK_STOCKINT_RELATIONS_STOCKINT">
             <End Role="StockInType" EntitySet="StockInType" />
@@ -2313,33 +1907,21 @@
             <End Role="StockOutType" EntitySet="StockOutType" />
             <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
+          <AssociationSet Name="FK_STOCKOUT_RELATIONS_SUPPLIER" Association="Self.FK_STOCKOUT_RELATIONS_SUPPLIER">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="StockOut" EntitySet="StockOut" />
+          </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_USER" Association="Self.FK_STOCKOUT_RELATIONS_USER">
             <End Role="User" EntitySet="User" />
             <End Role="StockOut" EntitySet="StockOut" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTDESTROY_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutDestroy" EntitySet="StockOutDestroy" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" Association="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT">
             <End Role="StockOut" EntitySet="StockOut" />
             <End Role="StockOutDetail" EntitySet="StockOutDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTSALEANDDOANTE_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutSaleAndDonate" EntitySet="StockOutSaleAndDonate" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTTRANSFER_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutTransfer" EntitySet="StockOutTransfer" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUTRETURN_INHERITAN_STOCKOUT" Association="Self.FK_STOCKOUTRETURN_INHERITAN_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOut" />
-            <End Role="StockOutReturn" EntitySet="StockOutReturn" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STOCKOUT_RELATIONS_SUPPLIER" Association="Self.FK_STOCKOUT_RELATIONS_SUPPLIER">
-            <End Role="Supplier" EntitySet="Supplier" />
-            <End Role="StockOutReturn" EntitySet="StockOutReturn" />
+          <AssociationSet Name="FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" Association="Self.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE">
+            <End Role="StockOutType" EntitySet="StockOutType" />
+            <End Role="StockOutType1" EntitySet="StockOutType" />
           </AssociationSet>
           <AssociationSet Name="FK_SUPPLIER_RELATIONS_SUPPLIER" Association="Self.FK_SUPPLIER_RELATIONS_SUPPLIER">
             <End Role="Supplier" EntitySet="Supplier" />
@@ -2367,9 +1949,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WharehouseManagementModelStoreContainer" CdmEntityContainer="WharehouseManagementEntities">
+        <EntityContainerMapping StorageEntityContainer="StockManagementModelStoreContainer" CdmEntityContainer="StockManagementEntities">
           <EntitySetMapping Name="Customer">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.Customer">
+            <EntityTypeMapping TypeName="StockManagementModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="GroupCustomerId" ColumnName="GroupCustomerId" />
@@ -2383,7 +1965,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupCustomer">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.GroupCustomer">
+            <EntityTypeMapping TypeName="StockManagementModel.GroupCustomer">
               <MappingFragment StoreEntitySet="GroupCustomer">
                 <ScalarProperty Name="GroupCustomerId" ColumnName="GroupCustomerId" />
                 <ScalarProperty Name="GroupCustomerCode" ColumnName="GroupCustomerCode" />
@@ -2394,7 +1976,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Permission">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.Permission">
+            <EntityTypeMapping TypeName="StockManagementModel.Permission">
               <MappingFragment StoreEntitySet="Permission">
                 <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
                 <ScalarProperty Name="NamePermission" ColumnName="NamePermission" />
@@ -2406,7 +1988,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.Product">
+            <EntityTypeMapping TypeName="StockManagementModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
@@ -2422,7 +2004,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductCategory">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.ProductCategory">
+            <EntityTypeMapping TypeName="StockManagementModel.ProductCategory">
               <MappingFragment StoreEntitySet="ProductCategory">
                 <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
                 <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
@@ -2432,7 +2014,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductOnStock">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.ProductOnStock">
+            <EntityTypeMapping TypeName="StockManagementModel.ProductOnStock">
               <MappingFragment StoreEntitySet="ProductOnStock">
                 <ScalarProperty Name="ProductOnStockId" ColumnName="ProductOnStockId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -2444,10 +2026,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductType">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.ProductType">
+            <EntityTypeMapping TypeName="StockManagementModel.ProductType">
               <MappingFragment StoreEntitySet="ProductType">
                 <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
-                <ScalarProperty Name="ProProducttypeid" ColumnName="ProProducttypeid" />
+                <ScalarProperty Name="GroupBy" ColumnName="GroupBy" />
                 <ScalarProperty Name="ProductTypeCode" ColumnName="ProductTypeCode" />
                 <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
@@ -2455,7 +2037,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductUnit">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.ProductUnit">
+            <EntityTypeMapping TypeName="StockManagementModel.ProductUnit">
               <MappingFragment StoreEntitySet="ProductUnit">
                 <ScalarProperty Name="ProductUnitId" ColumnName="ProductUnitId" />
                 <ScalarProperty Name="ProductUnitCode" ColumnName="ProductUnitCode" />
@@ -2465,10 +2047,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PurchaseOrder">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.PurchaseOrder">
+            <EntityTypeMapping TypeName="StockManagementModel.PurchaseOrder">
               <MappingFragment StoreEntitySet="PurchaseOrder">
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="PurchaseOrderCode" ColumnName="PurchaseOrderCode" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
@@ -2477,7 +2059,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PurchaseOrderDetail">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.PurchaseOrderDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.PurchaseOrderDetail">
               <MappingFragment StoreEntitySet="PurchaseOrderDetail">
                 <ScalarProperty Name="PurchaseOrderDetailId" ColumnName="PurchaseOrderDetailId" />
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
@@ -2490,10 +2072,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SaleOrder">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.SaleOrder">
+            <EntityTypeMapping TypeName="StockManagementModel.SaleOrder">
               <MappingFragment StoreEntitySet="SaleOrder">
                 <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="SaleOrderCode" ColumnName="SaleOrderCode" />
                 <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
@@ -2508,7 +2090,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SaleOrderDetail">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.SaleOrderDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.SaleOrderDetail">
               <MappingFragment StoreEntitySet="SaleOrderDetail">
                 <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -2521,7 +2103,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Stock">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.Stock">
+            <EntityTypeMapping TypeName="StockManagementModel.Stock">
               <MappingFragment StoreEntitySet="Stock">
                 <ScalarProperty Name="StockId" ColumnName="StockId" />
                 <ScalarProperty Name="StockCode" ColumnName="StockCode" />
@@ -2531,11 +2113,13 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StockIn">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockIn">
+            <EntityTypeMapping TypeName="StockManagementModel.StockIn">
               <MappingFragment StoreEntitySet="StockIn">
                 <ScalarProperty Name="StockInId" ColumnName="StockInId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FromStock" ColumnName="FromStock" />
+                <ScalarProperty Name="ToStock" ColumnName="ToStock" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
                 <ScalarProperty Name="StockInTypeId" ColumnName="StockInTypeId" />
                 <ScalarProperty Name="StockInCode" ColumnName="StockInCode" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
@@ -2543,11 +2127,12 @@
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="AccountingDate" ColumnName="AccountingDate" />
                 <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+                <ScalarProperty Name="ReasonReturn" ColumnName="ReasonReturn" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StockInDetail">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockInDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.StockInDetail">
               <MappingFragment StoreEntitySet="StockInDetail">
                 <ScalarProperty Name="StockInDetailID" ColumnName="StockInDetailID" />
                 <ScalarProperty Name="StockInId" ColumnName="StockInId" />
@@ -2557,99 +2142,37 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockInPurchaseAndDonate">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockInPurchaseAndDonate">
-              <MappingFragment StoreEntitySet="StockInPurchaseAndDonate">
-                <ScalarProperty Name="StockInId" ColumnName="StockInId" />
-                <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockInTypeId" ColumnName="StockInTypeId" />
-                <ScalarProperty Name="StockInCode" ColumnName="StockInCode" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="AccountingDate" ColumnName="AccountingDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="StockInReturn">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockInReturn">
-              <MappingFragment StoreEntitySet="StockInReturn">
-                <ScalarProperty Name="StockInId" ColumnName="StockInId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockInTypeId" ColumnName="StockInTypeId" />
-                <ScalarProperty Name="StockInCode" ColumnName="StockInCode" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="AccountingDate" ColumnName="AccountingDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-                <ScalarProperty Name="ReasonReturn" ColumnName="ReasonReturn" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="StockInType">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockInType">
+            <EntityTypeMapping TypeName="StockManagementModel.StockInType">
               <MappingFragment StoreEntitySet="StockInType">
                 <ScalarProperty Name="StockInTypeId" ColumnName="StockInTypeId" />
-                <ScalarProperty Name="StoStockintypeid" ColumnName="StoStockintypeid" />
+                <ScalarProperty Name="GroupBy" ColumnName="GroupBy" />
                 <ScalarProperty Name="StockInTypeName" ColumnName="StockInTypeName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockInTransfer">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockInTransfer">
-              <MappingFragment StoreEntitySet="StockInTransfer">
-                <ScalarProperty Name="StockInId" ColumnName="StockInId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="Sto_StockId" ColumnName="Sto_StockId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockInTypeId" ColumnName="StockInTypeId" />
-                <ScalarProperty Name="StockInCode" ColumnName="StockInCode" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="AccountingDate" ColumnName="AccountingDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="StockOut">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOut">
+            <EntityTypeMapping TypeName="StockManagementModel.StockOut">
               <MappingFragment StoreEntitySet="StockOut">
                 <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="FromStock" ColumnName="FromStock" />
+                <ScalarProperty Name="ToStock" ColumnName="ToStock" />
                 <ScalarProperty Name="StockOutType" ColumnName="StockOutType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockOutCode" ColumnName="StockOutCode" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="StockOutDestroy">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOutDestroy">
-              <MappingFragment StoreEntitySet="StockOutDestroy">
-                <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="StockOutType" ColumnName="StockOutType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
                 <ScalarProperty Name="StockOutCode" ColumnName="StockOutCode" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
                 <ScalarProperty Name="DestroyReason" ColumnName="DestroyReason" />
+                <ScalarProperty Name="ReasonReturn" ColumnName="ReasonReturn" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StockOutDetail">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOutDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.StockOutDetail">
               <MappingFragment StoreEntitySet="StockOutDetail">
                 <ScalarProperty Name="StockOutDetailId" ColumnName="StockOutDetailId" />
                 <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
@@ -2657,65 +2180,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockOutReturn">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOutReturn">
-              <MappingFragment StoreEntitySet="StockOutReturn">
-                <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
-                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="StockOutType" ColumnName="StockOutType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockOutCode" ColumnName="StockOutCode" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-                <ScalarProperty Name="ReasonReturn" ColumnName="ReasonReturn" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="StockOutSaleAndDonate">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOutSaleAndDonate">
-              <MappingFragment StoreEntitySet="StockOutSaleAndDonate">
-                <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
-                <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="StockOutType" ColumnName="StockOutType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockOutCode" ColumnName="StockOutCode" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="StockOutType">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOutType">
+            <EntityTypeMapping TypeName="StockManagementModel.StockOutType">
               <MappingFragment StoreEntitySet="StockOutType">
                 <ScalarProperty Name="StockOutType1" ColumnName="StockOutType" />
+                <ScalarProperty Name="GroupBy" ColumnName="GroupBy" />
                 <ScalarProperty Name="StockOutTypeName" ColumnName="StockOutTypeName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockOutTransfer">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.StockOutTransfer">
-              <MappingFragment StoreEntitySet="StockOutTransfer">
-                <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
-                <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="Sto_StockId" ColumnName="Sto_StockId" />
-                <ScalarProperty Name="StockOutType" ColumnName="StockOutType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="StockOutCode" ColumnName="StockOutCode" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Supplier">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.Supplier">
+            <EntityTypeMapping TypeName="StockManagementModel.Supplier">
               <MappingFragment StoreEntitySet="Supplier">
                 <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
@@ -2730,7 +2205,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SupplierProduct">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.SupplierProduct">
+            <EntityTypeMapping TypeName="StockManagementModel.SupplierProduct">
               <MappingFragment StoreEntitySet="SupplierProduct">
                 <ScalarProperty Name="SuplierProductId" ColumnName="SuplierProductId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -2741,7 +2216,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.User">
+            <EntityTypeMapping TypeName="StockManagementModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
@@ -2757,7 +2232,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserPermission">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.UserPermission">
+            <EntityTypeMapping TypeName="StockManagementModel.UserPermission">
               <MappingFragment StoreEntitySet="UserPermission">
                 <ScalarProperty Name="UserPermissionID" ColumnName="UserPermissionID" />
                 <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
@@ -2766,7 +2241,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserProfile">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.UserProfile">
+            <EntityTypeMapping TypeName="StockManagementModel.UserProfile">
               <MappingFragment StoreEntitySet="UserProfile">
                 <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2785,7 +2260,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserType">
-            <EntityTypeMapping TypeName="WharehouseManagementModel.UserType">
+            <EntityTypeMapping TypeName="StockManagementModel.UserType">
               <MappingFragment StoreEntitySet="UserType">
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
                 <ScalarProperty Name="UserTypeCode" ColumnName="UserTypeCode" />
