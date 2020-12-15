@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-using StockManagement.Bussiness;
+using StockManagement.Business;
 using StockManagement.Data;
 
 namespace StockManagement.Form
@@ -19,7 +19,7 @@ namespace StockManagement.Form
         public Login()
         {
             InitializeComponent();
-            LoginBO loginBO = new LoginBO();
+            ABC loginBO = new ABC();
             loginBO.Register(new User()
             {
                 UserId = Guid.NewGuid(),

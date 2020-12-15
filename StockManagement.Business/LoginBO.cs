@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StockManagement.Data;
 using Scrypt;
 
-namespace StockManagement.Data
+namespace StockManagement.Business
 {
-    public class ABC
+    public class LoginBO
     {
-
-        //read UserName from database and you could using the username to get its hashed password and salt.
         public bool CheckUser(string username, string password)
         {
             try
@@ -67,6 +66,5 @@ namespace StockManagement.Data
                 throw;
             }
         }
-
     }
 }
