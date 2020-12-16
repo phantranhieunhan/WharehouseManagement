@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using StockManagement.Form.Report;
 using StockManagement.Form.Supplier;
 
 namespace StockManagement.Form
@@ -36,10 +37,16 @@ namespace StockManagement.Form
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
         {
-            MainSupplier mainSupplier = new MainSupplier();
-            mainSupplier.MdiParent = this;
-            mainSupplier.Show();
+            nbj nbj = new nbj();
+            nbj.MdiParent = this;
+            nbj.Show();
         }
 
+        private void barButtonItem42_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            nhacungcap nhacungcap = new nhacungcap();
+            nhacungcap.MdiParent = this;
+            nhacungcap.Show();
+        }
     }
 }
