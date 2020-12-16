@@ -11,11 +11,11 @@
           </Key>
           <Property Name="CustomerId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="GroupCustomerId" Type="uniqueidentifier" />
-          <Property Name="FullName" Type="varchar" MaxLength="100" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
           <Property Name="Birthday" Type="datetime" />
           <Property Name="NumberPhone" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Email" Type="varchar" MaxLength="100" />
-          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
           <Property Name="Note" Type="text" />
         </EntityType>
         <EntityType Name="GroupCustomer">
@@ -23,8 +23,8 @@
             <PropertyRef Name="GroupCustomerId" />
           </Key>
           <Property Name="GroupCustomerId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="GroupCustomerCode" Type="char" MaxLength="50" />
-          <Property Name="GroupCustomerName" Type="varchar" MaxLength="100" />
+          <Property Name="GroupCustomerCode" Type="varchar" MaxLength="50" />
+          <Property Name="GroupCustomerName" Type="nvarchar" MaxLength="255" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="Note" Type="text" />
         </EntityType>
@@ -33,7 +33,7 @@
             <PropertyRef Name="PermissionId" />
           </Key>
           <Property Name="PermissionId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="NamePermission" Type="varchar" MaxLength="255" />
+          <Property Name="NamePermission" Type="nvarchar" MaxLength="255" />
           <Property Name="ViewPermission" Type="bit" />
           <Property Name="AddPermission" Type="bit" />
           <Property Name="EditPermission" Type="bit" />
@@ -47,20 +47,20 @@
           <Property Name="ProductCategoryId" Type="uniqueidentifier" />
           <Property Name="ProductTypeId" Type="uniqueidentifier" />
           <Property Name="ProductUnitId" Type="uniqueidentifier" />
-          <Property Name="ProductCode" Type="char" MaxLength="50" />
-          <Property Name="ProductName" Type="varchar" MaxLength="100" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
           <Property Name="Price" Type="money" />
           <Property Name="StandardCost" Type="money" />
-          <Property Name="Weight" Type="varchar" MaxLength="20" />
-          <Property Name="Size" Type="varchar" MaxLength="20" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="Size" Type="float" />
         </EntityType>
         <EntityType Name="ProductCategory">
           <Key>
             <PropertyRef Name="ProductCategoryId" />
           </Key>
           <Property Name="ProductCategoryId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ProductCategoryCode" Type="char" MaxLength="50" />
-          <Property Name="ProductCategoryName" Type="varchar" MaxLength="100" />
+          <Property Name="ProductCategoryCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductCategoryName" Type="nvarchar" MaxLength="255" />
           <Property Name="Note" Type="text" />
         </EntityType>
         <EntityType Name="ProductOnStock">
@@ -80,8 +80,8 @@
           </Key>
           <Property Name="ProductTypeId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="GroupBy" Type="uniqueidentifier" />
-          <Property Name="ProductTypeCode" Type="char" MaxLength="50" />
-          <Property Name="ProductTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="ProductTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductTypeName" Type="nvarchar" MaxLength="255" />
           <Property Name="Note" Type="text" />
         </EntityType>
         <EntityType Name="ProductUnit">
@@ -90,7 +90,7 @@
           </Key>
           <Property Name="ProductUnitId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ProductUnitCode" Type="char" MaxLength="50" />
-          <Property Name="ProductUnitName" Type="varchar" MaxLength="100" />
+          <Property Name="ProductUnitName" Type="nvarchar" MaxLength="255" />
           <Property Name="Note" Type="text" />
         </EntityType>
         <EntityType Name="PurchaseOrder">
@@ -99,7 +99,8 @@
           </Key>
           <Property Name="PurchaseOrderId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="CreatedBy" Type="uniqueidentifier" />
-          <Property Name="PurchaseOrderCode" Type="char" MaxLength="50" />
+          <Property Name="SupplierId" Type="uniqueidentifier" />
+          <Property Name="PurchaseOrderCode" Type="varchar" MaxLength="50" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
           <Property Name="IsPay" Type="bit" />
@@ -123,13 +124,13 @@
           <Property Name="SaleOrderId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="CustomerId" Type="uniqueidentifier" />
-          <Property Name="SaleOrderCode" Type="char" MaxLength="50" />
-          <Property Name="ShipAddress" Type="varchar" MaxLength="100" />
+          <Property Name="SaleOrderCode" Type="varchar" MaxLength="50" />
+          <Property Name="ShipAddress" Type="nvarchar" MaxLength="255" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CancelReason" Type="varchar" MaxLength="100" />
+          <Property Name="CancelReason" Type="text" />
           <Property Name="NoteGeneral" Type="text" />
           <Property Name="TotalAmount" Type="money" />
-          <Property Name="DiscountPercent" Type="char" MaxLength="50" />
+          <Property Name="DiscountPercent" Type="float" />
           <Property Name="IsPay" Type="bit" />
           <Property Name="CreatedDate" Type="datetime" />
         </EntityType>
@@ -150,9 +151,9 @@
             <PropertyRef Name="StockId" />
           </Key>
           <Property Name="StockId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="StockCode" Type="char" MaxLength="50" />
-          <Property Name="StockName" Type="varchar" MaxLength="100" />
-          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="StockCode" Type="varchar" MaxLength="50" />
+          <Property Name="StockName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="StockIn">
           <Key>
@@ -164,12 +165,12 @@
           <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="PurchaseOrderId" Type="uniqueidentifier" />
           <Property Name="StockInTypeId" Type="uniqueidentifier" />
-          <Property Name="StockInCode" Type="char" MaxLength="50" />
+          <Property Name="StockInCode" Type="varchar" MaxLength="50" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
           <Property Name="Note" Type="text" />
           <Property Name="AccountingDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
+          <Property Name="PercentComplete" Type="float" />
           <Property Name="ReasonReturn" Type="text" />
         </EntityType>
         <EntityType Name="StockInDetail">
@@ -188,7 +189,18 @@
           </Key>
           <Property Name="StockInTypeId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="GroupBy" Type="uniqueidentifier" />
-          <Property Name="StockInTypeName" Type="varchar" MaxLength="24" />
+          <Property Name="StockInTypeName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="StockManager">
+          <Key>
+            <PropertyRef Name="StockManagerId" />
+          </Key>
+          <Property Name="StockManagerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="StockId" Type="uniqueidentifier" />
+          <Property Name="FromDate" Type="datetime" />
+          <Property Name="ToDate" Type="datetime" />
+          <Property Name="Note" Type="text" />
         </EntityType>
         <EntityType Name="StockOut">
           <Key>
@@ -201,11 +213,11 @@
           <Property Name="SupplierId" Type="uniqueidentifier" />
           <Property Name="CreatedBy" Type="uniqueidentifier" />
           <Property Name="SaleOrderId" Type="uniqueidentifier" />
-          <Property Name="StockOutCode" Type="char" MaxLength="50" />
+          <Property Name="StockOutCode" Type="varchar" MaxLength="50" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
           <Property Name="Note" Type="text" />
           <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="PercentComplete" Type="char" MaxLength="50" />
+          <Property Name="PercentComplete" Type="float" />
           <Property Name="DestroyReason" Type="text" />
           <Property Name="ReasonReturn" Type="text" />
         </EntityType>
@@ -223,21 +235,20 @@
           </Key>
           <Property Name="StockOutType" Type="uniqueidentifier" Nullable="false" />
           <Property Name="GroupBy" Type="uniqueidentifier" />
-          <Property Name="StockOutTypeName" Type="varchar" MaxLength="255" />
+          <Property Name="StockOutTypeName" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Supplier">
           <Key>
             <PropertyRef Name="SupplierId" />
           </Key>
           <Property Name="SupplierId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="PurchaseOrderId" Type="uniqueidentifier" />
-          <Property Name="SupplierCode" Type="char" MaxLength="50" />
-          <Property Name="SupplierName" Type="varchar" MaxLength="100" />
-          <Property Name="Addpress" Type="varchar" MaxLength="150" />
-          <Property Name="TaxCode" Type="char" MaxLength="50" />
+          <Property Name="SupplierCode" Type="varchar" MaxLength="50" />
+          <Property Name="SupplierName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="TaxCode" Type="varchar" MaxLength="50" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="PhoneNumber" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SupplierProduct">
           <Key>
@@ -256,13 +267,20 @@
           <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="UserTypeId" Type="uniqueidentifier" />
           <Property Name="StockId" Type="uniqueidentifier" />
-          <Property Name="UserProfileId" Type="uniqueidentifier" />
-          <Property Name="UserName" Type="char" MaxLength="50" />
-          <Property Name="Password" Type="char" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdentityCard" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="Avatar" Type="varchar" MaxLength="1024" />
           <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="IsLock" Type="bit" />
-          <Property Name="IsAdmin" Type="bit" />
-          <Property Name="IsActive" Type="bit" />
+          <Property Name="MaritalStatus" Type="int" />
         </EntityType>
         <EntityType Name="UserPermission">
           <Key>
@@ -272,31 +290,13 @@
           <Property Name="PermissionId" Type="uniqueidentifier" />
           <Property Name="UserId" Type="uniqueidentifier" />
         </EntityType>
-        <EntityType Name="UserProfile">
-          <Key>
-            <PropertyRef Name="UserProfileId" />
-          </Key>
-          <Property Name="UserProfileId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="FirstName" Type="varchar" MaxLength="256" />
-          <Property Name="MiddleName" Type="varchar" MaxLength="256" />
-          <Property Name="LastName" Type="varchar" MaxLength="10" />
-          <Property Name="FullName" Type="varchar" MaxLength="100" />
-          <Property Name="IdentityCard" Type="char" MaxLength="20" />
-          <Property Name="Address" Type="varchar" MaxLength="100" />
-          <Property Name="Birthday" Type="datetime" />
-          <Property Name="Email" Type="varchar" MaxLength="100" />
-          <Property Name="Gender" Type="int" />
-          <Property Name="Avatar" Type="char" MaxLength="20" />
-          <Property Name="MaritalStatus" Type="int" />
-        </EntityType>
         <EntityType Name="UserType">
           <Key>
             <PropertyRef Name="UserTypeId" />
           </Key>
           <Property Name="UserTypeId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UserTypeCode" Type="char" MaxLength="50" />
-          <Property Name="UserTypeName" Type="varchar" MaxLength="255" />
+          <Property Name="UserTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="UserTypeName" Type="nvarchar" MaxLength="255" />
           <Property Name="Note" Type="text" />
         </EntityType>
         <Association Name="FK_CUSTOMER_RELATIONS_GROUPCUS">
@@ -404,6 +404,18 @@
             </Principal>
             <Dependent Role="PurchaseOrderDetail">
               <PropertyRef Name="PurchaseOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PURCHASE_RELATIONS_SUPPLIER">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="SupplierId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -551,6 +563,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_STOCKMAN_RELATIONS_STOCK">
+          <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
+          <End Role="StockManager" Type="Self.StockManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="StockId" />
+            </Principal>
+            <Dependent Role="StockManager">
+              <PropertyRef Name="StockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STOCKMAN_RELATIONS_USER">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="StockManager" Type="Self.StockManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="StockManager">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_SALEORDE">
           <End Role="SaleOrder" Type="Self.SaleOrder" Multiplicity="0..1" />
           <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
@@ -659,18 +695,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_SUPPLIER_RELATIONS_PURCHASE">
-          <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
-          <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PurchaseOrder">
-              <PropertyRef Name="PurchaseOrderId" />
-            </Principal>
-            <Dependent Role="Supplier">
-              <PropertyRef Name="PurchaseOrderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_SUPPLIER_RELATIONS_SUPPLIER">
           <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
           <End Role="SupplierProduct" Type="Self.SupplierProduct" Multiplicity="*" />
@@ -692,18 +716,6 @@
             </Principal>
             <Dependent Role="User">
               <PropertyRef Name="StockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_USER_RELATIONS_USERPROF">
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="UserProfile">
-              <PropertyRef Name="UserProfileId" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="UserProfileId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -743,18 +755,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_USERPROF_RELATIONS_USER">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserId" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="StockManagementModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" Schema="dbo" store:Type="Tables" />
@@ -772,6 +772,7 @@
           <EntitySet Name="StockIn" EntityType="Self.StockIn" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockInDetail" EntityType="Self.StockInDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockInType" EntityType="Self.StockInType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StockManager" EntityType="Self.StockManager" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockOut" EntityType="Self.StockOut" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockOutDetail" EntityType="Self.StockOutDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StockOutType" EntityType="Self.StockOutType" Schema="dbo" store:Type="Tables" />
@@ -779,7 +780,6 @@
           <EntitySet Name="SupplierProduct" EntityType="Self.SupplierProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserPermission" EntityType="Self.UserPermission" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_CUSTOMER_RELATIONS_GROUPCUS" Association="Self.FK_CUSTOMER_RELATIONS_GROUPCUS">
             <End Role="GroupCustomer" EntitySet="GroupCustomer" />
@@ -816,6 +816,10 @@
           <AssociationSet Name="FK_PURCHASE_RELATIONS_PURCHASE" Association="Self.FK_PURCHASE_RELATIONS_PURCHASE">
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
             <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PURCHASE_RELATIONS_SUPPLIER" Association="Self.FK_PURCHASE_RELATIONS_SUPPLIER">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
           </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_USER" Association="Self.FK_PURCHASE_RELATIONS_USER">
             <End Role="User" EntitySet="User" />
@@ -865,6 +869,14 @@
             <End Role="StockInType" EntitySet="StockInType" />
             <End Role="StockInType1" EntitySet="StockInType" />
           </AssociationSet>
+          <AssociationSet Name="FK_STOCKMAN_RELATIONS_STOCK" Association="Self.FK_STOCKMAN_RELATIONS_STOCK">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockManager" EntitySet="StockManager" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STOCKMAN_RELATIONS_USER" Association="Self.FK_STOCKMAN_RELATIONS_USER">
+            <End Role="User" EntitySet="User" />
+            <End Role="StockManager" EntitySet="StockManager" />
+          </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_SALEORDE" Association="Self.FK_STOCKOUT_RELATIONS_SALEORDE">
             <End Role="SaleOrder" EntitySet="SaleOrder" />
             <End Role="StockOut" EntitySet="StockOut" />
@@ -901,20 +913,12 @@
             <End Role="Product" EntitySet="Product" />
             <End Role="SupplierProduct" EntitySet="SupplierProduct" />
           </AssociationSet>
-          <AssociationSet Name="FK_SUPPLIER_RELATIONS_PURCHASE" Association="Self.FK_SUPPLIER_RELATIONS_PURCHASE">
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
-            <End Role="Supplier" EntitySet="Supplier" />
-          </AssociationSet>
           <AssociationSet Name="FK_SUPPLIER_RELATIONS_SUPPLIER" Association="Self.FK_SUPPLIER_RELATIONS_SUPPLIER">
             <End Role="Supplier" EntitySet="Supplier" />
             <End Role="SupplierProduct" EntitySet="SupplierProduct" />
           </AssociationSet>
           <AssociationSet Name="FK_USER_RELATIONS_STOCK" Association="Self.FK_USER_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
-          <AssociationSet Name="FK_USER_RELATIONS_USERPROF" Association="Self.FK_USER_RELATIONS_USERPROF">
-            <End Role="UserProfile" EntitySet="UserProfile" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
           <AssociationSet Name="FK_USER_RELATIONS_USERTYPE" Association="Self.FK_USER_RELATIONS_USERTYPE">
@@ -929,10 +933,6 @@
             <End Role="User" EntitySet="User" />
             <End Role="UserPermission" EntitySet="UserPermission" />
           </AssociationSet>
-          <AssociationSet Name="FK_USERPROF_RELATIONS_USER" Association="Self.FK_USERPROF_RELATIONS_USER">
-            <End Role="User" EntitySet="User" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -945,11 +945,11 @@
           </Key>
           <Property Name="CustomerId" Type="Guid" Nullable="false" />
           <Property Name="GroupCustomerId" Type="Guid" />
-          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Birthday" Type="DateTime" Precision="3" />
           <Property Name="NumberPhone" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="GroupCustomer" Relationship="Self.FK_CUSTOMER_RELATIONS_GROUPCUS" FromRole="Customer" ToRole="GroupCustomer" />
           <NavigationProperty Name="SaleOrder" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="SaleOrder" />
@@ -959,8 +959,8 @@
             <PropertyRef Name="GroupCustomerId" />
           </Key>
           <Property Name="GroupCustomerId" Type="Guid" Nullable="false" />
-          <Property Name="GroupCustomerCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="GroupCustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GroupCustomerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GroupCustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_CUSTOMER_RELATIONS_GROUPCUS" FromRole="GroupCustomer" ToRole="Customer" />
@@ -970,7 +970,7 @@
             <PropertyRef Name="PermissionId" />
           </Key>
           <Property Name="PermissionId" Type="Guid" Nullable="false" />
-          <Property Name="NamePermission" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NamePermission" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ViewPermission" Type="Boolean" />
           <Property Name="AddPermission" Type="Boolean" />
           <Property Name="EditPermission" Type="Boolean" />
@@ -985,12 +985,12 @@
           <Property Name="ProductCategoryId" Type="Guid" />
           <Property Name="ProductTypeId" Type="Guid" />
           <Property Name="ProductUnitId" Type="Guid" />
-          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="StandardCost" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Weight" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Size" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="Size" Type="Double" />
           <NavigationProperty Name="ProductCategory" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTC" FromRole="Product" ToRole="ProductCategory" />
           <NavigationProperty Name="ProductType" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTT" FromRole="Product" ToRole="ProductType" />
           <NavigationProperty Name="ProductUnit" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTU" FromRole="Product" ToRole="ProductUnit" />
@@ -1004,8 +1004,8 @@
             <PropertyRef Name="ProductCategoryId" />
           </Key>
           <Property Name="ProductCategoryId" Type="Guid" Nullable="false" />
-          <Property Name="ProductCategoryCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ProductCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCategoryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTC" FromRole="ProductCategory" ToRole="Product" />
         </EntityType>
@@ -1028,8 +1028,8 @@
           </Key>
           <Property Name="ProductTypeId" Type="Guid" Nullable="false" />
           <Property Name="GroupBy" Type="Guid" />
-          <Property Name="ProductTypeCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ProductTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProductTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTT" FromRole="ProductType" ToRole="Product" />
           <NavigationProperty Name="ProductType1" Relationship="Self.FK_PRODUCTT_GROUP_PRODUCTT" FromRole="ProductType" ToRole="ProductType1" />
@@ -1041,7 +1041,7 @@
           </Key>
           <Property Name="ProductUnitId" Type="Guid" Nullable="false" />
           <Property Name="ProductUnitCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ProductUnitName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProductUnitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTU" FromRole="ProductUnit" ToRole="Product" />
         </EntityType>
@@ -1051,14 +1051,15 @@
           </Key>
           <Property Name="PurchaseOrderId" Type="Guid" Nullable="false" />
           <Property Name="CreatedBy" Type="Guid" />
-          <Property Name="PurchaseOrderCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="SupplierId" Type="Guid" />
+          <Property Name="PurchaseOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="IsPay" Type="Boolean" />
           <NavigationProperty Name="PurchaseOrderDetail" Relationship="Self.FK_PURCHASE_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="PurchaseOrderDetail" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="PurchaseOrder" ToRole="Supplier" />
           <NavigationProperty Name="User" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="PurchaseOrder" ToRole="User" />
           <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="StockIn" />
-          <NavigationProperty Name="Supplier" Relationship="Self.FK_SUPPLIER_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="Supplier" />
         </EntityType>
         <EntityType Name="PurchaseOrderDetail">
           <Key>
@@ -1081,13 +1082,13 @@
           <Property Name="SaleOrderId" Type="Guid" Nullable="false" />
           <Property Name="CreatedBy" Type="Guid" />
           <Property Name="CustomerId" Type="Guid" />
-          <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="ShipAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ShipAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CancelReason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CancelReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="NoteGeneral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="DiscountPercent" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="DiscountPercent" Type="Double" />
           <Property Name="IsPay" Type="Boolean" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="SaleOrder" ToRole="Customer" />
@@ -1114,12 +1115,13 @@
             <PropertyRef Name="StockId" />
           </Key>
           <Property Name="StockId" Type="Guid" Nullable="false" />
-          <Property Name="StockCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="StockName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StockCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StockName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ProductOnStock" Relationship="Self.FK_PRODUCTO_RELATIONS_STOCK" FromRole="Stock" ToRole="ProductOnStock" />
           <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
           <NavigationProperty Name="StockIn1" Relationship="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
+          <NavigationProperty Name="StockManager" Relationship="Self.FK_STOCKMAN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockManager" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="Stock" ToRole="StockOut" />
           <NavigationProperty Name="StockOut1" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="Stock" ToRole="StockOut" />
           <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_STOCK" FromRole="Stock" ToRole="User" />
@@ -1134,12 +1136,12 @@
           <Property Name="CreatedBy" Type="Guid" />
           <Property Name="PurchaseOrderId" Type="Guid" />
           <Property Name="StockInTypeId" Type="Guid" />
-          <Property Name="StockInCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="StockInCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="AccountingDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PercentComplete" Type="Double" />
           <Property Name="ReasonReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="StockIn" ToRole="PurchaseOrder" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKIN_RELATIONS_STOCK" FromRole="StockIn" ToRole="Stock" />
@@ -1165,10 +1167,23 @@
           </Key>
           <Property Name="StockInTypeId" Type="Guid" Nullable="false" />
           <Property Name="GroupBy" Type="Guid" />
-          <Property Name="StockInTypeName" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="StockInTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE" FromRole="StockInType" ToRole="StockIn" />
           <NavigationProperty Name="StockInType1" Relationship="Self.FK_STOCKINT_RELATIONS_STOCKINT" FromRole="StockInType" ToRole="StockInType1" />
           <NavigationProperty Name="StockInType2" Relationship="Self.FK_STOCKINT_RELATIONS_STOCKINT" FromRole="StockInType1" ToRole="StockInType" />
+        </EntityType>
+        <EntityType Name="StockManager">
+          <Key>
+            <PropertyRef Name="StockManagerId" />
+          </Key>
+          <Property Name="StockManagerId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="StockId" Type="Guid" />
+          <Property Name="FromDate" Type="DateTime" Precision="3" />
+          <Property Name="ToDate" Type="DateTime" Precision="3" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Stock" Relationship="Self.FK_STOCKMAN_RELATIONS_STOCK" FromRole="StockManager" ToRole="Stock" />
+          <NavigationProperty Name="User" Relationship="Self.FK_STOCKMAN_RELATIONS_USER" FromRole="StockManager" ToRole="User" />
         </EntityType>
         <EntityType Name="StockOut">
           <Key>
@@ -1181,11 +1196,11 @@
           <Property Name="SupplierId" Type="Guid" />
           <Property Name="CreatedBy" Type="Guid" />
           <Property Name="SaleOrderId" Type="Guid" />
-          <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="StockOutCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="PercentComplete" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PercentComplete" Type="Double" />
           <Property Name="DestroyReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ReasonReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="SaleOrder" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="StockOut" ToRole="SaleOrder" />
@@ -1211,7 +1226,7 @@
           </Key>
           <Property Name="StockOutType1" Type="Guid" Nullable="false" />
           <Property Name="GroupBy" Type="Guid" />
-          <Property Name="StockOutTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StockOutTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType" ToRole="StockOut" />
           <NavigationProperty Name="StockOutType11" Relationship="Self.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType" ToRole="StockOutType1" />
           <NavigationProperty Name="StockOutType2" Relationship="Self.FK_STOCKOUTTYPE_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType1" ToRole="StockOutType" />
@@ -1221,15 +1236,14 @@
             <PropertyRef Name="SupplierId" />
           </Key>
           <Property Name="SupplierId" Type="Guid" Nullable="false" />
-          <Property Name="PurchaseOrderId" Type="Guid" />
-          <Property Name="SupplierCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="SupplierName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Addpress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="SupplierCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SupplierName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_SUPPLIER_RELATIONS_PURCHASE" FromRole="Supplier" ToRole="PurchaseOrder" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="PurchaseOrder" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="StockOut" />
           <NavigationProperty Name="SupplierProduct" Relationship="Self.FK_SUPPLIER_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="SupplierProduct" />
         </EntityType>
@@ -1252,22 +1266,28 @@
           <Property Name="UserId" Type="Guid" Nullable="false" />
           <Property Name="UserTypeId" Type="Guid" />
           <Property Name="StockId" Type="Guid" />
-          <Property Name="UserProfileId" Type="Guid" />
-          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IdentityCard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="Avatar" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="IsLock" Type="Boolean" />
-          <Property Name="IsAdmin" Type="Boolean" />
-          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="MaritalStatus" Type="Int32" />
           <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="User" ToRole="PurchaseOrder" />
           <NavigationProperty Name="SaleOrder" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="User" ToRole="SaleOrder" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_USER_RELATIONS_STOCK" FromRole="User" ToRole="Stock" />
           <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_USER" FromRole="User" ToRole="StockIn" />
+          <NavigationProperty Name="StockManager" Relationship="Self.FK_STOCKMAN_RELATIONS_USER" FromRole="User" ToRole="StockManager" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_USER" FromRole="User" ToRole="StockOut" />
-          <NavigationProperty Name="UserProfile" Relationship="Self.FK_USER_RELATIONS_USERPROF" FromRole="User" ToRole="UserProfile" />
           <NavigationProperty Name="UserType" Relationship="Self.FK_USER_RELATIONS_USERTYPE" FromRole="User" ToRole="UserType" />
           <NavigationProperty Name="UserPermission" Relationship="Self.FK_USERPERM_RELATIONS_USER" FromRole="User" ToRole="UserPermission" />
-          <NavigationProperty Name="UserProfile1" Relationship="Self.FK_USERPROF_RELATIONS_USER" FromRole="User" ToRole="UserProfile" />
         </EntityType>
         <EntityType Name="UserPermission">
           <Key>
@@ -1279,33 +1299,13 @@
           <NavigationProperty Name="Permission" Relationship="Self.FK_USERPERM_RELATIONS_PERMISSI" FromRole="UserPermission" ToRole="Permission" />
           <NavigationProperty Name="User" Relationship="Self.FK_USERPERM_RELATIONS_USER" FromRole="UserPermission" ToRole="User" />
         </EntityType>
-        <EntityType Name="UserProfile">
-          <Key>
-            <PropertyRef Name="UserProfileId" />
-          </Key>
-          <Property Name="UserProfileId" Type="Guid" Nullable="false" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="FirstName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
-          <Property Name="MiddleName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
-          <Property Name="LastName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="IdentityCard" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Birthday" Type="DateTime" Precision="3" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Gender" Type="Int32" />
-          <Property Name="Avatar" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="MaritalStatus" Type="Int32" />
-          <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_USERPROF" FromRole="UserProfile" ToRole="User" />
-          <NavigationProperty Name="User1" Relationship="Self.FK_USERPROF_RELATIONS_USER" FromRole="UserProfile" ToRole="User" />
-        </EntityType>
         <EntityType Name="UserType">
           <Key>
             <PropertyRef Name="UserTypeId" />
           </Key>
           <Property Name="UserTypeId" Type="Guid" Nullable="false" />
-          <Property Name="UserTypeCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="UserTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UserTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_USERTYPE" FromRole="UserType" ToRole="User" />
         </EntityType>
@@ -1465,6 +1465,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PURCHASE_RELATIONS_SUPPLIER">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PURCHASE_RELATIONS_USER">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="*" />
@@ -1485,18 +1497,6 @@
               <PropertyRef Name="PurchaseOrderId" />
             </Principal>
             <Dependent Role="StockIn">
-              <PropertyRef Name="PurchaseOrderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SUPPLIER_RELATIONS_PURCHASE">
-          <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
-          <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PurchaseOrder">
-              <PropertyRef Name="PurchaseOrderId" />
-            </Principal>
-            <Dependent Role="Supplier">
               <PropertyRef Name="PurchaseOrderId" />
             </Dependent>
           </ReferentialConstraint>
@@ -1558,6 +1558,18 @@
             </Principal>
             <Dependent Role="StockIn">
               <PropertyRef Name="FromStock" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STOCKMAN_RELATIONS_STOCK">
+          <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
+          <End Role="StockManager" Type="Self.StockManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="StockId" />
+            </Principal>
+            <Dependent Role="StockManager">
+              <PropertyRef Name="StockId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1645,6 +1657,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_STOCKMAN_RELATIONS_USER">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="StockManager" Type="Self.StockManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="StockManager">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_STOCKOUT_RELATIONS_STOCKOUTTYPE">
           <End Role="StockOutType" Type="Self.StockOutType" Multiplicity="0..1" />
           <End Role="StockOut" Type="Self.StockOut" Multiplicity="*" />
@@ -1717,18 +1741,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_USER_RELATIONS_USERPROF">
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="UserProfile">
-              <PropertyRef Name="UserProfileId" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="UserProfileId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_USER_RELATIONS_USERTYPE">
           <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
@@ -1753,18 +1765,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_USERPROF_RELATIONS_USER">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserId" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="StockManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customer" EntityType="Self.Customer" />
           <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" />
@@ -1782,6 +1782,7 @@
           <EntitySet Name="StockIn" EntityType="Self.StockIn" />
           <EntitySet Name="StockInDetail" EntityType="Self.StockInDetail" />
           <EntitySet Name="StockInType" EntityType="Self.StockInType" />
+          <EntitySet Name="StockManager" EntityType="Self.StockManager" />
           <EntitySet Name="StockOut" EntityType="Self.StockOut" />
           <EntitySet Name="StockOutDetail" EntityType="Self.StockOutDetail" />
           <EntitySet Name="StockOutType" EntityType="Self.StockOutType" />
@@ -1789,7 +1790,6 @@
           <EntitySet Name="SupplierProduct" EntityType="Self.SupplierProduct" />
           <EntitySet Name="User" EntityType="Self.User" />
           <EntitySet Name="UserPermission" EntityType="Self.UserPermission" />
-          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" />
           <EntitySet Name="UserType" EntityType="Self.UserType" />
           <AssociationSet Name="FK_CUSTOMER_RELATIONS_GROUPCUS" Association="Self.FK_CUSTOMER_RELATIONS_GROUPCUS">
             <End Role="GroupCustomer" EntitySet="GroupCustomer" />
@@ -1843,6 +1843,10 @@
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
             <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetail" />
           </AssociationSet>
+          <AssociationSet Name="FK_PURCHASE_RELATIONS_SUPPLIER" Association="Self.FK_PURCHASE_RELATIONS_SUPPLIER">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+          </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_USER" Association="Self.FK_PURCHASE_RELATIONS_USER">
             <End Role="User" EntitySet="User" />
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
@@ -1850,10 +1854,6 @@
           <AssociationSet Name="FK_STOCKIN_RELATIONS_PURCHASE" Association="Self.FK_STOCKIN_RELATIONS_PURCHASE">
             <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
             <End Role="StockIn" EntitySet="StockIn" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SUPPLIER_RELATIONS_PURCHASE" Association="Self.FK_SUPPLIER_RELATIONS_PURCHASE">
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
-            <End Role="Supplier" EntitySet="Supplier" />
           </AssociationSet>
           <AssociationSet Name="FK_SALEORDE_CREATEDBY_USER" Association="Self.FK_SALEORDE_CREATEDBY_USER">
             <End Role="User" EntitySet="User" />
@@ -1874,6 +1874,10 @@
           <AssociationSet Name="FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" Association="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
             <End Role="StockIn" EntitySet="StockIn" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STOCKMAN_RELATIONS_STOCK" Association="Self.FK_STOCKMAN_RELATIONS_STOCK">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockManager" EntitySet="StockManager" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCK" Association="Self.FK_STOCKOUT_RELATIONS_STOCK">
             <End Role="Stock" EntitySet="Stock" />
@@ -1903,6 +1907,10 @@
             <End Role="StockInType" EntitySet="StockInType" />
             <End Role="StockInType1" EntitySet="StockInType" />
           </AssociationSet>
+          <AssociationSet Name="FK_STOCKMAN_RELATIONS_USER" Association="Self.FK_STOCKMAN_RELATIONS_USER">
+            <End Role="User" EntitySet="User" />
+            <End Role="StockManager" EntitySet="StockManager" />
+          </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" Association="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE">
             <End Role="StockOutType" EntitySet="StockOutType" />
             <End Role="StockOut" EntitySet="StockOut" />
@@ -1927,10 +1935,6 @@
             <End Role="Supplier" EntitySet="Supplier" />
             <End Role="SupplierProduct" EntitySet="SupplierProduct" />
           </AssociationSet>
-          <AssociationSet Name="FK_USER_RELATIONS_USERPROF" Association="Self.FK_USER_RELATIONS_USERPROF">
-            <End Role="UserProfile" EntitySet="UserProfile" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
           <AssociationSet Name="FK_USER_RELATIONS_USERTYPE" Association="Self.FK_USER_RELATIONS_USERTYPE">
             <End Role="UserType" EntitySet="UserType" />
             <End Role="User" EntitySet="User" />
@@ -1938,10 +1942,6 @@
           <AssociationSet Name="FK_USERPERM_RELATIONS_USER" Association="Self.FK_USERPERM_RELATIONS_USER">
             <End Role="User" EntitySet="User" />
             <End Role="UserPermission" EntitySet="UserPermission" />
-          </AssociationSet>
-          <AssociationSet Name="FK_USERPROF_RELATIONS_USER" Association="Self.FK_USERPROF_RELATIONS_USER">
-            <End Role="User" EntitySet="User" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -2051,6 +2051,7 @@
               <MappingFragment StoreEntitySet="PurchaseOrder">
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
                 <ScalarProperty Name="PurchaseOrderCode" ColumnName="PurchaseOrderCode" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
@@ -2151,6 +2152,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="StockManager">
+            <EntityTypeMapping TypeName="StockManagementModel.StockManager">
+              <MappingFragment StoreEntitySet="StockManager">
+                <ScalarProperty Name="StockManagerId" ColumnName="StockManagerId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="StockOut">
             <EntityTypeMapping TypeName="StockManagementModel.StockOut">
               <MappingFragment StoreEntitySet="StockOut">
@@ -2193,10 +2206,9 @@
             <EntityTypeMapping TypeName="StockManagementModel.Supplier">
               <MappingFragment StoreEntitySet="Supplier">
                 <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
-                <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
                 <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
                 <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
-                <ScalarProperty Name="Addpress" ColumnName="Addpress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
@@ -2221,30 +2233,8 @@
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
                 <ScalarProperty Name="StockId" ColumnName="StockId" />
-                <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="IsLock" ColumnName="IsLock" />
-                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserPermission">
-            <EntityTypeMapping TypeName="StockManagementModel.UserPermission">
-              <MappingFragment StoreEntitySet="UserPermission">
-                <ScalarProperty Name="UserPermissionID" ColumnName="UserPermissionID" />
-                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserProfile">
-            <EntityTypeMapping TypeName="StockManagementModel.UserProfile">
-              <MappingFragment StoreEntitySet="UserProfile">
-                <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -2255,7 +2245,17 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPermission">
+            <EntityTypeMapping TypeName="StockManagementModel.UserPermission">
+              <MappingFragment StoreEntitySet="UserPermission">
+                <ScalarProperty Name="UserPermissionID" ColumnName="UserPermissionID" />
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

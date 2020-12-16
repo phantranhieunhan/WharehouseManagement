@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvanceModel\StockInReturn.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Customer.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
@@ -120,6 +121,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockManagementModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="StockManager.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="StockOut.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
@@ -141,27 +145,25 @@
     <Compile Include="UserPermission.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserProfile.cs">
-      <DependentUpon>StockManagementModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserType.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="StockManagementModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StockManagementModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="StockManagementModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StockManagementModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="StockManagementModel.edmx.diagram">
       <DependentUpon>StockManagementModel.edmx</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="StockManagementModel.Context.tt">
@@ -174,12 +176,6 @@
       <DependentUpon>StockManagementModel.edmx</DependentUpon>
       <LastGenOutput>StockManagementModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdvanceModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

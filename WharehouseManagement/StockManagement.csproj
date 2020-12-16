@@ -139,9 +139,9 @@
       <Project>{6fca7220-f7a0-4473-9891-6144a9c4c7ce}</Project>
       <Name>StockManagement.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="StockManagement.Bussiness\StockManagement.Bussiness.csproj">
+    <ProjectReference Include="StockManagement.Bussiness\StockManagement.Business.csproj">
       <Project>{d24f820d-6da1-4bf0-9fc4-e1a02de0664f}</Project>
-      <Name>StockManagement.Bussiness</Name>
+      <Name>StockManagement.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

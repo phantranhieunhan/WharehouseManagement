@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using StockManagement.Data;
 using Scrypt;
 
-namespace StockManagement.Bussiness
+namespace StockManagement.Business
 {
     public class LoginBO
     {
@@ -54,6 +54,7 @@ namespace StockManagement.Bussiness
                 }
                 using(var db = new StockManagementEntities())
                 {
+
                     user.Password = PasswordHashed(user.Password);
                     db.User.Add(user);
                     db.SaveChanges();
@@ -62,7 +63,6 @@ namespace StockManagement.Bussiness
             }
             catch 
             {
-
                 throw;
             }
         }

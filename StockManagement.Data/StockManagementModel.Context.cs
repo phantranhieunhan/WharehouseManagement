@@ -41,6 +41,7 @@ namespace StockManagement.Data
         public virtual DbSet<StockIn> StockIn { get; set; }
         public virtual DbSet<StockInDetail> StockInDetail { get; set; }
         public virtual DbSet<StockInType> StockInType { get; set; }
+        public virtual DbSet<StockManager> StockManager { get; set; }
         public virtual DbSet<StockOut> StockOut { get; set; }
         public virtual DbSet<StockOutDetail> StockOutDetail { get; set; }
         public virtual DbSet<StockOutType> StockOutType { get; set; }
@@ -48,7 +49,6 @@ namespace StockManagement.Data
         public virtual DbSet<SupplierProduct> SupplierProduct { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserPermission> UserPermission { get; set; }
-        public virtual DbSet<UserProfile> UserProfile { get; set; }
         public virtual DbSet<UserType> UserType { get; set; }
     }
 }

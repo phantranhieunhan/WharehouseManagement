@@ -30,7 +30,7 @@ namespace StockManagement.Data
         public string CancelReason { get; set; }
         public string NoteGeneral { get; set; }
         public Nullable<decimal> TotalAmount { get; set; }
-        public string DiscountPercent { get; set; }
+        public Nullable<double> DiscountPercent { get; set; }
         public Nullable<bool> IsPay { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
     

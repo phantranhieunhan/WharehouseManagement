@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManagement", "StockManagement.csproj", "{586AAA84-6E7C-4D65-B4F1-0336DD12F52B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManagement.Bussiness", "StockManagement.Bussiness\StockManagement.Bussiness.csproj", "{D24F820D-6DA1-4BF0-9FC4-E1A02DE0664F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManagement.Business", "StockManagement.Bussiness\StockManagement.Business.csproj", "{D24F820D-6DA1-4BF0-9FC4-E1A02DE0664F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManagement.Data", "..\StockManagement.Data\StockManagement.Data.csproj", "{F0B3DB49-BE9F-4C9E-BDD8-356F6F7991CA}"
 EndProject
