@@ -1,6 +1,6 @@
-﻿namespace StockManagement.Form.Supplier
+﻿namespace StockManagement.Form.Authentication
 {
-    partial class nhacungcap
+    partial class Check
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Check
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "nhacungcap";
+            this.ClientSize = new System.Drawing.Size(692, 553);
+            this.Name = "Check";
+            this.Text = "Check";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -17,23 +17,24 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Supplier()
         {
-            this.StockOutReturn = new HashSet<StockOutReturn>();
+            this.PurchaseOrder = new HashSet<PurchaseOrder>();
+            this.StockOut = new HashSet<StockOut>();
             this.SupplierProduct = new HashSet<SupplierProduct>();
         }
     
         public System.Guid SupplierId { get; set; }
-        public Nullable<System.Guid> PurchaseOrderId { get; set; }
         public string SupplierCode { get; set; }
         public string SupplierName { get; set; }
-        public string Addpress { get; set; }
+        public string Address { get; set; }
         public string TaxCode { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<decimal> PhoneNumber { get; set; }
         public string Email { get; set; }
     
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOutReturn> StockOutReturn { get; set; }
+        public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StockOut> StockOut { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SupplierProduct> SupplierProduct { get; set; }
     }

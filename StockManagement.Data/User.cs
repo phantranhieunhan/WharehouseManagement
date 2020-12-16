@@ -20,21 +20,28 @@ namespace StockManagement.Data
             this.PurchaseOrder = new HashSet<PurchaseOrder>();
             this.SaleOrder = new HashSet<SaleOrder>();
             this.StockIn = new HashSet<StockIn>();
+            this.StockManager = new HashSet<StockManager>();
             this.StockOut = new HashSet<StockOut>();
             this.UserPermission = new HashSet<UserPermission>();
-            this.UserProfile1 = new HashSet<UserProfile>();
         }
     
         public System.Guid UserId { get; set; }
         public Nullable<System.Guid> UserTypeId { get; set; }
         public Nullable<System.Guid> StockId { get; set; }
-        public Nullable<System.Guid> UserProfileId { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string FullName { get; set; }
+        public string IdentityCard { get; set; }
+        public string Address { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
+        public string Email { get; set; }
+        public Nullable<int> Gender { get; set; }
+        public string Avatar { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
-        public Nullable<bool> IsLock { get; set; }
-        public Nullable<bool> IsAdmin { get; set; }
-        public Nullable<bool> IsActive { get; set; }
+        public Nullable<int> MaritalStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
@@ -44,12 +51,11 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockIn> StockIn { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StockManager> StockManager { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockOut> StockOut { get; set; }
-        public virtual UserProfile UserProfile { get; set; }
         public virtual UserType UserType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserPermission> UserPermission { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserProfile> UserProfile1 { get; set; }
     }
 }

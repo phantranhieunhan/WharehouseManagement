@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockManagement.Bussiness
+namespace StockManagement.Data
 {
-    public class Class1
+    public class StockInReturn:StockIn
     {
+        public StockInReturn()
+        {
+            
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace StockManagement.Form.Report
+﻿namespace StockManagement.Form.Employee
 {
-    partial class nbj
+    partial class RegisterAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.SuspendLayout();
             // 
-            // nbj
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(404, 139);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(75, 16);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "labelControl1";
+            // 
+            // RegisterAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 524);
-            this.Name = "nbj";
-            this.Text = "nbj";
+            this.ClientSize = new System.Drawing.Size(1012, 415);
+            this.Controls.Add(this.labelControl1);
+            this.Name = "RegisterAccount";
+            this.Text = "RegisterAccount";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

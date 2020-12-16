@@ -18,11 +18,11 @@ namespace StockManagement.Data
         public SaleOrder()
         {
             this.SaleOrderDetail = new HashSet<SaleOrderDetail>();
-            this.StockOutSaleAndDonate = new HashSet<StockOutSaleAndDonate>();
+            this.StockOut = new HashSet<StockOut>();
         }
     
         public System.Guid SaleOrderId { get; set; }
-        public Nullable<System.Guid> UserId { get; set; }
+        public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.Guid> CustomerId { get; set; }
         public string SaleOrderCode { get; set; }
         public string ShipAddress { get; set; }
@@ -30,7 +30,7 @@ namespace StockManagement.Data
         public string CancelReason { get; set; }
         public string NoteGeneral { get; set; }
         public Nullable<decimal> TotalAmount { get; set; }
-        public string DiscountPercent { get; set; }
+        public Nullable<double> DiscountPercent { get; set; }
         public Nullable<bool> IsPay { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
     
@@ -39,6 +39,6 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SaleOrderDetail> SaleOrderDetail { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOutSaleAndDonate> StockOutSaleAndDonate { get; set; }
+        public virtual ICollection<StockOut> StockOut { get; set; }
     }
 }

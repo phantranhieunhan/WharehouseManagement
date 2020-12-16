@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace StockManagement.Form.Report
+namespace StockManagement.Form.Employee
 {
-    public partial class nbj : DevExpress.XtraEditors.XtraForm
+    public partial class RegisterAccount : DevExpress.XtraEditors.XtraForm
     {
-        public nbj()
+        public RegisterAccount()
         {
             InitializeComponent();
         }

@@ -19,9 +19,10 @@ namespace StockManagement.Data
         {
             this.ProductOnStock = new HashSet<ProductOnStock>();
             this.StockIn = new HashSet<StockIn>();
-            this.StockInTransfer = new HashSet<StockInTransfer>();
-            this.StockOutTransfer = new HashSet<StockOutTransfer>();
+            this.StockIn1 = new HashSet<StockIn>();
+            this.StockManager = new HashSet<StockManager>();
             this.StockOut = new HashSet<StockOut>();
+            this.StockOut1 = new HashSet<StockOut>();
             this.User = new HashSet<User>();
         }
     
@@ -35,11 +36,13 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockIn> StockIn { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockInTransfer> StockInTransfer { get; set; }
+        public virtual ICollection<StockIn> StockIn1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOutTransfer> StockOutTransfer { get; set; }
+        public virtual ICollection<StockManager> StockManager { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockOut> StockOut { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StockOut> StockOut1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> User { get; set; }
     }

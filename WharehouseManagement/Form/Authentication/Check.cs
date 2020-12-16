@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace StockManagement.Form.Supplier
+namespace StockManagement.Form.Authentication
 {
-    public partial class nhacungcap : DevExpress.XtraEditors.XtraForm
+    public partial class Check : DevExpress.XtraEditors.XtraForm
     {
-        public nhacungcap()
+        public Check()
         {
             InitializeComponent();
         }
