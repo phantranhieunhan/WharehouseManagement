@@ -98,6 +98,24 @@
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\NewFolder1\AddOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewFolder1\AddOrders.Designer.cs">
+      <DependentUpon>AddOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewFolder1\ProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewFolder1\ProductDetail.Designer.cs">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewFolder1\SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewFolder1\SalesOrder.Designer.cs">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Stock\AddWareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +150,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewFolder1\AddOrders.resx">
+      <DependentUpon>AddOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewFolder1\ProductDetail.resx">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewFolder1\SalesOrder.resx">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\AddWareHouse.resx">
       <DependentUpon>AddWareHouse.cs</DependentUpon>
