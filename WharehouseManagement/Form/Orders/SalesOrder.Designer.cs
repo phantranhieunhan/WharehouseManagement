@@ -34,9 +34,9 @@
             this.txt_TuNgay = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.cbb_NguoiXuLy = new DevExpress.XtraEditors.LookUpEdit();
+            this.txt_TenNCC = new DevExpress.XtraEditors.TextEdit();
+            this.txt_MaDon = new DevExpress.XtraEditors.TextEdit();
             this.btn_TimKiemKH = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -64,9 +64,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenNCC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,9 +122,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lookUpEdit1);
-            this.groupBox1.Controls.Add(this.textEdit2);
-            this.groupBox1.Controls.Add(this.textEdit1);
+            this.groupBox1.Controls.Add(this.cbb_NguoiXuLy);
+            this.groupBox1.Controls.Add(this.txt_TenNCC);
+            this.groupBox1.Controls.Add(this.txt_MaDon);
             this.groupBox1.Controls.Add(this.btn_ThemKH);
             this.groupBox1.Controls.Add(this.txt_DenNgay);
             this.groupBox1.Controls.Add(this.label2);
@@ -138,31 +138,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // lookUpEdit1
+            // cbb_NguoiXuLy
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(548, 30);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(548, 30);
+            this.cbb_NguoiXuLy.Name = "cbb_NguoiXuLy";
+            this.cbb_NguoiXuLy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.NullText = "Người xử lý";
-            this.lookUpEdit1.Size = new System.Drawing.Size(254, 22);
-            this.lookUpEdit1.TabIndex = 11;
+            this.cbb_NguoiXuLy.Properties.NullText = "Người xử lý";
+            this.cbb_NguoiXuLy.Size = new System.Drawing.Size(254, 22);
+            this.cbb_NguoiXuLy.TabIndex = 11;
             // 
-            // textEdit2
+            // txt_TenNCC
             // 
-            this.textEdit2.EditValue = "Tên NCC";
-            this.textEdit2.Location = new System.Drawing.Point(297, 30);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(234, 22);
-            this.textEdit2.TabIndex = 10;
+            this.txt_TenNCC.EditValue = "Tên NCC";
+            this.txt_TenNCC.Location = new System.Drawing.Point(297, 30);
+            this.txt_TenNCC.Name = "txt_TenNCC";
+            this.txt_TenNCC.Size = new System.Drawing.Size(234, 22);
+            this.txt_TenNCC.TabIndex = 10;
             // 
-            // textEdit1
+            // txt_MaDon
             // 
-            this.textEdit1.EditValue = "Mã đơn ";
-            this.textEdit1.Location = new System.Drawing.Point(51, 27);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(240, 22);
-            this.textEdit1.TabIndex = 9;
+            this.txt_MaDon.EditValue = "Mã đơn ";
+            this.txt_MaDon.Location = new System.Drawing.Point(51, 27);
+            this.txt_MaDon.Name = "txt_MaDon";
+            this.txt_MaDon.Size = new System.Drawing.Size(240, 22);
+            this.txt_MaDon.TabIndex = 9;
             // 
             // btn_TimKiemKH
             // 
@@ -183,7 +183,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1079, 520);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "Đặt hàng mua hàng";
+            this.groupControl1.Text = "Đặt hàng bán hàng";
             // 
             // groupBox2
             // 
@@ -419,9 +419,9 @@
             this.Text = "SalesOrder";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenNCC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -444,9 +444,9 @@
         private System.Windows.Forms.DateTimePicker txt_TuNgay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LookUpEdit cbb_NguoiXuLy;
+        private DevExpress.XtraEditors.TextEdit txt_TenNCC;
+        private DevExpress.XtraEditors.TextEdit txt_MaDon;
         private System.Windows.Forms.Button btn_TimKiemKH;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.GroupBox groupBox2;
