@@ -104,17 +104,35 @@
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Orders\AddOrders.cs">
+    <Compile Include="Form\Orders\PurchaseOrderAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Orders\AddOrders.Designer.cs">
-      <DependentUpon>AddOrders.cs</DependentUpon>
+    <Compile Include="Form\Orders\PurchaseOrderAdd.Designer.cs">
+      <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Orders\ProductDetail.cs">
+    <Compile Include="Form\Orders\PurchaseOrderProductDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Orders\ProductDetail.Designer.cs">
-      <DependentUpon>ProductDetail.cs</DependentUpon>
+    <Compile Include="Form\Orders\PurchaseOrderProductDetail.Designer.cs">
+      <DependentUpon>PurchaseOrderProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderAdd.Designer.cs">
+      <DependentUpon>SalesOrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderProductDetail.Designer.cs">
+      <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Orders\SalesOrder.cs">
       <SubType>Form</SubType>
@@ -160,11 +178,20 @@
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Orders\AddOrders.resx">
-      <DependentUpon>AddOrders.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrderAdd.resx">
+      <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Orders\ProductDetail.resx">
-      <DependentUpon>ProductDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrderProductDetail.resx">
+      <DependentUpon>PurchaseOrderProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\SalesOrderAdd.resx">
+      <DependentUpon>SalesOrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\SalesOrderProductDetail.resx">
+      <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\SalesOrder.resx">
       <DependentUpon>SalesOrder.cs</DependentUpon>

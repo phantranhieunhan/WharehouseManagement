@@ -1,6 +1,6 @@
 ﻿namespace StockManagement.Form.Orders
 {
-    partial class ProductDetail
+    partial class SalesOrderProductDetail
     {
         /// <summary>
         /// Required designer variable.

@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Orders
 {
-    public partial class AddOrders : DevExpress.XtraEditors.XtraForm
+    public partial class PurchaseOrderAdd : DevExpress.XtraEditors.XtraForm
     {
-        public AddOrders()
+        public PurchaseOrderAdd()
         {
             InitializeComponent();
         }

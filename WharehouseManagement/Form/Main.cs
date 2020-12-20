@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StockManagement.Form
 {
-    public partial class FormMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+    public partial class Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        public FormMain()
+        public Main()
         {
             InitializeComponent();
         }

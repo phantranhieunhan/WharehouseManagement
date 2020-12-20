@@ -1,6 +1,6 @@
 ﻿namespace StockManagement.Form.Orders
 {
-    partial class AddOrders
+    partial class SalesOrderAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddOrders));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesOrderAdd));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -78,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 30);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 0;
@@ -86,7 +86,7 @@
             // 
             // txt_NCC
             // 
-            this.txt_NCC.Location = new System.Drawing.Point(136, 27);
+            this.txt_NCC.Location = new System.Drawing.Point(129, 6);
             this.txt_NCC.Name = "txt_NCC";
             this.txt_NCC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -97,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(430, 30);
+            this.label2.Location = new System.Drawing.Point(423, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
@@ -106,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 83);
+            this.label3.Location = new System.Drawing.Point(12, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 4;
@@ -115,14 +115,14 @@
             // txt_MaDon
             // 
             this.txt_MaDon.EditValue = "Mã đơn";
-            this.txt_MaDon.Location = new System.Drawing.Point(136, 78);
+            this.txt_MaDon.Location = new System.Drawing.Point(129, 57);
             this.txt_MaDon.Name = "txt_MaDon";
             this.txt_MaDon.Size = new System.Drawing.Size(195, 22);
             this.txt_MaDon.TabIndex = 5;
             // 
             // txt_KhoGiao
             // 
-            this.txt_KhoGiao.Location = new System.Drawing.Point(502, 27);
+            this.txt_KhoGiao.Location = new System.Drawing.Point(495, 6);
             this.txt_KhoGiao.Name = "txt_KhoGiao";
             this.txt_KhoGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -139,7 +139,7 @@
             this.groupBox1.Controls.Add(this.lookUpEdit1);
             this.groupBox1.Controls.Add(this.gridControl1);
             this.groupBox1.Controls.Add(this.textEdit1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 131);
+            this.groupBox1.Location = new System.Drawing.Point(15, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(809, 330);
             this.groupBox1.TabIndex = 7;
@@ -302,11 +302,11 @@
             this.textEdit1.Size = new System.Drawing.Size(50, 22);
             this.textEdit1.TabIndex = 2;
             // 
-            // AddOrders
+            // SalesOrderAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 473);
+            this.ClientSize = new System.Drawing.Size(849, 438);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_KhoGiao);
             this.Controls.Add(this.txt_MaDon);
@@ -314,7 +314,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_NCC);
             this.Controls.Add(this.label1);
-            this.Name = "AddOrders";
+            this.Name = "SalesOrderAdd";
             this.Text = "Thêm đơn hàng";
             ((System.ComponentModel.ISupportInitialize)(this.txt_NCC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).EndInit();
