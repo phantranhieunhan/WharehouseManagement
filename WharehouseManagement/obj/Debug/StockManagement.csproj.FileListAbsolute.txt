@@ -167,3 +167,9 @@ C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.DDemployee.resources
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Form_DataEmployee.resources
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.WareHouse.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.FormMain.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.AddWareHouse.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.InventoryManagement.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.AddOrders.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.ProductDetail.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrder.resources

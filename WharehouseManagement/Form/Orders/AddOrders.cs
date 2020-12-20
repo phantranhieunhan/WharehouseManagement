@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace StockManagement.Form.NewFolder1
+namespace StockManagement.Form.Orders
 {
-    public partial class ProductDetail : DevExpress.XtraEditors.XtraForm
+    public partial class AddOrders : DevExpress.XtraEditors.XtraForm
     {
-        public ProductDetail()
+        public AddOrders()
         {
             InitializeComponent();
         }

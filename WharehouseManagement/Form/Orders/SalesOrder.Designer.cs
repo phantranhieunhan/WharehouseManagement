@@ -1,4 +1,4 @@
-﻿namespace StockManagement.Form.NewFolder1
+﻿namespace StockManagement.Form.Orders
 {
     partial class SalesOrder
     {

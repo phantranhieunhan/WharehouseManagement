@@ -60,6 +60,7 @@
             this.btn_HopDongLD = new DevExpress.XtraBars.BarButtonItem();
             this.btn_BHXH = new DevExpress.XtraBars.BarButtonItem();
             this.btn_NhapChuyenKho1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,7 +96,6 @@
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -362,6 +362,12 @@
             this.btn_NhapChuyenKho1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_NhapChuyenKho1.ImageOptions.LargeImage")));
             this.btn_NhapChuyenKho1.Name = "btn_NhapChuyenKho1";
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 37;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -593,12 +599,6 @@
             this.barButtonItem23.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.ImageOptions.Image")));
             this.barButtonItem23.Name = "barButtonItem23";
             this.barButtonItem23.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "barButtonItem3";
-            this.barButtonItem3.Id = 37;
-            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // MainForm
             // 

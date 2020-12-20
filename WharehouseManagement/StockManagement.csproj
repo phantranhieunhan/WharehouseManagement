@@ -92,28 +92,34 @@
     <Compile Include="Form\Employee\Form_DataEmployee.Designer.cs">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\NewFolder1\AddOrders.cs">
+    <Compile Include="Form\Orders\AddOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\NewFolder1\AddOrders.Designer.cs">
+    <Compile Include="Form\Orders\AddOrders.Designer.cs">
       <DependentUpon>AddOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\NewFolder1\ProductDetail.cs">
+    <Compile Include="Form\Orders\ProductDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\NewFolder1\ProductDetail.Designer.cs">
+    <Compile Include="Form\Orders\ProductDetail.Designer.cs">
       <DependentUpon>ProductDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\NewFolder1\SalesOrder.cs">
+    <Compile Include="Form\Orders\SalesOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\NewFolder1\SalesOrder.Designer.cs">
+    <Compile Include="Form\Orders\SalesOrder.Designer.cs">
       <DependentUpon>SalesOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Stock\AddWareHouse.cs">
@@ -148,16 +154,19 @@
     <EmbeddedResource Include="Form\Employee\Form_DataEmployee.resx">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\NewFolder1\AddOrders.resx">
+    <EmbeddedResource Include="Form\Orders\AddOrders.resx">
       <DependentUpon>AddOrders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\NewFolder1\ProductDetail.resx">
+    <EmbeddedResource Include="Form\Orders\ProductDetail.resx">
       <DependentUpon>ProductDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\NewFolder1\SalesOrder.resx">
+    <EmbeddedResource Include="Form\Orders\SalesOrder.resx">
       <DependentUpon>SalesOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\AddWareHouse.resx">
