@@ -161,6 +161,9 @@
     <EmbeddedResource Include="Form\Employee\Form_DataEmployee.resx">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FluentDesignForm1.resx">
+      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
