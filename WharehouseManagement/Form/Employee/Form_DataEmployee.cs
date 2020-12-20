@@ -17,5 +17,6 @@ namespace StockManagement.Form.Employee
         {
             InitializeComponent();
         }
+
     }
 }

@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -41,6 +42,7 @@
     <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -48,15 +50,21 @@
     <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -84,11 +92,71 @@
     <Compile Include="Form\Employee\Form_DataEmployee.Designer.cs">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrderAdd.Designer.cs">
+      <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrderProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrderProductDetail.Designer.cs">
+      <DependentUpon>PurchaseOrderProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderAdd.Designer.cs">
+      <DependentUpon>SalesOrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrderProductDetail.Designer.cs">
+      <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\SalesOrder.Designer.cs">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Stock\AddWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Stock\AddWareHouse.Designer.cs">
+      <DependentUpon>AddWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Stock\InventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Stock\InventoryManagement.Designer.cs">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Stock\WareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Stock\WareHouse.Designer.cs">
+      <DependentUpon>WareHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Stock\XtraUserControl1.cs">
       <SubType>UserControl</SubType>
@@ -104,8 +172,38 @@
     <EmbeddedResource Include="Form\Employee\Form_DataEmployee.resx">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrderAdd.resx">
+      <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrderProductDetail.resx">
+      <DependentUpon>PurchaseOrderProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\SalesOrderAdd.resx">
+      <DependentUpon>SalesOrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\SalesOrderProductDetail.resx">
+      <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\SalesOrder.resx">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Stock\AddWareHouse.resx">
+      <DependentUpon>AddWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Stock\InventoryManagement.resx">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Stock\WareHouse.resx">
+      <DependentUpon>WareHouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
