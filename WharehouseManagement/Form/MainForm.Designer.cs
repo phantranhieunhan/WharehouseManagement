@@ -137,7 +137,8 @@
             this.btn_HopDongLD,
             this.btn_BHXH,
             this.btn_NhapChuyenKho1,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.ribbon.SearchEditItem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 38;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
@@ -154,7 +155,7 @@
             this.ribbon.QuickToolbarItemLinks.Add(this.barButtonItem10);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageEdit1});
-            this.ribbon.Size = new System.Drawing.Size(1225, 180);
+            this.ribbon.Size = new System.Drawing.Size(1225, 193);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
@@ -537,10 +538,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 718);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 717);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1225, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1225, 28);
             // 
             // imageCollection1
             // 

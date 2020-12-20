@@ -20,12 +20,15 @@ namespace StockManagement.Form
 
         private void btn_SaleOrder_Click(object sender, EventArgs e)
         {
-            SalesOrder saleOrder = new SalesOrder();
-            saleOrder.MdiParent = this;
-            saleOrder.Show();
+            fluentDesignFormContainer1.Controls.Add(new SalesOrder() { Dock = DockStyle.Fill });
         }
 
         private void container_Click(object sender, EventArgs e)
+        {
+            //flu
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
