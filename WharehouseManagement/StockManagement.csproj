@@ -93,6 +93,12 @@
     <Compile Include="Form\Employee\Form_DataEmployee.Designer.cs">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FluentDesignForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FluentDesignForm1.Designer.cs">
+      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     <EmbeddedResource Include="Form\Employee\Form_DataEmployee.resx">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FluentDesignForm1.resx">
+      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,7 +237,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\Report\" />
