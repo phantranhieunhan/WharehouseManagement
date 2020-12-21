@@ -1,6 +1,6 @@
 ﻿namespace StockManagement.Form.Orders
 {
-    partial class SalesOrder
+    partial class SaleOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -409,14 +409,13 @@
             this.tabPage4.Text = "Đơn bị hủy";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // SalesOrder
+            // SaleOrder2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 535);
             this.Controls.Add(this.groupControl1);
-            this.Name = "SalesOrder";
-            this.Text = "SalesOrder";
+            this.Name = "SaleOrder2";
+            this.Size = new System.Drawing.Size(1103, 535);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).EndInit();

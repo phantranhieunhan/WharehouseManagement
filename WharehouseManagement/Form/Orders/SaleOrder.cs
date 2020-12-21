@@ -9,13 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace StockManagement.Form.Stock
+namespace StockManagement.Form.Orders
 {
-    public partial class InventoryManagement : DevExpress.XtraEditors.XtraUserControl
+    public partial class SaleOrder : DevExpress.XtraEditors.XtraUserControl
     {
-        public InventoryManagement()
+        public SaleOrder()
         {
-            InitializeComponent();
+            InitializeComponent();//nhấn f12
+        }
+
+        private void SaleOrder2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

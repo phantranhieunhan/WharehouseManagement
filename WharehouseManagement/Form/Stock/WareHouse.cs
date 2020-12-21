@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,12 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Stock
 {
-    public partial class WareHouse : DevExpress.XtraEditors.XtraForm
+    public partial class WareHouse : DevExpress.XtraEditors.XtraUserControl
     {
         public WareHouse()
         {
             InitializeComponent();
         }
-
     }
 }
