@@ -23,7 +23,8 @@ namespace StockManagement.Form
         {
             fluentDesignFormContainer1.Controls.Add(new XtraUserControl1() { Dock = DockStyle.Fill });
         }
-
+        
+      
         private void container_Click(object sender, EventArgs e)
         {
             //flu
@@ -34,7 +35,18 @@ namespace StockManagement.Form
 
         }
 
-        private void fluentDesignFormContainer1_Click(object sender, EventArgs e)
+        private void btn_InventoryManagement_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new InventoryManagement() { Dock = DockStyle.Fill });
+
+        }
+
+        private void btn_WarehouseList_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new WareHouse() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_EmployeeList_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,11 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Orders
 {
-    public partial class PurchaseOrder : DevExpress.XtraEditors.XtraForm
+    public partial class PurchaseOrder : DevExpress.XtraEditors.XtraUserControl
     {
         public PurchaseOrder()
         {
-            InitializeComponent();
+            InitializeComponent();//nhấn f12
         }
     }
 }
