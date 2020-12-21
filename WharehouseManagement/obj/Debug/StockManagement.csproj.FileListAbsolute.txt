@@ -236,9 +236,6 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csprojResolveAss
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.DDemployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Form_DataEmployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.FormMain.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.MainForm.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.AddOrders.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.ProductDetail.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrder.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.AddWareHouse.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.InventoryManagement.resources
@@ -248,3 +245,10 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.GenerateR
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe.licenses
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.pdb
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.FluentDesignForm1.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderAdd.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderProductDetail.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderAdd.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderProductDetail.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrder.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.XtraUserControl1.resources

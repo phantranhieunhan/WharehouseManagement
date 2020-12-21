@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using StockManagement.Form.Orders;
+using StockManagement.Form.Stock;
 
 namespace StockManagement.Form
 {
@@ -20,7 +21,7 @@ namespace StockManagement.Form
 
         private void btn_SaleOrder_Click(object sender, EventArgs e)
         {
-            fluentDesignFormContainer1.Controls.Add(new SalesOrder() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new XtraUserControl1() { Dock = DockStyle.Fill });
         }
 
         private void container_Click(object sender, EventArgs e)
@@ -29,6 +30,11 @@ namespace StockManagement.Form
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fluentDesignFormContainer1_Click(object sender, EventArgs e)
         {
 
         }
