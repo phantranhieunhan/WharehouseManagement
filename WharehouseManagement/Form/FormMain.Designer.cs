@@ -54,6 +54,8 @@
             this.btn_PurchaseOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.btn_CustomerGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_CustomerList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -118,6 +120,10 @@
             // 
             // btn_Customer
             // 
+            this.btn_Customer.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btn_CustomerGroup,
+            this.btn_CustomerList});
+            this.btn_Customer.Expanded = true;
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Text = "Khách hàng";
             // 
@@ -279,6 +285,18 @@
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 586);
             this.fluentDesignFormContainer1.TabIndex = 3;
             // 
+            // btn_CustomerGroup
+            // 
+            this.btn_CustomerGroup.Name = "btn_CustomerGroup";
+            this.btn_CustomerGroup.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_CustomerGroup.Text = "Nhóm khách hàng";
+            // 
+            // btn_CustomerList
+            // 
+            this.btn_CustomerList.Name = "btn_CustomerList";
+            this.btn_CustomerList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_CustomerList.Text = "Danh sách khách hàng";
+            // 
             // FormMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
@@ -331,5 +349,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Decentralization;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerGroup;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerList;
     }
 }

@@ -11,11 +11,16 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Stock
 {
-    public partial class WareHouse : DevExpress.XtraEditors.XtraUserControl
+    public partial class XtraUserControl2 : DevExpress.XtraEditors.XtraUserControl
     {
-        public WareHouse()
+        public XtraUserControl2()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
