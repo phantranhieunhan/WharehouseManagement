@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Stock
 {
-    public partial class XtraUserControl1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class WareHouse : DevExpress.XtraEditors.XtraUserControl
     {
-        public XtraUserControl1()
+        public WareHouse()
         {
             InitializeComponent();
         }

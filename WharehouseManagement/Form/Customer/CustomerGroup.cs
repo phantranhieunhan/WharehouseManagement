@@ -17,5 +17,35 @@ namespace StockManagement.Form
         {
             InitializeComponent();
         }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_MaNhom_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

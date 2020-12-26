@@ -38,6 +38,8 @@
             this.btn_Decentralization = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Report = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Customer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_CustomerGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_CustomerList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Supplier = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_SupplierList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_SupplierProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -54,8 +56,6 @@
             this.btn_PurchaseOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.btn_CustomerGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_CustomerList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -106,12 +106,14 @@
             this.btn_TypeEmployee.Name = "btn_TypeEmployee";
             this.btn_TypeEmployee.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_TypeEmployee.Text = "Loại nhân viên";
+            this.btn_TypeEmployee.Click += new System.EventHandler(this.btn_TypeEmployee_Click);
             // 
             // btn_Decentralization
             // 
             this.btn_Decentralization.Name = "btn_Decentralization";
             this.btn_Decentralization.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_Decentralization.Text = "Phân quyền";
+            this.btn_Decentralization.Click += new System.EventHandler(this.btn_Decentralization_Click);
             // 
             // btn_Report
             // 
@@ -126,6 +128,20 @@
             this.btn_Customer.Expanded = true;
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Text = "Khách hàng";
+            // 
+            // btn_CustomerGroup
+            // 
+            this.btn_CustomerGroup.Name = "btn_CustomerGroup";
+            this.btn_CustomerGroup.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_CustomerGroup.Text = "Nhóm khách hàng";
+            this.btn_CustomerGroup.Click += new System.EventHandler(this.btn_CustomerGroup_Click);
+            // 
+            // btn_CustomerList
+            // 
+            this.btn_CustomerList.Name = "btn_CustomerList";
+            this.btn_CustomerList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_CustomerList.Text = "Danh sách khách hàng";
+            this.btn_CustomerList.Click += new System.EventHandler(this.btn_CustomerList_Click);
             // 
             // btn_Supplier
             // 
@@ -194,11 +210,13 @@
             // 
             // btn_StockIn
             // 
+            this.btn_StockIn.Expanded = true;
             this.btn_StockIn.Name = "btn_StockIn";
             this.btn_StockIn.Text = "Nhập kho";
             // 
             // btn_StockOut
             // 
+            this.btn_StockOut.Expanded = true;
             this.btn_StockOut.Name = "btn_StockOut";
             this.btn_StockOut.Text = "Xuất kho";
             // 
@@ -284,18 +302,6 @@
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 586);
             this.fluentDesignFormContainer1.TabIndex = 3;
-            // 
-            // btn_CustomerGroup
-            // 
-            this.btn_CustomerGroup.Name = "btn_CustomerGroup";
-            this.btn_CustomerGroup.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_CustomerGroup.Text = "Nhóm khách hàng";
-            // 
-            // btn_CustomerList
-            // 
-            this.btn_CustomerList.Name = "btn_CustomerList";
-            this.btn_CustomerList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_CustomerList.Text = "Danh sách khách hàng";
             // 
             // FormMain
             // 
