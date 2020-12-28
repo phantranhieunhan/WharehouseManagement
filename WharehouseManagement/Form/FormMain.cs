@@ -9,6 +9,8 @@ using System.Text;
 using System.Windows.Forms;
 using StockManagement.Form.Orders;
 using StockManagement.Form.Stock;
+using StockManagement.Form.Customer;
+using StockManagement.Form.Employee;
 
 namespace StockManagement.Form
 {
@@ -21,7 +23,7 @@ namespace StockManagement.Form
 
         private void btn_SaleOrder_Click(object sender, EventArgs e)
         {
-            fluentDesignFormContainer1.Controls.Add(new XtraUserControl1() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new SaleOrder() { Dock = DockStyle.Fill });
         }
         
       
@@ -43,12 +45,32 @@ namespace StockManagement.Form
 
         private void btn_WarehouseList_Click(object sender, EventArgs e)
         {
-            fluentDesignFormContainer1.Controls.Add(new WareHouse() { Dock = DockStyle.Fill });
+           // fluentDesignFormContainer1.Controls.Add(new WareHouse() { Dock = DockStyle.Fill });
         }
 
         private void btn_EmployeeList_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Add(new EmployeeList() { Dock = DockStyle.Fill });
+        }
 
+        private void btn_CustomerGroup_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new CustomerGroup() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_CustomerList_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new CustomerList() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_Decentralization_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new Decentralization() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_TypeEmployee_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new TypeEmployee() { Dock = DockStyle.Fill });
         }
     }
 }

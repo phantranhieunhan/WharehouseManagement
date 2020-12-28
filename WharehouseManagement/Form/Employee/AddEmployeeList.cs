@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace StockManagement.Form.Employee
 {
-    public partial class EmployeeList : DevExpress.XtraEditors.XtraUserControl
+    public partial class AddEmployeeList : DevExpress.XtraEditors.XtraForm
     {
-        public EmployeeList()
+        public AddEmployeeList()
         {
             InitializeComponent();
         }

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace StockManagement.Form.Stock
+namespace StockManagement.Form.Customer
 {
-    public partial class XtraUserControl1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class CustomerList : DevExpress.XtraEditors.XtraUserControl
     {
-        public XtraUserControl1()
+        public CustomerList()
         {
             InitializeComponent();
         }
