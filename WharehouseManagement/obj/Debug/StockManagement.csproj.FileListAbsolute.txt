@@ -1,0 +1,278 @@
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\StockManagement.exe.config
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.exe
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.pdb
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\StockManagement.exe
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\StockManagement.pdb
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Properties.Resources.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.csproj.GenerateResource.Cache
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.exe.licenses
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.DDemployee.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Form_DataEmployee.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.FormMain.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.AddWareHouse.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.InventoryManagement.resources
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\StockManagement.exe.config
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\StockManagement.exe
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\StockManagement.pdb
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.CodeParser.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Data.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.DataAccess.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Images.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Office.v20.1.Core.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Printing.v20.1.Core.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Utils.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Xpo.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraBars.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraEditors.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraGrid.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraLayout.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraPrinting.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.Core.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Data.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.DataAccess.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Office.v20.1.Core.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Printing.v20.1.Core.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.RichEdit.v20.1.Core.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Sparkline.v20.1.Core.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Utils.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Xpo.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraBars.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraEditors.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraGrid.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraLayout.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.Core.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.DataAccess.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.DataAccess.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.DataAccess.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.DataAccess.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Office.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Printing.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Printing.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Printing.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Printing.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.RichEdit.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Sparkline.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Utils.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Xpo.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Xpo.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Xpo.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Xpo.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraEditors.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraEditors.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraEditors.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraEditors.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraGrid.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraGrid.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraGrid.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraGrid.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraLayout.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraLayout.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraLayout.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraLayout.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraPrinting.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraScheduler.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraScheduler.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraScheduler.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraScheduler.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraTreeList.v20.1.resources.dll
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csprojResolveAssemblyReference.cache
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.DDemployee.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Form_DataEmployee.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.FormMain.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.AddWareHouse.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.InventoryManagement.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.WareHouse.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Properties.Resources.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.GenerateResource.Cache
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe.licenses
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.exe
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.pdb
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderAdd.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderProductDetail.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderAdd.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderProductDetail.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.CodeParser.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Data.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.DataAccess.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Images.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Office.v20.1.Core.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Printing.v20.1.Core.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.RichEdit.v20.1.Core.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Sparkline.v20.1.Core.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Utils.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Xpo.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraBars.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraEditors.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraGrid.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraLayout.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraPrinting.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.Core.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraTreeList.v20.1.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Data.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.DataAccess.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Office.v20.1.Core.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Printing.v20.1.Core.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.RichEdit.v20.1.Core.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Sparkline.v20.1.Core.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Utils.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Xpo.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraBars.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraEditors.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraGrid.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraLayout.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraScheduler.v20.1.Core.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\DevExpress.XtraTreeList.v20.1.xml
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.DataAccess.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.DataAccess.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.DataAccess.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.DataAccess.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Office.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Printing.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Printing.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Printing.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Printing.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.RichEdit.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Sparkline.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Utils.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Xpo.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Xpo.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Xpo.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Xpo.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraBars.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraEditors.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraEditors.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraEditors.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraEditors.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraGrid.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraGrid.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraGrid.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraGrid.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraLayout.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraLayout.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraLayout.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraLayout.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraPrinting.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraScheduler.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraScheduler.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraScheduler.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraScheduler.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraScheduler.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\de\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\es\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ja\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\bin\Debug\ru\DevExpress.XtraTreeList.v20.1.resources.dll
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SaleOrder.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.csprojAssemblyReference.cache
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddCustomerList.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddressCustomerList.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.CustomerGroup.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.CustomerList.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.DetailCustomerGroup.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.csproj.CoreCompileInputs.cache
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.csproj.CopyComplete
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddCustomerGroup.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Decentralization.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.WareHouse.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.EmployeeList.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.TypeEmployee.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.AddEmployeeList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddCustomerGroup.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddCustomerList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddressCustomerList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.CustomerGroup.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.CustomerList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.DetailCustomerGroup.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.AddEmployeeList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Decentralization.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.EmployeeList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.TypeEmployee.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderAdd.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderProductDetail.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SaleOrder.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderAdd.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderProductDetail.resources
