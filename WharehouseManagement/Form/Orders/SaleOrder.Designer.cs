@@ -87,6 +87,7 @@
             this.btn_ThemKH.TabIndex = 8;
             this.btn_ThemKH.Text = "Thêm";
             this.btn_ThemKH.UseVisualStyleBackColor = true;
+            this.btn_ThemKH.Click += new System.EventHandler(this.btn_ThemKH_Click);
             // 
             // txt_DenNgay
             // 
@@ -409,12 +410,12 @@
             this.tabPage4.Text = "Đơn bị hủy";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // SaleOrder2
+            // SaleOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
-            this.Name = "SaleOrder2";
+            this.Name = "SaleOrder";
             this.Size = new System.Drawing.Size(1103, 535);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

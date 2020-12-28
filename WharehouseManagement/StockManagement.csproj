@@ -195,6 +195,30 @@
     <Compile Include="Form\Orders\SalesOrderProductDetail.Designer.cs">
       <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\StockIn\AddStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockIn\AddStockIn.Designer.cs">
+      <DependentUpon>AddStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockIn\StockIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\StockIn\StockIn.Designer.cs">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockOut\AddStockOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockOut\AddStockOut.Designer.cs">
+      <DependentUpon>AddStockOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockOut\StockOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\StockOut\StockOut.Designer.cs">
+      <DependentUpon>StockOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Stock\AddWareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +293,18 @@
     <EmbeddedResource Include="Form\Orders\SalesOrderProductDetail.resx">
       <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockIn\AddStockIn.resx">
+      <DependentUpon>AddStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockIn\StockIn.resx">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockOut\AddStockOut.resx">
+      <DependentUpon>AddStockOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockOut\StockOut.resx">
+      <DependentUpon>StockOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\AddWareHouse.resx">
       <DependentUpon>AddWareHouse.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,8 +343,6 @@
   <ItemGroup>
     <Folder Include="Form\Product\" />
     <Folder Include="Form\Report\" />
-    <Folder Include="Form\StockIn\" />
-    <Folder Include="Form\StockOut\" />
     <Folder Include="Form\Supplier\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

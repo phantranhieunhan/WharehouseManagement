@@ -11,6 +11,8 @@ using StockManagement.Form.Orders;
 using StockManagement.Form.Stock;
 using StockManagement.Form.Customer;
 using StockManagement.Form.Employee;
+using StockManagement.Form.StockIn;
+using StockManagement.Form.StockOut;
 
 namespace StockManagement.Form
 {
@@ -71,6 +73,16 @@ namespace StockManagement.Form
         private void btn_TypeEmployee_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Add(new TypeEmployee() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_StockOut_Click(object sender, EventArgs e)
+        {
+          //  fluentDesignFormContainer1.Controls.Add(new StockOut() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_StockIn_Click(object sender, EventArgs e)
+        {
+          //  fluentDesignFormContainer1.Controls.Add(new StockIn() { Dock = DockStyle.Fill });
         }
     }
 }
