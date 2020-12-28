@@ -126,10 +126,6 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csprojResolveAss
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.DDemployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Form_DataEmployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.FormMain.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.MainForm.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.AddOrders.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.ProductDetail.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrder.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.AddWareHouse.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.InventoryManagement.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.WareHouse.resources
@@ -265,3 +261,18 @@ C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.EmployeeList.resources
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.TypeEmployee.resources
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.AddEmployeeList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddCustomerGroup.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddCustomerList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.AddressCustomerList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.CustomerGroup.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.CustomerList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.DetailCustomerGroup.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.AddEmployeeList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Decentralization.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.EmployeeList.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.TypeEmployee.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderAdd.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderProductDetail.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SaleOrder.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderAdd.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.SalesOrderProductDetail.resources
