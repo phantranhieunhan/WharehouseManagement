@@ -11,22 +11,16 @@ using System.Windows.Forms;
 
 namespace StockManagement.Form.StockOut
 {
-    public partial class StockOut : DevExpress.XtraEditors.XtraUserControl
+    public partial class RequestStockIn : DevExpress.XtraEditors.XtraForm
     {
-        public StockOut()
+        public RequestStockIn()
         {
             InitializeComponent();
         }
 
-        private void gC_DangXuLy_Click(object sender, EventArgs e)
+        private void gridControl1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_Them_Click(object sender, EventArgs e)
-        {
-            AddStockOut f = new AddStockOut();
-            f.Show();
         }
     }
 }

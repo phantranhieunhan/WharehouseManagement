@@ -253,6 +253,7 @@
             this.btn_PurchaseOrder.Name = "btn_PurchaseOrder";
             this.btn_PurchaseOrder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_PurchaseOrder.Text = "Đặt hàng mua hàng";
+            this.btn_PurchaseOrder.Click += new System.EventHandler(this.btn_PurchaseOrder_Click);
             // 
             // accordionControl1
             // 

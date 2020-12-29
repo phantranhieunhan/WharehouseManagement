@@ -17,5 +17,11 @@ namespace StockManagement.Form.Orders
         {
             InitializeComponent();
         }
+
+        private void btn_Info_EditValueChanged(object sender, EventArgs e)
+        {
+            PurchaseOrderProductDetail f = new PurchaseOrderProductDetail();
+            f.Show();
+        }
     }
 }

@@ -32,21 +32,7 @@ namespace StockManagement.Form.StockIn
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gC_DSNhapKho = new System.Windows.Forms.TabControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbb_DenNgay = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbb_TuNgay = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.cbb_NguoiXuLy = new DevExpress.XtraEditors.LookUpEdit();
-            this.txt_TenNCC = new DevExpress.XtraEditors.TextEdit();
-            this.txt_MaPhieu = new DevExpress.XtraEditors.TextEdit();
             this.tab_PhieuMoi = new System.Windows.Forms.TabPage();
-            this.tab_DangKiemTra = new System.Windows.Forms.TabPage();
-            this.tab_HoanThanh = new System.Windows.Forms.TabPage();
-            this.tab_PhieuBiLoiHang = new System.Windows.Forms.TabPage();
-            this.tab_DonBiHuy = new System.Windows.Forms.TabPage();
             this.gC_PhieuMoi = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PurchaseOrderId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,6 +45,7 @@ namespace StockManagement.Form.StockIn
             this.btn_Action = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_HuyPhieu = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btn_TienHanhXuLy = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tab_DangKiemTra = new System.Windows.Forms.TabPage();
             this.gC_DangKiemTra = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -71,6 +58,7 @@ namespace StockManagement.Form.StockIn
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tab_HoanThanh = new System.Windows.Forms.TabPage();
             this.gC_HoanThanh = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -83,6 +71,7 @@ namespace StockManagement.Form.StockIn
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tab_PhieuBiLoiHang = new System.Windows.Forms.TabPage();
             this.gC_PhieuBiLoiHang = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -95,6 +84,7 @@ namespace StockManagement.Form.StockIn
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tab_DonBiHuy = new System.Windows.Forms.TabPage();
             this.gC_DonBiHuy = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -107,39 +97,49 @@ namespace StockManagement.Form.StockIn
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_DenNgay = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbb_TuNgay = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.cbb_NguoiXuLy = new DevExpress.XtraEditors.LookUpEdit();
+            this.txt_TenNCC = new DevExpress.XtraEditors.TextEdit();
+            this.txt_MaPhieu = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gC_DSNhapKho.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_TenNCC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaPhieu.Properties)).BeginInit();
             this.tab_PhieuMoi.SuspendLayout();
-            this.tab_DangKiemTra.SuspendLayout();
-            this.tab_HoanThanh.SuspendLayout();
-            this.tab_PhieuBiLoiHang.SuspendLayout();
-            this.tab_DonBiHuy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_PhieuMoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_HuyPhieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_TienHanhXuLy)).BeginInit();
+            this.tab_DangKiemTra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DangKiemTra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
+            this.tab_HoanThanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_HoanThanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit4)).BeginInit();
+            this.tab_PhieuBiLoiHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_PhieuBiLoiHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).BeginInit();
+            this.tab_DonBiHuy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DonBiHuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenNCC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaPhieu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -176,100 +176,6 @@ namespace StockManagement.Form.StockIn
             this.gC_DSNhapKho.Size = new System.Drawing.Size(1097, 423);
             this.gC_DSNhapKho.TabIndex = 0;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbb_DenNgay);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbb_TuNgay);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.btn_TimKiem);
-            this.groupBox1.Controls.Add(this.cbb_NguoiXuLy);
-            this.groupBox1.Controls.Add(this.txt_TenNCC);
-            this.groupBox1.Controls.Add(this.txt_MaPhieu);
-            this.groupBox1.Location = new System.Drawing.Point(3, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1118, 137);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm";
-            // 
-            // cbb_DenNgay
-            // 
-            this.cbb_DenNgay.Location = new System.Drawing.Point(452, 88);
-            this.cbb_DenNgay.Name = "cbb_DenNgay";
-            this.cbb_DenNgay.Size = new System.Drawing.Size(200, 23);
-            this.cbb_DenNgay.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(373, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Đến ngày:";
-            // 
-            // cbb_TuNgay
-            // 
-            this.cbb_TuNgay.Location = new System.Drawing.Point(108, 88);
-            this.cbb_TuNgay.Name = "cbb_TuNgay";
-            this.cbb_TuNgay.Size = new System.Drawing.Size(200, 23);
-            this.cbb_TuNgay.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Từ ngày:";
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Location = new System.Drawing.Point(992, 83);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 23);
-            this.btn_Them.TabIndex = 4;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.Location = new System.Drawing.Point(992, 40);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btn_TimKiem.TabIndex = 3;
-            this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            // 
-            // cbb_NguoiXuLy
-            // 
-            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(547, 37);
-            this.cbb_NguoiXuLy.Name = "cbb_NguoiXuLy";
-            this.cbb_NguoiXuLy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_NguoiXuLy.Properties.NullText = "Người xử lý";
-            this.cbb_NguoiXuLy.Size = new System.Drawing.Size(216, 22);
-            this.cbb_NguoiXuLy.TabIndex = 2;
-            // 
-            // txt_TenNCC
-            // 
-            this.txt_TenNCC.Location = new System.Drawing.Point(295, 37);
-            this.txt_TenNCC.Name = "txt_TenNCC";
-            this.txt_TenNCC.Properties.NullText = "Tên NCC";
-            this.txt_TenNCC.Size = new System.Drawing.Size(236, 22);
-            this.txt_TenNCC.TabIndex = 1;
-            // 
-            // txt_MaPhieu
-            // 
-            this.txt_MaPhieu.Location = new System.Drawing.Point(39, 37);
-            this.txt_MaPhieu.Name = "txt_MaPhieu";
-            this.txt_MaPhieu.Properties.NullText = "Mã phiếu";
-            this.txt_MaPhieu.Size = new System.Drawing.Size(236, 22);
-            this.txt_MaPhieu.TabIndex = 0;
-            // 
             // tab_PhieuMoi
             // 
             this.tab_PhieuMoi.Controls.Add(this.gC_PhieuMoi);
@@ -280,50 +186,6 @@ namespace StockManagement.Form.StockIn
             this.tab_PhieuMoi.TabIndex = 0;
             this.tab_PhieuMoi.Text = "Phiếu mới";
             this.tab_PhieuMoi.UseVisualStyleBackColor = true;
-            // 
-            // tab_DangKiemTra
-            // 
-            this.tab_DangKiemTra.Controls.Add(this.gC_DangKiemTra);
-            this.tab_DangKiemTra.Location = new System.Drawing.Point(4, 25);
-            this.tab_DangKiemTra.Name = "tab_DangKiemTra";
-            this.tab_DangKiemTra.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DangKiemTra.Size = new System.Drawing.Size(1089, 394);
-            this.tab_DangKiemTra.TabIndex = 1;
-            this.tab_DangKiemTra.Text = "Đang kiểm tra";
-            this.tab_DangKiemTra.UseVisualStyleBackColor = true;
-            // 
-            // tab_HoanThanh
-            // 
-            this.tab_HoanThanh.Controls.Add(this.gC_HoanThanh);
-            this.tab_HoanThanh.Location = new System.Drawing.Point(4, 25);
-            this.tab_HoanThanh.Name = "tab_HoanThanh";
-            this.tab_HoanThanh.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_HoanThanh.Size = new System.Drawing.Size(1089, 394);
-            this.tab_HoanThanh.TabIndex = 2;
-            this.tab_HoanThanh.Text = "Hoàn thành";
-            this.tab_HoanThanh.UseVisualStyleBackColor = true;
-            // 
-            // tab_PhieuBiLoiHang
-            // 
-            this.tab_PhieuBiLoiHang.Controls.Add(this.gC_PhieuBiLoiHang);
-            this.tab_PhieuBiLoiHang.Location = new System.Drawing.Point(4, 25);
-            this.tab_PhieuBiLoiHang.Name = "tab_PhieuBiLoiHang";
-            this.tab_PhieuBiLoiHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PhieuBiLoiHang.Size = new System.Drawing.Size(1089, 394);
-            this.tab_PhieuBiLoiHang.TabIndex = 3;
-            this.tab_PhieuBiLoiHang.Text = "Phiếu bị lỗi hàng";
-            this.tab_PhieuBiLoiHang.UseVisualStyleBackColor = true;
-            // 
-            // tab_DonBiHuy
-            // 
-            this.tab_DonBiHuy.Controls.Add(this.gC_DonBiHuy);
-            this.tab_DonBiHuy.Location = new System.Drawing.Point(4, 25);
-            this.tab_DonBiHuy.Name = "tab_DonBiHuy";
-            this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DonBiHuy.Size = new System.Drawing.Size(1089, 394);
-            this.tab_DonBiHuy.TabIndex = 4;
-            this.tab_DonBiHuy.Text = "Đơn bị hủy";
-            this.tab_DonBiHuy.UseVisualStyleBackColor = true;
             // 
             // gC_PhieuMoi
             // 
@@ -443,6 +305,17 @@ namespace StockManagement.Form.StockIn
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btn_TienHanhXuLy.Name = "btn_TienHanhXuLy";
             // 
+            // tab_DangKiemTra
+            // 
+            this.tab_DangKiemTra.Controls.Add(this.gC_DangKiemTra);
+            this.tab_DangKiemTra.Location = new System.Drawing.Point(4, 25);
+            this.tab_DangKiemTra.Name = "tab_DangKiemTra";
+            this.tab_DangKiemTra.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_DangKiemTra.Size = new System.Drawing.Size(1089, 394);
+            this.tab_DangKiemTra.TabIndex = 1;
+            this.tab_DangKiemTra.Text = "Đang kiểm tra";
+            this.tab_DangKiemTra.UseVisualStyleBackColor = true;
+            // 
             // gC_DangKiemTra
             // 
             this.gC_DangKiemTra.Location = new System.Drawing.Point(0, 6);
@@ -560,6 +433,17 @@ namespace StockManagement.Form.StockIn
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
+            // 
+            // tab_HoanThanh
+            // 
+            this.tab_HoanThanh.Controls.Add(this.gC_HoanThanh);
+            this.tab_HoanThanh.Location = new System.Drawing.Point(4, 25);
+            this.tab_HoanThanh.Name = "tab_HoanThanh";
+            this.tab_HoanThanh.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_HoanThanh.Size = new System.Drawing.Size(1089, 394);
+            this.tab_HoanThanh.TabIndex = 2;
+            this.tab_HoanThanh.Text = "Hoàn thành";
+            this.tab_HoanThanh.UseVisualStyleBackColor = true;
             // 
             // gC_HoanThanh
             // 
@@ -679,6 +563,17 @@ namespace StockManagement.Form.StockIn
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit4.Name = "repositoryItemButtonEdit4";
             // 
+            // tab_PhieuBiLoiHang
+            // 
+            this.tab_PhieuBiLoiHang.Controls.Add(this.gC_PhieuBiLoiHang);
+            this.tab_PhieuBiLoiHang.Location = new System.Drawing.Point(4, 25);
+            this.tab_PhieuBiLoiHang.Name = "tab_PhieuBiLoiHang";
+            this.tab_PhieuBiLoiHang.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_PhieuBiLoiHang.Size = new System.Drawing.Size(1089, 394);
+            this.tab_PhieuBiLoiHang.TabIndex = 3;
+            this.tab_PhieuBiLoiHang.Text = "Phiếu bị lỗi hàng";
+            this.tab_PhieuBiLoiHang.UseVisualStyleBackColor = true;
+            // 
             // gC_PhieuBiLoiHang
             // 
             this.gC_PhieuBiLoiHang.Location = new System.Drawing.Point(4, 6);
@@ -796,6 +691,17 @@ namespace StockManagement.Form.StockIn
             this.repositoryItemButtonEdit6.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit6.Name = "repositoryItemButtonEdit6";
+            // 
+            // tab_DonBiHuy
+            // 
+            this.tab_DonBiHuy.Controls.Add(this.gC_DonBiHuy);
+            this.tab_DonBiHuy.Location = new System.Drawing.Point(4, 25);
+            this.tab_DonBiHuy.Name = "tab_DonBiHuy";
+            this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_DonBiHuy.Size = new System.Drawing.Size(1089, 394);
+            this.tab_DonBiHuy.TabIndex = 4;
+            this.tab_DonBiHuy.Text = "Đơn bị hủy";
+            this.tab_DonBiHuy.UseVisualStyleBackColor = true;
             // 
             // gC_DonBiHuy
             // 
@@ -915,6 +821,101 @@ namespace StockManagement.Form.StockIn
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit8.Name = "repositoryItemButtonEdit8";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbb_DenNgay);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbb_TuNgay);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btn_Them);
+            this.groupBox1.Controls.Add(this.btn_TimKiem);
+            this.groupBox1.Controls.Add(this.cbb_NguoiXuLy);
+            this.groupBox1.Controls.Add(this.txt_TenNCC);
+            this.groupBox1.Controls.Add(this.txt_MaPhieu);
+            this.groupBox1.Location = new System.Drawing.Point(3, 32);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1118, 137);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm";
+            // 
+            // cbb_DenNgay
+            // 
+            this.cbb_DenNgay.Location = new System.Drawing.Point(452, 88);
+            this.cbb_DenNgay.Name = "cbb_DenNgay";
+            this.cbb_DenNgay.Size = new System.Drawing.Size(200, 23);
+            this.cbb_DenNgay.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(373, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Đến ngày:";
+            // 
+            // cbb_TuNgay
+            // 
+            this.cbb_TuNgay.Location = new System.Drawing.Point(108, 88);
+            this.cbb_TuNgay.Name = "cbb_TuNgay";
+            this.cbb_TuNgay.Size = new System.Drawing.Size(200, 23);
+            this.cbb_TuNgay.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Từ ngày:";
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.Location = new System.Drawing.Point(992, 83);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(75, 23);
+            this.btn_Them.TabIndex = 4;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Location = new System.Drawing.Point(992, 40);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btn_TimKiem.TabIndex = 3;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            // 
+            // cbb_NguoiXuLy
+            // 
+            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(547, 37);
+            this.cbb_NguoiXuLy.Name = "cbb_NguoiXuLy";
+            this.cbb_NguoiXuLy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbb_NguoiXuLy.Properties.NullText = "Người xử lý";
+            this.cbb_NguoiXuLy.Size = new System.Drawing.Size(216, 22);
+            this.cbb_NguoiXuLy.TabIndex = 2;
+            // 
+            // txt_TenNCC
+            // 
+            this.txt_TenNCC.Location = new System.Drawing.Point(295, 37);
+            this.txt_TenNCC.Name = "txt_TenNCC";
+            this.txt_TenNCC.Properties.NullText = "Tên NCC";
+            this.txt_TenNCC.Size = new System.Drawing.Size(236, 22);
+            this.txt_TenNCC.TabIndex = 1;
+            // 
+            // txt_MaPhieu
+            // 
+            this.txt_MaPhieu.Location = new System.Drawing.Point(39, 37);
+            this.txt_MaPhieu.Name = "txt_MaPhieu";
+            this.txt_MaPhieu.Properties.NullText = "Mã phiếu";
+            this.txt_MaPhieu.Size = new System.Drawing.Size(236, 22);
+            this.txt_MaPhieu.TabIndex = 0;
+            // 
             // StockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -926,36 +927,36 @@ namespace StockManagement.Form.StockIn
             this.groupControl2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.gC_DSNhapKho.ResumeLayout(false);
+            this.tab_PhieuMoi.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gC_PhieuMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_HuyPhieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_TienHanhXuLy)).EndInit();
+            this.tab_DangKiemTra.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DangKiemTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
+            this.tab_HoanThanh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gC_HoanThanh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit4)).EndInit();
+            this.tab_PhieuBiLoiHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gC_PhieuBiLoiHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).EndInit();
+            this.tab_DonBiHuy.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DonBiHuy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenNCC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaPhieu.Properties)).EndInit();
-            this.tab_PhieuMoi.ResumeLayout(false);
-            this.tab_DangKiemTra.ResumeLayout(false);
-            this.tab_HoanThanh.ResumeLayout(false);
-            this.tab_PhieuBiLoiHang.ResumeLayout(false);
-            this.tab_DonBiHuy.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gC_PhieuMoi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_HuyPhieu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_TienHanhXuLy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_DangKiemTra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_HoanThanh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_PhieuBiLoiHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_DonBiHuy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).EndInit();
             this.ResumeLayout(false);
 
         }

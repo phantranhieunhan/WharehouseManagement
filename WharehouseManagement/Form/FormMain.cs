@@ -82,7 +82,12 @@ namespace StockManagement.Form
 
         private void btn_StockIn_Click(object sender, EventArgs e)
         {
-          //  fluentDesignFormContainer1.Controls.Add(new StockIn() { Dock = DockStyle.Fill });
+          // fluentDesignFormContainer1.Controls.Add(new StockIn() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_PurchaseOrder_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Add(new PurchaseOrder() { Dock = DockStyle.Fill });
         }
     }
 }

@@ -269,3 +269,5 @@ C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.StockIn.StockIn.resources
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.StockOut.AddStockOut.resources
 C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.StockOut.StockOut.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrder.resources
+C:\đồ án tốt nghiệp\WharehouseManagement\WharehouseManagement\obj\Debug\StockManagement.Form.StockOut.RequestStockIn.resources

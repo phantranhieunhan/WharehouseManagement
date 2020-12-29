@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.PhuongThucGiaoHang = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.group_box = new System.Windows.Forms.GroupBox();
             this.gC_DSXuatKho = new System.Windows.Forms.TabControl();
@@ -133,6 +133,8 @@
             this.cbb_NguoiXuLy = new DevExpress.XtraEditors.LookUpEdit();
             this.txt_TenKhachHang = new DevExpress.XtraEditors.TextEdit();
             this.txt_MaDon = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhuongThucGiaoHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.group_box.SuspendLayout();
@@ -145,8 +147,6 @@
             this.tab_DangXuLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DangXuLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(repositoryItemButtonEdit1)).BeginInit();
             this.tab_SanSangGiao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_SanSangGiao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
@@ -177,6 +177,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // PhuongThucGiaoHang
+            // 
+            this.PhuongThucGiaoHang.AutoHeight = false;
+            this.PhuongThucGiaoHang.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PhuongThucGiaoHang.Name = "PhuongThucGiaoHang";
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
             // groupControl1
             // 
@@ -450,11 +464,7 @@
             // cbb_PhuongThucGiaoHang
             // 
             this.cbb_PhuongThucGiaoHang.Caption = "Phương thức giao hàng";
-            repositoryItemLookUpEdit1.AutoHeight = false;
-            repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            repositoryItemLookUpEdit1.Name = "PhuongThucGiaoHang";
-            this.cbb_PhuongThucGiaoHang.ColumnEdit = repositoryItemLookUpEdit1;
+            this.cbb_PhuongThucGiaoHang.ColumnEdit = this.PhuongThucGiaoHang;
             this.cbb_PhuongThucGiaoHang.MinWidth = 25;
             this.cbb_PhuongThucGiaoHang.Name = "cbb_PhuongThucGiaoHang";
             this.cbb_PhuongThucGiaoHang.Visible = true;
@@ -464,11 +474,7 @@
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Hành động";
-            repositoryItemButtonEdit1.AutoHeight = false;
-            repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.gridColumn11.ColumnEdit = repositoryItemButtonEdit1;
+            this.gridColumn11.ColumnEdit = this.repositoryItemButtonEdit1;
             this.gridColumn11.MinWidth = 25;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
@@ -1178,6 +1184,7 @@
             this.btn_Them.TabIndex = 4;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_TimKiem
             // 
@@ -1221,6 +1228,8 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "StockOut";
             this.Size = new System.Drawing.Size(1126, 631);
+            ((System.ComponentModel.ISupportInitialize)(this.PhuongThucGiaoHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.group_box.ResumeLayout(false);
@@ -1233,8 +1242,6 @@
             this.tab_DangXuLy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DangXuLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(repositoryItemButtonEdit1)).EndInit();
             this.tab_SanSangGiao.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_SanSangGiao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
@@ -1374,5 +1381,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit11;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit12;
         private DevExpress.XtraGrid.Columns.GridColumn cbb_PhuongThucGiaoHang;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit PhuongThucGiaoHang;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
     }
 }

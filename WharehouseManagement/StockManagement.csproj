@@ -213,6 +213,12 @@
     <Compile Include="Form\StockOut\AddStockOut.Designer.cs">
       <DependentUpon>AddStockOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\StockOut\RequestStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockOut\RequestStockIn.Designer.cs">
+      <DependentUpon>RequestStockIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\StockOut\StockOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\PurchaseOrderAdd.resx">
       <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\StockOut\AddStockOut.resx">
       <DependentUpon>AddStockOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockOut\RequestStockIn.resx">
+      <DependentUpon>RequestStockIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\StockOut\StockOut.resx">
       <DependentUpon>StockOut.cs</DependentUpon>

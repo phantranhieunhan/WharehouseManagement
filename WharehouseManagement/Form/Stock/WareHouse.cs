@@ -17,5 +17,11 @@ namespace StockManagement.Form.Stock
         {
             InitializeComponent();
         }
+
+        private void btn_ThemKH_Click(object sender, EventArgs e)
+        {
+            AddWareHouse f = new AddWareHouse();
+            f.Show();
+        }
     }
 }

@@ -210,6 +210,7 @@
             this.btn_Info.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.btn_Info.Size = new System.Drawing.Size(35, 37);
             this.btn_Info.TabIndex = 11;
+            this.btn_Info.EditValueChanged += new System.EventHandler(this.btn_Info_EditValueChanged);
             // 
             // button2
             // 
@@ -261,7 +262,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textEdit1.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit1.Size = new System.Drawing.Size(50, 22);
+            this.textEdit1.Size = new System.Drawing.Size(50, 24);
             this.textEdit1.TabIndex = 7;
             // 
             // gC_SanPham
