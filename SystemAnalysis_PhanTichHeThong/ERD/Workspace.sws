@@ -14,7 +14,7 @@
 		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD after_update 4_12_2020 (1).cdm"/>
 		<Model Expanded="Yes" ID="{B2C82619-DC18-4100-8DD8-D81C3E52F8AD}" Loaded="No" Name="ERD_Main_V1" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="ERD_Main_V1.pdm"/>
 		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD after_update 4_12_2020 (1).cdm"/>
-		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Name="ERD_Main_V1" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD_Main_V2.cdm"/>
+		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD_Main_V2.cdm"/>
 		<Model Expanded="Yes" ID="{35AEC7CD-91C3-429C-9925-DEECFFFB5C63}" Loaded="No" Name="ERD_Main_V4_Child_OnlyAttribute" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD_Main_V4_Child_OnlyAttribute.pdm"/>
 		<Model ID="{D1CE345C-AD06-44F1-B682-AE4B7DB2BCE6}" Loaded="No" Name="ERD_Main_V3_Child" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD_Main_V3_Child.pdm"/>
 		<Model Expanded="Yes" ID="{602A4ACA-1063-4584-959B-7F7A1567F052}" Loaded="No" Name="ERD_Main_V5" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/ERD_Main_V5.pdm"/>
@@ -22,7 +22,13 @@
 		<Model Expanded="Yes" ID="{6A85129D-CEFC-4D04-A9DB-716C9AC4FA2C}" Loaded="No" Name="BusinessProcessModel_1" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" URL="file:///C|/Users/ASUS/Documents/Zalo Received Files/BusinessProcessModel_1.bpm"/>
 		<Model Expanded="Yes" ID="{91EC0A78-5817-487D-997E-B2C7900AA261}" Loaded="No" Name="ERD_Main_V6" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="ERD_Main_V8.apm"/>
 		<Model ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="ERD_Main_V1.cdm"/>
-		<Model Expanded="Yes" ID="{91EC0A78-5817-487D-997E-B2C7900AA261}" Name="ERD_Main_V6" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="ERD_Main_V9.apm"/>
+		<Model Expanded="Yes" ID="{91EC0A78-5817-487D-997E-B2C7900AA261}" Loaded="No" Name="ERD_Main_V6" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="ERD_Main_V9.apm"/>
+		<Model Expanded="Yes" ID="{91EC0A78-5817-487D-997E-B2C7900AA261}" Loaded="No" Name="ERD_Main_V6" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="/ERD_Main_V9.apm"/>
+		<Model Expanded="Yes" ID="{91EC0A78-5817-487D-997E-B2C7900AA261}" Loaded="No" Name="ERD_Main_V6" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="/ERD_Main_V9.apm"/>
+		<Model ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/ModelDoAnTotNghiep/ERD_Main_V2.cdm"/>
+		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/ModelDoAnTotNghiep/ERD_Main_V2.cdm"/>
+		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Loaded="No" Name="ERD_Main_V1" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/ModelDoAnTotNghiep/ERD_Main_V2.cdm"/>
+		<Model Expanded="Yes" ID="{0B6ACAF4-08C2-4EDF-A8D2-BCDF37281955}" Name="ERD_Main_V1" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/ModelDoAnTotNghiep/ERD_Main_V2.cdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

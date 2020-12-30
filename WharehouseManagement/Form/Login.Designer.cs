@@ -79,7 +79,7 @@
             this.txt_username.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.Properties.Appearance.Options.UseFont = true;
             this.txt_username.Size = new System.Drawing.Size(203, 28);
-            this.txt_username.TabIndex = 2;
+            this.txt_username.TabIndex = 1;
             // 
             // txt_password
             // 
@@ -121,7 +121,7 @@
             this.bt_submit.Location = new System.Drawing.Point(298, 455);
             this.bt_submit.Name = "bt_submit";
             this.bt_submit.Size = new System.Drawing.Size(152, 43);
-            this.bt_submit.TabIndex = 4;
+            this.bt_submit.TabIndex = 3;
             this.bt_submit.Text = "Đăng nhập";
             this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click);
             // 

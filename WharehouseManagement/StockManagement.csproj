@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,6 +14,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +56,12 @@
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -147,6 +156,12 @@
     <Compile Include="Form\Employee\Form_DataEmployee.Designer.cs">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Employee\RegisterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Employee\RegisterAccount.Designer.cs">
+      <DependentUpon>RegisterAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Employee\TypeEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +173,12 @@
     </Compile>
     <Compile Include="Form\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Orders\PurchaseOrder.cs">
       <SubType>UserControl</SubType>
@@ -195,6 +216,30 @@
     <Compile Include="Form\Orders\SalesOrderProductDetail.Designer.cs">
       <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Product\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Product\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Product\AddProductCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Product\AddProductCategories.Designer.cs">
+      <DependentUpon>AddProductCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Product\ListOfProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Product\ListOfProducts.Designer.cs">
+      <DependentUpon>ListOfProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Product\ProductCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Product\ProductCategory.Designer.cs">
+      <DependentUpon>ProductCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Stock\AddWareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +257,30 @@
     </Compile>
     <Compile Include="Form\Stock\WareHouse.Designer.cs">
       <DependentUpon>WareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Supplier\AddProductSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Supplier\AddProductSupplier.Designer.cs">
+      <DependentUpon>AddProductSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Supplier\AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Supplier\AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Supplier\DataSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Supplier\DataSupplier.Designer.cs">
+      <DependentUpon>DataSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Supplier\ProductSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Supplier\ProductSupplier.Designer.cs">
+      <DependentUpon>ProductSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -248,11 +317,17 @@
     <EmbeddedResource Include="Form\Employee\Form_DataEmployee.resx">
       <DependentUpon>Form_DataEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\RegisterAccount.resx">
+      <DependentUpon>RegisterAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Employee\TypeEmployee.resx">
       <DependentUpon>TypeEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\PurchaseOrderAdd.resx">
       <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
@@ -269,6 +344,18 @@
     <EmbeddedResource Include="Form\Orders\SalesOrderProductDetail.resx">
       <DependentUpon>SalesOrderProductDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Product\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Product\AddProductCategories.resx">
+      <DependentUpon>AddProductCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Product\ListOfProducts.resx">
+      <DependentUpon>ListOfProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Product\ProductCategory.resx">
+      <DependentUpon>ProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\AddWareHouse.resx">
       <DependentUpon>AddWareHouse.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +364,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\WareHouse.resx">
       <DependentUpon>WareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\DataSupplier.resx">
+      <DependentUpon>DataSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\ProductSupplier.resx">
+      <DependentUpon>ProductSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -289,6 +382,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -305,11 +399,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Form\Product\" />
+    <Folder Include="Form\Authentication\" />
     <Folder Include="Form\Report\" />
     <Folder Include="Form\StockIn\" />
     <Folder Include="Form\StockOut\" />
-    <Folder Include="Form\Supplier\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StockManagement.Data\StockManagement.Data.csproj">
+      <Project>{f0b3db49-be9f-4c9e-bdd8-356f6f7991ca}</Project>
+      <Name>StockManagement.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="StockManagement.Bussiness\StockManagement.Business.csproj">
+      <Project>{d24f820d-6da1-4bf0-9fc4-e1a02de0664f}</Project>
+      <Name>StockManagement.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

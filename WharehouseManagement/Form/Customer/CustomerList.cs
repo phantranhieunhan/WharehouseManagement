@@ -17,5 +17,10 @@ namespace StockManagement.Form.Customer
         {
             InitializeComponent();
         }
+
+        public void InitData()
+        {
+            
+        }
     }
 }

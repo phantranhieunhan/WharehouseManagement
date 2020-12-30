@@ -45,7 +45,7 @@ namespace StockManagement.Form
 
         private void btn_WarehouseList_Click(object sender, EventArgs e)
         {
-           // fluentDesignFormContainer1.Controls.Add(new WareHouse() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new WareHouse() { Dock = DockStyle.Fill });
         }
 
         private void btn_EmployeeList_Click(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace StockManagement.Form
 
         private void btn_CustomerGroup_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new CustomerGroup() { Dock = DockStyle.Fill });
         }
 
@@ -65,6 +66,7 @@ namespace StockManagement.Form
 
         private void btn_Decentralization_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new Decentralization() { Dock = DockStyle.Fill });
         }
 

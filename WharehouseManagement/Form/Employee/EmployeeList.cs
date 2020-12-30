@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockManagement.Business;
+using StockManagement.Data;
 
 namespace StockManagement.Form.Employee
 {
@@ -16,6 +18,14 @@ namespace StockManagement.Form.Employee
         public EmployeeList()
         {
             InitializeComponent();
+            StockManagementEntities dbContext = new StockManagementEntities();
+
+            gridControl1.DataSource = dbContext.User.ToList();
+        }
+
+        public void InitData()
+        {
+            
         }
     }
 }

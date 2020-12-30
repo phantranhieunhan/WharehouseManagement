@@ -19,6 +19,8 @@ namespace StockManagement.Form
         public Login()
         {
             InitializeComponent();
+            txt_username.Text = "nhandora123";
+            txt_password.Text = "123456";
             //LoginBO loginBO = new LoginBO();
             //loginBO.Register(new User()
             //{
@@ -36,7 +38,7 @@ namespace StockManagement.Form
             if (check)
             {
                 this.Hide();
-                MainForm mainForm = new MainForm();
+                FormMain mainForm = new FormMain();
                 mainForm.Show();
             }
             else
