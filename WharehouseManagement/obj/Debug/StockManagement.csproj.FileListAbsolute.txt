@@ -293,3 +293,9 @@ D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\Dapper.xml
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.CopyComplete
 D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\EntityFramework.SqlServer.dll
 D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.AddProduct.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.AddProductCategories.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.ListOfProducts.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.ProductCategory.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Supplier.DataSupplier.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Supplier.ProductSupplier.resources
