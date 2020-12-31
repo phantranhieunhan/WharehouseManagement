@@ -213,12 +213,14 @@
             this.btn_StockIn.Expanded = true;
             this.btn_StockIn.Name = "btn_StockIn";
             this.btn_StockIn.Text = "Nhập kho";
+            this.btn_StockIn.Click += new System.EventHandler(this.btn_StockIn_Click);
             // 
             // btn_StockOut
             // 
             this.btn_StockOut.Expanded = true;
             this.btn_StockOut.Name = "btn_StockOut";
             this.btn_StockOut.Text = "Xuất kho";
+            this.btn_StockOut.Click += new System.EventHandler(this.btn_StockOut_Click);
             // 
             // btn_Order
             // 
@@ -251,6 +253,7 @@
             this.btn_PurchaseOrder.Name = "btn_PurchaseOrder";
             this.btn_PurchaseOrder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_PurchaseOrder.Text = "Đặt hàng mua hàng";
+            this.btn_PurchaseOrder.Click += new System.EventHandler(this.btn_PurchaseOrder_Click);
             // 
             // accordionControl1
             // 

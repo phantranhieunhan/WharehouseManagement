@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryManagement));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -40,6 +39,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.x = new System.Windows.Forms.GroupBox();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btn_XuatFile = new System.Windows.Forms.Button();
             this.btn_TimKiemTK = new System.Windows.Forms.Button();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -57,20 +57,19 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gC_DSTonKho = new DevExpress.XtraGrid.GridControl();
+            this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.x.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Sua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Xoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_DSTonKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // x
@@ -84,6 +83,14 @@
             this.x.TabIndex = 0;
             this.x.TabStop = false;
             this.x.Text = "Tìm kiếm";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.EditValue = "Mã SP/ Tên SP/ Mã NCC/ Tên NCC/ Mã Kho/ Tên Kho";
+            this.textEdit1.Location = new System.Drawing.Point(46, 21);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(507, 22);
+            this.textEdit1.TabIndex = 4;
             // 
             // btn_XuatFile
             // 
@@ -113,8 +120,6 @@
             // btn_Sua
             // 
             this.btn_Sua.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            serializableAppearanceObject1.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject1.Image")));
             serializableAppearanceObject1.Options.UseImage = true;
             this.btn_Sua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
@@ -124,8 +129,6 @@
             // btn_Xoa
             // 
             this.btn_Xoa.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            serializableAppearanceObject5.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject5.Image")));
             serializableAppearanceObject5.Options.UseImage = true;
             this.btn_Xoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
@@ -186,7 +189,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11});
-            this.gridView1.GridControl = this.gC_DSTonKho;
+            this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn5
@@ -245,18 +248,18 @@
             this.gridColumn11.VisibleIndex = 10;
             this.gridColumn11.Width = 68;
             // 
-            // gC_DSTonKho
+            // gC_DanhSach
             // 
-            this.gC_DSTonKho.Location = new System.Drawing.Point(7, 22);
-            this.gC_DSTonKho.MainView = this.gridView1;
-            this.gC_DSTonKho.Name = "gC_DSTonKho";
-            this.gC_DSTonKho.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gC_DanhSach.Location = new System.Drawing.Point(7, 22);
+            this.gC_DanhSach.MainView = this.gridView1;
+            this.gC_DanhSach.Name = "gC_DanhSach";
+            this.gC_DanhSach.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_Sua,
             this.btn_Xoa,
             this.repositoryItemButtonEdit1});
-            this.gC_DSTonKho.Size = new System.Drawing.Size(917, 351);
-            this.gC_DSTonKho.TabIndex = 0;
-            this.gC_DSTonKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gC_DanhSach.Size = new System.Drawing.Size(917, 351);
+            this.gC_DanhSach.TabIndex = 0;
+            this.gC_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // groupControl1
@@ -271,7 +274,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.gC_DSTonKho);
+            this.groupBox2.Controls.Add(this.gC_DanhSach);
             this.groupBox2.Location = new System.Drawing.Point(6, 110);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(930, 392);
@@ -279,32 +282,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "Mã SP/ Tên SP/ Mã NCC/ Tên NCC/ Mã Kho/ Tên Kho";
-            this.textEdit1.Location = new System.Drawing.Point(46, 21);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(507, 22);
-            this.textEdit1.TabIndex = 4;
-            // 
             // InventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 489);
             this.Controls.Add(this.groupControl1);
             this.Name = "InventoryManagement";
-            this.Text = "InventoryManagement";
+            this.Size = new System.Drawing.Size(933, 489);
             this.x.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Sua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Xoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_DSTonKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,7 +314,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gC_DSTonKho;
+        private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;

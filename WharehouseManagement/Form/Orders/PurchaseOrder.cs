@@ -17,5 +17,11 @@ namespace StockManagement.Form.Orders
         {
             InitializeComponent();//nhấn f12
         }
+
+        private void btn_ThemKH_Click(object sender, EventArgs e)
+        {
+            PurchaseOrderAdd f = new PurchaseOrderAdd();
+            f.Show();
+        }
     }
 }
