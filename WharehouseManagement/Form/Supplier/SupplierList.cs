@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Supplier
 {
-    public partial class DataSupplier : DevExpress.XtraEditors.XtraUserControl
+    public partial class SupplierList : DevExpress.XtraEditors.XtraUserControl
     {
-        public DataSupplier()
+        public SupplierList()
         {
             InitializeComponent();
         }

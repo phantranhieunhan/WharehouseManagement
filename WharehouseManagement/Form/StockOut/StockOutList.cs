@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace StockManagement.Form.StockOut
 {
-    public partial class StockOut : DevExpress.XtraEditors.XtraUserControl
+    public partial class StockOutList : DevExpress.XtraEditors.XtraUserControl
     {
-        public StockOut()
+        public StockOutList()
         {
             InitializeComponent();
         }

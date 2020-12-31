@@ -66,7 +66,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1145, 39);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1145, 35);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -157,12 +157,14 @@
             this.btn_SupplierList.Name = "btn_SupplierList";
             this.btn_SupplierList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_SupplierList.Text = "Danh sách NCC";
+            this.btn_SupplierList.Click += new System.EventHandler(this.btn_SupplierList_Click);
             // 
             // btn_SupplierProduct
             // 
             this.btn_SupplierProduct.Name = "btn_SupplierProduct";
             this.btn_SupplierProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_SupplierProduct.Text = "Sản phẩm từ NCC";
+            this.btn_SupplierProduct.Click += new System.EventHandler(this.btn_SupplierProduct_Click);
             // 
             // btn_Warehouse
             // 
@@ -201,12 +203,14 @@
             this.btn_ProductPortfolio.Name = "btn_ProductPortfolio";
             this.btn_ProductPortfolio.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_ProductPortfolio.Text = "Danh mục sản phẩm ";
+            this.btn_ProductPortfolio.Click += new System.EventHandler(this.btn_ProductPortfolio_Click);
             // 
             // btn_ListProducts
             // 
             this.btn_ListProducts.Name = "btn_ListProducts";
             this.btn_ListProducts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_ListProducts.Text = "Danh sách sản phẩm";
+            this.btn_ListProducts.Click += new System.EventHandler(this.btn_ListProducts_Click);
             // 
             // btn_StockIn
             // 
@@ -288,11 +292,11 @@
             this.btn_Report,
             this.btn_Employee,
             this.accordionControlElement10});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 39);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 35);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.NormalWidth = 260;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(325, 586);
+            this.accordionControl1.Size = new System.Drawing.Size(325, 590);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 

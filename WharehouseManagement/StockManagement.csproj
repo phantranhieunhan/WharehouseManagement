@@ -228,17 +228,47 @@
     <Compile Include="Form\Product\AddProductCategories.Designer.cs">
       <DependentUpon>AddProductCategories.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Product\ListOfProducts.cs">
+    <Compile Include="Form\Product\ProductsList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\Product\ListOfProducts.Designer.cs">
-      <DependentUpon>ListOfProducts.cs</DependentUpon>
+    <Compile Include="Form\Product\ProductsList.Designer.cs">
+      <DependentUpon>ProductsList.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Product\ProductCategory.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form\Product\ProductCategory.Designer.cs">
       <DependentUpon>ProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockIn\AddStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockIn\AddStockIn.Designer.cs">
+      <DependentUpon>AddStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockIn\StockInList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\StockIn\StockInList.Designer.cs">
+      <DependentUpon>StockInList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockOut\AddStockOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockOut\AddStockOut.Designer.cs">
+      <DependentUpon>AddStockOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockOut\RequestStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockOut\RequestStockIn.Designer.cs">
+      <DependentUpon>RequestStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StockOut\StockOutList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\StockOut\StockOutList.Designer.cs">
+      <DependentUpon>StockOutList.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Stock\AddWareHouse.cs">
       <SubType>Form</SubType>
@@ -270,11 +300,11 @@
     <Compile Include="Form\Supplier\AddSupplier.Designer.cs">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Supplier\DataSupplier.cs">
+    <Compile Include="Form\Supplier\SupplierList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\Supplier\DataSupplier.Designer.cs">
-      <DependentUpon>DataSupplier.cs</DependentUpon>
+    <Compile Include="Form\Supplier\SupplierList.Designer.cs">
+      <DependentUpon>SupplierList.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Supplier\ProductSupplier.cs">
       <SubType>UserControl</SubType>
@@ -350,11 +380,26 @@
     <EmbeddedResource Include="Form\Product\AddProductCategories.resx">
       <DependentUpon>AddProductCategories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Product\ListOfProducts.resx">
-      <DependentUpon>ListOfProducts.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Product\ProductsList.resx">
+      <DependentUpon>ProductsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Product\ProductCategory.resx">
       <DependentUpon>ProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockIn\AddStockIn.resx">
+      <DependentUpon>AddStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockIn\StockInList.resx">
+      <DependentUpon>StockInList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockOut\AddStockOut.resx">
+      <DependentUpon>AddStockOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockOut\RequestStockIn.resx">
+      <DependentUpon>RequestStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockOut\StockOutList.resx">
+      <DependentUpon>StockOutList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\AddWareHouse.resx">
       <DependentUpon>AddWareHouse.cs</DependentUpon>
@@ -365,8 +410,8 @@
     <EmbeddedResource Include="Form\Stock\WareHouse.resx">
       <DependentUpon>WareHouse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Supplier\DataSupplier.resx">
-      <DependentUpon>DataSupplier.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Supplier\SupplierList.resx">
+      <DependentUpon>SupplierList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Supplier\ProductSupplier.resx">
       <DependentUpon>ProductSupplier.cs</DependentUpon>
@@ -401,8 +446,6 @@
   <ItemGroup>
     <Folder Include="Form\Authentication\" />
     <Folder Include="Form\Report\" />
-    <Folder Include="Form\StockIn\" />
-    <Folder Include="Form\StockOut\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StockManagement.Data\StockManagement.Data.csproj">

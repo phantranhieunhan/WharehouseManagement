@@ -1,7 +1,7 @@
 ﻿
 namespace StockManagement.Form.StockIn
 {
-    partial class StockIn
+    partial class StockInList
     {
         /// <summary> 
         /// Required designer variable.

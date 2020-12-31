@@ -13,6 +13,8 @@ using StockManagement.Form.Customer;
 using StockManagement.Form.Employee;
 using StockManagement.Form.StockIn;
 using StockManagement.Form.StockOut;
+using StockManagement.Form.Supplier;
+using StockManagement.Form.Product;
 
 namespace StockManagement.Form
 {
@@ -25,6 +27,7 @@ namespace StockManagement.Form
 
         private void btn_SaleOrder_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new SaleOrder() { Dock = DockStyle.Fill });
         }
         
@@ -41,17 +44,20 @@ namespace StockManagement.Form
 
         private void btn_InventoryManagement_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new InventoryManagement() { Dock = DockStyle.Fill });
 
         }
 
         private void btn_WarehouseList_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new WareHouse() { Dock = DockStyle.Fill });
         }
 
         private void btn_EmployeeList_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new EmployeeList() { Dock = DockStyle.Fill });
         }
 
@@ -63,6 +69,7 @@ namespace StockManagement.Form
 
         private void btn_CustomerList_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new CustomerList() { Dock = DockStyle.Fill });
         }
 
@@ -74,22 +81,51 @@ namespace StockManagement.Form
 
         private void btn_TypeEmployee_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new TypeEmployee() { Dock = DockStyle.Fill });
         }
 
         private void btn_StockOut_Click(object sender, EventArgs e)
         {
-          //  fluentDesignFormContainer1.Controls.Add(new StockOut() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Clear();
+            fluentDesignFormContainer1.Controls.Add(new StockOutList() { Dock = DockStyle.Fill });
         }
 
         private void btn_StockIn_Click(object sender, EventArgs e)
         {
-          // fluentDesignFormContainer1.Controls.Add(new StockIn() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Clear();
+            fluentDesignFormContainer1.Controls.Add(new StockInList() { Dock = DockStyle.Fill });
         }
 
         private void btn_PurchaseOrder_Click(object sender, EventArgs e)
         {
+            fluentDesignFormContainer1.Controls.Clear();
             fluentDesignFormContainer1.Controls.Add(new PurchaseOrder() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_SupplierList_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Clear();
+            fluentDesignFormContainer1.Controls.Add(new SupplierList() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_SupplierProduct_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Clear();
+            fluentDesignFormContainer1.Controls.Add(new ProductSupplier() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_ProductPortfolio_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Clear();
+            fluentDesignFormContainer1.Controls.Add(new ProductCategory() { Dock = DockStyle.Fill });
+        }
+
+        private void btn_ListProducts_Click(object sender, EventArgs e)
+        {
+            fluentDesignFormContainer1.Controls.Clear();
+            fluentDesignFormContainer1.Controls.Add(new ProductsList() { Dock = DockStyle.Fill });
+
         }
     }
 }

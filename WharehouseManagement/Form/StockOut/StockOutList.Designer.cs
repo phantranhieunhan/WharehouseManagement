@@ -1,6 +1,6 @@
 ﻿namespace StockManagement.Form.StockOut
 {
-	partial class StockOut
+	partial class StockOutList
 	{
 		/// <summary> 
 		/// Required designer variable.

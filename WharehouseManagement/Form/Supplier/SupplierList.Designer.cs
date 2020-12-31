@@ -1,6 +1,6 @@
 ﻿namespace StockManagement.Form.Supplier
 {
-    partial class DataSupplier
+    partial class SupplierList
     {
         /// <summary> 
         /// Required designer variable.
