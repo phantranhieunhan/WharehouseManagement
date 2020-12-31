@@ -17,6 +17,7 @@ namespace StockManagement.Form.StockIn
         {
             InitializeComponent();
             //
+            //
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
