@@ -44,13 +44,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MaDon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PurchaseOrderCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CreatedBy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_Action = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -63,7 +64,6 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_NguoiXuLy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenNCC.Properties)).BeginInit();
@@ -75,10 +75,10 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -234,23 +234,24 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MaDon,
+            this.PurchaseOrderCode,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
+            this.CreatedBy,
+            this.btn_Action});
             this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
-            // MaDon
+            // PurchaseOrderCode
             // 
-            this.MaDon.Caption = "Mã đơn";
-            this.MaDon.Name = "MaDon";
-            this.MaDon.Visible = true;
-            this.MaDon.VisibleIndex = 0;
-            this.MaDon.Width = 66;
+            this.PurchaseOrderCode.Caption = "Mã đơn";
+            this.PurchaseOrderCode.FieldName = "PurchaseOrderCode";
+            this.PurchaseOrderCode.Name = "PurchaseOrderCode";
+            this.PurchaseOrderCode.Visible = true;
+            this.PurchaseOrderCode.VisibleIndex = 0;
+            this.PurchaseOrderCode.Width = 66;
             // 
             // gridColumn2
             // 
@@ -284,21 +285,27 @@
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 164;
             // 
-            // gridColumn6
+            // CreatedBy
             // 
-            this.gridColumn6.Caption = "Người xử lý";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 171;
+            this.CreatedBy.Caption = "Người xử lý";
+            this.CreatedBy.FieldName = "CreatedBy";
+            this.CreatedBy.Name = "CreatedBy";
+            this.CreatedBy.Visible = true;
+            this.CreatedBy.VisibleIndex = 5;
+            this.CreatedBy.Width = 171;
             // 
-            // gridColumn7
+            // btn_Action
             // 
-            this.gridColumn7.Caption = "Hành động";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 167;
+            this.btn_Action.Caption = "Hành động";
+            this.btn_Action.Name = "btn_Action";
+            this.btn_Action.Visible = true;
+            this.btn_Action.VisibleIndex = 6;
+            this.btn_Action.Width = 167;
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.gC_DanhSach;
+            this.gridView3.Name = "gridView3";
             // 
             // tabPage2
             // 
@@ -411,11 +418,6 @@
             this.tabPage4.Text = "Đơn bị hủy";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // gridView3
-            // 
-            this.gridView3.GridControl = this.gC_DanhSach;
-            this.gridView3.Name = "gridView3";
-            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -435,10 +437,10 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,13 +462,12 @@
         private System.Windows.Forms.TabPage tabPage1;
         private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn MaDon;
+        private DevExpress.XtraGrid.Columns.GridColumn PurchaseOrderCode;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn btn_Action;
         private System.Windows.Forms.TabPage tabPage2;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -480,5 +481,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn CreatedBy;
     }
 }

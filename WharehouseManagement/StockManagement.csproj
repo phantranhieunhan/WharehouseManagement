@@ -359,6 +359,9 @@
     <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\PurchaseOrderAdd.resx">
       <DependentUpon>PurchaseOrderAdd.cs</DependentUpon>
     </EmbeddedResource>

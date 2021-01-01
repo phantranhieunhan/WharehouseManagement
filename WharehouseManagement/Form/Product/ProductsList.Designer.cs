@@ -32,14 +32,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ProductCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_Sua = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_Xoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_timkiem = new System.Windows.Forms.GroupBox();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
@@ -87,49 +87,52 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
+            this.ProductCode,
+            this.ProductName,
+            this.Price,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8});
+            this.btn_Sua,
+            this.btn_Xoa});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // gridColumn1
+            // ProductCode
             // 
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "Mã sản phẩm";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
+            this.ProductCode.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductCode.AppearanceHeader.Options.UseFont = true;
+            this.ProductCode.Caption = "Mã sản phẩm";
+            this.ProductCode.FieldName = "ProductCode";
+            this.ProductCode.MinWidth = 25;
+            this.ProductCode.Name = "ProductCode";
+            this.ProductCode.Visible = true;
+            this.ProductCode.VisibleIndex = 0;
+            this.ProductCode.Width = 94;
             // 
-            // gridColumn2
+            // ProductName
             // 
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.Caption = "Tên sản phẩm";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
+            this.ProductName.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.ProductName.AppearanceHeader.Options.UseFont = true;
+            this.ProductName.Caption = "Tên sản phẩm";
+            this.ProductName.FieldName = "ProductName";
+            this.ProductName.MinWidth = 25;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Visible = true;
+            this.ProductName.VisibleIndex = 1;
+            this.ProductName.Width = 94;
             // 
-            // gridColumn3
+            // Price
             // 
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.Caption = "Giá bán";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 94;
+            this.Price.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.Price.AppearanceHeader.Options.UseFont = true;
+            this.Price.Caption = "Giá bán";
+            this.Price.FieldName = "Price";
+            this.Price.MinWidth = 25;
+            this.Price.Name = "Price";
+            this.Price.Visible = true;
+            this.Price.VisibleIndex = 2;
+            this.Price.Width = 94;
             // 
             // gridColumn4
             // 
@@ -164,27 +167,27 @@
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 94;
             // 
-            // gridColumn7
+            // btn_Sua
             // 
-            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
-            this.gridColumn7.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn7.Caption = "edit";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 94;
+            this.btn_Sua.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.btn_Sua.AppearanceHeader.Options.UseFont = true;
+            this.btn_Sua.Caption = "edit";
+            this.btn_Sua.MinWidth = 25;
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Visible = true;
+            this.btn_Sua.VisibleIndex = 6;
+            this.btn_Sua.Width = 94;
             // 
-            // gridColumn8
+            // btn_Xoa
             // 
-            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
-            this.gridColumn8.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn8.Caption = "delete";
-            this.gridColumn8.MinWidth = 25;
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 94;
+            this.btn_Xoa.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.btn_Xoa.AppearanceHeader.Options.UseFont = true;
+            this.btn_Xoa.Caption = "delete";
+            this.btn_Xoa.MinWidth = 25;
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Visible = true;
+            this.btn_Xoa.VisibleIndex = 7;
+            this.btn_Xoa.Width = 94;
             // 
             // btn_timkiem
             // 
@@ -222,12 +225,12 @@
             this.textEdit1.Size = new System.Drawing.Size(203, 22);
             this.textEdit1.TabIndex = 0;
             // 
-            // ListOfProducts
+            // ProductsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
-            this.Name = "ListOfProducts";
+            this.Name = "ProductsList";
             this.Size = new System.Drawing.Size(798, 535);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -246,14 +249,14 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductCode;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductName;
+        private DevExpress.XtraGrid.Columns.GridColumn Price;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn btn_Sua;
+        private DevExpress.XtraGrid.Columns.GridColumn btn_Xoa;
         private System.Windows.Forms.GroupBox btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton btn_them;

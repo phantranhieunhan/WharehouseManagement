@@ -36,7 +36,7 @@ namespace StockManagement.Form.StockIn
             this.gC_PhieuMoi = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PurchaseOrderId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.StockInId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.StockInCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StockInType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -204,7 +204,7 @@ namespace StockManagement.Form.StockIn
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.PurchaseOrderId,
-            this.StockInId,
+            this.StockInCode,
             this.StockInType,
             this.gridColumn3,
             this.gridColumn4,
@@ -224,15 +224,15 @@ namespace StockManagement.Form.StockIn
             this.PurchaseOrderId.VisibleIndex = 0;
             this.PurchaseOrderId.Width = 94;
             // 
-            // StockInId
+            // StockInCode
             // 
-            this.StockInId.Caption = "Mã phiếu";
-            this.StockInId.FieldName = "StockInId";
-            this.StockInId.MinWidth = 25;
-            this.StockInId.Name = "StockInId";
-            this.StockInId.Visible = true;
-            this.StockInId.VisibleIndex = 1;
-            this.StockInId.Width = 94;
+            this.StockInCode.Caption = "Mã phiếu";
+            this.StockInCode.FieldName = "StockInId";
+            this.StockInCode.MinWidth = 25;
+            this.StockInCode.Name = "StockInCode";
+            this.StockInCode.Visible = true;
+            this.StockInCode.VisibleIndex = 1;
+            this.StockInCode.Width = 94;
             // 
             // StockInType
             // 
@@ -916,12 +916,12 @@ namespace StockManagement.Form.StockIn
             this.txt_MaPhieu.Size = new System.Drawing.Size(236, 22);
             this.txt_MaPhieu.TabIndex = 0;
             // 
-            // StockIn
+            // StockInList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl2);
-            this.Name = "StockIn";
+            this.Name = "StockInList";
             this.Size = new System.Drawing.Size(1140, 624);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -984,7 +984,7 @@ namespace StockManagement.Form.StockIn
         private DevExpress.XtraGrid.GridControl gC_PhieuMoi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn PurchaseOrderId;
-        private DevExpress.XtraGrid.Columns.GridColumn StockInId;
+        private DevExpress.XtraGrid.Columns.GridColumn StockInCode;
         private DevExpress.XtraGrid.Columns.GridColumn StockInType;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;

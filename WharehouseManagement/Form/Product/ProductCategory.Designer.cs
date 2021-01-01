@@ -33,8 +33,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ProductCategoryCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ProductCategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_timkiem = new DevExpress.XtraEditors.SimpleButton();
@@ -84,8 +84,8 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
+            this.ProductCategoryCode,
+            this.ProductCategoryName,
             this.gridColumn4});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -100,25 +100,26 @@
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 94;
             // 
-            // gridColumn2
+            // ProductCategoryCode
             // 
-            this.gridColumn2.Caption = "Mã mục";
-            this.gridColumn2.FieldName = "Mã mục";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
+            this.ProductCategoryCode.Caption = "Mã mục";
+            this.ProductCategoryCode.FieldName = "Mã mục";
+            this.ProductCategoryCode.FieldNameSortGroup = "ProductCategoryCode";
+            this.ProductCategoryCode.MinWidth = 25;
+            this.ProductCategoryCode.Name = "ProductCategoryCode";
+            this.ProductCategoryCode.Visible = true;
+            this.ProductCategoryCode.VisibleIndex = 1;
+            this.ProductCategoryCode.Width = 94;
             // 
-            // gridColumn3
+            // ProductCategoryName
             // 
-            this.gridColumn3.Caption = "Tên mục";
-            this.gridColumn3.FieldName = "Tên mục";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 94;
+            this.ProductCategoryName.Caption = "Tên mục";
+            this.ProductCategoryName.FieldName = "ProductCategoryName";
+            this.ProductCategoryName.MinWidth = 25;
+            this.ProductCategoryName.Name = "ProductCategoryName";
+            this.ProductCategoryName.Visible = true;
+            this.ProductCategoryName.VisibleIndex = 3;
+            this.ProductCategoryName.Width = 94;
             // 
             // gridColumn4
             // 
@@ -192,8 +193,8 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductCategoryCode;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductCategoryName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.SimpleButton btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_them;
