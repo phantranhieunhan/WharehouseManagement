@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
-            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_EmployeeList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_TypeEmployee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -47,8 +47,8 @@
             this.btn_WarehouseList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_InventoryManagement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Product = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_ProductPortfolio = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_ListProducts = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_ProductCatagory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_ProductList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_StockIn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_StockOut = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Order = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -79,10 +79,15 @@
             this.buttonEdit1.Size = new System.Drawing.Size(125, 22);
             this.buttonEdit1.TabIndex = 2;
             // 
-            // accordionControlElement10
+            // btn_Setting
             // 
-            this.accordionControlElement10.Name = "accordionControlElement10";
-            this.accordionControlElement10.Text = "Cài đặt";
+            this.btn_Setting.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.btn_Setting.Name = "btn_Setting";
+            this.btn_Setting.Text = "Cài đặt";
             // 
             // btn_Employee
             // 
@@ -192,25 +197,25 @@
             // btn_Product
             // 
             this.btn_Product.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btn_ProductPortfolio,
-            this.btn_ListProducts});
+            this.btn_ProductCatagory,
+            this.btn_ProductList});
             this.btn_Product.Expanded = true;
             this.btn_Product.Name = "btn_Product";
             this.btn_Product.Text = "Sản phẩm";
             // 
-            // btn_ProductPortfolio
+            // btn_ProductCatagory
             // 
-            this.btn_ProductPortfolio.Name = "btn_ProductPortfolio";
-            this.btn_ProductPortfolio.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_ProductPortfolio.Text = "Danh mục sản phẩm ";
-            this.btn_ProductPortfolio.Click += new System.EventHandler(this.btn_ProductPortfolio_Click);
+            this.btn_ProductCatagory.Name = "btn_ProductCatagory";
+            this.btn_ProductCatagory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_ProductCatagory.Text = "Danh mục sản phẩm ";
+            this.btn_ProductCatagory.Click += new System.EventHandler(this.btn_ProductPortfolio_Click);
             // 
-            // btn_ListProducts
+            // btn_ProductList
             // 
-            this.btn_ListProducts.Name = "btn_ListProducts";
-            this.btn_ListProducts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_ListProducts.Text = "Danh sách sản phẩm";
-            this.btn_ListProducts.Click += new System.EventHandler(this.btn_ListProducts_Click);
+            this.btn_ProductList.Name = "btn_ProductList";
+            this.btn_ProductList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_ProductList.Text = "Danh sách sản phẩm";
+            this.btn_ProductList.Click += new System.EventHandler(this.btn_ListProducts_Click);
             // 
             // btn_StockIn
             // 
@@ -291,7 +296,7 @@
             this.btn_Customer,
             this.btn_Report,
             this.btn_Employee,
-            this.accordionControlElement10});
+            this.btn_Setting});
             this.accordionControl1.Location = new System.Drawing.Point(0, 35);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.NormalWidth = 260;
@@ -346,8 +351,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_StockOut;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_StockIn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Product;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_ProductPortfolio;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_ListProducts;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_ProductCatagory;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_ProductList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Warehouse;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_WarehouseList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_InventoryManagement;
@@ -360,9 +365,11 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_EmployeeList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_TypeEmployee;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Decentralization;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Setting;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerGroup;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerList;
+
+        
     }
 }

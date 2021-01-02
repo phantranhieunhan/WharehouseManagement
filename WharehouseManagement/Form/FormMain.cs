@@ -15,6 +15,7 @@ using StockManagement.Form.StockIn;
 using StockManagement.Form.StockOut;
 using StockManagement.Form.Supplier;
 using StockManagement.Form.Product;
+using StockManagement.Data;
 
 namespace StockManagement.Form
 {
@@ -23,15 +24,56 @@ namespace StockManagement.Form
         public FormMain()
         {
             InitializeComponent();
+            LoadPermission();
         }
 
+        public void LoadPermission()
+        {
+            List<string> permissionList = new List<string>() {
+                "btn_CustomerGroup",
+                "btn_CustomerList",
+                "btn_SupplierList",
+                "btn_WarehouseList"
+            };
+
+            foreach (DevExpress.XtraBars.Navigation.AccordionControlElement item in this.accordionControl1.Elements)
+            {
+                item.Visible = false;
+                foreach (DevExpress.XtraBars.Navigation.AccordionControlElement itemChild in item.Elements)
+                {
+                    itemChild.Visible = false;
+                    
+                    foreach (string itemString in permissionList)
+                    {
+                        if (itemChild.Name.Equals(itemString)|| item.Name.Equals(itemString))
+                        {
+                            item.Visible = true;
+                            itemChild.Visible = true;
+                            
+                        }    
+                            
+                    }
+
+                }
+            }
+            //foreach (Control control in this.Controls)
+            //{
+            //    foreach (string permission in permissionList)
+            //    {
+            //        if (control.Name.Equals(permission))
+            //        {
+                        
+            //        }
+            //    }
+            //}
+        }
         private void btn_SaleOrder_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Clear();
-            fluentDesignFormContainer1.Controls.Add(new SaleOrder() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new Orders.SaleOrder() { Dock = DockStyle.Fill });
         }
-        
-      
+
+
         private void container_Click(object sender, EventArgs e)
         {
             //flu
@@ -100,7 +142,7 @@ namespace StockManagement.Form
         private void btn_PurchaseOrder_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Clear();
-            fluentDesignFormContainer1.Controls.Add(new PurchaseOrder() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new Orders.PurchaseOrder() { Dock = DockStyle.Fill });
         }
 
         private void btn_SupplierList_Click(object sender, EventArgs e)
@@ -118,7 +160,7 @@ namespace StockManagement.Form
         private void btn_ProductPortfolio_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Clear();
-            fluentDesignFormContainer1.Controls.Add(new ProductCategory() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new Product.ProductCategory() { Dock = DockStyle.Fill });
         }
 
         private void btn_ListProducts_Click(object sender, EventArgs e)

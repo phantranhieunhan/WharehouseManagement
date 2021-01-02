@@ -292,7 +292,6 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.Add
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.AddProductCategories.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.ProductCategory.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Supplier.ProductSupplier.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csprojResolveAssemblyReference.cache
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.StockIn.AddStockIn.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.StockOut.AddStockOut.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.StockOut.RequestStockIn.resources
@@ -300,3 +299,8 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Product.Pro
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.StockIn.StockInList.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.StockOut.StockOutList.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Supplier.SupplierList.resources
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\StockManagement.Data.dll.config
+D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\StockManagement.Bussiness.dll.config
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csprojAssemblyReference.cache
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.CoreCompileInputs.cache
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.CopyComplete
