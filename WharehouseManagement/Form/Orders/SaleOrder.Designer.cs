@@ -44,13 +44,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MaDon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SaleOrderCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CreatedBy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_Action = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -123,6 +123,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.cbb_NguoiXuLy);
             this.groupBox1.Controls.Add(this.txt_TenNCC);
             this.groupBox1.Controls.Add(this.txt_MaDon);
@@ -176,7 +177,7 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Controls.Add(this.groupBox2);
             this.groupControl1.Controls.Add(this.groupBox1);
@@ -188,6 +189,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.tabControl1);
             this.groupBox2.Location = new System.Drawing.Point(5, 151);
             this.groupBox2.Name = "groupBox2";
@@ -233,23 +235,24 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MaDon,
+            this.SaleOrderCode,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
+            this.CreatedBy,
+            this.btn_Action});
             this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
-            // MaDon
+            // SaleOrderCode
             // 
-            this.MaDon.Caption = "Mã đơn";
-            this.MaDon.Name = "MaDon";
-            this.MaDon.Visible = true;
-            this.MaDon.VisibleIndex = 0;
-            this.MaDon.Width = 66;
+            this.SaleOrderCode.Caption = "Mã đơn";
+            this.SaleOrderCode.FieldName = "SaleOrderCode";
+            this.SaleOrderCode.Name = "SaleOrderCode";
+            this.SaleOrderCode.Visible = true;
+            this.SaleOrderCode.VisibleIndex = 0;
+            this.SaleOrderCode.Width = 66;
             // 
             // gridColumn2
             // 
@@ -283,21 +286,22 @@
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 164;
             // 
-            // gridColumn6
+            // CreatedBy
             // 
-            this.gridColumn6.Caption = "Người xử lý";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 171;
+            this.CreatedBy.Caption = "Người xử lý";
+            this.CreatedBy.FieldName = "CreatedBy";
+            this.CreatedBy.Name = "CreatedBy";
+            this.CreatedBy.Visible = true;
+            this.CreatedBy.VisibleIndex = 5;
+            this.CreatedBy.Width = 171;
             // 
-            // gridColumn7
+            // btn_Action
             // 
-            this.gridColumn7.Caption = "Hành động";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 167;
+            this.btn_Action.Caption = "Hành động";
+            this.btn_Action.Name = "btn_Action";
+            this.btn_Action.Visible = true;
+            this.btn_Action.VisibleIndex = 6;
+            this.btn_Action.Width = 167;
             // 
             // tabPage2
             // 
@@ -454,13 +458,13 @@
         private System.Windows.Forms.TabPage tabPage1;
         private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn MaDon;
+        private DevExpress.XtraGrid.Columns.GridColumn SaleOrderCode;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn CreatedBy;
+        private DevExpress.XtraGrid.Columns.GridColumn btn_Action;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
