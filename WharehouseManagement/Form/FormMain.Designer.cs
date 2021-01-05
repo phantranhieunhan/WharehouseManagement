@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -56,20 +57,38 @@
             this.btn_PurchaseOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_HoTen = new DevExpress.XtraEditors.LabelControl();
+            this.lb_NgaySinh = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
+            this.fluentDesignFormControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fluentDesignFormControl1
             // 
+            this.fluentDesignFormControl1.Controls.Add(this.lb_UserName);
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1145, 35);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            // 
+            // lb_UserName
+            // 
+            this.lb_UserName.Location = new System.Drawing.Point(629, 3);
+            this.lb_UserName.Name = "lb_UserName";
+            this.lb_UserName.Size = new System.Drawing.Size(59, 16);
+            this.lb_UserName.TabIndex = 4;
+            this.lb_UserName.Text = "NameUser";
             // 
             // buttonEdit1
             // 
@@ -311,20 +330,81 @@
             this.fluentDesignFormContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.Aqua;
+            this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.fluentDesignFormContainer1.Appearance.Options.UseBackColor = true;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(331, 95);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(331, 81);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 530);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 544);
             this.fluentDesignFormContainer1.TabIndex = 3;
             // 
-            // lb_UserName
+            // panelControl1
             // 
-            this.lb_UserName.Location = new System.Drawing.Point(1021, 58);
-            this.lb_UserName.Name = "lb_UserName";
-            this.lb_UserName.Size = new System.Drawing.Size(59, 16);
-            this.lb_UserName.TabIndex = 4;
-            this.lb_UserName.Text = "NameUser";
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.labelControl9);
+            this.panelControl1.Controls.Add(this.labelControl10);
+            this.panelControl1.Controls.Add(this.labelControl8);
+            this.panelControl1.Controls.Add(this.lb_HoTen);
+            this.panelControl1.Controls.Add(this.lb_NgaySinh);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Location = new System.Drawing.Point(331, 41);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(811, 34);
+            this.panelControl1.TabIndex = 4;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(480, 7);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(41, 16);
+            this.labelControl9.TabIndex = 58;
+            this.labelControl9.Text = "NV001";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(422, 7);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(42, 16);
+            this.labelControl10.TabIndex = 57;
+            this.labelControl10.Text = "Mã NV:";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(10, 6);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(68, 17);
+            this.labelControl8.TabIndex = 56;
+            this.labelControl8.Text = "Họ và Tên:";
+            // 
+            // lb_HoTen
+            // 
+            this.lb_HoTen.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_HoTen.Appearance.Options.UseFont = true;
+            this.lb_HoTen.Location = new System.Drawing.Point(84, 6);
+            this.lb_HoTen.Name = "lb_HoTen";
+            this.lb_HoTen.Size = new System.Drawing.Size(130, 17);
+            this.lb_HoTen.TabIndex = 55;
+            this.lb_HoTen.Text = "Phan Trọng Khang";
+            // 
+            // lb_NgaySinh
+            // 
+            this.lb_NgaySinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NgaySinh.Appearance.Options.UseFont = true;
+            this.lb_NgaySinh.Location = new System.Drawing.Point(334, 7);
+            this.lb_NgaySinh.Name = "lb_NgaySinh";
+            this.lb_NgaySinh.Size = new System.Drawing.Size(23, 16);
+            this.lb_NgaySinh.TabIndex = 54;
+            this.lb_NgaySinh.Text = "abc";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(260, 7);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(58, 17);
+            this.labelControl1.TabIndex = 53;
+            this.labelControl1.Text = "Chức vụ:";
             // 
             // FormMain
             // 
@@ -336,7 +416,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 625);
             this.ControlContainer = this.fluentDesignFormContainer1;
-            this.Controls.Add(this.lb_UserName);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.buttonEdit1);
             this.Controls.Add(this.fluentDesignFormContainer1);
@@ -347,10 +427,14 @@
             this.Text = "FormMain";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
+            this.fluentDesignFormControl1.ResumeLayout(false);
+            this.fluentDesignFormControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -383,5 +467,12 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerGroup;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerList;
         private DevExpress.XtraEditors.LabelControl lb_UserName;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl lb_HoTen;
+        private DevExpress.XtraEditors.LabelControl lb_NgaySinh;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

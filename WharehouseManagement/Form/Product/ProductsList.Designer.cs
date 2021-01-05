@@ -66,20 +66,24 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(5, 179);
+            this.groupBox2.Location = new System.Drawing.Point(5, 143);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(788, 351);
+            this.groupBox2.Size = new System.Drawing.Size(788, 387);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(6, 22);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(3, 19);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 323);
+            this.gridControl1.Size = new System.Drawing.Size(782, 365);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -191,19 +195,22 @@
             // 
             // btn_timkiem
             // 
+            this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_timkiem.Controls.Add(this.simpleButton2);
             this.btn_timkiem.Controls.Add(this.btn_them);
             this.btn_timkiem.Controls.Add(this.textEdit1);
             this.btn_timkiem.Location = new System.Drawing.Point(5, 31);
             this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(788, 142);
+            this.btn_timkiem.Size = new System.Drawing.Size(788, 106);
             this.btn_timkiem.TabIndex = 0;
             this.btn_timkiem.TabStop = false;
             this.btn_timkiem.Text = "Tìm kiếm";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(601, 53);
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Location = new System.Drawing.Point(654, 46);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(94, 29);
             this.simpleButton2.TabIndex = 2;
@@ -211,7 +218,8 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(455, 53);
+            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Location = new System.Drawing.Point(515, 43);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(94, 29);
             this.btn_them.TabIndex = 1;
@@ -220,9 +228,9 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(20, 61);
+            this.textEdit1.Location = new System.Drawing.Point(15, 43);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(203, 22);
+            this.textEdit1.Size = new System.Drawing.Size(364, 22);
             this.textEdit1.TabIndex = 0;
             // 
             // ProductsList

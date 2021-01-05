@@ -53,6 +53,5 @@ namespace StockManagement.Data
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserPermission> UserPermissions { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
-        public virtual DbSet<vw_UserPermission> vw_UserPermission { get; set; }
     }
 }
