@@ -20,7 +20,6 @@ namespace StockManagement.Data
         public Nullable<decimal> QuanlityOfCustomer { get; set; }
         public Nullable<decimal> QuanlityAvailable { get; set; }
         public Nullable<decimal> Status { get; set; }
-        public string Note { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual SaleOrder SaleOrder { get; set; }

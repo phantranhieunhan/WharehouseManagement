@@ -17,8 +17,8 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SaleOrder()
         {
-            this.SaleOrderDetail = new HashSet<SaleOrderDetail>();
-            this.StockOut = new HashSet<StockOut>();
+            this.SaleOrderDetails = new HashSet<SaleOrderDetail>();
+            this.StockOuts = new HashSet<StockOut>();
         }
     
         public System.Guid SaleOrderId { get; set; }
@@ -32,13 +32,12 @@ namespace StockManagement.Data
         public Nullable<decimal> TotalAmount { get; set; }
         public Nullable<double> DiscountPercent { get; set; }
         public Nullable<bool> IsPay { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
     
         public virtual Customer Customer { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SaleOrderDetail> SaleOrderDetail { get; set; }
+        public virtual ICollection<SaleOrderDetail> SaleOrderDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOut> StockOut { get; set; }
+        public virtual ICollection<StockOut> StockOuts { get; set; }
     }
 }

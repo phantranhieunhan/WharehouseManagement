@@ -17,16 +17,16 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GroupCustomer()
         {
-            this.Customer = new HashSet<Customer>();
+            this.GroupMembers = new HashSet<GroupMember>();
         }
     
         public System.Guid GroupCustomerId { get; set; }
         public string GroupCustomerCode { get; set; }
         public string GroupCustomerName { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
-        public string Note { get; set; }
+        public Nullable<System.Guid> CreatedPerson { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Customer> Customer { get; set; }
+        public virtual ICollection<GroupMember> GroupMembers { get; set; }
     }
 }

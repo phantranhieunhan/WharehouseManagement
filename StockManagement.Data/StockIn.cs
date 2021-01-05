@@ -17,7 +17,7 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StockIn()
         {
-            this.StockInDetail = new HashSet<StockInDetail>();
+            this.StockInDetails = new HashSet<StockInDetail>();
         }
     
         public System.Guid StockInId { get; set; }
@@ -27,9 +27,7 @@ namespace StockManagement.Data
         public Nullable<System.Guid> PurchaseOrderId { get; set; }
         public Nullable<System.Guid> StockInTypeId { get; set; }
         public string StockInCode { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<decimal> Status { get; set; }
-        public string Note { get; set; }
         public Nullable<System.DateTime> AccountingDate { get; set; }
         public Nullable<double> PercentComplete { get; set; }
         public string ReasonReturn { get; set; }
@@ -40,6 +38,6 @@ namespace StockManagement.Data
         public virtual StockInType StockInType { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockInDetail> StockInDetail { get; set; }
+        public virtual ICollection<StockInDetail> StockInDetails { get; set; }
     }
 }

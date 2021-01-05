@@ -17,7 +17,7 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StockOut()
         {
-            this.StockOutDetail = new HashSet<StockOutDetail>();
+            this.StockOutDetails = new HashSet<StockOutDetail>();
         }
     
         public System.Guid StockOutId { get; set; }
@@ -29,8 +29,6 @@ namespace StockManagement.Data
         public Nullable<System.Guid> SaleOrderId { get; set; }
         public string StockOutCode { get; set; }
         public Nullable<decimal> Status { get; set; }
-        public string Note { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<double> PercentComplete { get; set; }
         public string DestroyReason { get; set; }
         public string ReasonReturn { get; set; }
@@ -42,6 +40,6 @@ namespace StockManagement.Data
         public virtual Supplier Supplier { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOutDetail> StockOutDetail { get; set; }
+        public virtual ICollection<StockOutDetail> StockOutDetails { get; set; }
     }
 }

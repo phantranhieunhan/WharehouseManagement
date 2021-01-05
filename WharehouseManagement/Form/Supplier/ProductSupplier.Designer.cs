@@ -54,6 +54,8 @@
             // 
             // gc_danhsachSPNCC
             // 
+            this.gc_danhsachSPNCC.AutoSize = true;
+            this.gc_danhsachSPNCC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gc_danhsachSPNCC.Controls.Add(this.gc_danhsach);
             this.gc_danhsachSPNCC.Controls.Add(this.gc_timkiem);
             this.gc_danhsachSPNCC.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,6 +67,10 @@
             // 
             // gc_danhsach
             // 
+            this.gc_danhsach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gc_danhsach.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gc_danhsach.Controls.Add(this.gridControl1);
             this.gc_danhsach.Location = new System.Drawing.Point(5, 163);
             this.gc_danhsach.Name = "gc_danhsach";
@@ -74,10 +80,11 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(7, 28);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(2, 26);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(757, 239);
+            this.gridControl1.Size = new System.Drawing.Size(767, 246);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -130,17 +137,20 @@
             // 
             // gc_timkiem
             // 
+            this.gc_timkiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gc_timkiem.Controls.Add(this.btn_timkiem);
             this.gc_timkiem.Controls.Add(this.btn_them);
             this.gc_timkiem.Controls.Add(this.textEdit1);
-            this.gc_timkiem.Location = new System.Drawing.Point(5, 28);
+            this.gc_timkiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gc_timkiem.Location = new System.Drawing.Point(2, 26);
             this.gc_timkiem.Name = "gc_timkiem";
-            this.gc_timkiem.Size = new System.Drawing.Size(771, 129);
+            this.gc_timkiem.Size = new System.Drawing.Size(777, 129);
             this.gc_timkiem.TabIndex = 0;
             this.gc_timkiem.Text = "Tìm kiếm";
             // 
             // btn_timkiem
             // 
+            this.btn_timkiem.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_timkiem.Location = new System.Drawing.Point(641, 61);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(94, 29);
@@ -149,6 +159,7 @@
             // 
             // btn_them
             // 
+            this.btn_them.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_them.Location = new System.Drawing.Point(497, 61);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(94, 29);
@@ -180,6 +191,7 @@
             this.gc_timkiem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

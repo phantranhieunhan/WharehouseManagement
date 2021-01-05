@@ -35,7 +35,7 @@ namespace StockManagement.Data
         /// <returns></returns>
         public IDbConnection GetOpenConnection()
         {
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+            string connectionString = "Data Source=LAPTOP-IJLQ1L9S;Initial Catalog=StockManagement;Integrated Security=True";
             _connection = new SqlConnection(connectionString);
             //if (_connection == null)
             //{

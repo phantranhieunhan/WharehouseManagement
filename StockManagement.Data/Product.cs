@@ -17,10 +17,10 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.ProductOnStock = new HashSet<ProductOnStock>();
-            this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
-            this.SaleOrderDetail = new HashSet<SaleOrderDetail>();
-            this.SupplierProduct = new HashSet<SupplierProduct>();
+            this.ProductOnStocks = new HashSet<ProductOnStock>();
+            this.PurchaseOrderDetails = new HashSet<PurchaseOrderDetail>();
+            this.SaleOrderDetails = new HashSet<SaleOrderDetail>();
+            this.SupplierProducts = new HashSet<SupplierProduct>();
         }
     
         public System.Guid ProductId { get; set; }
@@ -30,20 +30,21 @@ namespace StockManagement.Data
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
         public Nullable<decimal> Price { get; set; }
-        public Nullable<decimal> StandardCost { get; set; }
         public Nullable<double> Weight { get; set; }
         public Nullable<double> Size { get; set; }
+        public string Color { get; set; }
+        public string Picture { get; set; }
     
         public virtual ProductCategory ProductCategory { get; set; }
         public virtual ProductType ProductType { get; set; }
         public virtual ProductUnit ProductUnit { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductOnStock> ProductOnStock { get; set; }
+        public virtual ICollection<ProductOnStock> ProductOnStocks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
+        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SaleOrderDetail> SaleOrderDetail { get; set; }
+        public virtual ICollection<SaleOrderDetail> SaleOrderDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SupplierProduct> SupplierProduct { get; set; }
+        public virtual ICollection<SupplierProduct> SupplierProducts { get; set; }
     }
 }
