@@ -155,6 +155,9 @@ namespace StockManagement.Form.StockIn
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gC_DSNhapKho);
             this.groupBox2.Location = new System.Drawing.Point(5, 175);
             this.groupBox2.Name = "groupBox2";
@@ -165,6 +168,9 @@ namespace StockManagement.Form.StockIn
             // 
             // gC_DSNhapKho
             // 
+            this.gC_DSNhapKho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gC_DSNhapKho.Controls.Add(this.tab_PhieuMoi);
             this.gC_DSNhapKho.Controls.Add(this.tab_DangKiemTra);
             this.gC_DSNhapKho.Controls.Add(this.tab_HoanThanh);
@@ -189,13 +195,14 @@ namespace StockManagement.Form.StockIn
             // 
             // gC_PhieuMoi
             // 
-            this.gC_PhieuMoi.Location = new System.Drawing.Point(3, 6);
+            this.gC_PhieuMoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_PhieuMoi.Location = new System.Drawing.Point(3, 3);
             this.gC_PhieuMoi.MainView = this.gridView1;
             this.gC_PhieuMoi.Name = "gC_PhieuMoi";
             this.gC_PhieuMoi.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_TienHanhXuLy,
             this.btn_HuyPhieu});
-            this.gC_PhieuMoi.Size = new System.Drawing.Size(1082, 382);
+            this.gC_PhieuMoi.Size = new System.Drawing.Size(1083, 388);
             this.gC_PhieuMoi.TabIndex = 1;
             this.gC_PhieuMoi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -318,13 +325,14 @@ namespace StockManagement.Form.StockIn
             // 
             // gC_DangKiemTra
             // 
-            this.gC_DangKiemTra.Location = new System.Drawing.Point(0, 6);
+            this.gC_DangKiemTra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_DangKiemTra.Location = new System.Drawing.Point(3, 3);
             this.gC_DangKiemTra.MainView = this.gridView2;
             this.gC_DangKiemTra.Name = "gC_DangKiemTra";
             this.gC_DangKiemTra.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit1});
-            this.gC_DangKiemTra.Size = new System.Drawing.Size(1082, 388);
+            this.gC_DangKiemTra.Size = new System.Drawing.Size(1083, 388);
             this.gC_DangKiemTra.TabIndex = 2;
             this.gC_DangKiemTra.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -447,13 +455,14 @@ namespace StockManagement.Form.StockIn
             // 
             // gC_HoanThanh
             // 
-            this.gC_HoanThanh.Location = new System.Drawing.Point(3, 0);
+            this.gC_HoanThanh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_HoanThanh.Location = new System.Drawing.Point(3, 3);
             this.gC_HoanThanh.MainView = this.gridView3;
             this.gC_HoanThanh.Name = "gC_HoanThanh";
             this.gC_HoanThanh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4,
             this.repositoryItemButtonEdit3});
-            this.gC_HoanThanh.Size = new System.Drawing.Size(1082, 388);
+            this.gC_HoanThanh.Size = new System.Drawing.Size(1083, 388);
             this.gC_HoanThanh.TabIndex = 2;
             this.gC_HoanThanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -576,13 +585,14 @@ namespace StockManagement.Form.StockIn
             // 
             // gC_PhieuBiLoiHang
             // 
-            this.gC_PhieuBiLoiHang.Location = new System.Drawing.Point(4, 6);
+            this.gC_PhieuBiLoiHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_PhieuBiLoiHang.Location = new System.Drawing.Point(3, 3);
             this.gC_PhieuBiLoiHang.MainView = this.gridView4;
             this.gC_PhieuBiLoiHang.Name = "gC_PhieuBiLoiHang";
             this.gC_PhieuBiLoiHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6,
             this.repositoryItemButtonEdit5});
-            this.gC_PhieuBiLoiHang.Size = new System.Drawing.Size(1082, 382);
+            this.gC_PhieuBiLoiHang.Size = new System.Drawing.Size(1083, 388);
             this.gC_PhieuBiLoiHang.TabIndex = 2;
             this.gC_PhieuBiLoiHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -705,13 +715,14 @@ namespace StockManagement.Form.StockIn
             // 
             // gC_DonBiHuy
             // 
-            this.gC_DonBiHuy.Location = new System.Drawing.Point(3, 6);
+            this.gC_DonBiHuy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_DonBiHuy.Location = new System.Drawing.Point(3, 3);
             this.gC_DonBiHuy.MainView = this.gridView5;
             this.gC_DonBiHuy.Name = "gC_DonBiHuy";
             this.gC_DonBiHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8,
             this.repositoryItemButtonEdit7});
-            this.gC_DonBiHuy.Size = new System.Drawing.Size(1082, 382);
+            this.gC_DonBiHuy.Size = new System.Drawing.Size(1083, 388);
             this.gC_DonBiHuy.TabIndex = 2;
             this.gC_DonBiHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -823,6 +834,8 @@ namespace StockManagement.Form.StockIn
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.cbb_DenNgay);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbb_TuNgay);
@@ -873,6 +886,7 @@ namespace StockManagement.Form.StockIn
             // 
             // btn_Them
             // 
+            this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Them.Location = new System.Drawing.Point(992, 83);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(75, 23);
@@ -883,6 +897,7 @@ namespace StockManagement.Form.StockIn
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_TimKiem.Location = new System.Drawing.Point(992, 40);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);

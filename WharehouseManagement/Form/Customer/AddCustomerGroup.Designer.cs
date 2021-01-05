@@ -46,7 +46,7 @@ namespace StockManagement.Form.Customer
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(511, 168);
+            this.btn_Luu.Location = new System.Drawing.Point(509, 159);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 39);
             this.btn_Luu.TabIndex = 5;

@@ -40,7 +40,7 @@
             this.gc_timkiem = new DevExpress.XtraEditors.GroupControl();
             this.btn_timkiem = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_MaNCC = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_danhsachSPNCC)).BeginInit();
             this.gc_danhsachSPNCC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_danhsach)).BeginInit();
@@ -49,7 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_timkiem)).BeginInit();
             this.gc_timkiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNCC.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gc_danhsachSPNCC
@@ -72,9 +72,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gc_danhsach.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gc_danhsach.Controls.Add(this.gridControl1);
-            this.gc_danhsach.Location = new System.Drawing.Point(5, 163);
+            this.gc_danhsach.Location = new System.Drawing.Point(5, 151);
             this.gc_danhsach.Name = "gc_danhsach";
-            this.gc_danhsach.Size = new System.Drawing.Size(771, 274);
+            this.gc_danhsach.Size = new System.Drawing.Size(771, 286);
             this.gc_danhsach.TabIndex = 1;
             this.gc_danhsach.Text = "Danh sách";
             // 
@@ -84,7 +84,7 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 26);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(767, 246);
+            this.gridControl1.Size = new System.Drawing.Size(767, 258);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -137,21 +137,22 @@
             // 
             // gc_timkiem
             // 
+            this.gc_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gc_timkiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gc_timkiem.Controls.Add(this.btn_timkiem);
             this.gc_timkiem.Controls.Add(this.btn_them);
-            this.gc_timkiem.Controls.Add(this.textEdit1);
-            this.gc_timkiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gc_timkiem.Controls.Add(this.txt_MaNCC);
             this.gc_timkiem.Location = new System.Drawing.Point(2, 26);
             this.gc_timkiem.Name = "gc_timkiem";
-            this.gc_timkiem.Size = new System.Drawing.Size(777, 129);
+            this.gc_timkiem.Size = new System.Drawing.Size(777, 119);
             this.gc_timkiem.TabIndex = 0;
             this.gc_timkiem.Text = "Tìm kiếm";
             // 
             // btn_timkiem
             // 
-            this.btn_timkiem.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_timkiem.Location = new System.Drawing.Point(641, 61);
+            this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_timkiem.Location = new System.Drawing.Point(644, 51);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(94, 29);
             this.btn_timkiem.TabIndex = 2;
@@ -159,20 +160,20 @@
             // 
             // btn_them
             // 
-            this.btn_them.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_them.Location = new System.Drawing.Point(497, 61);
+            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Location = new System.Drawing.Point(508, 51);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(94, 29);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // textEdit1
+            // txt_MaNCC
             // 
-            this.textEdit1.Location = new System.Drawing.Point(22, 65);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(234, 22);
-            this.textEdit1.TabIndex = 0;
+            this.txt_MaNCC.Location = new System.Drawing.Point(35, 55);
+            this.txt_MaNCC.Name = "txt_MaNCC";
+            this.txt_MaNCC.Size = new System.Drawing.Size(234, 22);
+            this.txt_MaNCC.TabIndex = 0;
             // 
             // ProductSupplier
             // 
@@ -189,7 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_timkiem)).EndInit();
             this.gc_timkiem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNCC.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +203,7 @@
         private DevExpress.XtraEditors.GroupControl gc_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_them;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_MaNCC;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;

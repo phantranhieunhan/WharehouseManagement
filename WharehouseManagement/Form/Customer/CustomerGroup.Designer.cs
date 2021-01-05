@@ -230,7 +230,7 @@
             this.groupBox1.Controls.Add(this.btn_TimKiem);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.txt_MaNhom);
-            this.groupBox1.Location = new System.Drawing.Point(3, 31);
+            this.groupBox1.Location = new System.Drawing.Point(1, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(845, 138);
             this.groupBox1.TabIndex = 2;
@@ -262,7 +262,7 @@
             this.txt_MaNhom.EditValue = "Mã, tên nhóm";
             this.txt_MaNhom.Location = new System.Drawing.Point(33, 50);
             this.txt_MaNhom.Name = "txt_MaNhom";
-            this.txt_MaNhom.Size = new System.Drawing.Size(438, 22);
+            this.txt_MaNhom.Size = new System.Drawing.Size(484, 22);
             this.txt_MaNhom.TabIndex = 0;
             // 
             // CustomerGroup
