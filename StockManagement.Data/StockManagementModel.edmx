@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="StockManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="StockManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AddressCustomer">
           <Key>
             <PropertyRef Name="AddressCustomerId" />
@@ -1035,7 +1035,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             <End Role="UserPermission" EntitySet="UserPermission" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StockManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1067,9 +1068,9 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
           <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Avatar" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="AddressCustomers" Relationship="Self.FK_ADDRESSC_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="AddressCustomer" />
-          <NavigationProperty Name="GroupMembers" Relationship="Self.FK_GROUPMEM_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="GroupMember" />
-          <NavigationProperty Name="SaleOrders" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="SaleOrder" />
+          <NavigationProperty Name="AddressCustomer" Relationship="Self.FK_ADDRESSC_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="AddressCustomer" />
+          <NavigationProperty Name="GroupMember" Relationship="Self.FK_GROUPMEM_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="GroupMember" />
+          <NavigationProperty Name="SaleOrder" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="SaleOrder" />
         </EntityType>
         <EntityType Name="GroupCustomer">
           <Key>
@@ -1080,7 +1081,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="GroupCustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="CreatedPerson" Type="Guid" />
-          <NavigationProperty Name="GroupMembers" Relationship="Self.FK_GROUPMEM_RELATIONS_GROUPCUS" FromRole="GroupCustomer" ToRole="GroupMember" />
+          <NavigationProperty Name="GroupMember" Relationship="Self.FK_GROUPMEM_RELATIONS_GROUPCUS" FromRole="GroupCustomer" ToRole="GroupMember" />
         </EntityType>
         <EntityType Name="GroupMember">
           <Key>
@@ -1104,7 +1105,6 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="EditPermission" Type="Boolean" />
           <Property Name="DeletePermission" Type="Boolean" />
           <Property Name="GroupBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="UserPermissions" Relationship="Self.FK_USERPERM_RELATIONS_PERMISSI" FromRole="Permission" ToRole="UserPermission" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -1124,10 +1124,10 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="ProductCategory" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTC" FromRole="Product" ToRole="ProductCategory" />
           <NavigationProperty Name="ProductType" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTT" FromRole="Product" ToRole="ProductType" />
           <NavigationProperty Name="ProductUnit" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTU" FromRole="Product" ToRole="ProductUnit" />
-          <NavigationProperty Name="ProductOnStocks" Relationship="Self.FK_PRODUCTO_RELATIONS_PRODUCT" FromRole="Product" ToRole="ProductOnStock" />
-          <NavigationProperty Name="PurchaseOrderDetails" Relationship="Self.FK_PURCHASE_RELATIONS_PRODUCT" FromRole="Product" ToRole="PurchaseOrderDetail" />
-          <NavigationProperty Name="SaleOrderDetails" Relationship="Self.FK_SALEORDE_RELATIONS_PRODUCT" FromRole="Product" ToRole="SaleOrderDetail" />
-          <NavigationProperty Name="SupplierProducts" Relationship="Self.FK_SUPPLIER_RELATIONS_PRODUCT" FromRole="Product" ToRole="SupplierProduct" />
+          <NavigationProperty Name="ProductOnStock" Relationship="Self.FK_PRODUCTO_RELATIONS_PRODUCT" FromRole="Product" ToRole="ProductOnStock" />
+          <NavigationProperty Name="PurchaseOrderDetail" Relationship="Self.FK_PURCHASE_RELATIONS_PRODUCT" FromRole="Product" ToRole="PurchaseOrderDetail" />
+          <NavigationProperty Name="SaleOrderDetail" Relationship="Self.FK_SALEORDE_RELATIONS_PRODUCT" FromRole="Product" ToRole="SaleOrderDetail" />
+          <NavigationProperty Name="SupplierProduct" Relationship="Self.FK_SUPPLIER_RELATIONS_PRODUCT" FromRole="Product" ToRole="SupplierProduct" />
         </EntityType>
         <EntityType Name="ProductCategory">
           <Key>
@@ -1136,7 +1136,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="ProductCategoryId" Type="Guid" Nullable="false" />
           <Property Name="ProductCategoryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ProductCategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTC" FromRole="ProductCategory" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTC" FromRole="ProductCategory" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductOnStock">
           <Key>
@@ -1159,7 +1159,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="ProductTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ProductTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTT" FromRole="ProductType" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTT" FromRole="ProductType" ToRole="Product" />
           <NavigationProperty Name="ProductType1" Relationship="Self.FK_PRODUCTT_GROUP_PRODUCTT" FromRole="ProductType" ToRole="ProductType1" />
           <NavigationProperty Name="ProductType2" Relationship="Self.FK_PRODUCTT_GROUP_PRODUCTT" FromRole="ProductType1" ToRole="ProductType" />
         </EntityType>
@@ -1170,7 +1170,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="ProductUnitId" Type="Guid" Nullable="false" />
           <Property Name="ProductUnitCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="ProductUnitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTU" FromRole="ProductUnit" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTU" FromRole="ProductUnit" ToRole="Product" />
         </EntityType>
         <EntityType Name="PurchaseOrder">
           <Key>
@@ -1183,11 +1183,11 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="PurchaseOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="IsPay" Type="Boolean" />
-          <NavigationProperty Name="PurchaseOrderDetails" Relationship="Self.FK_PURCHASE_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="PurchaseOrderDetail" />
+          <NavigationProperty Name="PurchaseOrderDetail" Relationship="Self.FK_PURCHASE_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="PurchaseOrderDetail" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_PURCHASE_RELATIONS_STOCK" FromRole="PurchaseOrder" ToRole="Stock" />
           <NavigationProperty Name="Supplier" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="PurchaseOrder" ToRole="Supplier" />
           <NavigationProperty Name="User" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="PurchaseOrder" ToRole="User" />
-          <NavigationProperty Name="StockIns" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="StockIn" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="StockIn" />
         </EntityType>
         <EntityType Name="PurchaseOrderDetail">
           <Key>
@@ -1219,8 +1219,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="IsPay" Type="Boolean" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="SaleOrder" ToRole="Customer" />
           <NavigationProperty Name="User" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="SaleOrder" ToRole="User" />
-          <NavigationProperty Name="SaleOrderDetails" Relationship="Self.FK_SALEORDE_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="SaleOrderDetail" />
-          <NavigationProperty Name="StockOuts" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="StockOut" />
+          <NavigationProperty Name="SaleOrderDetail" Relationship="Self.FK_SALEORDE_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="SaleOrderDetail" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="StockOut" />
         </EntityType>
         <EntityType Name="SaleOrderDetail">
           <Key>
@@ -1244,14 +1244,14 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="StockName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="ProductOnStocks" Relationship="Self.FK_PRODUCTO_RELATIONS_STOCK" FromRole="Stock" ToRole="ProductOnStock" />
-          <NavigationProperty Name="PurchaseOrders" Relationship="Self.FK_PURCHASE_RELATIONS_STOCK" FromRole="Stock" ToRole="PurchaseOrder" />
-          <NavigationProperty Name="StockIns" Relationship="Self.FK_STOCKIN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
-          <NavigationProperty Name="StockIns1" Relationship="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
-          <NavigationProperty Name="StockManagers" Relationship="Self.FK_STOCKMAN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockManager" />
-          <NavigationProperty Name="StockOuts" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="Stock" ToRole="StockOut" />
-          <NavigationProperty Name="StockOuts1" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="Stock" ToRole="StockOut" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_USER_RELATIONS_STOCK" FromRole="Stock" ToRole="User" />
+          <NavigationProperty Name="ProductOnStock" Relationship="Self.FK_PRODUCTO_RELATIONS_STOCK" FromRole="Stock" ToRole="ProductOnStock" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_STOCK" FromRole="Stock" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
+          <NavigationProperty Name="StockIn1" Relationship="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" FromRole="Stock" ToRole="StockIn" />
+          <NavigationProperty Name="StockManager" Relationship="Self.FK_STOCKMAN_RELATIONS_STOCK" FromRole="Stock" ToRole="StockManager" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCK" FromRole="Stock" ToRole="StockOut" />
+          <NavigationProperty Name="StockOut1" Relationship="Self.FK_STOCKOUT_WAREHOUSE_STOCK" FromRole="Stock" ToRole="StockOut" />
+          <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_STOCK" FromRole="Stock" ToRole="User" />
         </EntityType>
         <EntityType Name="StockIn">
           <Key>
@@ -1273,7 +1273,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="Stock1" Relationship="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" FromRole="StockIn" ToRole="Stock" />
           <NavigationProperty Name="StockInType" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE" FromRole="StockIn" ToRole="StockInType" />
           <NavigationProperty Name="User" Relationship="Self.FK_STOCKIN_RELATIONS_USER" FromRole="StockIn" ToRole="User" />
-          <NavigationProperty Name="StockInDetails" Relationship="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN" FromRole="StockIn" ToRole="StockInDetail" />
+          <NavigationProperty Name="StockInDetail" Relationship="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN" FromRole="StockIn" ToRole="StockInDetail" />
         </EntityType>
         <EntityType Name="StockInDetail">
           <Key>
@@ -1291,7 +1291,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           </Key>
           <Property Name="StockInTypeId" Type="Guid" Nullable="false" />
           <Property Name="StockInTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="StockIns" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE" FromRole="StockInType" ToRole="StockIn" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE" FromRole="StockInType" ToRole="StockIn" />
         </EntityType>
         <EntityType Name="StockManager">
           <Key>
@@ -1325,7 +1325,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="StockOutType1" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOut" ToRole="StockOutType" />
           <NavigationProperty Name="Supplier" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="StockOut" ToRole="Supplier" />
           <NavigationProperty Name="User" Relationship="Self.FK_STOCKOUT_RELATIONS_USER" FromRole="StockOut" ToRole="User" />
-          <NavigationProperty Name="StockOutDetails" Relationship="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" FromRole="StockOut" ToRole="StockOutDetail" />
+          <NavigationProperty Name="StockOutDetail" Relationship="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" FromRole="StockOut" ToRole="StockOutDetail" />
         </EntityType>
         <EntityType Name="StockOutDetail">
           <Key>
@@ -1342,7 +1342,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           </Key>
           <Property Name="StockOutType1" Type="Guid" Nullable="false" />
           <Property Name="StockOutTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="StockOuts" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType" ToRole="StockOut" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" FromRole="StockOutType" ToRole="StockOut" />
         </EntityType>
         <EntityType Name="Supplier">
           <Key>
@@ -1355,9 +1355,9 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PurchaseOrders" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="PurchaseOrder" />
-          <NavigationProperty Name="StockOuts" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="StockOut" />
-          <NavigationProperty Name="SupplierProducts" Relationship="Self.FK_SUPPLIER_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="SupplierProduct" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="StockOut" />
+          <NavigationProperty Name="SupplierProduct" Relationship="Self.FK_SUPPLIER_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="SupplierProduct" />
         </EntityType>
         <EntityType Name="SupplierProduct">
           <Key>
@@ -1371,7 +1371,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="Product" Relationship="Self.FK_SUPPLIER_RELATIONS_PRODUCT" FromRole="SupplierProduct" ToRole="Product" />
           <NavigationProperty Name="Supplier" Relationship="Self.FK_SUPPLIER_RELATIONS_SUPPLIER" FromRole="SupplierProduct" ToRole="Supplier" />
         </EntityType>
-        <EntityType Name="sysdiagram">
+        <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
@@ -1403,23 +1403,20 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="Avatar" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
           <Property Name="MaritalStatus" Type="Int32" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="PurchaseOrders" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="User" ToRole="PurchaseOrder" />
-          <NavigationProperty Name="SaleOrders" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="User" ToRole="SaleOrder" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="User" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="SaleOrder" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="User" ToRole="SaleOrder" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_USER_RELATIONS_STOCK" FromRole="User" ToRole="Stock" />
-          <NavigationProperty Name="StockIns" Relationship="Self.FK_STOCKIN_RELATIONS_USER" FromRole="User" ToRole="StockIn" />
-          <NavigationProperty Name="StockOuts" Relationship="Self.FK_STOCKOUT_RELATIONS_USER" FromRole="User" ToRole="StockOut" />
+          <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_USER" FromRole="User" ToRole="StockIn" />
+          <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_USER" FromRole="User" ToRole="StockOut" />
           <NavigationProperty Name="UserType" Relationship="Self.FK_USER_RELATIONS_USERTYPE" FromRole="User" ToRole="UserType" />
-          <NavigationProperty Name="UserPermissions" Relationship="Self.FK_USERPERM_RELATIONS_USER" FromRole="User" ToRole="UserPermission" />
+          <NavigationProperty Name="UserPermission" Relationship="Self.FK_USERPERM_RELATIONS_USER" FromRole="User" ToRole="UserPermission" />
         </EntityType>
         <EntityType Name="UserPermission">
           <Key>
             <PropertyRef Name="UserPermissionID" />
           </Key>
           <Property Name="UserPermissionID" Type="Guid" Nullable="false" />
-          <Property Name="PermissionId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserId" Type="Guid" />
-          <NavigationProperty Name="Permission" Relationship="Self.FK_USERPERM_RELATIONS_PERMISSI" FromRole="UserPermission" ToRole="Permission" />
-          <NavigationProperty Name="User" Relationship="Self.FK_USERPERM_RELATIONS_USER" FromRole="UserPermission" ToRole="User" />
           <Property Name="btn_EmployeeList" Type="Boolean" />
           <Property Name="btn_TypeEmployee" Type="Boolean" />
           <Property Name="btn_Decentralization" Type="Boolean" />
@@ -1445,6 +1442,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="btn_Setting3" Type="Boolean" />
           <Property Name="btn_Setting4" Type="Boolean" />
           <Property Name="btn_Setting5" Type="Boolean" />
+          <NavigationProperty Name="User" Relationship="Self.FK_USERPERM_RELATIONS_USER" FromRole="UserPermission" ToRole="User" />
         </EntityType>
         <EntityType Name="UserType">
           <Key>
@@ -1453,7 +1451,41 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="UserTypeId" Type="Guid" Nullable="false" />
           <Property Name="UserTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_USER_RELATIONS_USERTYPE" FromRole="UserType" ToRole="User" />
+          <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_USERTYPE" FromRole="UserType" ToRole="User" />
+        </EntityType>
+        <EntityType Name="vw_UserPermission">
+          <Key>
+            <PropertyRef Name="UserPermissionID" />
+          </Key>
+          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UserPermissionID" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="btn_EmployeeList" Type="Boolean" />
+          <Property Name="btn_TypeEmployee" Type="Boolean" />
+          <Property Name="btn_Decentralization" Type="Boolean" />
+          <Property Name="btn_CustomerGroup" Type="Boolean" />
+          <Property Name="btn_CustomerList" Type="Boolean" />
+          <Property Name="btn_SupplierList" Type="Boolean" />
+          <Property Name="btn_SupplierProduct" Type="Boolean" />
+          <Property Name="btn_WarehouseList" Type="Boolean" />
+          <Property Name="btn_InventoryManagement" Type="Boolean" />
+          <Property Name="btn_ProductPortfolio" Type="Boolean" />
+          <Property Name="btn_ProductList" Type="Boolean" />
+          <Property Name="btn_StockIn" Type="Boolean" />
+          <Property Name="btn_StockOut" Type="Boolean" />
+          <Property Name="btn_SaleOrder" Type="Boolean" />
+          <Property Name="btn_PurchaseOrder" Type="Boolean" />
+          <Property Name="btn_Report1" Type="Boolean" />
+          <Property Name="btn_Report2" Type="Boolean" />
+          <Property Name="btn_Report3" Type="Boolean" />
+          <Property Name="btn_Report4" Type="Boolean" />
+          <Property Name="btn_Report5" Type="Boolean" />
+          <Property Name="btn_Setting1" Type="Boolean" />
+          <Property Name="btn_Setting2" Type="Boolean" />
+          <Property Name="btn_Setting3" Type="Boolean" />
+          <Property Name="btn_Setting4" Type="Boolean" />
+          <Property Name="btn_Setting5" Type="Boolean" />
         </EntityType>
         <Association Name="FK_ADDRESSC_RELATIONS_CUSTOMER">
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
@@ -1500,18 +1532,6 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             </Principal>
             <Dependent Role="GroupMember">
               <PropertyRef Name="GroupCustomerId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_USERPERM_RELATIONS_PERMISSI">
-          <End Role="Permission" Type="Self.Permission" Multiplicity="0..1" />
-          <End Role="UserPermission" Type="Self.UserPermission" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Permission">
-              <PropertyRef Name="PermissionId" />
-            </Principal>
-            <Dependent Role="UserPermission">
-              <PropertyRef Name="PermissionId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1912,229 +1932,191 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="StockManagementEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AddressCustomers" EntityType="Self.AddressCustomer" />
-          <EntitySet Name="Customers" EntityType="Self.Customer" />
-          <EntitySet Name="GroupCustomers" EntityType="Self.GroupCustomer" />
-          <EntitySet Name="GroupMembers" EntityType="Self.GroupMember" />
-          <EntitySet Name="Permissions" EntityType="Self.Permission" />
-          <EntitySet Name="Products" EntityType="Self.Product" />
-          <EntitySet Name="ProductCategories" EntityType="Self.ProductCategory" />
-          <EntitySet Name="ProductOnStocks" EntityType="Self.ProductOnStock" />
-          <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
-          <EntitySet Name="ProductUnits" EntityType="Self.ProductUnit" />
-          <EntitySet Name="PurchaseOrders" EntityType="Self.PurchaseOrder" />
-          <EntitySet Name="PurchaseOrderDetails" EntityType="Self.PurchaseOrderDetail" />
-          <EntitySet Name="SaleOrders" EntityType="Self.SaleOrder" />
-          <EntitySet Name="SaleOrderDetails" EntityType="Self.SaleOrderDetail" />
-          <EntitySet Name="Stocks" EntityType="Self.Stock" />
-          <EntitySet Name="StockIns" EntityType="Self.StockIn" />
-          <EntitySet Name="StockInDetails" EntityType="Self.StockInDetail" />
-          <EntitySet Name="StockInTypes" EntityType="Self.StockInType" />
-          <EntitySet Name="StockManagers" EntityType="Self.StockManager" />
-          <EntitySet Name="StockOuts" EntityType="Self.StockOut" />
-          <EntitySet Name="StockOutDetails" EntityType="Self.StockOutDetail" />
-          <EntitySet Name="StockOutTypes" EntityType="Self.StockOutType" />
-          <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
-          <EntitySet Name="SupplierProducts" EntityType="Self.SupplierProduct" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="Users" EntityType="Self.User" />
-          <EntitySet Name="UserPermissions" EntityType="Self.UserPermission" />
-          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+          <EntitySet Name="AddressCustomer" EntityType="Self.AddressCustomer" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" />
+          <EntitySet Name="GroupMember" EntityType="Self.GroupMember" />
+          <EntitySet Name="Permission" EntityType="Self.Permission" />
+          <EntitySet Name="Product" EntityType="Self.Product" />
+          <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" />
+          <EntitySet Name="ProductOnStock" EntityType="Self.ProductOnStock" />
+          <EntitySet Name="ProductType" EntityType="Self.ProductType" />
+          <EntitySet Name="ProductUnit" EntityType="Self.ProductUnit" />
+          <EntitySet Name="PurchaseOrder" EntityType="Self.PurchaseOrder" />
+          <EntitySet Name="PurchaseOrderDetail" EntityType="Self.PurchaseOrderDetail" />
+          <EntitySet Name="SaleOrder" EntityType="Self.SaleOrder" />
+          <EntitySet Name="SaleOrderDetail" EntityType="Self.SaleOrderDetail" />
+          <EntitySet Name="Stock" EntityType="Self.Stock" />
+          <EntitySet Name="StockIn" EntityType="Self.StockIn" />
+          <EntitySet Name="StockInDetail" EntityType="Self.StockInDetail" />
+          <EntitySet Name="StockInType" EntityType="Self.StockInType" />
+          <EntitySet Name="StockManager" EntityType="Self.StockManager" />
+          <EntitySet Name="StockOut" EntityType="Self.StockOut" />
+          <EntitySet Name="StockOutDetail" EntityType="Self.StockOutDetail" />
+          <EntitySet Name="StockOutType" EntityType="Self.StockOutType" />
+          <EntitySet Name="Supplier" EntityType="Self.Supplier" />
+          <EntitySet Name="SupplierProduct" EntityType="Self.SupplierProduct" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="UserPermission" EntityType="Self.UserPermission" />
+          <EntitySet Name="UserType" EntityType="Self.UserType" />
+          <EntitySet Name="vw_UserPermission" EntityType="Self.vw_UserPermission" />
           <AssociationSet Name="FK_ADDRESSC_RELATIONS_CUSTOMER" Association="Self.FK_ADDRESSC_RELATIONS_CUSTOMER">
-            <End Role="Customer" EntitySet="Customers" />
-            <End Role="AddressCustomer" EntitySet="AddressCustomers" />
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="AddressCustomer" EntitySet="AddressCustomer" />
           </AssociationSet>
           <AssociationSet Name="FK_GROUPMEM_RELATIONS_CUSTOMER" Association="Self.FK_GROUPMEM_RELATIONS_CUSTOMER">
-            <End Role="Customer" EntitySet="Customers" />
-            <End Role="GroupMember" EntitySet="GroupMembers" />
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="GroupMember" EntitySet="GroupMember" />
           </AssociationSet>
           <AssociationSet Name="FK_SALEORDE_RELATIONS_CUSTOMER" Association="Self.FK_SALEORDE_RELATIONS_CUSTOMER">
-            <End Role="Customer" EntitySet="Customers" />
-            <End Role="SaleOrder" EntitySet="SaleOrders" />
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="SaleOrder" EntitySet="SaleOrder" />
           </AssociationSet>
           <AssociationSet Name="FK_GROUPMEM_RELATIONS_GROUPCUS" Association="Self.FK_GROUPMEM_RELATIONS_GROUPCUS">
-            <End Role="GroupCustomer" EntitySet="GroupCustomers" />
-            <End Role="GroupMember" EntitySet="GroupMembers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_USERPERM_RELATIONS_PERMISSI" Association="Self.FK_USERPERM_RELATIONS_PERMISSI">
-            <End Role="Permission" EntitySet="Permissions" />
-            <End Role="UserPermission" EntitySet="UserPermissions" />
+            <End Role="GroupCustomer" EntitySet="GroupCustomer" />
+            <End Role="GroupMember" EntitySet="GroupMember" />
           </AssociationSet>
           <AssociationSet Name="FK_PRODUCT_RELATIONS_PRODUCTC" Association="Self.FK_PRODUCT_RELATIONS_PRODUCTC">
-            <End Role="ProductCategory" EntitySet="ProductCategories" />
-            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+            <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK_PRODUCT_RELATIONS_PRODUCTT" Association="Self.FK_PRODUCT_RELATIONS_PRODUCTT">
-            <End Role="ProductType" EntitySet="ProductTypes" />
-            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductType" EntitySet="ProductType" />
+            <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK_PRODUCT_RELATIONS_PRODUCTU" Association="Self.FK_PRODUCT_RELATIONS_PRODUCTU">
-            <End Role="ProductUnit" EntitySet="ProductUnits" />
-            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductUnit" EntitySet="ProductUnit" />
+            <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK_PRODUCTO_RELATIONS_PRODUCT" Association="Self.FK_PRODUCTO_RELATIONS_PRODUCT">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductOnStock" EntitySet="ProductOnStocks" />
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductOnStock" EntitySet="ProductOnStock" />
           </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_PRODUCT" Association="Self.FK_PURCHASE_RELATIONS_PRODUCT">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetails" />
+            <End Role="Product" EntitySet="Product" />
+            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_SALEORDE_RELATIONS_PRODUCT" Association="Self.FK_SALEORDE_RELATIONS_PRODUCT">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="SaleOrderDetail" EntitySet="SaleOrderDetails" />
+            <End Role="Product" EntitySet="Product" />
+            <End Role="SaleOrderDetail" EntitySet="SaleOrderDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_SUPPLIER_RELATIONS_PRODUCT" Association="Self.FK_SUPPLIER_RELATIONS_PRODUCT">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="SupplierProduct" EntitySet="SupplierProducts" />
+            <End Role="Product" EntitySet="Product" />
+            <End Role="SupplierProduct" EntitySet="SupplierProduct" />
           </AssociationSet>
           <AssociationSet Name="FK_PRODUCTO_RELATIONS_STOCK" Association="Self.FK_PRODUCTO_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="ProductOnStock" EntitySet="ProductOnStocks" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="ProductOnStock" EntitySet="ProductOnStock" />
           </AssociationSet>
           <AssociationSet Name="FK_PRODUCTT_GROUP_PRODUCTT" Association="Self.FK_PRODUCTT_GROUP_PRODUCTT">
-            <End Role="ProductType" EntitySet="ProductTypes" />
-            <End Role="ProductType1" EntitySet="ProductTypes" />
+            <End Role="ProductType" EntitySet="ProductType" />
+            <End Role="ProductType1" EntitySet="ProductType" />
           </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_PURCHASE" Association="Self.FK_PURCHASE_RELATIONS_PURCHASE">
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
-            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetails" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_STOCK" Association="Self.FK_PURCHASE_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
           </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_SUPPLIER" Association="Self.FK_PURCHASE_RELATIONS_SUPPLIER">
-            <End Role="Supplier" EntitySet="Suppliers" />
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
           </AssociationSet>
           <AssociationSet Name="FK_PURCHASE_RELATIONS_USER" Association="Self.FK_PURCHASE_RELATIONS_USER">
-            <End Role="User" EntitySet="Users" />
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+            <End Role="User" EntitySet="User" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_RELATIONS_PURCHASE" Association="Self.FK_STOCKIN_RELATIONS_PURCHASE">
-            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
-            <End Role="StockIn" EntitySet="StockIns" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_SALEORDE_CREATEDBY_USER" Association="Self.FK_SALEORDE_CREATEDBY_USER">
-            <End Role="User" EntitySet="Users" />
-            <End Role="SaleOrder" EntitySet="SaleOrders" />
+            <End Role="User" EntitySet="User" />
+            <End Role="SaleOrder" EntitySet="SaleOrder" />
           </AssociationSet>
           <AssociationSet Name="FK_SALEORDE_RELATIONS_SALEORDE" Association="Self.FK_SALEORDE_RELATIONS_SALEORDE">
-            <End Role="SaleOrder" EntitySet="SaleOrders" />
-            <End Role="SaleOrderDetail" EntitySet="SaleOrderDetails" />
+            <End Role="SaleOrder" EntitySet="SaleOrder" />
+            <End Role="SaleOrderDetail" EntitySet="SaleOrderDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_SALEORDE" Association="Self.FK_STOCKOUT_RELATIONS_SALEORDE">
-            <End Role="SaleOrder" EntitySet="SaleOrders" />
-            <End Role="StockOut" EntitySet="StockOuts" />
+            <End Role="SaleOrder" EntitySet="SaleOrder" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCK" Association="Self.FK_STOCKIN_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="StockIn" EntitySet="StockIns" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_TO_STOCK_RELATIONS_STOCK" Association="Self.FK_STOCKIN_TO_STOCK_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="StockIn" EntitySet="StockIns" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKMAN_RELATIONS_STOCK" Association="Self.FK_STOCKMAN_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="StockManager" EntitySet="StockManagers" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockManager" EntitySet="StockManager" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCK" Association="Self.FK_STOCKOUT_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="StockOut" EntitySet="StockOuts" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_WAREHOUSE_STOCK" Association="Self.FK_STOCKOUT_WAREHOUSE_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="StockOut" EntitySet="StockOuts" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_USER_RELATIONS_STOCK" Association="Self.FK_USER_RELATIONS_STOCK">
-            <End Role="Stock" EntitySet="Stocks" />
-            <End Role="User" EntitySet="Users" />
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="User" EntitySet="User" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_RELATIONS_STOCKINTYPE" Association="Self.FK_STOCKIN_RELATIONS_STOCKINTYPE">
-            <End Role="StockInType" EntitySet="StockInTypes" />
-            <End Role="StockIn" EntitySet="StockIns" />
+            <End Role="StockInType" EntitySet="StockInType" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKIN_RELATIONS_USER" Association="Self.FK_STOCKIN_RELATIONS_USER">
-            <End Role="User" EntitySet="Users" />
-            <End Role="StockIn" EntitySet="StockIns" />
+            <End Role="User" EntitySet="User" />
+            <End Role="StockIn" EntitySet="StockIn" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKINDDETAIL_RELATIONS_STOCKIN" Association="Self.FK_STOCKINDDETAIL_RELATIONS_STOCKIN">
-            <End Role="StockIn" EntitySet="StockIns" />
-            <End Role="StockInDetail" EntitySet="StockInDetails" />
+            <End Role="StockIn" EntitySet="StockIn" />
+            <End Role="StockInDetail" EntitySet="StockInDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_STOCKOUTTYPE" Association="Self.FK_STOCKOUT_RELATIONS_STOCKOUTTYPE">
-            <End Role="StockOutType" EntitySet="StockOutTypes" />
-            <End Role="StockOut" EntitySet="StockOuts" />
+            <End Role="StockOutType" EntitySet="StockOutType" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_SUPPLIER" Association="Self.FK_STOCKOUT_RELATIONS_SUPPLIER">
-            <End Role="Supplier" EntitySet="Suppliers" />
-            <End Role="StockOut" EntitySet="StockOuts" />
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUT_RELATIONS_USER" Association="Self.FK_STOCKOUT_RELATIONS_USER">
-            <End Role="User" EntitySet="Users" />
-            <End Role="StockOut" EntitySet="StockOuts" />
+            <End Role="User" EntitySet="User" />
+            <End Role="StockOut" EntitySet="StockOut" />
           </AssociationSet>
           <AssociationSet Name="FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT" Association="Self.FK_STOCKOUTDETAIL_RELATIONS_STOCKOUT">
-            <End Role="StockOut" EntitySet="StockOuts" />
-            <End Role="StockOutDetail" EntitySet="StockOutDetails" />
+            <End Role="StockOut" EntitySet="StockOut" />
+            <End Role="StockOutDetail" EntitySet="StockOutDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_SUPPLIER_RELATIONS_SUPPLIER" Association="Self.FK_SUPPLIER_RELATIONS_SUPPLIER">
-            <End Role="Supplier" EntitySet="Suppliers" />
-            <End Role="SupplierProduct" EntitySet="SupplierProducts" />
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="SupplierProduct" EntitySet="SupplierProduct" />
           </AssociationSet>
           <AssociationSet Name="FK_USER_RELATIONS_USERTYPE" Association="Self.FK_USER_RELATIONS_USERTYPE">
-            <End Role="UserType" EntitySet="UserTypes" />
-            <End Role="User" EntitySet="Users" />
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="User" EntitySet="User" />
           </AssociationSet>
           <AssociationSet Name="FK_USERPERM_RELATIONS_USER" Association="Self.FK_USERPERM_RELATIONS_USER">
-            <End Role="User" EntitySet="Users" />
-            <End Role="UserPermission" EntitySet="UserPermissions" />
+            <End Role="User" EntitySet="User" />
+            <End Role="UserPermission" EntitySet="UserPermission" />
           </AssociationSet>
-          <EntitySet Name="vw_UserPermission" EntityType="StockManagementModel.vw_UserPermission" />
         </EntityContainer>
-        <EntityType Name="vw_UserPermission">
-          <Key>
-            <PropertyRef Name="UserPermissionID" />
-          </Key>
-          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="UserPermissionID" Type="Guid" Nullable="false" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="btn_EmployeeList" Type="Boolean" />
-          <Property Name="btn_TypeEmployee" Type="Boolean" />
-          <Property Name="btn_Decentralization" Type="Boolean" />
-          <Property Name="btn_CustomerGroup" Type="Boolean" />
-          <Property Name="btn_CustomerList" Type="Boolean" />
-          <Property Name="btn_SupplierList" Type="Boolean" />
-          <Property Name="btn_SupplierProduct" Type="Boolean" />
-          <Property Name="btn_WarehouseList" Type="Boolean" />
-          <Property Name="btn_InventoryManagement" Type="Boolean" />
-          <Property Name="btn_ProductPortfolio" Type="Boolean" />
-          <Property Name="btn_ProductList" Type="Boolean" />
-          <Property Name="btn_StockIn" Type="Boolean" />
-          <Property Name="btn_StockOut" Type="Boolean" />
-          <Property Name="btn_SaleOrder" Type="Boolean" />
-          <Property Name="btn_PurchaseOrder" Type="Boolean" />
-          <Property Name="btn_Report1" Type="Boolean" />
-          <Property Name="btn_Report2" Type="Boolean" />
-          <Property Name="btn_Report3" Type="Boolean" />
-          <Property Name="btn_Report4" Type="Boolean" />
-          <Property Name="btn_Report5" Type="Boolean" />
-          <Property Name="btn_Setting1" Type="Boolean" />
-          <Property Name="btn_Setting2" Type="Boolean" />
-          <Property Name="btn_Setting3" Type="Boolean" />
-          <Property Name="btn_Setting4" Type="Boolean" />
-          <Property Name="btn_Setting5" Type="Boolean" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="StockManagementModelStoreContainer" CdmEntityContainer="StockManagementEntities">
-          <EntitySetMapping Name="AddressCustomers">
+          <EntitySetMapping Name="AddressCustomer">
             <EntityTypeMapping TypeName="StockManagementModel.AddressCustomer">
               <MappingFragment StoreEntitySet="AddressCustomer">
                 <ScalarProperty Name="AddressCustomerId" ColumnName="AddressCustomerId" />
@@ -2148,7 +2130,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Customers">
+          <EntitySetMapping Name="Customer">
             <EntityTypeMapping TypeName="StockManagementModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
@@ -2164,7 +2146,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="GroupCustomers">
+          <EntitySetMapping Name="GroupCustomer">
             <EntityTypeMapping TypeName="StockManagementModel.GroupCustomer">
               <MappingFragment StoreEntitySet="GroupCustomer">
                 <ScalarProperty Name="GroupCustomerId" ColumnName="GroupCustomerId" />
@@ -2175,7 +2157,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="GroupMembers">
+          <EntitySetMapping Name="GroupMember">
             <EntityTypeMapping TypeName="StockManagementModel.GroupMember">
               <MappingFragment StoreEntitySet="GroupMember">
                 <ScalarProperty Name="GroupMemberID" ColumnName="GroupMemberID" />
@@ -2185,7 +2167,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Permissions">
+          <EntitySetMapping Name="Permission">
             <EntityTypeMapping TypeName="StockManagementModel.Permission">
               <MappingFragment StoreEntitySet="Permission">
                 <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
@@ -2198,7 +2180,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Products">
+          <EntitySetMapping Name="Product">
             <EntityTypeMapping TypeName="StockManagementModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -2215,7 +2197,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProductCategories">
+          <EntitySetMapping Name="ProductCategory">
             <EntityTypeMapping TypeName="StockManagementModel.ProductCategory">
               <MappingFragment StoreEntitySet="ProductCategory">
                 <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
@@ -2224,7 +2206,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProductOnStocks">
+          <EntitySetMapping Name="ProductOnStock">
             <EntityTypeMapping TypeName="StockManagementModel.ProductOnStock">
               <MappingFragment StoreEntitySet="ProductOnStock">
                 <ScalarProperty Name="ProductOnStockId" ColumnName="ProductOnStockId" />
@@ -2235,7 +2217,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProductTypes">
+          <EntitySetMapping Name="ProductType">
             <EntityTypeMapping TypeName="StockManagementModel.ProductType">
               <MappingFragment StoreEntitySet="ProductType">
                 <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
@@ -2246,7 +2228,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProductUnits">
+          <EntitySetMapping Name="ProductUnit">
             <EntityTypeMapping TypeName="StockManagementModel.ProductUnit">
               <MappingFragment StoreEntitySet="ProductUnit">
                 <ScalarProperty Name="ProductUnitId" ColumnName="ProductUnitId" />
@@ -2255,7 +2237,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PurchaseOrders">
+          <EntitySetMapping Name="PurchaseOrder">
             <EntityTypeMapping TypeName="StockManagementModel.PurchaseOrder">
               <MappingFragment StoreEntitySet="PurchaseOrder">
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
@@ -2268,7 +2250,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PurchaseOrderDetails">
+          <EntitySetMapping Name="PurchaseOrderDetail">
             <EntityTypeMapping TypeName="StockManagementModel.PurchaseOrderDetail">
               <MappingFragment StoreEntitySet="PurchaseOrderDetail">
                 <ScalarProperty Name="PurchaseOrderDetailId" ColumnName="PurchaseOrderDetailId" />
@@ -2280,7 +2262,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SaleOrders">
+          <EntitySetMapping Name="SaleOrder">
             <EntityTypeMapping TypeName="StockManagementModel.SaleOrder">
               <MappingFragment StoreEntitySet="SaleOrder">
                 <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
@@ -2297,7 +2279,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SaleOrderDetails">
+          <EntitySetMapping Name="SaleOrderDetail">
             <EntityTypeMapping TypeName="StockManagementModel.SaleOrderDetail">
               <MappingFragment StoreEntitySet="SaleOrderDetail">
                 <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
@@ -2309,7 +2291,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Stocks">
+          <EntitySetMapping Name="Stock">
             <EntityTypeMapping TypeName="StockManagementModel.Stock">
               <MappingFragment StoreEntitySet="Stock">
                 <ScalarProperty Name="StockId" ColumnName="StockId" />
@@ -2320,7 +2302,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockIns">
+          <EntitySetMapping Name="StockIn">
             <EntityTypeMapping TypeName="StockManagementModel.StockIn">
               <MappingFragment StoreEntitySet="StockIn">
                 <ScalarProperty Name="StockInId" ColumnName="StockInId" />
@@ -2337,7 +2319,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockInDetails">
+          <EntitySetMapping Name="StockInDetail">
             <EntityTypeMapping TypeName="StockManagementModel.StockInDetail">
               <MappingFragment StoreEntitySet="StockInDetail">
                 <ScalarProperty Name="StockInDetailID" ColumnName="StockInDetailID" />
@@ -2347,7 +2329,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockInTypes">
+          <EntitySetMapping Name="StockInType">
             <EntityTypeMapping TypeName="StockManagementModel.StockInType">
               <MappingFragment StoreEntitySet="StockInType">
                 <ScalarProperty Name="StockInTypeId" ColumnName="StockInTypeId" />
@@ -2355,7 +2337,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockManagers">
+          <EntitySetMapping Name="StockManager">
             <EntityTypeMapping TypeName="StockManagementModel.StockManager">
               <MappingFragment StoreEntitySet="StockManager">
                 <ScalarProperty Name="StockManagerId" ColumnName="StockManagerId" />
@@ -2365,7 +2347,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockOuts">
+          <EntitySetMapping Name="StockOut">
             <EntityTypeMapping TypeName="StockManagementModel.StockOut">
               <MappingFragment StoreEntitySet="StockOut">
                 <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
@@ -2383,7 +2365,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockOutDetails">
+          <EntitySetMapping Name="StockOutDetail">
             <EntityTypeMapping TypeName="StockManagementModel.StockOutDetail">
               <MappingFragment StoreEntitySet="StockOutDetail">
                 <ScalarProperty Name="StockOutDetailId" ColumnName="StockOutDetailId" />
@@ -2392,7 +2374,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StockOutTypes">
+          <EntitySetMapping Name="StockOutType">
             <EntityTypeMapping TypeName="StockManagementModel.StockOutType">
               <MappingFragment StoreEntitySet="StockOutType">
                 <ScalarProperty Name="StockOutType1" ColumnName="StockOutType" />
@@ -2400,7 +2382,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Suppliers">
+          <EntitySetMapping Name="Supplier">
             <EntityTypeMapping TypeName="StockManagementModel.Supplier">
               <MappingFragment StoreEntitySet="Supplier">
                 <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
@@ -2413,7 +2395,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SupplierProducts">
+          <EntitySetMapping Name="SupplierProduct">
             <EntityTypeMapping TypeName="StockManagementModel.SupplierProduct">
               <MappingFragment StoreEntitySet="SupplierProduct">
                 <ScalarProperty Name="SuplierProductId" ColumnName="SuplierProductId" />
@@ -2425,7 +2407,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="StockManagementModel.sysdiagram">
+            <EntityTypeMapping TypeName="StockManagementModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -2435,7 +2417,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Users">
+          <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="StockManagementModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2459,40 +2441,40 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserPermissions">
+          <EntitySetMapping Name="UserPermission">
             <EntityTypeMapping TypeName="StockManagementModel.UserPermission">
               <MappingFragment StoreEntitySet="UserPermission">
-                <ScalarProperty Name="btn_Setting5" ColumnName="btn_Setting5" />
-                <ScalarProperty Name="btn_Setting4" ColumnName="btn_Setting4" />
-                <ScalarProperty Name="btn_Setting3" ColumnName="btn_Setting3" />
-                <ScalarProperty Name="btn_Setting2" ColumnName="btn_Setting2" />
-                <ScalarProperty Name="btn_Setting1" ColumnName="btn_Setting1" />
-                <ScalarProperty Name="btn_Report5" ColumnName="btn_Report5" />
-                <ScalarProperty Name="btn_Report4" ColumnName="btn_Report4" />
-                <ScalarProperty Name="btn_Report3" ColumnName="btn_Report3" />
-                <ScalarProperty Name="btn_Report2" ColumnName="btn_Report2" />
-                <ScalarProperty Name="btn_Report1" ColumnName="btn_Report1" />
-                <ScalarProperty Name="btn_PurchaseOrder" ColumnName="btn_PurchaseOrder" />
-                <ScalarProperty Name="btn_SaleOrder" ColumnName="btn_SaleOrder" />
-                <ScalarProperty Name="btn_StockOut" ColumnName="btn_StockOut" />
-                <ScalarProperty Name="btn_StockIn" ColumnName="btn_StockIn" />
-                <ScalarProperty Name="btn_ProductList" ColumnName="btn_ProductList" />
-                <ScalarProperty Name="btn_ProductPortfolio" ColumnName="btn_ProductPortfolio" />
-                <ScalarProperty Name="btn_InventoryManagement" ColumnName="btn_InventoryManagement" />
-                <ScalarProperty Name="btn_WarehouseList" ColumnName="btn_WarehouseList" />
-                <ScalarProperty Name="btn_SupplierProduct" ColumnName="btn_SupplierProduct" />
-                <ScalarProperty Name="btn_SupplierList" ColumnName="btn_SupplierList" />
-                <ScalarProperty Name="btn_CustomerList" ColumnName="btn_CustomerList" />
-                <ScalarProperty Name="btn_CustomerGroup" ColumnName="btn_CustomerGroup" />
-                <ScalarProperty Name="btn_Decentralization" ColumnName="btn_Decentralization" />
-                <ScalarProperty Name="btn_TypeEmployee" ColumnName="btn_TypeEmployee" />
-                <ScalarProperty Name="btn_EmployeeList" ColumnName="btn_EmployeeList" />
                 <ScalarProperty Name="UserPermissionID" ColumnName="UserPermissionID" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="btn_EmployeeList" ColumnName="btn_EmployeeList" />
+                <ScalarProperty Name="btn_TypeEmployee" ColumnName="btn_TypeEmployee" />
+                <ScalarProperty Name="btn_Decentralization" ColumnName="btn_Decentralization" />
+                <ScalarProperty Name="btn_CustomerGroup" ColumnName="btn_CustomerGroup" />
+                <ScalarProperty Name="btn_CustomerList" ColumnName="btn_CustomerList" />
+                <ScalarProperty Name="btn_SupplierList" ColumnName="btn_SupplierList" />
+                <ScalarProperty Name="btn_SupplierProduct" ColumnName="btn_SupplierProduct" />
+                <ScalarProperty Name="btn_WarehouseList" ColumnName="btn_WarehouseList" />
+                <ScalarProperty Name="btn_InventoryManagement" ColumnName="btn_InventoryManagement" />
+                <ScalarProperty Name="btn_ProductPortfolio" ColumnName="btn_ProductPortfolio" />
+                <ScalarProperty Name="btn_ProductList" ColumnName="btn_ProductList" />
+                <ScalarProperty Name="btn_StockIn" ColumnName="btn_StockIn" />
+                <ScalarProperty Name="btn_StockOut" ColumnName="btn_StockOut" />
+                <ScalarProperty Name="btn_SaleOrder" ColumnName="btn_SaleOrder" />
+                <ScalarProperty Name="btn_PurchaseOrder" ColumnName="btn_PurchaseOrder" />
+                <ScalarProperty Name="btn_Report1" ColumnName="btn_Report1" />
+                <ScalarProperty Name="btn_Report2" ColumnName="btn_Report2" />
+                <ScalarProperty Name="btn_Report3" ColumnName="btn_Report3" />
+                <ScalarProperty Name="btn_Report4" ColumnName="btn_Report4" />
+                <ScalarProperty Name="btn_Report5" ColumnName="btn_Report5" />
+                <ScalarProperty Name="btn_Setting1" ColumnName="btn_Setting1" />
+                <ScalarProperty Name="btn_Setting2" ColumnName="btn_Setting2" />
+                <ScalarProperty Name="btn_Setting3" ColumnName="btn_Setting3" />
+                <ScalarProperty Name="btn_Setting4" ColumnName="btn_Setting4" />
+                <ScalarProperty Name="btn_Setting5" ColumnName="btn_Setting5" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserTypes">
+          <EntitySetMapping Name="UserType">
             <EntityTypeMapping TypeName="StockManagementModel.UserType">
               <MappingFragment StoreEntitySet="UserType">
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
@@ -2504,35 +2486,35 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="vw_UserPermission">
             <EntityTypeMapping TypeName="StockManagementModel.vw_UserPermission">
               <MappingFragment StoreEntitySet="vw_UserPermission">
-                <ScalarProperty Name="btn_Setting5" ColumnName="btn_Setting5" />
-                <ScalarProperty Name="btn_Setting4" ColumnName="btn_Setting4" />
-                <ScalarProperty Name="btn_Setting3" ColumnName="btn_Setting3" />
-                <ScalarProperty Name="btn_Setting2" ColumnName="btn_Setting2" />
-                <ScalarProperty Name="btn_Setting1" ColumnName="btn_Setting1" />
-                <ScalarProperty Name="btn_Report5" ColumnName="btn_Report5" />
-                <ScalarProperty Name="btn_Report4" ColumnName="btn_Report4" />
-                <ScalarProperty Name="btn_Report3" ColumnName="btn_Report3" />
-                <ScalarProperty Name="btn_Report2" ColumnName="btn_Report2" />
-                <ScalarProperty Name="btn_Report1" ColumnName="btn_Report1" />
-                <ScalarProperty Name="btn_PurchaseOrder" ColumnName="btn_PurchaseOrder" />
-                <ScalarProperty Name="btn_SaleOrder" ColumnName="btn_SaleOrder" />
-                <ScalarProperty Name="btn_StockOut" ColumnName="btn_StockOut" />
-                <ScalarProperty Name="btn_StockIn" ColumnName="btn_StockIn" />
-                <ScalarProperty Name="btn_ProductList" ColumnName="btn_ProductList" />
-                <ScalarProperty Name="btn_ProductPortfolio" ColumnName="btn_ProductPortfolio" />
-                <ScalarProperty Name="btn_InventoryManagement" ColumnName="btn_InventoryManagement" />
-                <ScalarProperty Name="btn_WarehouseList" ColumnName="btn_WarehouseList" />
-                <ScalarProperty Name="btn_SupplierProduct" ColumnName="btn_SupplierProduct" />
-                <ScalarProperty Name="btn_SupplierList" ColumnName="btn_SupplierList" />
-                <ScalarProperty Name="btn_CustomerList" ColumnName="btn_CustomerList" />
-                <ScalarProperty Name="btn_CustomerGroup" ColumnName="btn_CustomerGroup" />
-                <ScalarProperty Name="btn_Decentralization" ColumnName="btn_Decentralization" />
-                <ScalarProperty Name="btn_TypeEmployee" ColumnName="btn_TypeEmployee" />
-                <ScalarProperty Name="btn_EmployeeList" ColumnName="btn_EmployeeList" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="UserPermissionID" ColumnName="UserPermissionID" />
-                <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserPermissionID" ColumnName="UserPermissionID" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="btn_EmployeeList" ColumnName="btn_EmployeeList" />
+                <ScalarProperty Name="btn_TypeEmployee" ColumnName="btn_TypeEmployee" />
+                <ScalarProperty Name="btn_Decentralization" ColumnName="btn_Decentralization" />
+                <ScalarProperty Name="btn_CustomerGroup" ColumnName="btn_CustomerGroup" />
+                <ScalarProperty Name="btn_CustomerList" ColumnName="btn_CustomerList" />
+                <ScalarProperty Name="btn_SupplierList" ColumnName="btn_SupplierList" />
+                <ScalarProperty Name="btn_SupplierProduct" ColumnName="btn_SupplierProduct" />
+                <ScalarProperty Name="btn_WarehouseList" ColumnName="btn_WarehouseList" />
+                <ScalarProperty Name="btn_InventoryManagement" ColumnName="btn_InventoryManagement" />
+                <ScalarProperty Name="btn_ProductPortfolio" ColumnName="btn_ProductPortfolio" />
+                <ScalarProperty Name="btn_ProductList" ColumnName="btn_ProductList" />
+                <ScalarProperty Name="btn_StockIn" ColumnName="btn_StockIn" />
+                <ScalarProperty Name="btn_StockOut" ColumnName="btn_StockOut" />
+                <ScalarProperty Name="btn_SaleOrder" ColumnName="btn_SaleOrder" />
+                <ScalarProperty Name="btn_PurchaseOrder" ColumnName="btn_PurchaseOrder" />
+                <ScalarProperty Name="btn_Report1" ColumnName="btn_Report1" />
+                <ScalarProperty Name="btn_Report2" ColumnName="btn_Report2" />
+                <ScalarProperty Name="btn_Report3" ColumnName="btn_Report3" />
+                <ScalarProperty Name="btn_Report4" ColumnName="btn_Report4" />
+                <ScalarProperty Name="btn_Report5" ColumnName="btn_Report5" />
+                <ScalarProperty Name="btn_Setting1" ColumnName="btn_Setting1" />
+                <ScalarProperty Name="btn_Setting2" ColumnName="btn_Setting2" />
+                <ScalarProperty Name="btn_Setting3" ColumnName="btn_Setting3" />
+                <ScalarProperty Name="btn_Setting4" ColumnName="btn_Setting4" />
+                <ScalarProperty Name="btn_Setting5" ColumnName="btn_Setting5" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2550,7 +2532,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

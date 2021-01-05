@@ -25,34 +25,34 @@ namespace StockManagement.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AddressCustomer> AddressCustomers { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<GroupCustomer> GroupCustomers { get; set; }
-        public virtual DbSet<GroupMember> GroupMembers { get; set; }
-        public virtual DbSet<Permission> Permissions { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
-        public virtual DbSet<ProductOnStock> ProductOnStocks { get; set; }
-        public virtual DbSet<ProductType> ProductTypes { get; set; }
-        public virtual DbSet<ProductUnit> ProductUnits { get; set; }
-        public virtual DbSet<PurchaseOrder> PurchaseOrders { get; set; }
-        public virtual DbSet<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
-        public virtual DbSet<SaleOrder> SaleOrders { get; set; }
-        public virtual DbSet<SaleOrderDetail> SaleOrderDetails { get; set; }
-        public virtual DbSet<Stock> Stocks { get; set; }
-        public virtual DbSet<StockIn> StockIns { get; set; }
-        public virtual DbSet<StockInDetail> StockInDetails { get; set; }
-        public virtual DbSet<StockInType> StockInTypes { get; set; }
-        public virtual DbSet<StockManager> StockManagers { get; set; }
-        public virtual DbSet<StockOut> StockOuts { get; set; }
-        public virtual DbSet<StockOutDetail> StockOutDetails { get; set; }
-        public virtual DbSet<StockOutType> StockOutTypes { get; set; }
-        public virtual DbSet<Supplier> Suppliers { get; set; }
-        public virtual DbSet<SupplierProduct> SupplierProducts { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserPermission> UserPermissions { get; set; }
-        public virtual DbSet<UserType> UserTypes { get; set; }
+        public virtual DbSet<AddressCustomer> AddressCustomer { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<GroupCustomer> GroupCustomer { get; set; }
+        public virtual DbSet<GroupMember> GroupMember { get; set; }
+        public virtual DbSet<Permission> Permission { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategory { get; set; }
+        public virtual DbSet<ProductOnStock> ProductOnStock { get; set; }
+        public virtual DbSet<ProductType> ProductType { get; set; }
+        public virtual DbSet<ProductUnit> ProductUnit { get; set; }
+        public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
+        public virtual DbSet<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
+        public virtual DbSet<SaleOrder> SaleOrder { get; set; }
+        public virtual DbSet<SaleOrderDetail> SaleOrderDetail { get; set; }
+        public virtual DbSet<Stock> Stock { get; set; }
+        public virtual DbSet<StockIn> StockIn { get; set; }
+        public virtual DbSet<StockInDetail> StockInDetail { get; set; }
+        public virtual DbSet<StockInType> StockInType { get; set; }
+        public virtual DbSet<StockManager> StockManager { get; set; }
+        public virtual DbSet<StockOut> StockOut { get; set; }
+        public virtual DbSet<StockOutDetail> StockOutDetail { get; set; }
+        public virtual DbSet<StockOutType> StockOutType { get; set; }
+        public virtual DbSet<Supplier> Supplier { get; set; }
+        public virtual DbSet<SupplierProduct> SupplierProduct { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<UserPermission> UserPermission { get; set; }
+        public virtual DbSet<UserType> UserType { get; set; }
         public virtual DbSet<vw_UserPermission> vw_UserPermission { get; set; }
     }
 }

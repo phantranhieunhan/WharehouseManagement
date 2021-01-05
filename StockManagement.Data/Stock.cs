@@ -17,14 +17,14 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Stock()
         {
-            this.ProductOnStocks = new HashSet<ProductOnStock>();
-            this.PurchaseOrders = new HashSet<PurchaseOrder>();
-            this.StockIns = new HashSet<StockIn>();
-            this.StockIns1 = new HashSet<StockIn>();
-            this.StockManagers = new HashSet<StockManager>();
-            this.StockOuts = new HashSet<StockOut>();
-            this.StockOuts1 = new HashSet<StockOut>();
-            this.Users = new HashSet<User>();
+            this.ProductOnStock = new HashSet<ProductOnStock>();
+            this.PurchaseOrder = new HashSet<PurchaseOrder>();
+            this.StockIn = new HashSet<StockIn>();
+            this.StockIn1 = new HashSet<StockIn>();
+            this.StockManager = new HashSet<StockManager>();
+            this.StockOut = new HashSet<StockOut>();
+            this.StockOut1 = new HashSet<StockOut>();
+            this.User = new HashSet<User>();
         }
     
         public System.Guid StockId { get; set; }
@@ -34,20 +34,20 @@ namespace StockManagement.Data
         public Nullable<decimal> PhoneNumber { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductOnStock> ProductOnStocks { get; set; }
+        public virtual ICollection<ProductOnStock> ProductOnStock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseOrder> PurchaseOrders { get; set; }
+        public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockIn> StockIns { get; set; }
+        public virtual ICollection<StockIn> StockIn { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockIn> StockIns1 { get; set; }
+        public virtual ICollection<StockIn> StockIn1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockManager> StockManagers { get; set; }
+        public virtual ICollection<StockManager> StockManager { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOut> StockOuts { get; set; }
+        public virtual ICollection<StockOut> StockOut { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOut> StockOuts1 { get; set; }
+        public virtual ICollection<StockOut> StockOut1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<User> User { get; set; }
     }
 }

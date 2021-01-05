@@ -17,7 +17,7 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProductType()
         {
-            this.Products = new HashSet<Product>();
+            this.Product = new HashSet<Product>();
             this.ProductType1 = new HashSet<ProductType>();
         }
     
@@ -28,7 +28,7 @@ namespace StockManagement.Data
         public Nullable<System.DateTime> CreatedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductType> ProductType1 { get; set; }
         public virtual ProductType ProductType2 { get; set; }

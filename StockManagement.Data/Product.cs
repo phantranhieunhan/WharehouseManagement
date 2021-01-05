@@ -17,10 +17,10 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.ProductOnStocks = new HashSet<ProductOnStock>();
-            this.PurchaseOrderDetails = new HashSet<PurchaseOrderDetail>();
-            this.SaleOrderDetails = new HashSet<SaleOrderDetail>();
-            this.SupplierProducts = new HashSet<SupplierProduct>();
+            this.ProductOnStock = new HashSet<ProductOnStock>();
+            this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
+            this.SaleOrderDetail = new HashSet<SaleOrderDetail>();
+            this.SupplierProduct = new HashSet<SupplierProduct>();
         }
     
         public System.Guid ProductId { get; set; }
@@ -39,12 +39,12 @@ namespace StockManagement.Data
         public virtual ProductType ProductType { get; set; }
         public virtual ProductUnit ProductUnit { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductOnStock> ProductOnStocks { get; set; }
+        public virtual ICollection<ProductOnStock> ProductOnStock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
+        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SaleOrderDetail> SaleOrderDetails { get; set; }
+        public virtual ICollection<SaleOrderDetail> SaleOrderDetail { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SupplierProduct> SupplierProducts { get; set; }
+        public virtual ICollection<SupplierProduct> SupplierProduct { get; set; }
     }
 }

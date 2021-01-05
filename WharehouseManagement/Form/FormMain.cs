@@ -16,6 +16,7 @@ using StockManagement.Form.StockOut;
 using StockManagement.Form.Supplier;
 using StockManagement.Form.Product;
 using StockManagement.Data;
+using StockManagement.Business;
 
 namespace StockManagement.Form
 {
@@ -24,7 +25,7 @@ namespace StockManagement.Form
         public FormMain()
         {
             InitializeComponent();
-            //LoadPermission();
+            LoadPermission();
             LoadUser();
         }
 
@@ -34,12 +35,9 @@ namespace StockManagement.Form
         }
         public void LoadPermission()
         {
-            List<string> permissionList = new List<string>() {
-                "btn_CustomerGroup",
-                "btn_CustomerList",
-                "btn_SupplierList",
-                "btn_WarehouseList"
-            };
+            IDecentralization decentralizationBO = new DecentralizationBO();
+
+            List<string> permissionList = decentralizationBO.GetOne(Session.UserId);
 
             foreach (DevExpress.XtraBars.Navigation.AccordionControlElement item in this.accordionControl1.Elements)
             {
@@ -117,7 +115,7 @@ namespace StockManagement.Form
         private void btn_CustomerList_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Clear();
-            fluentDesignFormContainer1.Controls.Add(new CustomerList() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new Customer.CustomerList() { Dock = DockStyle.Fill });
         }
 
         private void btn_Decentralization_Click(object sender, EventArgs e)

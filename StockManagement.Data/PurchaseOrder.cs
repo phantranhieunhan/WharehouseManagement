@@ -17,8 +17,8 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PurchaseOrder()
         {
-            this.PurchaseOrderDetails = new HashSet<PurchaseOrderDetail>();
-            this.StockIns = new HashSet<StockIn>();
+            this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
+            this.StockIn = new HashSet<StockIn>();
         }
     
         public System.Guid PurchaseOrderId { get; set; }
@@ -30,11 +30,11 @@ namespace StockManagement.Data
         public Nullable<bool> IsPay { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
+        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         public virtual Stock Stock { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockIn> StockIns { get; set; }
+        public virtual ICollection<StockIn> StockIn { get; set; }
     }
 }

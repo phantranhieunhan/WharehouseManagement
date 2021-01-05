@@ -17,13 +17,13 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StockOutType()
         {
-            this.StockOuts = new HashSet<StockOut>();
+            this.StockOut = new HashSet<StockOut>();
         }
     
         public System.Guid StockOutType1 { get; set; }
         public string StockOutTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOut> StockOuts { get; set; }
+        public virtual ICollection<StockOut> StockOut { get; set; }
     }
 }

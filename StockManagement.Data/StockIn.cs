@@ -17,7 +17,7 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StockIn()
         {
-            this.StockInDetails = new HashSet<StockInDetail>();
+            this.StockInDetail = new HashSet<StockInDetail>();
         }
     
         public System.Guid StockInId { get; set; }
@@ -38,6 +38,6 @@ namespace StockManagement.Data
         public virtual StockInType StockInType { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockInDetail> StockInDetails { get; set; }
+        public virtual ICollection<StockInDetail> StockInDetail { get; set; }
     }
 }

@@ -204,7 +204,7 @@
             this.bandedGridColumn12});
             this.advBandedGridView1.GridControl = this.gridControl1;
             this.advBandedGridView1.Name = "advBandedGridView1";
-            this.advBandedGridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.advBandedGridView1_RowUpdated);
+            this.advBandedGridView1.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.advBandedGridView1_CellValueChanged);
             // 
             // gridBand2
             // 

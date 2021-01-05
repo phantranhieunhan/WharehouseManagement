@@ -17,7 +17,7 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProductUnit()
         {
-            this.Products = new HashSet<Product>();
+            this.Product = new HashSet<Product>();
         }
     
         public System.Guid ProductUnitId { get; set; }
@@ -25,6 +25,6 @@ namespace StockManagement.Data
         public string ProductUnitName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace StockManagement.Business
             {
                 using (var db = new StockManagementEntities())
                 {
-                    User user = db.Users.Where(x => x.UserName == username).FirstOrDefault();
+                    User user = db.User.Where(x => x.UserName == username).FirstOrDefault();
 
                     if (user == null)
                     {
@@ -71,7 +71,7 @@ namespace StockManagement.Business
                 {
 
                     user.Password = PasswordHashed(user.Password);
-                    db.Users.Add(user);
+                    db.User.Add(user);
                     db.SaveChanges();
                     return true;
                 }

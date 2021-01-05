@@ -15,7 +15,6 @@ namespace StockManagement.Data
     public partial class UserPermission
     {
         public System.Guid UserPermissionID { get; set; }
-        public string PermissionId { get; set; }
         public Nullable<System.Guid> UserId { get; set; }
         public Nullable<bool> btn_EmployeeList { get; set; }
         public Nullable<bool> btn_TypeEmployee { get; set; }
@@ -43,7 +42,6 @@ namespace StockManagement.Data
         public Nullable<bool> btn_Setting4 { get; set; }
         public Nullable<bool> btn_Setting5 { get; set; }
     
-        public virtual Permission Permission { get; set; }
         public virtual User User { get; set; }
     }
 }

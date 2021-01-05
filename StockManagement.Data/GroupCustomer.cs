@@ -17,7 +17,7 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GroupCustomer()
         {
-            this.GroupMembers = new HashSet<GroupMember>();
+            this.GroupMember = new HashSet<GroupMember>();
         }
     
         public System.Guid GroupCustomerId { get; set; }
@@ -27,6 +27,6 @@ namespace StockManagement.Data
         public Nullable<System.Guid> CreatedPerson { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GroupMember> GroupMembers { get; set; }
+        public virtual ICollection<GroupMember> GroupMember { get; set; }
     }
 }

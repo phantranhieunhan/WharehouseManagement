@@ -17,11 +17,11 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.PurchaseOrders = new HashSet<PurchaseOrder>();
-            this.SaleOrders = new HashSet<SaleOrder>();
-            this.StockIns = new HashSet<StockIn>();
-            this.StockOuts = new HashSet<StockOut>();
-            this.UserPermissions = new HashSet<UserPermission>();
+            this.PurchaseOrder = new HashSet<PurchaseOrder>();
+            this.SaleOrder = new HashSet<SaleOrder>();
+            this.StockIn = new HashSet<StockIn>();
+            this.StockOut = new HashSet<StockOut>();
+            this.UserPermission = new HashSet<UserPermission>();
         }
     
         public System.Guid UserId { get; set; }
@@ -44,16 +44,16 @@ namespace StockManagement.Data
         public Nullable<System.DateTime> CreatedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseOrder> PurchaseOrders { get; set; }
+        public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SaleOrder> SaleOrders { get; set; }
+        public virtual ICollection<SaleOrder> SaleOrder { get; set; }
         public virtual Stock Stock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockIn> StockIns { get; set; }
+        public virtual ICollection<StockIn> StockIn { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOut> StockOuts { get; set; }
+        public virtual ICollection<StockOut> StockOut { get; set; }
         public virtual UserType UserType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserPermission> UserPermissions { get; set; }
+        public virtual ICollection<UserPermission> UserPermission { get; set; }
     }
 }
