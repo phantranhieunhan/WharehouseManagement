@@ -451,10 +451,6 @@
     <Folder Include="Form\Report\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StockManagement.Data\StockManagement.Data.csproj">
-      <Project>{f0b3db49-be9f-4c9e-bdd8-356f6f7991ca}</Project>
-      <Name>StockManagement.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="StockManagement.Bussiness\StockManagement.Business.csproj">
       <Project>{d24f820d-6da1-4bf0-9fc4-e1a02de0664f}</Project>
       <Name>StockManagement.Business</Name>

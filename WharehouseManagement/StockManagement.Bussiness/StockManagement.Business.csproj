@@ -69,12 +69,6 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\StockManagement.Data\StockManagement.Data.csproj">
-      <Project>{f0b3db49-be9f-4c9e-bdd8-356f6f7991ca}</Project>
-      <Name>StockManagement.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
