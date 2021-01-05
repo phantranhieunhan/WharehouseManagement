@@ -60,6 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressCustomer.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AdvanceModel\StockInReturn.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ConnectionFactory.cs" />
@@ -67,6 +70,9 @@
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GroupCustomer.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupMember.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="IRepository.cs" />
@@ -147,6 +153,9 @@
     <Compile Include="SupplierProduct.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
@@ -174,6 +183,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="StockManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StockManagementModel.edmx</DependentUpon>
@@ -184,9 +196,6 @@
       <DependentUpon>StockManagementModel.edmx</DependentUpon>
       <LastGenOutput>StockManagementModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

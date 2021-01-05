@@ -122,7 +122,6 @@ D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\de\DevExpress.XtraTreeList.v20.1
 D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\es\DevExpress.XtraTreeList.v20.1.resources.dll
 D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ja\DevExpress.XtraTreeList.v20.1.resources.dll
 D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\ru\DevExpress.XtraTreeList.v20.1.resources.dll
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.DDemployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Form_DataEmployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.FormMain.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Stock.AddWareHouse.resources
@@ -267,7 +266,6 @@ D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.CustomerGro
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.CustomerList.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Customer.DetailCustomerGroup.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.AddEmployeeList.resources
-D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Decentralization.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.EmployeeList.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.TypeEmployee.resources
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrderAdd.resources
@@ -304,3 +302,5 @@ D:\DoAnTotNghiep\WharehouseManagement\bin\Debug\StockManagement.Bussiness.dll.co
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csprojAssemblyReference.cache
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.CoreCompileInputs.cache
 D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.csproj.CopyComplete
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Orders.PurchaseOrder.resources
+D:\DoAnTotNghiep\WharehouseManagement\obj\Debug\StockManagement.Form.Employee.Decentralization.resources

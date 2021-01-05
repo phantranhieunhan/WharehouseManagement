@@ -20,7 +20,7 @@ namespace StockManagement.Form.Employee
             InitializeComponent();
             StockManagementEntities dbContext = new StockManagementEntities();
 
-            gridControl1.DataSource = dbContext.User.ToList();
+            gridControl1.DataSource = dbContext.Users.ToList();
         }
 
         public void InitData()

@@ -17,15 +17,14 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProductUnit()
         {
-            this.Product = new HashSet<Product>();
+            this.Products = new HashSet<Product>();
         }
     
         public System.Guid ProductUnitId { get; set; }
         public string ProductUnitCode { get; set; }
         public string ProductUnitName { get; set; }
-        public string Note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

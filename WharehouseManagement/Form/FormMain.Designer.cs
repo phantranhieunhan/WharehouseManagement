@@ -46,16 +46,17 @@
             this.btn_Warehouse = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_WarehouseList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_InventoryManagement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_StockIn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_StockOut = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Product = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_ProductCatagory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_ProductList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_StockIn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_StockOut = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Order = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_SaleOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_PurchaseOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -175,7 +176,9 @@
             // 
             this.btn_Warehouse.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_WarehouseList,
-            this.btn_InventoryManagement});
+            this.btn_InventoryManagement,
+            this.btn_StockIn,
+            this.btn_StockOut});
             this.btn_Warehouse.Expanded = true;
             this.btn_Warehouse.Name = "btn_Warehouse";
             this.btn_Warehouse.Text = "Kho hàng";
@@ -193,6 +196,20 @@
             this.btn_InventoryManagement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_InventoryManagement.Text = "Quản lý tồn kho";
             this.btn_InventoryManagement.Click += new System.EventHandler(this.btn_InventoryManagement_Click);
+            // 
+            // btn_StockIn
+            // 
+            this.btn_StockIn.Name = "btn_StockIn";
+            this.btn_StockIn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_StockIn.Text = "Nhập kho";
+            this.btn_StockIn.Click += new System.EventHandler(this.btn_StockIn_Click);
+            // 
+            // btn_StockOut
+            // 
+            this.btn_StockOut.Name = "btn_StockOut";
+            this.btn_StockOut.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_StockOut.Text = "Xuất kho";
+            this.btn_StockOut.Click += new System.EventHandler(this.btn_StockOut_Click);
             // 
             // btn_Product
             // 
@@ -216,20 +233,6 @@
             this.btn_ProductList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_ProductList.Text = "Danh sách sản phẩm";
             this.btn_ProductList.Click += new System.EventHandler(this.btn_ListProducts_Click);
-            // 
-            // btn_StockIn
-            // 
-            this.btn_StockIn.Expanded = true;
-            this.btn_StockIn.Name = "btn_StockIn";
-            this.btn_StockIn.Text = "Nhập kho";
-            this.btn_StockIn.Click += new System.EventHandler(this.btn_StockIn_Click);
-            // 
-            // btn_StockOut
-            // 
-            this.btn_StockOut.Expanded = true;
-            this.btn_StockOut.Name = "btn_StockOut";
-            this.btn_StockOut.Text = "Xuất kho";
-            this.btn_StockOut.Click += new System.EventHandler(this.btn_StockOut_Click);
             // 
             // btn_Order
             // 
@@ -288,8 +291,6 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_Order,
-            this.btn_StockOut,
-            this.btn_StockIn,
             this.btn_Product,
             this.btn_Warehouse,
             this.btn_Supplier,
@@ -310,10 +311,20 @@
             this.fluentDesignFormContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(331, 39);
+            this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.Aqua;
+            this.fluentDesignFormContainer1.Appearance.Options.UseBackColor = true;
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(331, 95);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 586);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 530);
             this.fluentDesignFormContainer1.TabIndex = 3;
+            // 
+            // lb_UserName
+            // 
+            this.lb_UserName.Location = new System.Drawing.Point(1021, 58);
+            this.lb_UserName.Name = "lb_UserName";
+            this.lb_UserName.Size = new System.Drawing.Size(59, 16);
+            this.lb_UserName.TabIndex = 4;
+            this.lb_UserName.Text = "NameUser";
             // 
             // FormMain
             // 
@@ -325,6 +336,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 625);
             this.ControlContainer = this.fluentDesignFormContainer1;
+            this.Controls.Add(this.lb_UserName);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.buttonEdit1);
             this.Controls.Add(this.fluentDesignFormContainer1);
@@ -338,6 +350,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -369,7 +382,6 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerGroup;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerList;
-
-        
+        private DevExpress.XtraEditors.LabelControl lb_UserName;
     }
 }

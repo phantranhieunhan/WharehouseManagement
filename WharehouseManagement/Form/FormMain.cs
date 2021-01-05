@@ -24,9 +24,14 @@ namespace StockManagement.Form
         public FormMain()
         {
             InitializeComponent();
-            LoadPermission();
+            //LoadPermission();
+            LoadUser();
         }
 
+        public void LoadUser()
+        {
+            lb_UserName.Text = Session.UserId.ToString();
+        }
         public void LoadPermission()
         {
             List<string> permissionList = new List<string>() {

@@ -17,15 +17,14 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserType()
         {
-            this.User = new HashSet<User>();
+            this.Users = new HashSet<User>();
         }
     
         public System.Guid UserTypeId { get; set; }
         public string UserTypeCode { get; set; }
         public string UserTypeName { get; set; }
-        public string Note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> User { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }
