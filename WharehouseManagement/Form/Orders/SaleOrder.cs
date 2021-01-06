@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using StockManagement.Data;
+using StockManagement.Business;
+
 namespace StockManagement.Form.Orders
 {
     public partial class SaleOrder : DevExpress.XtraEditors.XtraUserControl
@@ -16,10 +19,14 @@ namespace StockManagement.Form.Orders
         public SaleOrder()
         {
             InitializeComponent();//nhấn f12
+
+            GetInit();
         }
         private void GetInit()
         {
-
+            ISaleOrder saleOrderBO = new SaleOrderBO();
+            List<vw_SaleOrder> vw_SaleOrders = saleOrderBO.GetData();
+            gC_DanhSachDonMoi.DataSource = vw_SaleOrders;
         }
 
         private void SaleOrder2_Load(object sender, EventArgs e)
@@ -31,6 +38,11 @@ namespace StockManagement.Form.Orders
         {
             SalesOrderAdd f = new SalesOrderAdd();
             f.Show();
+        }
+
+        private void buttonRecieve_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            
         }
     }
 }

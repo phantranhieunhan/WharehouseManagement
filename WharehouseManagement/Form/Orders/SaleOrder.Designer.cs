@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btn_ThemKH = new System.Windows.Forms.Button();
             this.txt_DenNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,15 +47,17 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
+            this.gC_DanhSachDonMoi = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.SaleOrderCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CreatedBy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_Action = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.buttonRecieve = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -90,8 +97,9 @@
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDonMoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonRecieve)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -254,7 +262,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.gC_DanhSach);
+            this.tabPage1.Controls.Add(this.gC_DanhSachDonMoi);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -263,16 +271,18 @@
             this.tabPage1.Text = "Đơn mới";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // gC_DanhSach
+            // gC_DanhSachDonMoi
             // 
-            this.gC_DanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gC_DanhSach.Location = new System.Drawing.Point(3, 3);
-            this.gC_DanhSach.MainView = this.gridView1;
-            this.gC_DanhSach.Name = "gC_DanhSach";
-            this.gC_DanhSach.ShowOnlyPredefinedDetails = true;
-            this.gC_DanhSach.Size = new System.Drawing.Size(1078, 333);
-            this.gC_DanhSach.TabIndex = 0;
-            this.gC_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gC_DanhSachDonMoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_DanhSachDonMoi.Location = new System.Drawing.Point(3, 3);
+            this.gC_DanhSachDonMoi.MainView = this.gridView1;
+            this.gC_DanhSachDonMoi.Name = "gC_DanhSachDonMoi";
+            this.gC_DanhSachDonMoi.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.buttonRecieve});
+            this.gC_DanhSachDonMoi.ShowOnlyPredefinedDetails = true;
+            this.gC_DanhSachDonMoi.Size = new System.Drawing.Size(1078, 333);
+            this.gC_DanhSachDonMoi.TabIndex = 0;
+            this.gC_DanhSachDonMoi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -281,12 +291,15 @@
             this.SaleOrderCode,
             this.gridColumn2,
             this.gridColumn3,
+            this.gridColumn26,
             this.gridColumn4,
             this.gridColumn5,
             this.CreatedBy,
             this.btn_Action});
-            this.gridView1.GridControl = this.gC_DanhSach;
+            this.gridView1.GridControl = this.gC_DanhSachDonMoi;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsView.AllowCellMerge = true;
             // 
             // SaleOrderCode
             // 
@@ -295,39 +308,54 @@
             this.SaleOrderCode.Name = "SaleOrderCode";
             this.SaleOrderCode.Visible = true;
             this.SaleOrderCode.VisibleIndex = 0;
-            this.SaleOrderCode.Width = 66;
+            this.SaleOrderCode.Width = 62;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Khách hàng";
+            this.gridColumn2.FieldName = "Customer";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 158;
+            this.gridColumn2.Width = 148;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Mặt hàng";
+            this.gridColumn3.FieldName = "ProductName";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 133;
+            this.gridColumn3.Width = 207;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "Số lượng";
+            this.gridColumn26.FieldName = "QuanlityOfCustomer";
+            this.gridColumn26.MinWidth = 25;
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 3;
+            this.gridColumn26.Width = 91;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Tổng tiền";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 164;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 132;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Ngày đặt";
+            this.gridColumn5.FieldName = "CreatedDate";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 164;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 132;
             // 
             // CreatedBy
             // 
@@ -335,16 +363,28 @@
             this.CreatedBy.FieldName = "CreatedBy";
             this.CreatedBy.Name = "CreatedBy";
             this.CreatedBy.Visible = true;
-            this.CreatedBy.VisibleIndex = 5;
-            this.CreatedBy.Width = 171;
+            this.CreatedBy.VisibleIndex = 6;
+            this.CreatedBy.Width = 199;
             // 
             // btn_Action
             // 
             this.btn_Action.Caption = "Hành động";
+            this.btn_Action.ColumnEdit = this.buttonRecieve;
             this.btn_Action.Name = "btn_Action";
+            this.btn_Action.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.btn_Action.Visible = true;
-            this.btn_Action.VisibleIndex = 6;
-            this.btn_Action.Width = 167;
+            this.btn_Action.VisibleIndex = 7;
+            this.btn_Action.Width = 84;
+            // 
+            // buttonRecieve
+            // 
+            this.buttonRecieve.AutoHeight = false;
+            editorButtonImageOptions1.ImageUri.Uri = "spreadsheet/pivottablegroupselection";
+            this.buttonRecieve.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.buttonRecieve.Name = "buttonRecieve";
+            this.buttonRecieve.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.buttonRecieve.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonRecieve_ButtonClick);
             // 
             // tabPage2
             // 
@@ -636,8 +676,9 @@
             this.groupBox3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDonMoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonRecieve)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -667,7 +708,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private DevExpress.XtraGrid.GridControl gC_DanhSach;
+        private DevExpress.XtraGrid.GridControl gC_DanhSachDonMoi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn SaleOrderCode;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -706,5 +747,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit buttonRecieve;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
     }
 }

@@ -349,12 +349,13 @@
 warning 6002: The table/view 'StockManagement.dbo.vw_SaleOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_SaleOrder">
           <Key>
-            <PropertyRef Name="SaleOrderId" />
+            <PropertyRef Name="SaleOrderDetailId" />
           </Key>
-          <Property Name="SaleOrderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SaleOrderDetailId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="SaleOrderCode" Type="varchar" MaxLength="50" />
           <Property Name="Customer" Type="nvarchar" MaxLength="255" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="QuanlityOfCustomer" Type="numeric" Precision="18" Scale="0" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
         </EntityType>
@@ -869,10 +870,11 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="vw_SaleOrder" EntityType="Self.vw_SaleOrder" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [vw_SaleOrder].[SaleOrderId] AS [SaleOrderId], 
+    [vw_SaleOrder].[SaleOrderDetailId] AS [SaleOrderDetailId], 
     [vw_SaleOrder].[SaleOrderCode] AS [SaleOrderCode], 
     [vw_SaleOrder].[Customer] AS [Customer], 
     [vw_SaleOrder].[ProductName] AS [ProductName], 
+    [vw_SaleOrder].[QuanlityOfCustomer] AS [QuanlityOfCustomer], 
     [vw_SaleOrder].[CreatedDate] AS [CreatedDate], 
     [vw_SaleOrder].[CreatedBy] AS [CreatedBy]
     FROM [dbo].[vw_SaleOrder] AS [vw_SaleOrder]</DefiningQuery>
@@ -2137,14 +2139,15 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
         </EntityContainer>
         <EntityType Name="vw_SaleOrder">
           <Key>
-            <PropertyRef Name="SaleOrderId" />
+            <PropertyRef Name="SaleOrderDetailId" />
           </Key>
-          <Property Name="SaleOrderId" Type="Guid" Nullable="false" />
           <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Customer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="QuanlityOfCustomer" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SaleOrderDetailId" Type="Guid" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2558,12 +2561,13 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="vw_SaleOrder">
             <EntityTypeMapping TypeName="StockManagementModel.vw_SaleOrder">
               <MappingFragment StoreEntitySet="vw_SaleOrder">
+                <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
+                <ScalarProperty Name="QuanlityOfCustomer" ColumnName="QuanlityOfCustomer" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="Customer" ColumnName="Customer" />
                 <ScalarProperty Name="SaleOrderCode" ColumnName="SaleOrderCode" />
-                <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

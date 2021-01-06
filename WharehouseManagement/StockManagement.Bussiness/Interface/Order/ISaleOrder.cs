@@ -9,6 +9,6 @@ namespace StockManagement.Business
 {
     public interface ISaleOrder:IRepository<SaleOrder>
     {
-        List<SaleOrder> GetData();
+        List<vw_SaleOrder> GetData();
     }
 }

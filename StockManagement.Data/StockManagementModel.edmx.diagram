@@ -71,7 +71,7 @@
         <AssociationConnector Association="StockManagementModel.FK_SUPPLIER_RELATIONS_SUPPLIER" ManuallyRouted="false" />
         <AssociationConnector Association="StockManagementModel.FK_USER_RELATIONS_USERTYPE" ManuallyRouted="false" />
         <AssociationConnector Association="StockManagementModel.FK_USERPERM_RELATIONS_USER" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="StockManagementModel.vw_SaleOrder" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="StockManagementModel.vw_SaleOrder" Width="2" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

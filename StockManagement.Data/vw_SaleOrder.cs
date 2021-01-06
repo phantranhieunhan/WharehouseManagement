@@ -14,11 +14,12 @@ namespace StockManagement.Data
     
     public partial class vw_SaleOrder
     {
-        public System.Guid SaleOrderId { get; set; }
         public string SaleOrderCode { get; set; }
         public string Customer { get; set; }
         public string ProductName { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string CreatedBy { get; set; }
+        public Nullable<decimal> QuanlityOfCustomer { get; set; }
+        public System.Guid SaleOrderDetailId { get; set; }
     }
 }

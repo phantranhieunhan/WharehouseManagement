@@ -11,7 +11,10 @@ namespace StockManagement.Business
     {
         public List<vw_SaleOrder> GetData()
         {
-
+            using (var db = new StockManagementEntities())
+            {
+                return db.vw_SaleOrder.ToList();
+            }
         }
     }
 }
