@@ -31,7 +31,11 @@ namespace StockManagement.Form
 
         public void LoadUser()
         {
-            lb_UserName.Text = Session.UserId.ToString();
+            IUser userBO = new UserBO();
+            User user= userBO.GetByID(Session.UserId);
+            lb_HoTen.Text = user.FullName;
+            lb_UserCode.Text = user.UserCode;
+
         }
         public void LoadPermission()
         {

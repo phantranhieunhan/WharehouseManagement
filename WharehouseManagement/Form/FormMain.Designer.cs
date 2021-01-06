@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -58,14 +57,13 @@
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_UserCode = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.lb_HoTen = new DevExpress.XtraEditors.LabelControl();
             this.lb_NgaySinh = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            this.fluentDesignFormControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -74,21 +72,12 @@
             // 
             // fluentDesignFormControl1
             // 
-            this.fluentDesignFormControl1.Controls.Add(this.lb_UserName);
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1145, 35);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            // 
-            // lb_UserName
-            // 
-            this.lb_UserName.Location = new System.Drawing.Point(629, 3);
-            this.lb_UserName.Name = "lb_UserName";
-            this.lb_UserName.Size = new System.Drawing.Size(59, 16);
-            this.lb_UserName.TabIndex = 4;
-            this.lb_UserName.Text = "NameUser";
             // 
             // buttonEdit1
             // 
@@ -341,7 +330,7 @@
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.labelControl9);
+            this.panelControl1.Controls.Add(this.lb_UserCode);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl8);
             this.panelControl1.Controls.Add(this.lb_HoTen);
@@ -352,15 +341,15 @@
             this.panelControl1.Size = new System.Drawing.Size(811, 34);
             this.panelControl1.TabIndex = 4;
             // 
-            // labelControl9
+            // lb_UserCode
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(480, 7);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(41, 16);
-            this.labelControl9.TabIndex = 58;
-            this.labelControl9.Text = "NV001";
+            this.lb_UserCode.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_UserCode.Appearance.Options.UseFont = true;
+            this.lb_UserCode.Location = new System.Drawing.Point(480, 7);
+            this.lb_UserCode.Name = "lb_UserCode";
+            this.lb_UserCode.Size = new System.Drawing.Size(41, 16);
+            this.lb_UserCode.TabIndex = 58;
+            this.lb_UserCode.Text = "NV001";
             // 
             // labelControl10
             // 
@@ -427,8 +416,6 @@
             this.Text = "FormMain";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            this.fluentDesignFormControl1.ResumeLayout(false);
-            this.fluentDesignFormControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -466,9 +453,8 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerGroup;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_CustomerList;
-        private DevExpress.XtraEditors.LabelControl lb_UserName;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl lb_UserCode;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl lb_HoTen;

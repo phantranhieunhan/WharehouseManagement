@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StockManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="StockManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AddressCustomer">
           <Key>
             <PropertyRef Name="AddressCustomerId" />
@@ -154,6 +154,7 @@
           <Property Name="TotalAmount" Type="money" />
           <Property Name="DiscountPercent" Type="float" />
           <Property Name="IsPay" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
         </EntityType>
         <EntityType Name="SaleOrderDetail">
           <Key>
@@ -344,6 +345,15 @@
           <Property Name="UserTypeCode" Type="varchar" MaxLength="50" />
           <Property Name="UserTypeName" Type="nvarchar" MaxLength="255" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'StockManagement.dbo.vw_SaleOrder' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vw_SaleOrder">
+          <Property Name="SaleOrderCode" Type="varchar" MaxLength="50" />
+          <Property Name="Customer" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
         <!--Errors Found During Generation:
 warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_UserPermission">
@@ -1035,8 +1045,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             <End Role="UserPermission" EntitySet="UserPermission" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StockManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1221,6 +1230,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="User" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="SaleOrder" ToRole="User" />
           <NavigationProperty Name="SaleOrderDetail" Relationship="Self.FK_SALEORDE_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="SaleOrderDetail" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="StockOut" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="SaleOrderDetail">
           <Key>
@@ -2265,6 +2275,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="SaleOrder">
             <EntityTypeMapping TypeName="StockManagementModel.SaleOrder">
               <MappingFragment StoreEntitySet="SaleOrder">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />

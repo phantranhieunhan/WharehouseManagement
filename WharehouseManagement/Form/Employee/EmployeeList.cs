@@ -20,7 +20,7 @@ namespace StockManagement.Form.Employee
             InitializeComponent();
             StockManagementEntities dbContext = new StockManagementEntities();
 
-            gC_DanhSach.DataSource = dbContext.Users.ToList();
+            gC_DanhSach.DataSource = dbContext.User.ToList();
         }
 
         public void InitData()

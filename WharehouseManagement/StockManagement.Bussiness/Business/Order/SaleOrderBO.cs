@@ -7,8 +7,11 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public interface IUser:IRepository<User>
+    public class SaleOrderBO : Repository<SaleOrder>, ISaleOrder
     {
-        //User GetUser(Guid userId);
+        public List<vw_SaleOrder> GetData()
+        {
+
+        }
     }
 }

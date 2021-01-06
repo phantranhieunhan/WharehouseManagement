@@ -97,7 +97,7 @@
             this.groupBox1.Controls.Add(this.btn_TimKiemKH);
             this.groupBox1.Location = new System.Drawing.Point(5, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1067, 115);
+            this.groupBox1.Size = new System.Drawing.Size(1075, 115);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -131,7 +131,7 @@
             // btn_ThemKH
             // 
             this.btn_ThemKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_ThemKH.Location = new System.Drawing.Point(900, 68);
+            this.btn_ThemKH.Location = new System.Drawing.Point(908, 68);
             this.btn_ThemKH.Name = "btn_ThemKH";
             this.btn_ThemKH.Size = new System.Drawing.Size(161, 23);
             this.btn_ThemKH.TabIndex = 8;
@@ -174,7 +174,7 @@
             // btn_TimKiemKH
             // 
             this.btn_TimKiemKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_TimKiemKH.Location = new System.Drawing.Point(900, 30);
+            this.btn_TimKiemKH.Location = new System.Drawing.Point(908, 30);
             this.btn_TimKiemKH.Name = "btn_TimKiemKH";
             this.btn_TimKiemKH.Size = new System.Drawing.Size(161, 23);
             this.btn_TimKiemKH.TabIndex = 2;
@@ -185,9 +185,10 @@
             // 
             this.groupControl1.Controls.Add(this.gB_DanhSach);
             this.groupControl1.Controls.Add(this.groupBox1);
-            this.groupControl1.Location = new System.Drawing.Point(2, 1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1079, 520);
+            this.groupControl1.Size = new System.Drawing.Size(1087, 526);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Đặt hàng mua hàng";
             // 
@@ -199,7 +200,7 @@
             this.gB_DanhSach.Controls.Add(this.tab_DanhSach);
             this.gB_DanhSach.Location = new System.Drawing.Point(5, 151);
             this.gB_DanhSach.Name = "gB_DanhSach";
-            this.gB_DanhSach.Size = new System.Drawing.Size(1069, 369);
+            this.gB_DanhSach.Size = new System.Drawing.Size(1077, 375);
             this.gB_DanhSach.TabIndex = 1;
             this.gB_DanhSach.TabStop = false;
             this.gB_DanhSach.Text = "Danh sách";
@@ -210,10 +211,11 @@
             this.tab_DanhSach.Controls.Add(this.tabPage2);
             this.tab_DanhSach.Controls.Add(this.tabPage3);
             this.tab_DanhSach.Controls.Add(this.tabPage4);
-            this.tab_DanhSach.Location = new System.Drawing.Point(7, 22);
+            this.tab_DanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_DanhSach.Location = new System.Drawing.Point(3, 19);
             this.tab_DanhSach.Name = "tab_DanhSach";
             this.tab_DanhSach.SelectedIndex = 0;
-            this.tab_DanhSach.Size = new System.Drawing.Size(1062, 342);
+            this.tab_DanhSach.Size = new System.Drawing.Size(1071, 353);
             this.tab_DanhSach.TabIndex = 0;
             // 
             // tabPage1
@@ -222,7 +224,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1054, 313);
+            this.tabPage1.Size = new System.Drawing.Size(1063, 324);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Đơn mới";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -233,7 +235,7 @@
             this.gC_DanhSach.Location = new System.Drawing.Point(3, 3);
             this.gC_DanhSach.MainView = this.gridView1;
             this.gC_DanhSach.Name = "gC_DanhSach";
-            this.gC_DanhSach.Size = new System.Drawing.Size(1048, 307);
+            this.gC_DanhSach.Size = new System.Drawing.Size(1057, 318);
             this.gC_DanhSach.TabIndex = 0;
             this.gC_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,

@@ -17,6 +17,10 @@ namespace StockManagement.Form.Orders
         {
             InitializeComponent();//nhấn f12
         }
+        private void GetInit()
+        {
+
+        }
 
         private void SaleOrder2_Load(object sender, EventArgs e)
         {

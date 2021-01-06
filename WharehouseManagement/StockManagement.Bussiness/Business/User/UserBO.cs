@@ -8,7 +8,7 @@ using Scrypt;
 
 namespace StockManagement.Business
 {
-    public class UserBO
+    public class UserBO:Repository<User>, IUser
     {
         private const string STATUS = "Status";
         private const string DATA = "Data";

@@ -7,8 +7,8 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public interface IUser:IRepository<User>
+    public interface ISaleOrder:IRepository<SaleOrder>
     {
-        //User GetUser(Guid userId);
+        List<SaleOrder> GetData();
     }
 }
