@@ -23,5 +23,10 @@ namespace StockManagement.Form.Supplier
             AddSupplier dataSupplier = new AddSupplier();
             dataSupplier.Show();
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
