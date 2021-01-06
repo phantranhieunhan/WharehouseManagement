@@ -54,6 +54,8 @@
             // 
             // gc_danhsachSPNCC
             // 
+            this.gc_danhsachSPNCC.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gc_danhsachSPNCC.AppearanceCaption.Options.UseFont = true;
             this.gc_danhsachSPNCC.AutoSize = true;
             this.gc_danhsachSPNCC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gc_danhsachSPNCC.Controls.Add(this.gc_danhsach);
