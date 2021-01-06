@@ -140,16 +140,16 @@ namespace StockManagement.Form.Customer
             // txt_TimKiemKhachHang
             // 
             this.txt_TimKiemKhachHang.EditValue = "Mã, tên khách hàng";
-            this.txt_TimKiemKhachHang.Location = new System.Drawing.Point(334, 37);
+            this.txt_TimKiemKhachHang.Location = new System.Drawing.Point(302, 37);
             this.txt_TimKiemKhachHang.Name = "txt_TimKiemKhachHang";
             this.txt_TimKiemKhachHang.Size = new System.Drawing.Size(227, 22);
             this.txt_TimKiemKhachHang.TabIndex = 3;
             // 
             // btn_TimKiem
             // 
-            this.btn_TimKiem.Location = new System.Drawing.Point(679, 29);
+            this.btn_TimKiem.Location = new System.Drawing.Point(663, 28);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(75, 39);
+            this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 2;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;
@@ -157,19 +157,19 @@ namespace StockManagement.Form.Customer
             // txt_TimKiemNhom
             // 
             this.txt_TimKiemNhom.EditValue = "Mã, tên nhóm";
-            this.txt_TimKiemNhom.Location = new System.Drawing.Point(60, 37);
+            this.txt_TimKiemNhom.Location = new System.Drawing.Point(33, 37);
             this.txt_TimKiemNhom.Name = "txt_TimKiemNhom";
             this.txt_TimKiemNhom.Size = new System.Drawing.Size(227, 22);
             this.txt_TimKiemNhom.TabIndex = 0;
             // 
-            // DetailCustomerGroup2
+            // DetailCustomerGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 444);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "DetailCustomerGroup2";
+            this.Name = "DetailCustomerGroup";
             this.Text = "Chi tiết nhóm khách hàng";
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

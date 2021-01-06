@@ -18,17 +18,12 @@ namespace StockManagement.Data
         public StockOutType()
         {
             this.StockOut = new HashSet<StockOut>();
-            this.StockOutType11 = new HashSet<StockOutType>();
         }
     
         public System.Guid StockOutType1 { get; set; }
-        public Nullable<System.Guid> GroupBy { get; set; }
         public string StockOutTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockOut> StockOut { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockOutType> StockOutType11 { get; set; }
-        public virtual StockOutType StockOutType2 { get; set; }
     }
 }

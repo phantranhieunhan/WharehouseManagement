@@ -27,9 +27,7 @@ namespace StockManagement.Data
         public Nullable<System.Guid> PurchaseOrderId { get; set; }
         public Nullable<System.Guid> StockInTypeId { get; set; }
         public string StockInCode { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<decimal> Status { get; set; }
-        public string Note { get; set; }
         public Nullable<System.DateTime> AccountingDate { get; set; }
         public Nullable<double> PercentComplete { get; set; }
         public string ReasonReturn { get; set; }

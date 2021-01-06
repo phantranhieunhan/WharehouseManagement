@@ -14,7 +14,7 @@ using StockManagement.Data;
 
 namespace StockManagement.Form
 {
-    public partial class Login : DevExpress.XtraEditors.XtraForm
+    public partial class Login : BaseForm
     {
         public Login()
         {
@@ -33,14 +33,17 @@ namespace StockManagement.Form
 
         private void bt_submit_Click(object sender, EventArgs e)
         {
-            LoginBO loginBO = new LoginBO();
-            bool check = loginBO.CheckUser(txt_username.Text, txt_password.Text);
-            if (check)
+            UserBO loginBO = new UserBO();
+            Dictionary<string, object> checkResult = loginBO.CheckUser(txt_username.Text, txt_password.Text);
+            if (checkResult["Status"].Equals(1))
             {
                 this.Hide();
+                Session.IsLogin = true;
+                Session.UserId = (Guid)checkResult["Data"];
+                
                 FormMain mainForm = new FormMain();
                 mainForm.Show();
-            }
+            }   
             else
             {
                 DialogResult result = XtraMessageBox.Show("Do you want to quit the application?", "Confirmation", MessageBoxButtons.OK);
@@ -48,7 +51,6 @@ namespace StockManagement.Form
                 {
                     this.Close();
                 }
-
             }
         }
     }

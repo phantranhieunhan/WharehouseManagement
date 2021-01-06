@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierList));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -56,37 +55,37 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.groupBox2);
             this.groupControl1.Controls.Add(this.groupBox1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Card;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(852, 417);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách nhà cung cấp ";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(5, 146);
+            this.groupBox2.Location = new System.Drawing.Point(5, 130);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(842, 266);
+            this.groupBox2.Size = new System.Drawing.Size(842, 282);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(6, 22);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(3, 19);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(830, 238);
+            this.gridControl1.Size = new System.Drawing.Size(836, 260);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -195,39 +194,43 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btn_timkiem);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.textEdit1);
             this.groupBox1.Location = new System.Drawing.Point(5, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(842, 109);
+            this.groupBox1.Size = new System.Drawing.Size(842, 93);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
             // btn_timkiem
             // 
-            this.btn_timkiem.Location = new System.Drawing.Point(613, 35);
+            this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_timkiem.Location = new System.Drawing.Point(691, 26);
             this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(94, 29);
+            this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
             this.btn_timkiem.TabIndex = 2;
             this.btn_timkiem.Text = "Tìm kiếm";
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(427, 36);
+            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Location = new System.Drawing.Point(555, 26);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(94, 29);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(27, 44);
+            this.textEdit1.EditValue = "Mã NCC";
+            this.textEdit1.Location = new System.Drawing.Point(26, 33);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(210, 22);
+            this.textEdit1.Size = new System.Drawing.Size(358, 22);
             this.textEdit1.TabIndex = 0;
             // 
             // SupplierList

@@ -18,17 +18,12 @@ namespace StockManagement.Data
         public StockInType()
         {
             this.StockIn = new HashSet<StockIn>();
-            this.StockInType1 = new HashSet<StockInType>();
         }
     
         public System.Guid StockInTypeId { get; set; }
-        public Nullable<System.Guid> GroupBy { get; set; }
         public string StockInTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockIn> StockIn { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockInType> StockInType1 { get; set; }
-        public virtual StockInType StockInType2 { get; set; }
     }
 }

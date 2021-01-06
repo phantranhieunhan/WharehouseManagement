@@ -147,9 +147,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(519, 335);
+            this.button1.Location = new System.Drawing.Point(546, 344);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 34);
+            this.button1.Size = new System.Drawing.Size(202, 40);
             this.button1.TabIndex = 15;
             this.button1.Text = "Chấp nhận với số lượng này";
             this.button1.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             // 
             this.lb_TongSoLuong.AutoSize = true;
             this.lb_TongSoLuong.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TongSoLuong.Location = new System.Drawing.Point(208, 344);
+            this.lb_TongSoLuong.Location = new System.Drawing.Point(222, 344);
             this.lb_TongSoLuong.Name = "lb_TongSoLuong";
             this.lb_TongSoLuong.Size = new System.Drawing.Size(26, 17);
             this.lb_TongSoLuong.TabIndex = 14;
@@ -167,7 +167,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 345);
+            this.label5.Location = new System.Drawing.Point(29, 345);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 17);
             this.label5.TabIndex = 13;
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 376);
+            this.ClientSize = new System.Drawing.Size(760, 393);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.lb_TenSP);
             this.Controls.Add(this.lb_MaSP);
@@ -187,7 +187,7 @@
             this.Controls.Add(this.lb_TongSoLuong);
             this.Controls.Add(this.label5);
             this.Name = "PurchaseOrderProductDetail";
-            this.Text = "PurchaseOrderProductDetail";
+            this.Text = "Chi tiết đơn đặt hàng bán hàng";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

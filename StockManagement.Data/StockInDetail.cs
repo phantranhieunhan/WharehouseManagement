@@ -18,7 +18,6 @@ namespace StockManagement.Data
         public Nullable<System.Guid> StockInId { get; set; }
         public Nullable<decimal> Status { get; set; }
         public Nullable<decimal> Quanlity { get; set; }
-        public string Note { get; set; }
     
         public virtual StockIn StockIn { get; set; }
     }

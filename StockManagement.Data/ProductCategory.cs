@@ -23,7 +23,6 @@ namespace StockManagement.Data
         public System.Guid ProductCategoryId { get; set; }
         public string ProductCategoryCode { get; set; }
         public string ProductCategoryName { get; set; }
-        public string Note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Product { get; set; }

@@ -30,9 +30,10 @@ namespace StockManagement.Data
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
         public Nullable<decimal> Price { get; set; }
-        public Nullable<decimal> StandardCost { get; set; }
         public Nullable<double> Weight { get; set; }
         public Nullable<double> Size { get; set; }
+        public string Color { get; set; }
+        public string Picture { get; set; }
     
         public virtual ProductCategory ProductCategory { get; set; }
         public virtual ProductType ProductType { get; set; }

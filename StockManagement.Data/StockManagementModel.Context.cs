@@ -25,8 +25,10 @@ namespace StockManagement.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AddressCustomer> AddressCustomer { get; set; }
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<GroupCustomer> GroupCustomer { get; set; }
+        public virtual DbSet<GroupMember> GroupMember { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductCategory> ProductCategory { get; set; }
@@ -47,8 +49,10 @@ namespace StockManagement.Data
         public virtual DbSet<StockOutType> StockOutType { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<SupplierProduct> SupplierProduct { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserPermission> UserPermission { get; set; }
         public virtual DbSet<UserType> UserType { get; set; }
+        public virtual DbSet<vw_UserPermission> vw_UserPermission { get; set; }
     }
 }
