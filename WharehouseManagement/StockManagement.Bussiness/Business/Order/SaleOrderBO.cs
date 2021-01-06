@@ -7,11 +7,11 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public class SaleOrderBO : Repository<SaleOrder>, ISaleOrder
+    public class SaleOrderBO // : Repository<SaleOrder>, ISaleOrder
     {
-        public List<vw_SaleOrder> GetData()
-        {
+        //public List<vw_SaleOrder> GetData()
+        //{
 
-        }
+        //}
     }
 }
