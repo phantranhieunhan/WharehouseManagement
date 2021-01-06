@@ -258,7 +258,7 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn ProductCode;
-        private DevExpress.XtraGrid.Columns.GridColumn ProductName;
+        private new DevExpress.XtraGrid.Columns.GridColumn ProductName;
         private DevExpress.XtraGrid.Columns.GridColumn Price;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
