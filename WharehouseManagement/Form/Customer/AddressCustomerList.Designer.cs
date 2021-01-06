@@ -153,12 +153,13 @@ namespace StockManagement.Form.Customer
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(683, 126);
+            this.btn_Luu.Location = new System.Drawing.Point(638, 126);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(75, 49);
+            this.btn_Luu.Size = new System.Drawing.Size(120, 40);
             this.btn_Luu.TabIndex = 10;
             this.btn_Luu.Text = "Lưu lại";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // textEdit1
             // 

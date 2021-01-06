@@ -57,7 +57,7 @@ namespace StockManagement.Form.Customer
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 286);
+            this.label4.Location = new System.Drawing.Point(144, 282);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 17);
             this.label4.TabIndex = 49;
@@ -90,16 +90,16 @@ namespace StockManagement.Form.Customer
             // 
             // btn_ChiTiet
             // 
-            this.btn_ChiTiet.Location = new System.Drawing.Point(517, 127);
+            this.btn_ChiTiet.Location = new System.Drawing.Point(505, 124);
             this.btn_ChiTiet.Name = "btn_ChiTiet";
-            this.btn_ChiTiet.Size = new System.Drawing.Size(108, 35);
+            this.btn_ChiTiet.Size = new System.Drawing.Size(120, 40);
             this.btn_ChiTiet.TabIndex = 44;
             this.btn_ChiTiet.Text = "Chi tiết";
             this.btn_ChiTiet.UseVisualStyleBackColor = true;
             // 
             // cbb_DiaChi
             // 
-            this.cbb_DiaChi.Location = new System.Drawing.Point(15, 133);
+            this.cbb_DiaChi.Location = new System.Drawing.Point(8, 133);
             this.cbb_DiaChi.Name = "cbb_DiaChi";
             this.cbb_DiaChi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -156,12 +156,13 @@ namespace StockManagement.Form.Customer
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(534, 359);
+            this.btn_Luu.Location = new System.Drawing.Point(489, 356);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(75, 36);
+            this.btn_Luu.Size = new System.Drawing.Size(120, 40);
             this.btn_Luu.TabIndex = 35;
             this.btn_Luu.Text = "Lưu lại";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // txt_MaKhachHang
             // 
@@ -183,7 +184,7 @@ namespace StockManagement.Form.Customer
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(307, 238);
+            this.textEdit1.Location = new System.Drawing.Point(272, 234);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.textEdit1.Size = new System.Drawing.Size(143, 116);

@@ -79,7 +79,7 @@
             this.x.Controls.Add(this.btn_TimKiemTK);
             this.x.Location = new System.Drawing.Point(5, 29);
             this.x.Name = "x";
-            this.x.Size = new System.Drawing.Size(925, 75);
+            this.x.Size = new System.Drawing.Size(971, 103);
             this.x.TabIndex = 0;
             this.x.TabStop = false;
             this.x.Text = "Tìm kiếm";
@@ -87,25 +87,25 @@
             // textEdit1
             // 
             this.textEdit1.EditValue = "Mã SP/ Tên SP/ Mã NCC/ Tên NCC/ Mã Kho/ Tên Kho";
-            this.textEdit1.Location = new System.Drawing.Point(46, 21);
+            this.textEdit1.Location = new System.Drawing.Point(37, 39);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(507, 22);
             this.textEdit1.TabIndex = 4;
             // 
             // btn_XuatFile
             // 
-            this.btn_XuatFile.Location = new System.Drawing.Point(641, 21);
+            this.btn_XuatFile.Location = new System.Drawing.Point(641, 30);
             this.btn_XuatFile.Name = "btn_XuatFile";
-            this.btn_XuatFile.Size = new System.Drawing.Size(118, 23);
+            this.btn_XuatFile.Size = new System.Drawing.Size(120, 40);
             this.btn_XuatFile.TabIndex = 3;
             this.btn_XuatFile.Text = "Xuất file";
             this.btn_XuatFile.UseVisualStyleBackColor = true;
             // 
             // btn_TimKiemTK
             // 
-            this.btn_TimKiemTK.Location = new System.Drawing.Point(796, 21);
+            this.btn_TimKiemTK.Location = new System.Drawing.Point(796, 30);
             this.btn_TimKiemTK.Name = "btn_TimKiemTK";
-            this.btn_TimKiemTK.Size = new System.Drawing.Size(118, 23);
+            this.btn_TimKiemTK.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiemTK.TabIndex = 2;
             this.btn_TimKiemTK.Text = "Tìm kiếm";
             this.btn_TimKiemTK.UseVisualStyleBackColor = true;
@@ -268,18 +268,19 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.groupBox2);
             this.groupControl1.Controls.Add(this.x);
-            this.groupControl1.Location = new System.Drawing.Point(1, 3);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(930, 488);
+            this.groupControl1.Size = new System.Drawing.Size(981, 553);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Danh sách tồn kho";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gC_DanhSach);
-            this.groupBox2.Location = new System.Drawing.Point(6, 110);
+            this.groupBox2.Location = new System.Drawing.Point(6, 138);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(930, 392);
+            this.groupBox2.Size = new System.Drawing.Size(970, 410);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
@@ -290,7 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
             this.Name = "InventoryManagement";
-            this.Size = new System.Drawing.Size(933, 489);
+            this.Size = new System.Drawing.Size(981, 553);
             this.x.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();

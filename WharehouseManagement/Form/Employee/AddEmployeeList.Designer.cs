@@ -50,6 +50,7 @@ namespace StockManagement.Form.Employee
             this.label1 = new System.Windows.Forms.Label();
             this.cbb_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.textEdit2 = new DevExpress.XtraEditors.RadioGroup();
+            this.cbb_DiaChi = new DevExpress.XtraEditors.TextEdit();
             this.btn_Luu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -75,7 +76,6 @@ namespace StockManagement.Form.Employee
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cbb_DiaChi = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NoiLamViec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SoDienThoai.Properties)).BeginInit();
@@ -89,9 +89,9 @@ namespace StockManagement.Form.Employee
             ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Email.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChi.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -286,11 +286,19 @@ namespace StockManagement.Form.Employee
             this.textEdit2.Size = new System.Drawing.Size(286, 33);
             this.textEdit2.TabIndex = 91;
             // 
+            // cbb_DiaChi
+            // 
+            this.cbb_DiaChi.Location = new System.Drawing.Point(10, 122);
+            this.cbb_DiaChi.Name = "cbb_DiaChi";
+            this.cbb_DiaChi.Properties.NullText = "Địa chỉ";
+            this.cbb_DiaChi.Size = new System.Drawing.Size(605, 22);
+            this.cbb_DiaChi.TabIndex = 80;
+            // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(215, 490);
+            this.btn_Luu.Location = new System.Drawing.Point(165, 492);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(75, 36);
+            this.btn_Luu.Size = new System.Drawing.Size(120, 40);
             this.btn_Luu.TabIndex = 73;
             this.btn_Luu.Text = "Lưu lại";
             this.btn_Luu.UseVisualStyleBackColor = true;
@@ -534,14 +542,6 @@ namespace StockManagement.Form.Employee
             this.labelControl1.TabIndex = 35;
             this.labelControl1.Text = "Ngày sinh:";
             // 
-            // cbb_DiaChi
-            // 
-            this.cbb_DiaChi.Location = new System.Drawing.Point(10, 122);
-            this.cbb_DiaChi.Name = "cbb_DiaChi";
-            this.cbb_DiaChi.Properties.NullText = "Địa chỉ";
-            this.cbb_DiaChi.Size = new System.Drawing.Size(605, 22);
-            this.cbb_DiaChi.TabIndex = 80;
-            // 
             // AddEmployeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -565,10 +565,10 @@ namespace StockManagement.Form.Employee
             ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Email.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChi.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

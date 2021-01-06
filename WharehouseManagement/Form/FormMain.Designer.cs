@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.btn_CaiDat = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_TaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_EmployeeList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -63,8 +65,8 @@
             this.lb_HoTen = new DevExpress.XtraEditors.LabelControl();
             this.lb_NgaySinh = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -73,20 +75,35 @@
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btn_CaiDat,
+            this.btn_TaiKhoan,
+            this.barSubItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1145, 35);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.btn_TaiKhoan);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barSubItem1);
             // 
-            // buttonEdit1
+            // btn_CaiDat
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(164, 92);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEdit1.Size = new System.Drawing.Size(125, 22);
-            this.buttonEdit1.TabIndex = 2;
+            this.btn_CaiDat.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btn_CaiDat.Caption = "barButtonItem1";
+            this.btn_CaiDat.Id = 0;
+            this.btn_CaiDat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CaiDat.ImageOptions.Image")));
+            this.btn_CaiDat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_CaiDat.ImageOptions.LargeImage")));
+            this.btn_CaiDat.Name = "btn_CaiDat";
+            // 
+            // btn_TaiKhoan
+            // 
+            this.btn_TaiKhoan.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btn_TaiKhoan.Caption = "barButtonItem2";
+            this.btn_TaiKhoan.Id = 1;
+            this.btn_TaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoan.ImageOptions.Image")));
+            this.btn_TaiKhoan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoan.ImageOptions.LargeImage")));
+            this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             // 
             // btn_Setting
             // 
@@ -105,6 +122,12 @@
             this.btn_TypeEmployee,
             this.btn_Decentralization});
             this.btn_Employee.Expanded = true;
+            this.btn_Employee.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Employee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Employee.ImageOptions.Image")));
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Text = "Nhân viên";
             // 
@@ -131,6 +154,12 @@
             // 
             // btn_Report
             // 
+            this.btn_Report.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Report.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Report.ImageOptions.Image")));
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Text = "Báo cáo";
             // 
@@ -140,6 +169,12 @@
             this.btn_CustomerGroup,
             this.btn_CustomerList});
             this.btn_Customer.Expanded = true;
+            this.btn_Customer.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Customer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Customer.ImageOptions.Image")));
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Text = "Khách hàng";
             // 
@@ -163,6 +198,12 @@
             this.btn_SupplierList,
             this.btn_SupplierProduct});
             this.btn_Supplier.Expanded = true;
+            this.btn_Supplier.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Supplier.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Supplier.ImageOptions.Image")));
             this.btn_Supplier.Name = "btn_Supplier";
             this.btn_Supplier.Text = "Nhà cung cấp";
             // 
@@ -188,6 +229,12 @@
             this.btn_StockIn,
             this.btn_StockOut});
             this.btn_Warehouse.Expanded = true;
+            this.btn_Warehouse.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Warehouse.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Warehouse.ImageOptions.Image")));
             this.btn_Warehouse.Name = "btn_Warehouse";
             this.btn_Warehouse.Text = "Kho hàng";
             // 
@@ -225,6 +272,12 @@
             this.btn_ProductCatagory,
             this.btn_ProductList});
             this.btn_Product.Expanded = true;
+            this.btn_Product.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Product.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Product.ImageOptions.Image")));
             this.btn_Product.Name = "btn_Product";
             this.btn_Product.Text = "Sản phẩm";
             // 
@@ -249,10 +302,11 @@
             this.btn_PurchaseOrder});
             this.btn_Order.Expanded = true;
             this.btn_Order.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Order.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Order.ImageOptions.Image")));
             this.btn_Order.Name = "btn_Order";
             this.btn_Order.Text = "Đơn hàng";
             // 
@@ -395,6 +449,16 @@
             this.labelControl1.TabIndex = 53;
             this.labelControl1.Text = "Chức vụ:";
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barSubItem1.Caption = "Cài đặt";
+            this.barSubItem1.Id = 0;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
+            // 
             // FormMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
@@ -407,7 +471,6 @@
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.accordionControl1);
-            this.Controls.Add(this.buttonEdit1);
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
@@ -416,7 +479,6 @@
             this.Text = "FormMain";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -427,7 +489,6 @@
 
         #endregion
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Order;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_SaleOrder;
@@ -460,5 +521,8 @@
         private DevExpress.XtraEditors.LabelControl lb_HoTen;
         private DevExpress.XtraEditors.LabelControl lb_NgaySinh;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraBars.BarButtonItem btn_CaiDat;
+        private DevExpress.XtraBars.BarButtonItem btn_TaiKhoan;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
     }
 }

@@ -240,6 +240,12 @@
     <Compile Include="Form\Product\ProductCategory.Designer.cs">
       <DependentUpon>ProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Setting\Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Setting\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\StockIn\AddStockIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Product\ProductCategory.resx">
       <DependentUpon>ProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Setting\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\StockIn\AddStockIn.resx">
       <DependentUpon>AddStockIn.cs</DependentUpon>

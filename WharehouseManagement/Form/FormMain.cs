@@ -25,8 +25,8 @@ namespace StockManagement.Form
         public FormMain()
         {
             InitializeComponent();
-            LoadPermission();
-            LoadUser();
+            //LoadPermission();
+            //LoadUser();
         }
 
         public void LoadUser()

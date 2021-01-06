@@ -162,20 +162,20 @@
             // btn_timkiem
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_timkiem.Location = new System.Drawing.Point(1299, 50);
+            this.btn_timkiem.Location = new System.Drawing.Point(1349, 50);
             this.btn_timkiem.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(161, 42);
+            this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
             this.btn_timkiem.TabIndex = 1;
             this.btn_timkiem.Text = "Tìm kiếm";
             // 
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(1063, 50);
+            this.btn_them.Location = new System.Drawing.Point(1181, 50);
             this.btn_them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(161, 42);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm ";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
@@ -185,7 +185,7 @@
             this.txt_MaSP.Location = new System.Drawing.Point(50, 56);
             this.txt_MaSP.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txt_MaSP.Name = "txt_MaSP";
-            this.txt_MaSP.Size = new System.Drawing.Size(850, 22);
+            this.txt_MaSP.Size = new System.Drawing.Size(478, 22);
             this.txt_MaSP.TabIndex = 0;
             // 
             // ProductCategory

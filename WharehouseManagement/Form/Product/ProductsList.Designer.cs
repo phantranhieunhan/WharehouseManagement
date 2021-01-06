@@ -86,11 +86,11 @@
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.gridControl1.Location = new System.Drawing.Point(5, 27);
+            this.gridControl1.Location = new System.Drawing.Point(5, 20);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1341, 525);
+            this.gridControl1.Size = new System.Drawing.Size(1341, 532);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -221,20 +221,20 @@
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Location = new System.Drawing.Point(1121, 66);
+            this.simpleButton2.Location = new System.Drawing.Point(1182, 53);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(161, 42);
+            this.simpleButton2.Size = new System.Drawing.Size(120, 40);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Tìm kiếm";
             // 
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(883, 62);
+            this.btn_them.Location = new System.Drawing.Point(1040, 53);
             this.btn_them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(161, 42);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm ";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
@@ -244,7 +244,7 @@
             this.textEdit1.Location = new System.Drawing.Point(26, 62);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(624, 22);
+            this.textEdit1.Size = new System.Drawing.Size(478, 22);
             this.textEdit1.TabIndex = 0;
             // 
             // ProductsList

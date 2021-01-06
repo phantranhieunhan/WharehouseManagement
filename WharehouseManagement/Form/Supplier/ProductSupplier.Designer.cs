@@ -156,7 +156,7 @@
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_timkiem.Location = new System.Drawing.Point(644, 51);
             this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(94, 29);
+            this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
             this.btn_timkiem.TabIndex = 2;
             this.btn_timkiem.Text = "Tìm kiếm";
             // 
@@ -165,16 +165,17 @@
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_them.Location = new System.Drawing.Point(508, 51);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(94, 29);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // txt_MaNCC
             // 
+            this.txt_MaNCC.EditValue = "Mã NCC";
             this.txt_MaNCC.Location = new System.Drawing.Point(35, 55);
             this.txt_MaNCC.Name = "txt_MaNCC";
-            this.txt_MaNCC.Size = new System.Drawing.Size(234, 22);
+            this.txt_MaNCC.Size = new System.Drawing.Size(354, 22);
             this.txt_MaNCC.TabIndex = 0;
             // 
             // ProductSupplier

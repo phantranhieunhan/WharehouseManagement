@@ -78,9 +78,9 @@ namespace StockManagement.Form.Employee
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TimKiem.Location = new System.Drawing.Point(653, 53);
+            this.btn_TimKiem.Location = new System.Drawing.Point(561, 41);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(76, 26);
+            this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 2;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@ namespace StockManagement.Form.Employee
             // txt_MaNhom
             // 
             this.txt_MaNhom.EditValue = "Mã, tên nhóm";
-            this.txt_MaNhom.Location = new System.Drawing.Point(33, 50);
+            this.txt_MaNhom.Location = new System.Drawing.Point(17, 50);
             this.txt_MaNhom.Name = "txt_MaNhom";
-            this.txt_MaNhom.Size = new System.Drawing.Size(499, 22);
+            this.txt_MaNhom.Size = new System.Drawing.Size(477, 22);
             this.txt_MaNhom.TabIndex = 0;
             // 
             // ChiTiet
@@ -257,9 +257,9 @@ namespace StockManagement.Form.Employee
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Them.Location = new System.Drawing.Point(746, 53);
+            this.btn_Them.Location = new System.Drawing.Point(701, 41);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(76, 26);
+            this.btn_Them.Size = new System.Drawing.Size(120, 40);
             this.btn_Them.TabIndex = 1;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;

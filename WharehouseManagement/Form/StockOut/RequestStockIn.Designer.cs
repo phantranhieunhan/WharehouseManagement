@@ -40,9 +40,9 @@ namespace StockManagement.Form.StockOut
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbb_KhoNhap = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_YeuCauNhapKho = new System.Windows.Forms.Button();
-            this.cbb_KhoNhap = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_KhoNhap)).BeginInit();
@@ -155,6 +155,13 @@ namespace StockManagement.Form.StockOut
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 130;
             // 
+            // cbb_KhoNhap
+            // 
+            this.cbb_KhoNhap.AutoHeight = false;
+            this.cbb_KhoNhap.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbb_KhoNhap.Name = "cbb_KhoNhap";
+            // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Số lượng";
@@ -166,19 +173,12 @@ namespace StockManagement.Form.StockOut
             // 
             // btn_YeuCauNhapKho
             // 
-            this.btn_YeuCauNhapKho.Location = new System.Drawing.Point(541, 542);
+            this.btn_YeuCauNhapKho.Location = new System.Drawing.Point(527, 520);
             this.btn_YeuCauNhapKho.Name = "btn_YeuCauNhapKho";
-            this.btn_YeuCauNhapKho.Size = new System.Drawing.Size(150, 23);
+            this.btn_YeuCauNhapKho.Size = new System.Drawing.Size(140, 40);
             this.btn_YeuCauNhapKho.TabIndex = 5;
             this.btn_YeuCauNhapKho.Text = "Yêu cầu nhập kho";
             this.btn_YeuCauNhapKho.UseVisualStyleBackColor = true;
-            // 
-            // cbb_KhoNhap
-            // 
-            this.cbb_KhoNhap.AutoHeight = false;
-            this.cbb_KhoNhap.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_KhoNhap.Name = "cbb_KhoNhap";
             // 
             // RequestStockIn
             // 

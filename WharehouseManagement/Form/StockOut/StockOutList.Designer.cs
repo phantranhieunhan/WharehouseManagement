@@ -379,7 +379,7 @@
             this.tab_DangXuLy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DangXuLy.Name = "tab_DangXuLy";
             this.tab_DangXuLy.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DangXuLy.Size = new System.Drawing.Size(1883, 578);
+            this.tab_DangXuLy.Size = new System.Drawing.Size(3234, 844);
             this.tab_DangXuLy.TabIndex = 1;
             this.tab_DangXuLy.Text = "Đang xử lý";
             this.tab_DangXuLy.UseVisualStyleBackColor = true;
@@ -393,7 +393,7 @@
             this.gC_DangXuLy.MainView = this.gridView2;
             this.gC_DangXuLy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gC_DangXuLy.Name = "gC_DangXuLy";
-            this.gC_DangXuLy.Size = new System.Drawing.Size(1873, 570);
+            this.gC_DangXuLy.Size = new System.Drawing.Size(3224, 836);
             this.gC_DangXuLy.TabIndex = 1;
             this.gC_DangXuLy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -509,7 +509,7 @@
             this.tab_SanSangGiao.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_SanSangGiao.Name = "tab_SanSangGiao";
             this.tab_SanSangGiao.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_SanSangGiao.Size = new System.Drawing.Size(1883, 578);
+            this.tab_SanSangGiao.Size = new System.Drawing.Size(3234, 844);
             this.tab_SanSangGiao.TabIndex = 2;
             this.tab_SanSangGiao.Text = "Sẵn sàng giao";
             this.tab_SanSangGiao.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@
             this.gC_SanSangGiao.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4,
             this.btn_GiaoHang});
-            this.gC_SanSangGiao.Size = new System.Drawing.Size(1873, 570);
+            this.gC_SanSangGiao.Size = new System.Drawing.Size(3224, 836);
             this.gC_SanSangGiao.TabIndex = 2;
             this.gC_SanSangGiao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -644,7 +644,7 @@
             this.tab_DangGiao.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DangGiao.Name = "tab_DangGiao";
             this.tab_DangGiao.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DangGiao.Size = new System.Drawing.Size(1883, 578);
+            this.tab_DangGiao.Size = new System.Drawing.Size(3234, 844);
             this.tab_DangGiao.TabIndex = 3;
             this.tab_DangGiao.Text = "Đang giao";
             this.tab_DangGiao.UseVisualStyleBackColor = true;
@@ -660,7 +660,7 @@
             this.gC_DangGiao.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6,
             this.repositoryItemButtonEdit5});
-            this.gC_DangGiao.Size = new System.Drawing.Size(1873, 570);
+            this.gC_DangGiao.Size = new System.Drawing.Size(3224, 836);
             this.gC_DangGiao.TabIndex = 2;
             this.gC_DangGiao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -779,7 +779,7 @@
             this.tab_HoanThanh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_HoanThanh.Name = "tab_HoanThanh";
             this.tab_HoanThanh.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_HoanThanh.Size = new System.Drawing.Size(1883, 578);
+            this.tab_HoanThanh.Size = new System.Drawing.Size(3234, 844);
             this.tab_HoanThanh.TabIndex = 4;
             this.tab_HoanThanh.Text = "Hoàn thành";
             this.tab_HoanThanh.UseVisualStyleBackColor = true;
@@ -795,7 +795,7 @@
             this.gC_HoanThanh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8,
             this.repositoryItemButtonEdit7});
-            this.gC_HoanThanh.Size = new System.Drawing.Size(1873, 570);
+            this.gC_HoanThanh.Size = new System.Drawing.Size(3224, 836);
             this.gC_HoanThanh.TabIndex = 2;
             this.gC_HoanThanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -914,7 +914,7 @@
             this.tab_GiaoHangThatBai.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_GiaoHangThatBai.Name = "tab_GiaoHangThatBai";
             this.tab_GiaoHangThatBai.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_GiaoHangThatBai.Size = new System.Drawing.Size(1883, 578);
+            this.tab_GiaoHangThatBai.Size = new System.Drawing.Size(3234, 844);
             this.tab_GiaoHangThatBai.TabIndex = 5;
             this.tab_GiaoHangThatBai.Text = "Giao hàng thất bại";
             this.tab_GiaoHangThatBai.UseVisualStyleBackColor = true;
@@ -930,7 +930,7 @@
             this.gC_GiaoHangThatBai.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit10,
             this.repositoryItemButtonEdit9});
-            this.gC_GiaoHangThatBai.Size = new System.Drawing.Size(1873, 570);
+            this.gC_GiaoHangThatBai.Size = new System.Drawing.Size(3224, 836);
             this.gC_GiaoHangThatBai.TabIndex = 2;
             this.gC_GiaoHangThatBai.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1049,7 +1049,7 @@
             this.tab_DonBiHuy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DonBiHuy.Name = "tab_DonBiHuy";
             this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DonBiHuy.Size = new System.Drawing.Size(1883, 578);
+            this.tab_DonBiHuy.Size = new System.Drawing.Size(3234, 844);
             this.tab_DonBiHuy.TabIndex = 6;
             this.tab_DonBiHuy.Text = "Đơn bị hủy";
             this.tab_DonBiHuy.UseVisualStyleBackColor = true;
@@ -1065,7 +1065,7 @@
             this.gC_DonBiHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit12,
             this.repositoryItemButtonEdit11});
-            this.gC_DonBiHuy.Size = new System.Drawing.Size(1873, 570);
+            this.gC_DonBiHuy.Size = new System.Drawing.Size(3224, 836);
             this.gC_DonBiHuy.TabIndex = 2;
             this.gC_DonBiHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -1238,10 +1238,10 @@
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Them.Location = new System.Drawing.Point(1701, 119);
+            this.btn_Them.Location = new System.Drawing.Point(1747, 109);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(129, 33);
+            this.btn_Them.Size = new System.Drawing.Size(120, 40);
             this.btn_Them.TabIndex = 4;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
@@ -1250,10 +1250,10 @@
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TimKiem.Location = new System.Drawing.Point(1701, 58);
+            this.btn_TimKiem.Location = new System.Drawing.Point(1747, 44);
             this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(129, 33);
+            this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 3;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;

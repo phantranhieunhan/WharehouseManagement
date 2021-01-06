@@ -9,18 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StockManagement.Form.Customer
+namespace StockManagement.Form.Setting
 {
-    public partial class AddCustomerList : DevExpress.XtraEditors.XtraForm
+    public partial class Setting : DevExpress.XtraEditors.XtraUserControl
     {
-        public AddCustomerList()
+        public Setting()
         {
             InitializeComponent();
-        }
-
-        private void btn_Luu_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
