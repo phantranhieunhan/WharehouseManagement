@@ -30,7 +30,7 @@
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,14 +43,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_timkiem = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_MaNCC = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNCC.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -71,7 +71,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.gridControl1);
+            this.groupBox2.Controls.Add(this.gC_DanhSach);
             this.groupBox2.Location = new System.Drawing.Point(5, 130);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(842, 282);
@@ -79,15 +79,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
-            // gridControl1
+            // gC_DanhSach
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 19);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(836, 260);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gC_DanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_DanhSach.Location = new System.Drawing.Point(3, 19);
+            this.gC_DanhSach.MainView = this.gridView1;
+            this.gC_DanhSach.Name = "gC_DanhSach";
+            this.gC_DanhSach.Size = new System.Drawing.Size(836, 260);
+            this.gC_DanhSach.TabIndex = 0;
+            this.gC_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -101,7 +101,7 @@
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn8});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn1
@@ -198,7 +198,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btn_timkiem);
             this.groupBox1.Controls.Add(this.btn_them);
-            this.groupBox1.Controls.Add(this.textEdit1);
+            this.groupBox1.Controls.Add(this.txt_MaNCC);
             this.groupBox1.Location = new System.Drawing.Point(5, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(842, 93);
@@ -225,13 +225,13 @@
             this.btn_them.Text = "Thêm";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // textEdit1
+            // txt_MaNCC
             // 
-            this.textEdit1.EditValue = "Mã NCC";
-            this.textEdit1.Location = new System.Drawing.Point(26, 33);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(358, 22);
-            this.textEdit1.TabIndex = 0;
+            this.txt_MaNCC.EditValue = "Mã NCC";
+            this.txt_MaNCC.Location = new System.Drawing.Point(26, 33);
+            this.txt_MaNCC.Name = "txt_MaNCC";
+            this.txt_MaNCC.Size = new System.Drawing.Size(358, 22);
+            this.txt_MaNCC.TabIndex = 0;
             // 
             // SupplierList
             // 
@@ -243,10 +243,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNCC.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,7 +255,7 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -268,6 +268,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.SimpleButton btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_them;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_MaNCC;
     }
 }

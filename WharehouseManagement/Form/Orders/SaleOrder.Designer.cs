@@ -59,23 +59,21 @@
             this.txt_MaDon = new DevExpress.XtraEditors.TextEdit();
             this.btn_TimKiemKH = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gB_DanhSach = new System.Windows.Forms.GroupBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gC_DanhSachDonMoi = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.SaleOrderCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CustomerId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CreatedBy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_Action = new DevExpress.XtraGrid.Columns.GridColumn();
             this.buttonRecieve = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.gC_DanhSachDaTiepNhan = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,6 +85,7 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gC_DanhSachYeuCauNhapKho = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,6 +97,7 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.gC_DanhSachDonHuy = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -115,21 +115,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gB_DanhSach.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDonMoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonRecieve)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDaTiepNhan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachYeuCauNhapKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDonHuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
@@ -248,7 +248,9 @@
             // 
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.Controls.Add(this.groupBox3);
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.gB_DanhSach);
             this.groupControl1.Controls.Add(this.groupBox1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
@@ -257,19 +259,19 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Đặt hàng bán hàng";
             // 
-            // groupBox3
+            // gB_DanhSach
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gB_DanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.tabControl);
-            this.groupBox3.Location = new System.Drawing.Point(5, 151);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1098, 390);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Danh sách";
+            this.gB_DanhSach.BackColor = System.Drawing.Color.White;
+            this.gB_DanhSach.Controls.Add(this.tabControl);
+            this.gB_DanhSach.Location = new System.Drawing.Point(5, 151);
+            this.gB_DanhSach.Name = "gB_DanhSach";
+            this.gB_DanhSach.Size = new System.Drawing.Size(1098, 390);
+            this.gB_DanhSach.TabIndex = 1;
+            this.gB_DanhSach.TabStop = false;
+            this.gB_DanhSach.Text = "Danh sách";
             // 
             // tabControl
             // 
@@ -314,10 +316,10 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.SaleOrderCode,
-            this.gridColumn2,
+            this.CustomerId,
             this.gridColumn3,
             this.gridColumn26,
-            this.gridColumn4,
+            this.TotalAmount,
             this.gridColumn5,
             this.CreatedBy,
             this.btn_Action});
@@ -335,14 +337,14 @@
             this.SaleOrderCode.VisibleIndex = 0;
             this.SaleOrderCode.Width = 62;
             // 
-            // gridColumn2
+            // CustomerId
             // 
-            this.gridColumn2.Caption = "Khách hàng";
-            this.gridColumn2.FieldName = "Customer";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 148;
+            this.CustomerId.Caption = "Khách hàng";
+            this.CustomerId.FieldName = "CustomerId";
+            this.CustomerId.Name = "CustomerId";
+            this.CustomerId.Visible = true;
+            this.CustomerId.VisibleIndex = 1;
+            this.CustomerId.Width = 148;
             // 
             // gridColumn3
             // 
@@ -365,14 +367,14 @@
             this.gridColumn26.VisibleIndex = 3;
             this.gridColumn26.Width = 91;
             // 
-            // gridColumn4
+            // TotalAmount
             // 
-            this.gridColumn4.Caption = "Tổng tiền";
-            this.gridColumn4.FieldName = "TotalAmount";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 132;
+            this.TotalAmount.Caption = "Tổng tiền";
+            this.TotalAmount.FieldName = "TotalAmount";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.Visible = true;
+            this.TotalAmount.VisibleIndex = 4;
+            this.TotalAmount.Width = 132;
             // 
             // gridColumn5
             // 
@@ -424,28 +426,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đã tiếp nhận";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.gC_DanhSachYeuCauNhapKho);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1084, 339);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Yêu cầu nhập kho";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.gC_DanhSachDonHuy);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1084, 339);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Đơn bị hủy";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // gC_DanhSachDaTiepNhan
             // 
@@ -564,6 +544,17 @@
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.gC_DanhSachYeuCauNhapKho);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1084, 339);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Yêu cầu nhập kho";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // gC_DanhSachYeuCauNhapKho
             // 
             this.gC_DanhSachYeuCauNhapKho.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -680,6 +671,17 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.gC_DanhSachDonHuy);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1084, 339);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Đơn bị hủy";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // gC_DanhSachDonHuy
             // 
@@ -812,21 +814,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.gB_DanhSach.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDonMoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonRecieve)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDaTiepNhan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachYeuCauNhapKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSachDonHuy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
@@ -847,15 +849,15 @@
         private DevExpress.XtraEditors.TextEdit txt_MaDon;
         private System.Windows.Forms.Button btn_TimKiemKH;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gB_DanhSach;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private DevExpress.XtraGrid.GridControl gC_DanhSachDonMoi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn SaleOrderCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn CustomerId;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn TotalAmount;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn CreatedBy;
         private DevExpress.XtraGrid.Columns.GridColumn btn_Action;

@@ -212,11 +212,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.group_box.Controls.Add(this.gC_DSXuatKho);
-            this.group_box.Location = new System.Drawing.Point(9, 252);
+            this.group_box.Location = new System.Drawing.Point(5, 251);
             this.group_box.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.group_box.Name = "group_box";
             this.group_box.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.group_box.Size = new System.Drawing.Size(1913, 648);
+            this.group_box.Size = new System.Drawing.Size(1917, 648);
             this.group_box.TabIndex = 1;
             this.group_box.TabStop = false;
             this.group_box.Text = "Danh sách";
@@ -230,11 +230,11 @@
             this.gC_DSXuatKho.Controls.Add(this.tab_HoanThanh);
             this.gC_DSXuatKho.Controls.Add(this.tab_GiaoHangThatBai);
             this.gC_DSXuatKho.Controls.Add(this.tab_DonBiHuy);
-            this.gC_DSXuatKho.Location = new System.Drawing.Point(12, 33);
+            this.gC_DSXuatKho.Location = new System.Drawing.Point(4, 26);
             this.gC_DSXuatKho.Margin = new System.Windows.Forms.Padding(9, 6, 9, 6);
             this.gC_DSXuatKho.Name = "gC_DSXuatKho";
             this.gC_DSXuatKho.SelectedIndex = 0;
-            this.gC_DSXuatKho.Size = new System.Drawing.Size(3242, 873);
+            this.gC_DSXuatKho.Size = new System.Drawing.Size(1910, 890);
             this.gC_DSXuatKho.TabIndex = 0;
             // 
             // tab_PhieuMoi
@@ -244,7 +244,7 @@
             this.tab_PhieuMoi.Margin = new System.Windows.Forms.Padding(9, 6, 9, 6);
             this.tab_PhieuMoi.Name = "tab_PhieuMoi";
             this.tab_PhieuMoi.Padding = new System.Windows.Forms.Padding(9, 6, 9, 6);
-            this.tab_PhieuMoi.Size = new System.Drawing.Size(3234, 844);
+            this.tab_PhieuMoi.Size = new System.Drawing.Size(1902, 861);
             this.tab_PhieuMoi.TabIndex = 0;
             this.tab_PhieuMoi.Text = "Phiếu mới";
             this.tab_PhieuMoi.UseVisualStyleBackColor = true;
@@ -260,7 +260,7 @@
             this.gC_PhieiMoi.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_TienHanhXuLy,
             this.btn_HuyPhieu});
-            this.gC_PhieiMoi.Size = new System.Drawing.Size(3216, 832);
+            this.gC_PhieiMoi.Size = new System.Drawing.Size(1884, 849);
             this.gC_PhieiMoi.TabIndex = 0;
             this.gC_PhieiMoi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -356,7 +356,7 @@
             this.btn_Action.Name = "btn_Action";
             this.btn_Action.Visible = true;
             this.btn_Action.VisibleIndex = 7;
-            this.btn_Action.Width = 161;
+            this.btn_Action.Width = 438;
             // 
             // btn_HuyPhieu
             // 
@@ -379,7 +379,7 @@
             this.tab_DangXuLy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DangXuLy.Name = "tab_DangXuLy";
             this.tab_DangXuLy.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DangXuLy.Size = new System.Drawing.Size(3234, 844);
+            this.tab_DangXuLy.Size = new System.Drawing.Size(1902, 861);
             this.tab_DangXuLy.TabIndex = 1;
             this.tab_DangXuLy.Text = "Đang xử lý";
             this.tab_DangXuLy.UseVisualStyleBackColor = true;
@@ -393,7 +393,7 @@
             this.gC_DangXuLy.MainView = this.gridView2;
             this.gC_DangXuLy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gC_DangXuLy.Name = "gC_DangXuLy";
-            this.gC_DangXuLy.Size = new System.Drawing.Size(3224, 836);
+            this.gC_DangXuLy.Size = new System.Drawing.Size(1892, 853);
             this.gC_DangXuLy.TabIndex = 1;
             this.gC_DangXuLy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -509,7 +509,7 @@
             this.tab_SanSangGiao.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_SanSangGiao.Name = "tab_SanSangGiao";
             this.tab_SanSangGiao.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_SanSangGiao.Size = new System.Drawing.Size(3234, 844);
+            this.tab_SanSangGiao.Size = new System.Drawing.Size(1902, 861);
             this.tab_SanSangGiao.TabIndex = 2;
             this.tab_SanSangGiao.Text = "Sẵn sàng giao";
             this.tab_SanSangGiao.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@
             this.gC_SanSangGiao.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4,
             this.btn_GiaoHang});
-            this.gC_SanSangGiao.Size = new System.Drawing.Size(3224, 836);
+            this.gC_SanSangGiao.Size = new System.Drawing.Size(1892, 853);
             this.gC_SanSangGiao.TabIndex = 2;
             this.gC_SanSangGiao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -644,7 +644,7 @@
             this.tab_DangGiao.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DangGiao.Name = "tab_DangGiao";
             this.tab_DangGiao.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DangGiao.Size = new System.Drawing.Size(3234, 844);
+            this.tab_DangGiao.Size = new System.Drawing.Size(1902, 861);
             this.tab_DangGiao.TabIndex = 3;
             this.tab_DangGiao.Text = "Đang giao";
             this.tab_DangGiao.UseVisualStyleBackColor = true;
@@ -660,7 +660,7 @@
             this.gC_DangGiao.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6,
             this.repositoryItemButtonEdit5});
-            this.gC_DangGiao.Size = new System.Drawing.Size(3224, 836);
+            this.gC_DangGiao.Size = new System.Drawing.Size(1892, 853);
             this.gC_DangGiao.TabIndex = 2;
             this.gC_DangGiao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -914,7 +914,7 @@
             this.tab_GiaoHangThatBai.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_GiaoHangThatBai.Name = "tab_GiaoHangThatBai";
             this.tab_GiaoHangThatBai.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_GiaoHangThatBai.Size = new System.Drawing.Size(3234, 844);
+            this.tab_GiaoHangThatBai.Size = new System.Drawing.Size(3234, 851);
             this.tab_GiaoHangThatBai.TabIndex = 5;
             this.tab_GiaoHangThatBai.Text = "Giao hàng thất bại";
             this.tab_GiaoHangThatBai.UseVisualStyleBackColor = true;
@@ -930,7 +930,7 @@
             this.gC_GiaoHangThatBai.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit10,
             this.repositoryItemButtonEdit9});
-            this.gC_GiaoHangThatBai.Size = new System.Drawing.Size(3224, 836);
+            this.gC_GiaoHangThatBai.Size = new System.Drawing.Size(3224, 843);
             this.gC_GiaoHangThatBai.TabIndex = 2;
             this.gC_GiaoHangThatBai.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1026,7 +1026,7 @@
             this.gridColumn43.Name = "gridColumn43";
             this.gridColumn43.Visible = true;
             this.gridColumn43.VisibleIndex = 7;
-            this.gridColumn43.Width = 161;
+            this.gridColumn43.Width = 578;
             // 
             // repositoryItemButtonEdit9
             // 
@@ -1049,7 +1049,7 @@
             this.tab_DonBiHuy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DonBiHuy.Name = "tab_DonBiHuy";
             this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DonBiHuy.Size = new System.Drawing.Size(3234, 844);
+            this.tab_DonBiHuy.Size = new System.Drawing.Size(3234, 851);
             this.tab_DonBiHuy.TabIndex = 6;
             this.tab_DonBiHuy.Text = "Đơn bị hủy";
             this.tab_DonBiHuy.UseVisualStyleBackColor = true;
@@ -1065,7 +1065,7 @@
             this.gC_DonBiHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit12,
             this.repositoryItemButtonEdit11});
-            this.gC_DonBiHuy.Size = new System.Drawing.Size(3224, 836);
+            this.gC_DonBiHuy.Size = new System.Drawing.Size(3224, 843);
             this.gC_DonBiHuy.TabIndex = 2;
             this.gC_DonBiHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});

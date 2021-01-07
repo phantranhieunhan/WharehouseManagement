@@ -30,7 +30,7 @@
         {
             this.gc_danhsachSPNCC = new DevExpress.XtraEditors.GroupControl();
             this.gc_danhsach = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gC_DS = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,7 +45,7 @@
             this.gc_danhsachSPNCC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_danhsach)).BeginInit();
             this.gc_danhsach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_timkiem)).BeginInit();
             this.gc_timkiem.SuspendLayout();
@@ -73,22 +73,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gc_danhsach.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gc_danhsach.Controls.Add(this.gridControl1);
+            this.gc_danhsach.Controls.Add(this.gC_DS);
             this.gc_danhsach.Location = new System.Drawing.Point(5, 151);
             this.gc_danhsach.Name = "gc_danhsach";
             this.gc_danhsach.Size = new System.Drawing.Size(771, 286);
             this.gc_danhsach.TabIndex = 1;
             this.gc_danhsach.Text = "Danh sách";
             // 
-            // gridControl1
+            // gC_DS
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 26);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(767, 258);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gC_DS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_DS.Location = new System.Drawing.Point(2, 26);
+            this.gC_DS.MainView = this.gridView1;
+            this.gC_DS.Name = "gC_DS";
+            this.gC_DS.Size = new System.Drawing.Size(767, 258);
+            this.gC_DS.TabIndex = 0;
+            this.gC_DS.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -99,7 +99,7 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gC_DS;
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn1
@@ -189,7 +189,7 @@
             this.gc_danhsachSPNCC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_danhsach)).EndInit();
             this.gc_danhsach.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_timkiem)).EndInit();
             this.gc_timkiem.ResumeLayout(false);
@@ -207,7 +207,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_them;
         private DevExpress.XtraEditors.TextEdit txt_MaNCC;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gC_DS;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
