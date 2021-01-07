@@ -58,7 +58,7 @@
             this.lb_Login.Appearance.Options.UseForeColor = true;
             this.lb_Login.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lb_Login.IndentBetweenImageAndText = 10;
-            this.lb_Login.Location = new System.Drawing.Point(230, 87);
+            this.lb_Login.Location = new System.Drawing.Point(230, -1);
             this.lb_Login.Name = "lb_Login";
             this.lb_Login.Padding = new System.Windows.Forms.Padding(10);
             this.lb_Login.Size = new System.Drawing.Size(369, 117);
@@ -195,6 +195,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lb_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Login.IconOptions.Image")));
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Login.IconOptions.LargeImage")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
