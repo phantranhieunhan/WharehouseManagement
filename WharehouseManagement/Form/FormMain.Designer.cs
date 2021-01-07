@@ -33,6 +33,7 @@
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.btn_CaiDat = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TaiKhoan = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_EmployeeList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -65,7 +66,6 @@
             this.lb_HoTen = new DevExpress.XtraEditors.LabelControl();
             this.lb_NgaySinh = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -104,6 +104,16 @@
             this.btn_TaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoan.ImageOptions.Image")));
             this.btn_TaiKhoan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoan.ImageOptions.LargeImage")));
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barSubItem1.Caption = "Cài đặt";
+            this.barSubItem1.Id = 0;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
             // 
             // btn_Setting
             // 
@@ -449,16 +459,6 @@
             this.labelControl1.TabIndex = 53;
             this.labelControl1.Text = "Chức vụ:";
             // 
-            // barSubItem1
-            // 
-            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barSubItem1.Caption = "Cài đặt";
-            this.barSubItem1.Id = 0;
-            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
-            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
-            this.barSubItem1.Name = "barSubItem1";
-            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
-            // 
             // FormMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.AliceBlue;
@@ -474,6 +474,7 @@
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FormMain.IconOptions.Image")));
             this.Name = "FormMain";
             this.NavigationControl = this.accordionControl1;
             this.Text = "FormMain";

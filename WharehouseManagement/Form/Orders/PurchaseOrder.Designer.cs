@@ -123,7 +123,7 @@
             // txt_MaDon
             // 
             this.txt_MaDon.EditValue = "Mã đơn ";
-            this.txt_MaDon.Location = new System.Drawing.Point(51, 27);
+            this.txt_MaDon.Location = new System.Drawing.Point(40, 30);
             this.txt_MaDon.Name = "txt_MaDon";
             this.txt_MaDon.Size = new System.Drawing.Size(240, 22);
             this.txt_MaDon.TabIndex = 9;
@@ -131,7 +131,7 @@
             // btn_ThemKH
             // 
             this.btn_ThemKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_ThemKH.Location = new System.Drawing.Point(1005, 80);
+            this.btn_ThemKH.Location = new System.Drawing.Point(1024, 80);
             this.btn_ThemKH.Name = "btn_ThemKH";
             this.btn_ThemKH.Size = new System.Drawing.Size(120, 40);
             this.btn_ThemKH.TabIndex = 8;
@@ -174,7 +174,7 @@
             // btn_TimKiemKH
             // 
             this.btn_TimKiemKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_TimKiemKH.Location = new System.Drawing.Point(1005, 33);
+            this.btn_TimKiemKH.Location = new System.Drawing.Point(1024, 30);
             this.btn_TimKiemKH.Name = "btn_TimKiemKH";
             this.btn_TimKiemKH.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiemKH.TabIndex = 2;
@@ -324,7 +324,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1063, 324);
+            this.tabPage2.Size = new System.Drawing.Size(1140, 335);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đã tiếp nhận";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -335,7 +335,7 @@
             this.gridControl2.Location = new System.Drawing.Point(3, 3);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1057, 318);
+            this.gridControl2.Size = new System.Drawing.Size(1134, 329);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -414,7 +414,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1063, 324);
+            this.tabPage3.Size = new System.Drawing.Size(1140, 335);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Yêu cầu xuất kho";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -424,7 +424,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1063, 324);
+            this.tabPage4.Size = new System.Drawing.Size(1140, 335);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Đơn bị hủy";
             this.tabPage4.UseVisualStyleBackColor = true;
