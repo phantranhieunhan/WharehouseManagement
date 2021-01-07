@@ -33,6 +33,7 @@ namespace StockManagement.Form
 
         private void bt_submit_Click(object sender, EventArgs e)
         {
+            bt_submit.BackColor = Color.LightSeaGreen;
             UserBO loginBO = new UserBO();
             Dictionary<string, object> checkResult = loginBO.CheckUser(txt_username.Text, txt_password.Text);
             if (checkResult["Status"].Equals(1))
@@ -52,6 +53,11 @@ namespace StockManagement.Form
                     this.Close();
                 }
             }
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
