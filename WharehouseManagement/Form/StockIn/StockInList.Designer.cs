@@ -144,6 +144,8 @@ namespace StockManagement.Form.StockIn
             // 
             // groupControl2
             // 
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.groupBox2);
             this.groupControl2.Controls.Add(this.groupBox1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;

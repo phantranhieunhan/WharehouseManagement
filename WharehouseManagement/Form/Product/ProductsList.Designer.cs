@@ -55,12 +55,15 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.groupBox2);
             this.groupControl1.Controls.Add(this.btn_timkiem);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(798, 535);
+            this.groupControl1.Size = new System.Drawing.Size(1368, 769);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách sản phẩm";
             // 
@@ -70,9 +73,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gridControl1);
-            this.groupBox2.Location = new System.Drawing.Point(5, 143);
+            this.groupBox2.Location = new System.Drawing.Point(9, 206);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(788, 387);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1351, 556);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
@@ -80,10 +85,12 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 19);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.gridControl1.Location = new System.Drawing.Point(5, 27);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(782, 365);
+            this.gridControl1.Size = new System.Drawing.Size(1341, 525);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -99,6 +106,8 @@
             this.gridColumn6,
             this.btn_Sua,
             this.btn_Xoa});
+            this.gridView1.DetailHeight = 503;
+            this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -108,11 +117,11 @@
             this.ProductCode.AppearanceHeader.Options.UseFont = true;
             this.ProductCode.Caption = "Mã sản phẩm";
             this.ProductCode.FieldName = "ProductCode";
-            this.ProductCode.MinWidth = 25;
+            this.ProductCode.MinWidth = 43;
             this.ProductCode.Name = "ProductCode";
             this.ProductCode.Visible = true;
             this.ProductCode.VisibleIndex = 0;
-            this.ProductCode.Width = 94;
+            this.ProductCode.Width = 161;
             // 
             // ProductName
             // 
@@ -120,11 +129,11 @@
             this.ProductName.AppearanceHeader.Options.UseFont = true;
             this.ProductName.Caption = "Tên sản phẩm";
             this.ProductName.FieldName = "ProductName";
-            this.ProductName.MinWidth = 25;
+            this.ProductName.MinWidth = 43;
             this.ProductName.Name = "ProductName";
             this.ProductName.Visible = true;
             this.ProductName.VisibleIndex = 1;
-            this.ProductName.Width = 94;
+            this.ProductName.Width = 161;
             // 
             // Price
             // 
@@ -132,66 +141,66 @@
             this.Price.AppearanceHeader.Options.UseFont = true;
             this.Price.Caption = "Giá bán";
             this.Price.FieldName = "Price";
-            this.Price.MinWidth = 25;
+            this.Price.MinWidth = 43;
             this.Price.Name = "Price";
             this.Price.Visible = true;
             this.Price.VisibleIndex = 2;
-            this.Price.Width = 94;
+            this.Price.Width = 161;
             // 
             // gridColumn4
             // 
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Số lượng";
-            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.MinWidth = 43;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 94;
+            this.gridColumn4.Width = 161;
             // 
             // gridColumn5
             // 
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Danh mục";
-            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.MinWidth = 43;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 94;
+            this.gridColumn5.Width = 161;
             // 
             // gridColumn6
             // 
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Ngày tạo";
-            this.gridColumn6.MinWidth = 25;
+            this.gridColumn6.MinWidth = 43;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 94;
+            this.gridColumn6.Width = 161;
             // 
             // btn_Sua
             // 
             this.btn_Sua.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
             this.btn_Sua.AppearanceHeader.Options.UseFont = true;
             this.btn_Sua.Caption = "edit";
-            this.btn_Sua.MinWidth = 25;
+            this.btn_Sua.MinWidth = 43;
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Visible = true;
             this.btn_Sua.VisibleIndex = 6;
-            this.btn_Sua.Width = 94;
+            this.btn_Sua.Width = 161;
             // 
             // btn_Xoa
             // 
             this.btn_Xoa.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
             this.btn_Xoa.AppearanceHeader.Options.UseFont = true;
             this.btn_Xoa.Caption = "delete";
-            this.btn_Xoa.MinWidth = 25;
+            this.btn_Xoa.MinWidth = 43;
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Visible = true;
             this.btn_Xoa.VisibleIndex = 7;
-            this.btn_Xoa.Width = 94;
+            this.btn_Xoa.Width = 161;
             // 
             // btn_timkiem
             // 
@@ -200,9 +209,11 @@
             this.btn_timkiem.Controls.Add(this.simpleButton2);
             this.btn_timkiem.Controls.Add(this.btn_them);
             this.btn_timkiem.Controls.Add(this.textEdit1);
-            this.btn_timkiem.Location = new System.Drawing.Point(5, 31);
+            this.btn_timkiem.Location = new System.Drawing.Point(9, 45);
+            this.btn_timkiem.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(788, 106);
+            this.btn_timkiem.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_timkiem.Size = new System.Drawing.Size(1351, 152);
             this.btn_timkiem.TabIndex = 0;
             this.btn_timkiem.TabStop = false;
             this.btn_timkiem.Text = "Tìm kiếm";
@@ -210,36 +221,42 @@
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Location = new System.Drawing.Point(654, 46);
+            this.simpleButton2.Location = new System.Drawing.Point(1121, 66);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
+            this.simpleButton2.Size = new System.Drawing.Size(161, 42);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Tìm kiếm";
             // 
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(515, 43);
+            this.btn_them.Location = new System.Drawing.Point(883, 62);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(94, 29);
+            this.btn_them.Size = new System.Drawing.Size(161, 42);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm ";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(15, 43);
+            this.textEdit1.Location = new System.Drawing.Point(26, 62);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(364, 22);
+            this.textEdit1.Size = new System.Drawing.Size(624, 22);
             this.textEdit1.TabIndex = 0;
             // 
             // ProductsList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "ProductsList";
-            this.Size = new System.Drawing.Size(798, 535);
+            this.Size = new System.Drawing.Size(1368, 769);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
