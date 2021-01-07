@@ -27,7 +27,6 @@ namespace StockManagement.Data
         public string SupplierName { get; set; }
         public string Address { get; set; }
         public string TaxCode { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<decimal> PhoneNumber { get; set; }
         public string Email { get; set; }
     

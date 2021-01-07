@@ -19,7 +19,7 @@ namespace StockManagement.Data
         public Nullable<System.Guid> StockId { get; set; }
         public Nullable<decimal> MinQuanlity { get; set; }
         public Nullable<decimal> MaxQuanlity { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<decimal> RecentQuanlity { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual Stock Stock { get; set; }

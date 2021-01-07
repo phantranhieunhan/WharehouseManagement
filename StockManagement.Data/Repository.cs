@@ -29,7 +29,7 @@ namespace StockManagement.Data
         {
             if (IConnect == null)
             {
-                IConnect = new ConnectionFactory(new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString));
+                IConnect = new ConnectionFactory(new SqlConnection("Data Source=LAPTOP-IJLQ1L9S;Initial Catalog=StockManagement;Integrated Security=True"));
             }
         }
 

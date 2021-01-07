@@ -18,7 +18,6 @@ namespace StockManagement.Data
         public Nullable<System.Guid> PurchaseOrderId { get; set; }
         public Nullable<System.Guid> ProductId { get; set; }
         public Nullable<decimal> Status { get; set; }
-        public string Note { get; set; }
         public Nullable<decimal> QualityPurchase { get; set; }
         public Nullable<decimal> QualityAvalible { get; set; }
     

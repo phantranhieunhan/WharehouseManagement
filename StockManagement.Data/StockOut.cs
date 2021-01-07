@@ -29,8 +29,6 @@ namespace StockManagement.Data
         public Nullable<System.Guid> SaleOrderId { get; set; }
         public string StockOutCode { get; set; }
         public Nullable<decimal> Status { get; set; }
-        public string Note { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<double> PercentComplete { get; set; }
         public string DestroyReason { get; set; }
         public string ReasonReturn { get; set; }

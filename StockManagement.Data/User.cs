@@ -20,12 +20,12 @@ namespace StockManagement.Data
             this.PurchaseOrder = new HashSet<PurchaseOrder>();
             this.SaleOrder = new HashSet<SaleOrder>();
             this.StockIn = new HashSet<StockIn>();
-            this.StockManager = new HashSet<StockManager>();
             this.StockOut = new HashSet<StockOut>();
             this.UserPermission = new HashSet<UserPermission>();
         }
     
         public System.Guid UserId { get; set; }
+        public string UserCode { get; set; }
         public Nullable<System.Guid> UserTypeId { get; set; }
         public Nullable<System.Guid> StockId { get; set; }
         public string UserName { get; set; }
@@ -40,8 +40,8 @@ namespace StockManagement.Data
         public string Email { get; set; }
         public Nullable<int> Gender { get; set; }
         public string Avatar { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> MaritalStatus { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
@@ -50,8 +50,6 @@ namespace StockManagement.Data
         public virtual Stock Stock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockIn> StockIn { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StockManager> StockManager { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StockOut> StockOut { get; set; }
         public virtual UserType UserType { get; set; }

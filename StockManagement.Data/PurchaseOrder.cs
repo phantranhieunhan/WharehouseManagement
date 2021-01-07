@@ -22,15 +22,16 @@ namespace StockManagement.Data
         }
     
         public System.Guid PurchaseOrderId { get; set; }
+        public Nullable<System.Guid> StockId { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.Guid> SupplierId { get; set; }
         public string PurchaseOrderCode { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<decimal> Status { get; set; }
         public Nullable<bool> IsPay { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
+        public virtual Stock Stock { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

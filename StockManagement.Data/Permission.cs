@@ -14,20 +14,12 @@ namespace StockManagement.Data
     
     public partial class Permission
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Permission()
-        {
-            this.UserPermission = new HashSet<UserPermission>();
-        }
-    
-        public System.Guid PermissionId { get; set; }
+        public string PermissionId { get; set; }
         public string NamePermission { get; set; }
         public Nullable<bool> ViewPermission { get; set; }
         public Nullable<bool> AddPermission { get; set; }
         public Nullable<bool> EditPermission { get; set; }
         public Nullable<bool> DeletePermission { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserPermission> UserPermission { get; set; }
+        public string GroupBy { get; set; }
     }
 }

@@ -17,19 +17,26 @@ namespace StockManagement.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
         {
+            this.AddressCustomer = new HashSet<AddressCustomer>();
+            this.GroupMember = new HashSet<GroupMember>();
             this.SaleOrder = new HashSet<SaleOrder>();
         }
     
         public System.Guid CustomerId { get; set; }
-        public Nullable<System.Guid> GroupCustomerId { get; set; }
+        public string CustomerCode { get; set; }
         public string FullName { get; set; }
         public Nullable<System.DateTime> Birthday { get; set; }
         public Nullable<decimal> NumberPhone { get; set; }
         public string Email { get; set; }
-        public string Address { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<System.DateTime> UpdatedDate { get; set; }
         public string Note { get; set; }
+        public string Avatar { get; set; }
     
-        public virtual GroupCustomer GroupCustomer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AddressCustomer> AddressCustomer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<GroupMember> GroupMember { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SaleOrder> SaleOrder { get; set; }
     }

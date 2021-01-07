@@ -15,13 +15,10 @@ namespace StockManagement.Data
     public partial class StockManager
     {
         public System.Guid StockManagerId { get; set; }
-        public Nullable<System.Guid> UserId { get; set; }
         public Nullable<System.Guid> StockId { get; set; }
         public Nullable<System.DateTime> FromDate { get; set; }
         public Nullable<System.DateTime> ToDate { get; set; }
-        public string Note { get; set; }
     
         public virtual Stock Stock { get; set; }
-        public virtual User User { get; set; }
     }
 }
