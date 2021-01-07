@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="51416b136e674a93a5632c8f326cf39b" Name="Diagram1" ZoomLevel="57">
+      <Diagram DiagramId="51416b136e674a93a5632c8f326cf39b" Name="Diagram1" ZoomLevel="72">
         <EntityTypeShape EntityType="StockManagementModel.AddressCustomer" Width="1.5" PointX="11.25" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="StockManagementModel.Customer" Width="1.5" PointX="9" PointY="10.125" IsExpanded="true" />
         <EntityTypeShape EntityType="StockManagementModel.GroupCustomer" Width="1.5" PointX="12" PointY="0.75" IsExpanded="true" />
@@ -71,6 +71,9 @@
         <AssociationConnector Association="StockManagementModel.FK_SUPPLIER_RELATIONS_SUPPLIER" ManuallyRouted="false" />
         <AssociationConnector Association="StockManagementModel.FK_USER_RELATIONS_USERTYPE" ManuallyRouted="false" />
         <AssociationConnector Association="StockManagementModel.FK_USERPERM_RELATIONS_USER" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="StockManagementModel.vw_SaleOrder" Width="2" PointX="7.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockManagementModel.vw_ProductOnStock" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="StockManagementModel.vw_ProductOnStockDetail" Width="1.5" PointX="13.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

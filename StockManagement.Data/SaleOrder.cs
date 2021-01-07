@@ -33,6 +33,7 @@ namespace StockManagement.Data
         public Nullable<double> DiscountPercent { get; set; }
         public Nullable<bool> IsPay { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<System.Guid> UpdatedPerson { get; set; }
     
         public virtual Customer Customer { get; set; }
         public virtual User User { get; set; }

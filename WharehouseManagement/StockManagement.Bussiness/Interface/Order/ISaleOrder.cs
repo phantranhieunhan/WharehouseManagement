@@ -9,6 +9,7 @@ namespace StockManagement.Business
 {
     public interface ISaleOrder:IRepository<SaleOrder>
     {
-        List<SaleOrder> GetData();
+        List<vw_SaleOrder> GetData(int status);
+        void ChangeStatus(Guid saleOrderId, Guid updatedPerson, int status);
     }
 }

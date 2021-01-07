@@ -50,7 +50,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lud_Product = new DevExpress.XtraEditors.LookUpEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,18 +61,18 @@
             this.Sửa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Xóa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.SpinEdit();
+            this.spinEditQuanlity = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NCC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_KhoGiao.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Info.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lud_Product.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sửa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Xóa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEditQuanlity.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,6 +90,10 @@
             this.txt_NCC.Name = "txt_NCC";
             this.txt_NCC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_NCC.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierCode", "Mã NCC"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", "Tên NCC"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TaxCode", "MS thuế")});
             this.txt_NCC.Properties.NullText = "Tên NCC";
             this.txt_NCC.Size = new System.Drawing.Size(195, 22);
             this.txt_NCC.TabIndex = 1;
@@ -126,6 +130,9 @@
             this.txt_KhoGiao.Name = "txt_KhoGiao";
             this.txt_KhoGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_KhoGiao.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("StockCode", "Mã Kho"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("StockName", "Tên Kho")});
             this.txt_KhoGiao.Properties.NullText = "Kho giao";
             this.txt_KhoGiao.Size = new System.Drawing.Size(195, 22);
             this.txt_KhoGiao.TabIndex = 6;
@@ -136,9 +143,9 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.lookUpEdit1);
+            this.groupBox1.Controls.Add(this.lud_Product);
             this.groupBox1.Controls.Add(this.gridControl1);
-            this.groupBox1.Controls.Add(this.textEdit1);
+            this.groupBox1.Controls.Add(this.spinEditQuanlity);
             this.groupBox1.Location = new System.Drawing.Point(15, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(809, 330);
@@ -154,6 +161,7 @@
             this.btn_Info.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.btn_Info.Size = new System.Drawing.Size(35, 37);
             this.btn_Info.TabIndex = 6;
+            this.btn_Info.Click += new System.EventHandler(this.btn_Info_MouseHover);
             // 
             // button2
             // 
@@ -182,15 +190,21 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Số lượng:";
             // 
-            // lookUpEdit1
+            // lud_Product
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(35, 24);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lud_Product.Location = new System.Drawing.Point(35, 24);
+            this.lud_Product.Name = "lud_Product";
+            this.lud_Product.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.NullText = "Tìm kiếm sản phẩm";
-            this.lookUpEdit1.Size = new System.Drawing.Size(284, 22);
-            this.lookUpEdit1.TabIndex = 1;
+            this.lud_Product.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductCode", "Mã SP"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductName", "Tên SP"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TotalQuanlity", "Số lượng")});
+            this.lud_Product.Properties.NullText = "Tìm kiếm sản phẩm";
+            this.lud_Product.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.lud_Product.Size = new System.Drawing.Size(284, 22);
+            this.lud_Product.TabIndex = 1;
+            this.lud_Product.EditValueChanged += new System.EventHandler(this.lud_Product_EditValueChanged);
             // 
             // gridControl1
             // 
@@ -286,21 +300,21 @@
             this.Xóa.Name = "Xóa";
             this.Xóa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // textEdit1
+            // spinEditQuanlity
             // 
-            this.textEdit1.EditValue = new decimal(new int[] {
+            this.spinEditQuanlity.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.textEdit1.Location = new System.Drawing.Point(421, 24);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.spinEditQuanlity.Location = new System.Drawing.Point(421, 24);
+            this.spinEditQuanlity.Name = "spinEditQuanlity";
+            this.spinEditQuanlity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit1.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit1.Size = new System.Drawing.Size(50, 22);
-            this.textEdit1.TabIndex = 2;
+            this.spinEditQuanlity.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.spinEditQuanlity.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.spinEditQuanlity.Size = new System.Drawing.Size(50, 22);
+            this.spinEditQuanlity.TabIndex = 2;
             // 
             // SalesOrderAdd
             // 
@@ -322,12 +336,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Info.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lud_Product.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sửa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Xóa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEditQuanlity.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +356,7 @@
         private DevExpress.XtraEditors.TextEdit txt_MaDon;
         private DevExpress.XtraEditors.LookUpEdit txt_KhoGiao;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit lud_Product;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PictureEdit btn_Info;
@@ -357,6 +371,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit Sửa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit Xóa;
-        private DevExpress.XtraEditors.SpinEdit textEdit1;
+        private DevExpress.XtraEditors.SpinEdit spinEditQuanlity;
     }
 }
