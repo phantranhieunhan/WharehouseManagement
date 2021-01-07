@@ -165,6 +165,12 @@
     <Compile Include="UserType.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="vw_ProductOnStock.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ProductOnStockDetail.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="vw_SaleOrder.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>

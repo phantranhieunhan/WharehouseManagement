@@ -12,16 +12,12 @@ namespace StockManagement.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class vw_SaleOrder
+    public partial class vw_ProductOnStock
     {
-        public string SaleOrderCode { get; set; }
-        public string Customer { get; set; }
+        public System.Guid ProductId { get; set; }
+        public string ProductCode { get; set; }
         public string ProductName { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
-        public string CreatedBy { get; set; }
-        public Nullable<decimal> QuanlityOfCustomer { get; set; }
-        public System.Guid SaleOrderDetailId { get; set; }
-        public Nullable<decimal> TotalAmount { get; set; }
-        public Nullable<decimal> Status { get; set; }
+        public Nullable<decimal> TotalQuanlity { get; set; }
+        public string SearchString { get; set; }
     }
 }

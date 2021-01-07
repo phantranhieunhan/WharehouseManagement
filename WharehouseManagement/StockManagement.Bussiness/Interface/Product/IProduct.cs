@@ -7,9 +7,8 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public interface ISaleOrder:IRepository<SaleOrder>
+    public interface IProduct:IRepository<Product>
     {
-        List<vw_SaleOrder> GetData(int status);
-        void ChangeStatus(Guid saleOrderId, Guid updatedPerson, int status);
+        List<vw_ProductOnStockDetail> GetProductOnStock(Guid productId);
     }
 }

@@ -61,11 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Order\SaleOrderBO.cs" />
+    <Compile Include="Business\Product\ProductBO.cs" />
     <Compile Include="Business\User\UserBO.cs" />
     <Compile Include="Business\Customer\CustomerListBO.cs" />
     <Compile Include="Business\User\DecentralizationBO.cs" />
     <Compile Include="Interface\Customer\ICustomerList.cs" />
     <Compile Include="Interface\Order\ISaleOrder.cs" />
+    <Compile Include="Interface\Product\IProduct.cs" />
     <Compile Include="Interface\User\IDecentralization.cs" />
     <Compile Include="Interface\User\IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -25,7 +25,7 @@ namespace StockManagement.Form.Orders
         private void GetInit()
         {
             ISaleOrder saleOrderBO = new SaleOrderBO();
-            List<vw_SaleOrder> vw_SaleOrders = saleOrderBO.GetData();
+            List<vw_SaleOrder> vw_SaleOrders = saleOrderBO.GetData(1);
             gC_DanhSachDonMoi.DataSource = vw_SaleOrders;
         }
 
@@ -44,5 +44,37 @@ namespace StockManagement.Form.Orders
         {
             
         }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TabControl newSender = (TabControl)sender;
+            int selectedIndex = newSender.SelectedIndex;
+            if (selectedIndex >=0 && selectedIndex <=3)
+            {
+                ISaleOrder saleOrderBO = new SaleOrderBO();
+                List<vw_SaleOrder> vw_SaleOrders = saleOrderBO.GetData(selectedIndex + 1);
+
+                if (selectedIndex == 0)
+                {
+                    gC_DanhSachDonMoi.DataSource = vw_SaleOrders;
+                }
+                else if(selectedIndex == 1)
+                {
+                    gC_DanhSachDaTiepNhan.DataSource = vw_SaleOrders;
+
+                }
+                else if(selectedIndex == 2)
+                {
+                    gC_DanhSachYeuCauNhapKho.DataSource = vw_SaleOrders;
+
+                }
+                else
+                {
+                    gC_DanhSachDonHuy.DataSource = vw_SaleOrders;
+                }
+            }
+        }
+
+
     }
 }

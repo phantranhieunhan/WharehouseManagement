@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lb_MaSP = new System.Windows.Forms.Label();
             this.lb_TenSP = new System.Windows.Forms.Label();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.Gc_ProductOnStock = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lb_TongSoLuong = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gc_ProductOnStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,14 +84,14 @@
             this.lb_TenSP.TabIndex = 3;
             this.lb_TenSP.Text = "Đậu phộng rang";
             // 
-            // gridControl1
+            // Gc_ProductOnStock
             // 
-            this.gridControl1.Location = new System.Drawing.Point(43, 66);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(708, 281);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.Gc_ProductOnStock.Location = new System.Drawing.Point(43, 66);
+            this.Gc_ProductOnStock.MainView = this.gridView1;
+            this.Gc_ProductOnStock.Name = "Gc_ProductOnStock";
+            this.Gc_ProductOnStock.Size = new System.Drawing.Size(708, 281);
+            this.Gc_ProductOnStock.TabIndex = 4;
+            this.Gc_ProductOnStock.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -102,7 +102,7 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.Gc_ProductOnStock;
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn1
@@ -173,7 +173,7 @@
             this.button1.Text = "Chấp nhận với số lượng này";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // ProductDetail
+            // SalesOrderProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,14 +181,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_TongSoLuong);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.Gc_ProductOnStock);
             this.Controls.Add(this.lb_TenSP);
             this.Controls.Add(this.lb_MaSP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ProductDetail";
+            this.Name = "SalesOrderProductDetail";
             this.Text = "Hàng tồn kho trong sản phẩm";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gc_ProductOnStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,7 +201,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_MaSP;
         private System.Windows.Forms.Label lb_TenSP;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl Gc_ProductOnStock;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
