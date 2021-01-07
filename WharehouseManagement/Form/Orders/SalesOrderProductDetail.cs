@@ -20,17 +20,17 @@ namespace StockManagement.Form.Orders
         }
         public SalesOrderProductDetail(List<Data.vw_ProductOnStockDetail> vw_ProductOnStockDetailList)
         {
+            InitializeComponent();
             try
             {
-                //if (vw_ProductOnStockDetailList.Any())
-                //{
-                //    lb_MaSP.Text = "abc"; 
-                //        //vw_ProductOnStockDetailList.FirstOrDefault().ProductCode;
-                    
-                //    lb_TenSP.Text = vw_ProductOnStockDetailList.FirstOrDefault().ProductName;
+                if (vw_ProductOnStockDetailList.Any())
+                {
+                    lb_MaSP.Text = vw_ProductOnStockDetailList.FirstOrDefault().ProductCode;
 
-                //    Gc_ProductOnStock.DataSource = vw_ProductOnStockDetailList;
-                //}
+                    lb_TenSP.Text = vw_ProductOnStockDetailList.FirstOrDefault().ProductName;
+
+                    Gc_ProductOnStock.DataSource = vw_ProductOnStockDetailList;
+                }
             }
             catch (Exception e)
             {
