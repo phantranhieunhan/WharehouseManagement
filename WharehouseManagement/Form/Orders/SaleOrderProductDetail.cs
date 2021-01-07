@@ -11,17 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace StockManagement.Form.Orders
 {
-    public partial class PurchaseOrderAdd : DevExpress.XtraEditors.XtraForm
+    public partial class SaleOrderProductDetail : DevExpress.XtraEditors.XtraForm
     {
-        public PurchaseOrderAdd()
+        public SaleOrderProductDetail()
         {
             InitializeComponent();
-        }
-
-        private void btn_Info_EditValueChanged(object sender, EventArgs e)
-        {
-            PurchaseOrderProductDetail f = new PurchaseOrderProductDetail();
-            f.Show();
         }
     }
 }

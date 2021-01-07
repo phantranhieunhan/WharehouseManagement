@@ -13,9 +13,9 @@ using StockManagement.Business;
 
 namespace StockManagement.Form.Orders
 {
-    public partial class SalesOrderAdd : DevExpress.XtraEditors.XtraForm
+    public partial class PerchaseOrderAdd : DevExpress.XtraEditors.XtraForm
     {
-        public SalesOrderAdd()
+        public PerchaseOrderAdd()
         {
             InitializeComponent();
             GetInit();
@@ -42,22 +42,26 @@ namespace StockManagement.Form.Orders
                 lud_Product.Properties.DisplayMember = "ProductName";
                 lud_Product.Properties.ValueMember = "ProductId";
 
-
+                
             }
         }
 
         private void btn_Info_MouseHover(object sender, EventArgs e)
         {
-            if (lud_Product.SelectedText.Any())
+            if (lud_Product.SelectedText != "")
             {
                 Data.vw_ProductOnStock vw_ProductOnStock = (Data.vw_ProductOnStock)lud_Product.GetSelectedDataRow();
 
                 IProduct productBO = new ProductBO();
                 List<vw_ProductOnStockDetail> productOnStockDetailList = productBO.GetProductOnStock(vw_ProductOnStock.ProductId);
 
-                SalesOrderProductDetail salesOrderProductDetail = new SalesOrderProductDetail();
-                salesOrderProductDetail = new SalesOrderProductDetail(productOnStockDetailList);
+                ProductOnStockDetail salesOrderProductDetail = new ProductOnStockDetail();
+                salesOrderProductDetail = new ProductOnStockDetail(productOnStockDetailList);
                 salesOrderProductDetail.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn cần chọn sản phẩm!!!");
             }
         }
 

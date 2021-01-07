@@ -77,7 +77,7 @@ namespace StockManagement.Form
         private void btn_SaleOrder_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Clear();
-            fluentDesignFormContainer1.Controls.Add(new Orders.SaleOrder() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new Orders.PurchaseOrder() { Dock = DockStyle.Fill });
         }
 
 
@@ -149,7 +149,7 @@ namespace StockManagement.Form
         private void btn_PurchaseOrder_Click(object sender, EventArgs e)
         {
             fluentDesignFormContainer1.Controls.Clear();
-            fluentDesignFormContainer1.Controls.Add(new Orders.PurchaseOrder() { Dock = DockStyle.Fill });
+            fluentDesignFormContainer1.Controls.Add(new Orders.SaleOrder() { Dock = DockStyle.Fill });
         }
 
         private void btn_SupplierList_Click(object sender, EventArgs e)

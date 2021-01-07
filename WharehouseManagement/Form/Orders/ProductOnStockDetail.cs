@@ -12,13 +12,13 @@ using StockManagement.Data;
 
 namespace StockManagement.Form.Orders
 {
-    public partial class SalesOrderProductDetail : DevExpress.XtraEditors.XtraForm
+    public partial class ProductOnStockDetail : DevExpress.XtraEditors.XtraForm
     {
-        public SalesOrderProductDetail()
+        public ProductOnStockDetail()
         {
             InitializeComponent();
         }
-        public SalesOrderProductDetail(List<Data.vw_ProductOnStockDetail> vw_ProductOnStockDetailList)
+        public ProductOnStockDetail(List<Data.vw_ProductOnStockDetail> vw_ProductOnStockDetailList)
         {
             InitializeComponent();
             try
