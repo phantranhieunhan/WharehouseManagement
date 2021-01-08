@@ -46,7 +46,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CustomerCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FullName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,10 +64,11 @@
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.txt_MaNhom = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Xoa)).BeginInit();
@@ -94,7 +95,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.gridControl1);
+            this.groupBox2.Controls.Add(this.gC_DanhSach);
             this.groupBox2.Location = new System.Drawing.Point(5, 173);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(936, 398);
@@ -102,19 +103,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
-            // gridControl1
+            // gC_DanhSach
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 19);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gC_DanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_DanhSach.Location = new System.Drawing.Point(3, 19);
+            this.gC_DanhSach.MainView = this.gridView1;
+            this.gC_DanhSach.Name = "gC_DanhSach";
+            this.gC_DanhSach.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.Sua,
             this.Xoa,
             this.ChiTiet});
-            this.gridControl1.Size = new System.Drawing.Size(930, 376);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gC_DanhSach.Size = new System.Drawing.Size(930, 376);
+            this.gC_DanhSach.TabIndex = 0;
+            this.gC_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -129,7 +130,7 @@
             this.gridColumn7,
             this.btn_Sua,
             this.btn_Xoa});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
             // CustomerCode
@@ -251,6 +252,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_TimKiem);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.txt_MaNhom);
@@ -264,9 +266,9 @@
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TimKiem.Location = new System.Drawing.Point(704, 50);
+            this.btn_TimKiem.Location = new System.Drawing.Point(765, 39);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btn_TimKiem.Size = new System.Drawing.Size(75, 43);
             this.btn_TimKiem.TabIndex = 2;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;
@@ -274,20 +276,29 @@
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Them.Location = new System.Drawing.Point(827, 49);
+            this.btn_Them.Location = new System.Drawing.Point(855, 39);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 23);
+            this.btn_Them.Size = new System.Drawing.Size(75, 42);
             this.btn_Them.TabIndex = 1;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
             // 
             // txt_MaNhom
             // 
-            this.txt_MaNhom.EditValue = "Mã, tên, sđt, email khách hàng ";
-            this.txt_MaNhom.Location = new System.Drawing.Point(33, 50);
+            this.txt_MaNhom.EditValue = "";
+            this.txt_MaNhom.Location = new System.Drawing.Point(114, 49);
             this.txt_MaNhom.Name = "txt_MaNhom";
             this.txt_MaNhom.Size = new System.Drawing.Size(536, 22);
             this.txt_MaNhom.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 34);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nhập thông tin\r\n  khách hàng:";
             // 
             // CustomerList
             // 
@@ -299,12 +310,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Xoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChiTiet)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaNhom.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -314,7 +326,7 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerCode;
         private DevExpress.XtraGrid.Columns.GridColumn FullName;
@@ -332,5 +344,6 @@
         private System.Windows.Forms.Button btn_TimKiem;
         private System.Windows.Forms.Button btn_Them;
         private DevExpress.XtraEditors.TextEdit txt_MaNhom;
+        private System.Windows.Forms.Label label1;
     }
 }

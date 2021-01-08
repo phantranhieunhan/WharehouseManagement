@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductSupplier));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_NCC = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_SP = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NCC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SP.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +48,9 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(44, 37);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(85, 17);
+            this.labelControl1.Size = new System.Drawing.Size(90, 17);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Nhà cung cấp";
+            this.labelControl1.Text = "Nhà cung cấp:";
             // 
             // txt_NCC
             // 
@@ -57,34 +58,34 @@
             this.txt_NCC.Name = "txt_NCC";
             this.txt_NCC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txt_NCC.Size = new System.Drawing.Size(125, 22);
+            this.txt_NCC.Size = new System.Drawing.Size(184, 22);
             this.txt_NCC.TabIndex = 1;
             // 
             // txt_SP
             // 
-            this.txt_SP.Location = new System.Drawing.Point(615, 34);
+            this.txt_SP.Location = new System.Drawing.Point(552, 29);
             this.txt_SP.Name = "txt_SP";
             this.txt_SP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txt_SP.Size = new System.Drawing.Size(202, 22);
+            this.txt_SP.Size = new System.Drawing.Size(265, 22);
             this.txt_SP.TabIndex = 2;
             // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(479, 34);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(62, 17);
+            this.labelControl2.Size = new System.Drawing.Size(67, 17);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Sản phẩm";
+            this.labelControl2.Text = "Sản phẩm:";
             // 
-            // gridControl1
+            // gC_DanhSach
             // 
-            this.gridControl1.Location = new System.Drawing.Point(44, 114);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(773, 360);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gC_DanhSach.Location = new System.Drawing.Point(44, 114);
+            this.gC_DanhSach.MainView = this.gridView1;
+            this.gC_DanhSach.Name = "gC_DanhSach";
+            this.gC_DanhSach.Size = new System.Drawing.Size(773, 360);
+            this.gC_DanhSach.TabIndex = 4;
+            this.gC_DanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -93,7 +94,7 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
             // gridColumn1
@@ -117,21 +118,22 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             // 
-            // Form_AddProductSupplier
+            // AddProductSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 522);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(868, 542);
+            this.Controls.Add(this.gC_DanhSach);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txt_SP);
             this.Controls.Add(this.txt_NCC);
             this.Controls.Add(this.labelControl1);
-            this.Name = "Form_AddProductSupplier";
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AddProductSupplier.IconOptions.Image")));
+            this.Name = "AddProductSupplier";
             this.Text = "Thêm danh sách sản phẩm NCC";
             ((System.ComponentModel.ISupportInitialize)(this.txt_NCC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SP.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,7 +146,7 @@
         private DevExpress.XtraEditors.ComboBoxEdit txt_NCC;
         private DevExpress.XtraEditors.ComboBoxEdit txt_SP;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;

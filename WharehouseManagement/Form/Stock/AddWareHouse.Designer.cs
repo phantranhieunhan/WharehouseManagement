@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWareHouse));
             this.lb_MaKH = new System.Windows.Forms.Label();
             this.txt_MaKH = new DevExpress.XtraEditors.TextEdit();
             this.txt_TenKH = new DevExpress.XtraEditors.TextEdit();
@@ -141,6 +142,7 @@
             this.Controls.Add(this.lb_TenKH);
             this.Controls.Add(this.txt_MaKH);
             this.Controls.Add(this.lb_MaKH);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AddWareHouse.IconOptions.Image")));
             this.Name = "AddWareHouse";
             this.Text = "Thêm kho hàng";
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).EndInit();

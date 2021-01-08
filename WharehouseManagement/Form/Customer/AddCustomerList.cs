@@ -22,5 +22,6 @@ namespace StockManagement.Form.Customer
         {
 
         }
+
     }
 }

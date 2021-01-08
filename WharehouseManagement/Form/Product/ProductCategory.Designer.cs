@@ -40,6 +40,7 @@
             this.btn_timkiem = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
             this.txt_MaSP = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -51,6 +52,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.groupBox2);
             this.groupControl1.Controls.Add(this.groupBox1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -147,6 +150,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_timkiem);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.txt_MaSP);
@@ -182,11 +186,20 @@
             // 
             // txt_MaSP
             // 
-            this.txt_MaSP.Location = new System.Drawing.Point(50, 56);
+            this.txt_MaSP.Location = new System.Drawing.Point(193, 62);
             this.txt_MaSP.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txt_MaSP.Name = "txt_MaSP";
             this.txt_MaSP.Size = new System.Drawing.Size(478, 22);
             this.txt_MaSP.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 34);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Nhập thông tin \r\ndanh mục sản phẩm:";
             // 
             // ProductCategory
             // 
@@ -204,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaSP.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -223,5 +237,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_them;
         private DevExpress.XtraEditors.TextEdit txt_MaSP;
+        private System.Windows.Forms.Label label1;
     }
 }

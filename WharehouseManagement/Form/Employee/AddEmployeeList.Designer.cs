@@ -30,6 +30,7 @@ namespace StockManagement.Form.Employee
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployeeList));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_NoiLamViec = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,6 +77,16 @@ namespace StockManagement.Form.Employee
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NoiLamViec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SoDienThoai.Properties)).BeginInit();
@@ -96,6 +107,16 @@ namespace StockManagement.Form.Employee
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txt_NoiLamViec);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_SoDienThoai);
@@ -118,7 +139,7 @@ namespace StockManagement.Form.Employee
             this.groupBox1.Controls.Add(this.cbb_DiaChi);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(621, 539);
+            this.groupBox1.Size = new System.Drawing.Size(953, 539);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm thông tin";
@@ -126,15 +147,15 @@ namespace StockManagement.Form.Employee
             // txt_NoiLamViec
             // 
             this.txt_NoiLamViec.EditValue = "Nơi làm việc";
-            this.txt_NoiLamViec.Location = new System.Drawing.Point(362, 235);
+            this.txt_NoiLamViec.Location = new System.Drawing.Point(449, 190);
             this.txt_NoiLamViec.Name = "txt_NoiLamViec";
-            this.txt_NoiLamViec.Size = new System.Drawing.Size(254, 22);
+            this.txt_NoiLamViec.Size = new System.Drawing.Size(218, 22);
             this.txt_NoiLamViec.TabIndex = 94;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 194);
+            this.label5.Location = new System.Drawing.Point(369, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 17);
             this.label5.TabIndex = 93;
@@ -142,16 +163,16 @@ namespace StockManagement.Form.Employee
             // 
             // txt_SoDienThoai
             // 
-            this.txt_SoDienThoai.EditValue = "Số điện thoại";
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(339, 157);
+            this.txt_SoDienThoai.EditValue = "";
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(553, 114);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
-            this.txt_SoDienThoai.Size = new System.Drawing.Size(277, 22);
+            this.txt_SoDienThoai.Size = new System.Drawing.Size(394, 22);
             this.txt_SoDienThoai.TabIndex = 92;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 233);
+            this.label3.Location = new System.Drawing.Point(13, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 17);
             this.label3.TabIndex = 89;
@@ -159,41 +180,41 @@ namespace StockManagement.Form.Employee
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 233);
+            this.dateTimePicker1.Location = new System.Drawing.Point(144, 185);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 90;
             // 
             // txt_MaNhanVien
             // 
-            this.txt_MaNhanVien.EditValue = "Mã nhân viên";
-            this.txt_MaNhanVien.Location = new System.Drawing.Point(6, 22);
+            this.txt_MaNhanVien.EditValue = "";
+            this.txt_MaNhanVien.Location = new System.Drawing.Point(110, 22);
             this.txt_MaNhanVien.Name = "txt_MaNhanVien";
-            this.txt_MaNhanVien.Size = new System.Drawing.Size(145, 22);
+            this.txt_MaNhanVien.Size = new System.Drawing.Size(197, 22);
             this.txt_MaNhanVien.TabIndex = 72;
             // 
             // txt_CMND
             // 
-            this.txt_CMND.EditValue = "CMND";
-            this.txt_CMND.Location = new System.Drawing.Point(324, 50);
+            this.txt_CMND.EditValue = "";
+            this.txt_CMND.Location = new System.Drawing.Point(655, 50);
             this.txt_CMND.Name = "txt_CMND";
             this.txt_CMND.Size = new System.Drawing.Size(292, 22);
             this.txt_CMND.TabIndex = 87;
             // 
             // rdn_GioiTinh
             // 
-            this.rdn_GioiTinh.Location = new System.Drawing.Point(425, 78);
+            this.rdn_GioiTinh.Location = new System.Drawing.Point(79, 143);
             this.rdn_GioiTinh.Name = "rdn_GioiTinh";
             this.rdn_GioiTinh.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Nam", true, null, ""),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Nữ", true, null, "")});
-            this.rdn_GioiTinh.Size = new System.Drawing.Size(190, 31);
+            this.rdn_GioiTinh.Size = new System.Drawing.Size(284, 31);
             this.rdn_GioiTinh.TabIndex = 84;
             // 
             // txt_MatKhau
             // 
-            this.txt_MatKhau.EditValue = "Mật khẩu";
-            this.txt_MatKhau.Location = new System.Drawing.Point(396, 22);
+            this.txt_MatKhau.EditValue = "";
+            this.txt_MatKhau.Location = new System.Drawing.Point(727, 19);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(220, 22);
             this.txt_MatKhau.TabIndex = 86;
@@ -210,7 +231,7 @@ namespace StockManagement.Form.Employee
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(358, 84);
+            this.label2.Location = new System.Drawing.Point(12, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 85;
@@ -218,11 +239,11 @@ namespace StockManagement.Form.Employee
             // 
             // cbb_LoaiNV
             // 
-            this.cbb_LoaiNV.Location = new System.Drawing.Point(449, 196);
+            this.cbb_LoaiNV.Location = new System.Drawing.Point(780, 190);
             this.cbb_LoaiNV.Name = "cbb_LoaiNV";
             this.cbb_LoaiNV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_LoaiNV.Properties.NullText = "Loại nhân viên";
+            this.cbb_LoaiNV.Properties.NullText = "";
             this.cbb_LoaiNV.Size = new System.Drawing.Size(166, 22);
             this.cbb_LoaiNV.TabIndex = 79;
             // 
@@ -237,26 +258,26 @@ namespace StockManagement.Form.Employee
             // 
             // txt_TenNhanVien
             // 
-            this.txt_TenNhanVien.EditValue = "Tên nhân viên";
-            this.txt_TenNhanVien.Location = new System.Drawing.Point(6, 50);
+            this.txt_TenNhanVien.EditValue = "";
+            this.txt_TenNhanVien.Location = new System.Drawing.Point(137, 50);
             this.txt_TenNhanVien.Name = "txt_TenNhanVien";
-            this.txt_TenNhanVien.Size = new System.Drawing.Size(312, 22);
+            this.txt_TenNhanVien.Size = new System.Drawing.Size(452, 22);
             this.txt_TenNhanVien.TabIndex = 74;
             // 
             // txt_SDT
             // 
-            this.txt_SDT.EditValue = "Tài khoản";
-            this.txt_SDT.Location = new System.Drawing.Point(157, 22);
+            this.txt_SDT.EditValue = "";
+            this.txt_SDT.Location = new System.Drawing.Point(391, 19);
             this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(233, 22);
+            this.txt_SDT.Size = new System.Drawing.Size(255, 22);
             this.txt_SDT.TabIndex = 75;
             // 
             // txt_Email
             // 
-            this.txt_Email.EditValue = "Email";
-            this.txt_Email.Location = new System.Drawing.Point(10, 157);
+            this.txt_Email.EditValue = "";
+            this.txt_Email.Location = new System.Drawing.Point(66, 112);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(323, 22);
+            this.txt_Email.Size = new System.Drawing.Size(381, 22);
             this.txt_Email.TabIndex = 78;
             // 
             // label1
@@ -277,21 +298,22 @@ namespace StockManagement.Form.Employee
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(157, 185);
+            this.textEdit2.Location = new System.Drawing.Point(514, 142);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Độc thân"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Kết hôn"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Li hôn")});
-            this.textEdit2.Size = new System.Drawing.Size(286, 33);
+            this.textEdit2.Size = new System.Drawing.Size(432, 33);
             this.textEdit2.TabIndex = 91;
             // 
             // cbb_DiaChi
             // 
-            this.cbb_DiaChi.Location = new System.Drawing.Point(10, 122);
+            this.cbb_DiaChi.EditValue = "";
+            this.cbb_DiaChi.Location = new System.Drawing.Point(408, 86);
             this.cbb_DiaChi.Name = "cbb_DiaChi";
             this.cbb_DiaChi.Properties.NullText = "Địa chỉ";
-            this.cbb_DiaChi.Size = new System.Drawing.Size(605, 22);
+            this.cbb_DiaChi.Size = new System.Drawing.Size(538, 22);
             this.cbb_DiaChi.TabIndex = 80;
             // 
             // btn_Luu
@@ -329,9 +351,9 @@ namespace StockManagement.Form.Employee
             this.groupBox2.Controls.Add(this.labelControl3);
             this.groupBox2.Controls.Add(this.labelControl2);
             this.groupBox2.Controls.Add(this.labelControl1);
-            this.groupBox2.Location = new System.Drawing.Point(631, 4);
+            this.groupBox2.Location = new System.Drawing.Point(963, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(296, 539);
+            this.groupBox2.Size = new System.Drawing.Size(287, 547);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
@@ -358,7 +380,7 @@ namespace StockManagement.Form.Employee
             // 
             this.pictureBox1.Location = new System.Drawing.Point(6, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 205);
+            this.pictureBox1.Size = new System.Drawing.Size(275, 205);
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
@@ -542,13 +564,104 @@ namespace StockManagement.Form.Employee
             this.labelControl1.TabIndex = 35;
             this.labelControl1.Text = "Ngày sinh:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(652, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "Mật khẩu:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(313, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 17);
+            this.label7.TabIndex = 96;
+            this.label7.Text = "Tài khoản:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 17);
+            this.label8.TabIndex = 97;
+            this.label8.Text = "Mã nhân viên:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(595, 53);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 17);
+            this.label9.TabIndex = 98;
+            this.label9.Text = "CMND:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 52);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 17);
+            this.label10.TabIndex = 99;
+            this.label10.Text = "Họ tên nhân viên:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(358, 191);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 17);
+            this.label11.TabIndex = 100;
+            this.label11.Text = "Nơi làm việc:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(673, 195);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 17);
+            this.label12.TabIndex = 101;
+            this.label12.Text = "Loại nhân viên:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(349, 90);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 17);
+            this.label13.TabIndex = 102;
+            this.label13.Text = "Địa chỉ:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 115);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 17);
+            this.label14.TabIndex = 103;
+            this.label14.Text = "Email:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(455, 117);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 17);
+            this.label15.TabIndex = 104;
+            this.label15.Text = "Số điện thoại:";
+            // 
             // AddEmployeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 548);
+            this.ClientSize = new System.Drawing.Size(1262, 548);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AddEmployeeList.IconOptions.Image")));
             this.Name = "AddEmployeeList";
             this.Text = "Thêm nhân viên";
             this.groupBox1.ResumeLayout(false);
@@ -621,5 +734,15 @@ namespace StockManagement.Form.Employee
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.TextEdit txt_NoiLamViec;
         private DevExpress.XtraEditors.TextEdit cbb_DiaChi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

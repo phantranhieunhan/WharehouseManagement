@@ -38,6 +38,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gc_timkiem = new DevExpress.XtraEditors.GroupControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_timkiem = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
             this.txt_MaNCC = new DevExpress.XtraEditors.TextEdit();
@@ -142,19 +143,29 @@
             this.gc_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gc_timkiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gc_timkiem.Controls.Add(this.label1);
             this.gc_timkiem.Controls.Add(this.btn_timkiem);
             this.gc_timkiem.Controls.Add(this.btn_them);
             this.gc_timkiem.Controls.Add(this.txt_MaNCC);
             this.gc_timkiem.Location = new System.Drawing.Point(2, 26);
             this.gc_timkiem.Name = "gc_timkiem";
-            this.gc_timkiem.Size = new System.Drawing.Size(777, 119);
+            this.gc_timkiem.Size = new System.Drawing.Size(774, 119);
             this.gc_timkiem.TabIndex = 0;
             this.gc_timkiem.Text = "Tìm kiếm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 51);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nhập thông tin \r\n sản phẩm nhà \r\n   cung cấp:";
             // 
             // btn_timkiem
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_timkiem.Location = new System.Drawing.Point(644, 51);
+            this.btn_timkiem.Location = new System.Drawing.Point(641, 51);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
             this.btn_timkiem.TabIndex = 2;
@@ -163,7 +174,7 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(508, 51);
+            this.btn_them.Location = new System.Drawing.Point(505, 51);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 1;
@@ -172,10 +183,10 @@
             // 
             // txt_MaNCC
             // 
-            this.txt_MaNCC.EditValue = "Mã NCC";
-            this.txt_MaNCC.Location = new System.Drawing.Point(35, 55);
+            this.txt_MaNCC.EditValue = "";
+            this.txt_MaNCC.Location = new System.Drawing.Point(145, 60);
             this.txt_MaNCC.Name = "txt_MaNCC";
-            this.txt_MaNCC.Size = new System.Drawing.Size(354, 22);
+            this.txt_MaNCC.Size = new System.Drawing.Size(295, 22);
             this.txt_MaNCC.TabIndex = 0;
             // 
             // ProductSupplier
@@ -193,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_timkiem)).EndInit();
             this.gc_timkiem.ResumeLayout(false);
+            this.gc_timkiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaNCC.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,5 +226,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private System.Windows.Forms.Label label1;
     }
 }

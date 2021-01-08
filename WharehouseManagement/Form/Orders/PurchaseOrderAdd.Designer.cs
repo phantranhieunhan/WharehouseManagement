@@ -51,11 +51,11 @@
             this.cbb_TenKH = new DevExpress.XtraEditors.LookUpEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Info = new DevExpress.XtraEditors.PictureEdit();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.SpinEdit();
+            this.cbb_TimKiemSP = new DevExpress.XtraEditors.LookUpEdit();
+            this.txt_SoLuong = new DevExpress.XtraEditors.SpinEdit();
             this.gC_SanPham = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,6 +65,12 @@
             this.btn_Sua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_Xoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChiDaLuu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).BeginInit();
@@ -77,8 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbb_TenKH.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Info.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_TimKiemSP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_SoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gC_SanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Sua)).BeginInit();
@@ -87,6 +93,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_Info);
+            this.groupBox1.Controls.Add(this.btn_Them);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btn_Update);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txt_SoLuong);
+            this.groupBox1.Controls.Add(this.cbb_TimKiemSP);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbb_DiaChiDaLuu);
             this.groupBox1.Controls.Add(this.txt_MaDon);
             this.groupBox1.Controls.Add(this.txt_DiaChiCuThe);
@@ -98,24 +116,25 @@
             this.groupBox1.Controls.Add(this.cbb_TenKH);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(840, 164);
+            this.groupBox1.Size = new System.Drawing.Size(967, 196);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Khách hàng";
             // 
             // cbb_DiaChiDaLuu
             // 
-            this.cbb_DiaChiDaLuu.Location = new System.Drawing.Point(177, 123);
+            this.cbb_DiaChiDaLuu.Location = new System.Drawing.Point(113, 114);
             this.cbb_DiaChiDaLuu.Name = "cbb_DiaChiDaLuu";
             this.cbb_DiaChiDaLuu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_DiaChiDaLuu.Properties.NullText = "Địa chỉ đã lưu";
-            this.cbb_DiaChiDaLuu.Size = new System.Drawing.Size(654, 22);
+            this.cbb_DiaChiDaLuu.Properties.NullText = "";
+            this.cbb_DiaChiDaLuu.Size = new System.Drawing.Size(848, 22);
             this.cbb_DiaChiDaLuu.TabIndex = 8;
             // 
             // txt_MaDon
             // 
-            this.txt_MaDon.Location = new System.Drawing.Point(7, 123);
+            this.txt_MaDon.EditValue = "";
+            this.txt_MaDon.Location = new System.Drawing.Point(468, 20);
             this.txt_MaDon.Name = "txt_MaDon";
             this.txt_MaDon.Properties.NullText = "Mã đơn";
             this.txt_MaDon.Size = new System.Drawing.Size(164, 22);
@@ -123,81 +142,77 @@
             // 
             // txt_DiaChiCuThe
             // 
-            this.txt_DiaChiCuThe.Location = new System.Drawing.Point(177, 77);
+            this.txt_DiaChiCuThe.EditValue = "";
+            this.txt_DiaChiCuThe.Location = new System.Drawing.Point(113, 86);
             this.txt_DiaChiCuThe.Name = "txt_DiaChiCuThe";
             this.txt_DiaChiCuThe.Properties.NullText = "Địa chỉ cụ thể";
-            this.txt_DiaChiCuThe.Size = new System.Drawing.Size(654, 22);
+            this.txt_DiaChiCuThe.Size = new System.Drawing.Size(848, 22);
             this.txt_DiaChiCuThe.TabIndex = 6;
             // 
             // txt_SDT
             // 
-            this.txt_SDT.Location = new System.Drawing.Point(7, 77);
+            this.txt_SDT.EditValue = "";
+            this.txt_SDT.Location = new System.Drawing.Point(113, 55);
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Properties.NullText = "Số điện thoại";
-            this.txt_SDT.Size = new System.Drawing.Size(164, 22);
+            this.txt_SDT.Size = new System.Drawing.Size(230, 22);
             this.txt_SDT.TabIndex = 5;
             // 
             // cbb_PhuongXa
             // 
-            this.cbb_PhuongXa.Location = new System.Drawing.Point(667, 22);
+            this.cbb_PhuongXa.Location = new System.Drawing.Point(768, 55);
             this.cbb_PhuongXa.Name = "cbb_PhuongXa";
             this.cbb_PhuongXa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbb_PhuongXa.Properties.NullText = "Phường/ xã";
-            this.cbb_PhuongXa.Size = new System.Drawing.Size(164, 22);
+            this.cbb_PhuongXa.Size = new System.Drawing.Size(193, 22);
             this.cbb_PhuongXa.TabIndex = 4;
             // 
             // cbb_QuanHuyen
             // 
-            this.cbb_QuanHuyen.Location = new System.Drawing.Point(497, 22);
+            this.cbb_QuanHuyen.Location = new System.Drawing.Point(550, 55);
             this.cbb_QuanHuyen.Name = "cbb_QuanHuyen";
             this.cbb_QuanHuyen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbb_QuanHuyen.Properties.NullText = "Quận/ huyện";
-            this.cbb_QuanHuyen.Size = new System.Drawing.Size(164, 22);
+            this.cbb_QuanHuyen.Size = new System.Drawing.Size(211, 22);
             this.cbb_QuanHuyen.TabIndex = 3;
             // 
             // cbb_TinhTP
             // 
-            this.cbb_TinhTP.Location = new System.Drawing.Point(327, 22);
+            this.cbb_TinhTP.Location = new System.Drawing.Point(349, 55);
             this.cbb_TinhTP.Name = "cbb_TinhTP";
             this.cbb_TinhTP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbb_TinhTP.Properties.NullText = "Tỉnh/ thành phố";
-            this.cbb_TinhTP.Size = new System.Drawing.Size(164, 22);
+            this.cbb_TinhTP.Size = new System.Drawing.Size(195, 22);
             this.cbb_TinhTP.TabIndex = 2;
             // 
             // txt_Email
             // 
-            this.txt_Email.EditValue = "Email";
-            this.txt_Email.Location = new System.Drawing.Point(177, 22);
+            this.txt_Email.EditValue = "";
+            this.txt_Email.Location = new System.Drawing.Point(695, 18);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Properties.NullText = "Email";
-            this.txt_Email.Size = new System.Drawing.Size(144, 22);
+            this.txt_Email.Size = new System.Drawing.Size(266, 22);
             this.txt_Email.TabIndex = 1;
             // 
             // cbb_TenKH
             // 
-            this.cbb_TenKH.Location = new System.Drawing.Point(7, 23);
+            this.cbb_TenKH.Location = new System.Drawing.Point(125, 20);
             this.cbb_TenKH.Name = "cbb_TenKH";
             this.cbb_TenKH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_TenKH.Properties.NullText = "Tên KH";
-            this.cbb_TenKH.Size = new System.Drawing.Size(164, 22);
+            this.cbb_TenKH.Properties.NullText = "";
+            this.cbb_TenKH.Size = new System.Drawing.Size(273, 22);
             this.cbb_TenKH.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_Info);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.lookUpEdit1);
-            this.groupBox2.Controls.Add(this.textEdit1);
             this.groupBox2.Controls.Add(this.gC_SanPham);
-            this.groupBox2.Location = new System.Drawing.Point(12, 184);
+            this.groupBox2.Location = new System.Drawing.Point(12, 215);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(840, 280);
+            this.groupBox2.Size = new System.Drawing.Size(967, 347);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sản phẩm";
@@ -205,75 +220,76 @@
             // btn_Info
             // 
             this.btn_Info.EditValue = ((object)(resources.GetObject("btn_Info.EditValue")));
-            this.btn_Info.Location = new System.Drawing.Point(805, 9);
+            this.btn_Info.Location = new System.Drawing.Point(926, 149);
             this.btn_Info.Name = "btn_Info";
             this.btn_Info.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.btn_Info.Size = new System.Drawing.Size(35, 37);
             this.btn_Info.TabIndex = 11;
             this.btn_Info.EditValueChanged += new System.EventHandler(this.btn_Info_EditValueChanged);
             // 
-            // button2
+            // btn_Them
             // 
-            this.button2.Location = new System.Drawing.Point(641, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 40);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Them.Location = new System.Drawing.Point(768, 149);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(120, 40);
+            this.btn_Them.TabIndex = 10;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Update
             // 
-            this.button1.Location = new System.Drawing.Point(515, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Update.Location = new System.Drawing.Point(608, 149);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(120, 40);
+            this.btn_Update.TabIndex = 9;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 25);
+            this.label4.Location = new System.Drawing.Point(420, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Số lượng:";
             // 
-            // lookUpEdit1
+            // cbb_TimKiemSP
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(7, 22);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbb_TimKiemSP.Location = new System.Drawing.Point(10, 156);
+            this.cbb_TimKiemSP.Name = "cbb_TimKiemSP";
+            this.cbb_TimKiemSP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.NullText = "Tìm kiếm sản phẩm";
-            this.lookUpEdit1.Size = new System.Drawing.Size(284, 22);
-            this.lookUpEdit1.TabIndex = 6;
+            this.cbb_TimKiemSP.Properties.NullText = "Tìm kiếm sản phẩm";
+            this.cbb_TimKiemSP.Size = new System.Drawing.Size(404, 22);
+            this.cbb_TimKiemSP.TabIndex = 6;
             // 
-            // textEdit1
+            // txt_SoLuong
             // 
-            this.textEdit1.EditValue = new decimal(new int[] {
+            this.txt_SoLuong.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.textEdit1.Location = new System.Drawing.Point(393, 22);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txt_SoLuong.Location = new System.Drawing.Point(494, 158);
+            this.txt_SoLuong.Name = "txt_SoLuong";
+            this.txt_SoLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit1.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit1.Size = new System.Drawing.Size(50, 22);
-            this.textEdit1.TabIndex = 7;
+            this.txt_SoLuong.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txt_SoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txt_SoLuong.Size = new System.Drawing.Size(50, 22);
+            this.txt_SoLuong.TabIndex = 7;
             // 
             // gC_SanPham
             // 
-            this.gC_SanPham.Location = new System.Drawing.Point(7, 55);
+            this.gC_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gC_SanPham.Location = new System.Drawing.Point(3, 19);
             this.gC_SanPham.MainView = this.gridView1;
             this.gC_SanPham.Name = "gC_SanPham";
             this.gC_SanPham.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_Sua,
             this.btn_Xoa});
-            this.gC_SanPham.Size = new System.Drawing.Size(833, 225);
+            this.gC_SanPham.Size = new System.Drawing.Size(961, 325);
             this.gC_SanPham.TabIndex = 0;
             this.gC_SanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -378,16 +394,72 @@
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Địa chỉ cụ thể:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Số điện thoại:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Địa chỉ đã lưu:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(404, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Mã đơn:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(638, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Email:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Tên khách hàng:";
+            // 
             // PurchaseOrderAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 476);
+            this.ClientSize = new System.Drawing.Size(991, 574);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("PurchaseOrderAdd.IconOptions.Image")));
             this.Name = "PurchaseOrderAdd";
             this.Text = "Thêm đơn đặt hàng bán hàng";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChiDaLuu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaDon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DiaChiCuThe.Properties)).EndInit();
@@ -398,10 +470,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_Email.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_TenKH.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Info.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_TimKiemSP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_SoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gC_SanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Sua)).EndInit();
@@ -432,11 +503,17 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_Sua;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_Xoa;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.SpinEdit textEdit1;
+        private DevExpress.XtraEditors.LookUpEdit cbb_TimKiemSP;
+        private DevExpress.XtraEditors.SpinEdit txt_SoLuong;
         private DevExpress.XtraEditors.PictureEdit btn_Info;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

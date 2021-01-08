@@ -107,6 +107,9 @@ namespace StockManagement.Form.StockIn
             this.cbb_NguoiXuLy = new DevExpress.XtraEditors.LookUpEdit();
             this.txt_TenNCC = new DevExpress.XtraEditors.TextEdit();
             this.txt_MaPhieu = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -151,7 +154,7 @@ namespace StockManagement.Form.StockIn
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1132, 678);
+            this.groupControl2.Size = new System.Drawing.Size(1251, 678);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Phiếu nhập kho";
             // 
@@ -163,7 +166,7 @@ namespace StockManagement.Form.StockIn
             this.groupBox2.Controls.Add(this.gC_DSNhapKho);
             this.groupBox2.Location = new System.Drawing.Point(5, 175);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1122, 505);
+            this.groupBox2.Size = new System.Drawing.Size(1241, 505);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
@@ -181,7 +184,7 @@ namespace StockManagement.Form.StockIn
             this.gC_DSNhapKho.Location = new System.Drawing.Point(7, 22);
             this.gC_DSNhapKho.Name = "gC_DSNhapKho";
             this.gC_DSNhapKho.SelectedIndex = 0;
-            this.gC_DSNhapKho.Size = new System.Drawing.Size(1103, 477);
+            this.gC_DSNhapKho.Size = new System.Drawing.Size(1222, 477);
             this.gC_DSNhapKho.TabIndex = 0;
             // 
             // tab_PhieuMoi
@@ -190,7 +193,7 @@ namespace StockManagement.Form.StockIn
             this.tab_PhieuMoi.Location = new System.Drawing.Point(4, 25);
             this.tab_PhieuMoi.Name = "tab_PhieuMoi";
             this.tab_PhieuMoi.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PhieuMoi.Size = new System.Drawing.Size(1095, 448);
+            this.tab_PhieuMoi.Size = new System.Drawing.Size(1214, 448);
             this.tab_PhieuMoi.TabIndex = 0;
             this.tab_PhieuMoi.Text = "Phiếu mới";
             this.tab_PhieuMoi.UseVisualStyleBackColor = true;
@@ -204,7 +207,7 @@ namespace StockManagement.Form.StockIn
             this.gC_PhieuMoi.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_TienHanhXuLy,
             this.btn_HuyPhieu});
-            this.gC_PhieuMoi.Size = new System.Drawing.Size(1089, 442);
+            this.gC_PhieuMoi.Size = new System.Drawing.Size(1208, 442);
             this.gC_PhieuMoi.TabIndex = 1;
             this.gC_PhieuMoi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -320,7 +323,7 @@ namespace StockManagement.Form.StockIn
             this.tab_DangKiemTra.Location = new System.Drawing.Point(4, 25);
             this.tab_DangKiemTra.Name = "tab_DangKiemTra";
             this.tab_DangKiemTra.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DangKiemTra.Size = new System.Drawing.Size(1089, 394);
+            this.tab_DangKiemTra.Size = new System.Drawing.Size(1095, 448);
             this.tab_DangKiemTra.TabIndex = 1;
             this.tab_DangKiemTra.Text = "Đang kiểm tra";
             this.tab_DangKiemTra.UseVisualStyleBackColor = true;
@@ -334,7 +337,7 @@ namespace StockManagement.Form.StockIn
             this.gC_DangKiemTra.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit1});
-            this.gC_DangKiemTra.Size = new System.Drawing.Size(1083, 388);
+            this.gC_DangKiemTra.Size = new System.Drawing.Size(1089, 442);
             this.gC_DangKiemTra.TabIndex = 2;
             this.gC_DangKiemTra.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -450,7 +453,7 @@ namespace StockManagement.Form.StockIn
             this.tab_HoanThanh.Location = new System.Drawing.Point(4, 25);
             this.tab_HoanThanh.Name = "tab_HoanThanh";
             this.tab_HoanThanh.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_HoanThanh.Size = new System.Drawing.Size(1089, 394);
+            this.tab_HoanThanh.Size = new System.Drawing.Size(1095, 448);
             this.tab_HoanThanh.TabIndex = 2;
             this.tab_HoanThanh.Text = "Hoàn thành";
             this.tab_HoanThanh.UseVisualStyleBackColor = true;
@@ -464,7 +467,7 @@ namespace StockManagement.Form.StockIn
             this.gC_HoanThanh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4,
             this.repositoryItemButtonEdit3});
-            this.gC_HoanThanh.Size = new System.Drawing.Size(1083, 388);
+            this.gC_HoanThanh.Size = new System.Drawing.Size(1089, 442);
             this.gC_HoanThanh.TabIndex = 2;
             this.gC_HoanThanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -580,7 +583,7 @@ namespace StockManagement.Form.StockIn
             this.tab_PhieuBiLoiHang.Location = new System.Drawing.Point(4, 25);
             this.tab_PhieuBiLoiHang.Name = "tab_PhieuBiLoiHang";
             this.tab_PhieuBiLoiHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PhieuBiLoiHang.Size = new System.Drawing.Size(1089, 394);
+            this.tab_PhieuBiLoiHang.Size = new System.Drawing.Size(1095, 448);
             this.tab_PhieuBiLoiHang.TabIndex = 3;
             this.tab_PhieuBiLoiHang.Text = "Phiếu bị lỗi hàng";
             this.tab_PhieuBiLoiHang.UseVisualStyleBackColor = true;
@@ -594,7 +597,7 @@ namespace StockManagement.Form.StockIn
             this.gC_PhieuBiLoiHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6,
             this.repositoryItemButtonEdit5});
-            this.gC_PhieuBiLoiHang.Size = new System.Drawing.Size(1083, 388);
+            this.gC_PhieuBiLoiHang.Size = new System.Drawing.Size(1089, 442);
             this.gC_PhieuBiLoiHang.TabIndex = 2;
             this.gC_PhieuBiLoiHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -710,7 +713,7 @@ namespace StockManagement.Form.StockIn
             this.tab_DonBiHuy.Location = new System.Drawing.Point(4, 25);
             this.tab_DonBiHuy.Name = "tab_DonBiHuy";
             this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DonBiHuy.Size = new System.Drawing.Size(1089, 394);
+            this.tab_DonBiHuy.Size = new System.Drawing.Size(1095, 448);
             this.tab_DonBiHuy.TabIndex = 4;
             this.tab_DonBiHuy.Text = "Đơn bị hủy";
             this.tab_DonBiHuy.UseVisualStyleBackColor = true;
@@ -724,7 +727,7 @@ namespace StockManagement.Form.StockIn
             this.gC_DonBiHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8,
             this.repositoryItemButtonEdit7});
-            this.gC_DonBiHuy.Size = new System.Drawing.Size(1083, 388);
+            this.gC_DonBiHuy.Size = new System.Drawing.Size(1089, 442);
             this.gC_DonBiHuy.TabIndex = 2;
             this.gC_DonBiHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -838,6 +841,9 @@ namespace StockManagement.Form.StockIn
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cbb_DenNgay);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbb_TuNgay);
@@ -849,14 +855,14 @@ namespace StockManagement.Form.StockIn
             this.groupBox1.Controls.Add(this.txt_MaPhieu);
             this.groupBox1.Location = new System.Drawing.Point(3, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1124, 137);
+            this.groupBox1.Size = new System.Drawing.Size(1243, 137);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
             // cbb_DenNgay
             // 
-            this.cbb_DenNgay.Location = new System.Drawing.Point(452, 88);
+            this.cbb_DenNgay.Location = new System.Drawing.Point(576, 88);
             this.cbb_DenNgay.Name = "cbb_DenNgay";
             this.cbb_DenNgay.Size = new System.Drawing.Size(200, 23);
             this.cbb_DenNgay.TabIndex = 8;
@@ -864,7 +870,7 @@ namespace StockManagement.Form.StockIn
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(373, 88);
+            this.label2.Location = new System.Drawing.Point(497, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 7;
@@ -872,7 +878,7 @@ namespace StockManagement.Form.StockIn
             // 
             // cbb_TuNgay
             // 
-            this.cbb_TuNgay.Location = new System.Drawing.Point(108, 88);
+            this.cbb_TuNgay.Location = new System.Drawing.Point(138, 88);
             this.cbb_TuNgay.Name = "cbb_TuNgay";
             this.cbb_TuNgay.Size = new System.Drawing.Size(200, 23);
             this.cbb_TuNgay.TabIndex = 6;
@@ -880,7 +886,7 @@ namespace StockManagement.Form.StockIn
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 88);
+            this.label1.Location = new System.Drawing.Point(66, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 5;
@@ -889,7 +895,7 @@ namespace StockManagement.Form.StockIn
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Them.Location = new System.Drawing.Point(960, 81);
+            this.btn_Them.Location = new System.Drawing.Point(1107, 81);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(120, 40);
             this.btn_Them.TabIndex = 4;
@@ -900,7 +906,7 @@ namespace StockManagement.Form.StockIn
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TimKiem.Location = new System.Drawing.Point(960, 28);
+            this.btn_TimKiem.Location = new System.Drawing.Point(1107, 28);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 3;
@@ -909,7 +915,7 @@ namespace StockManagement.Form.StockIn
             // 
             // cbb_NguoiXuLy
             // 
-            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(547, 37);
+            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(726, 39);
             this.cbb_NguoiXuLy.Name = "cbb_NguoiXuLy";
             this.cbb_NguoiXuLy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -919,7 +925,7 @@ namespace StockManagement.Form.StockIn
             // 
             // txt_TenNCC
             // 
-            this.txt_TenNCC.Location = new System.Drawing.Point(295, 37);
+            this.txt_TenNCC.Location = new System.Drawing.Point(392, 37);
             this.txt_TenNCC.Name = "txt_TenNCC";
             this.txt_TenNCC.Properties.NullText = "Tên NCC";
             this.txt_TenNCC.Size = new System.Drawing.Size(236, 22);
@@ -927,11 +933,38 @@ namespace StockManagement.Form.StockIn
             // 
             // txt_MaPhieu
             // 
-            this.txt_MaPhieu.Location = new System.Drawing.Point(39, 37);
+            this.txt_MaPhieu.Location = new System.Drawing.Point(84, 35);
             this.txt_MaPhieu.Name = "txt_MaPhieu";
             this.txt_MaPhieu.Properties.NullText = "Mã phiếu";
-            this.txt_MaPhieu.Size = new System.Drawing.Size(236, 22);
+            this.txt_MaPhieu.Size = new System.Drawing.Size(224, 22);
             this.txt_MaPhieu.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Mã phiếu:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(319, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tên NCC:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(636, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Người xử lý:";
             // 
             // StockInList
             // 
@@ -939,7 +972,7 @@ namespace StockManagement.Form.StockIn
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl2);
             this.Name = "StockInList";
-            this.Size = new System.Drawing.Size(1132, 678);
+            this.Size = new System.Drawing.Size(1251, 678);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -1058,5 +1091,8 @@ namespace StockManagement.Form.StockIn
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit7;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

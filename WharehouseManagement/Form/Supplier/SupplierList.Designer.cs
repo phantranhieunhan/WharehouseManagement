@@ -41,6 +41,7 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_timkiem = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
             this.txt_MaNCC = new DevExpress.XtraEditors.TextEdit();
@@ -196,6 +197,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_timkiem);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.txt_MaNCC);
@@ -206,10 +208,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 34);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nhập thông tin\r\n  nhà cung cấp:";
+            // 
             // btn_timkiem
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_timkiem.Location = new System.Drawing.Point(691, 26);
+            this.btn_timkiem.Location = new System.Drawing.Point(716, 26);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
             this.btn_timkiem.TabIndex = 2;
@@ -218,7 +229,7 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(555, 26);
+            this.btn_them.Location = new System.Drawing.Point(590, 26);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 1;
@@ -227,10 +238,10 @@
             // 
             // txt_MaNCC
             // 
-            this.txt_MaNCC.EditValue = "Mã NCC";
-            this.txt_MaNCC.Location = new System.Drawing.Point(26, 33);
+            this.txt_MaNCC.EditValue = "";
+            this.txt_MaNCC.Location = new System.Drawing.Point(141, 35);
             this.txt_MaNCC.Name = "txt_MaNCC";
-            this.txt_MaNCC.Size = new System.Drawing.Size(358, 22);
+            this.txt_MaNCC.Size = new System.Drawing.Size(262, 22);
             this.txt_MaNCC.TabIndex = 0;
             // 
             // SupplierList
@@ -246,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaNCC.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -269,5 +281,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_timkiem;
         private DevExpress.XtraEditors.SimpleButton btn_them;
         private DevExpress.XtraEditors.TextEdit txt_MaNCC;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -47,5 +47,10 @@ namespace StockManagement.Form
         {
 
         }
+
+        private void txt_MaNhom_EditValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStockOut));
             this.cbb_KhoDi1 = new DevExpress.XtraEditors.LookUpEdit();
             this.cbb_LoaiXuatKho = new DevExpress.XtraEditors.LookUpEdit();
             this.cbb_NCC = new DevExpress.XtraEditors.LookUpEdit();
@@ -91,9 +92,9 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(565, 486);
+            this.btn_Them.Location = new System.Drawing.Point(565, 466);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 23);
+            this.btn_Them.Size = new System.Drawing.Size(75, 43);
             this.btn_Them.TabIndex = 5;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
@@ -109,6 +110,7 @@
             this.Controls.Add(this.cbb_NCC);
             this.Controls.Add(this.cbb_LoaiXuatKho);
             this.Controls.Add(this.cbb_KhoDi1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AddStockOut.IconOptions.Image")));
             this.Name = "AddStockOut";
             this.Text = "Thêm phiếu xuất kho";
             ((System.ComponentModel.ISupportInitialize)(this.cbb_KhoDi1.Properties)).EndInit();

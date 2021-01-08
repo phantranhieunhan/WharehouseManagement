@@ -44,7 +44,7 @@ namespace StockManagement.Form.Employee
             //}
             //listOffical = decentralization.GetMany();
 
-            gridControl1.DataSource = db.vw_UserPermission.ToList();
+            gC_DanhSach.DataSource = db.vw_UserPermission.ToList();
             //db.UserPermission.Where(x=>x.UserPermissionID = )
         }
 

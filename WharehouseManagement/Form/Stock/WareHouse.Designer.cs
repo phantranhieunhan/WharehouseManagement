@@ -28,47 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gC_DanhSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btn_Xoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btn_Sua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.StockCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.StockName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Address = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_Xoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Xoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btn_Sua = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Sua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_MaKhoHang = new DevExpress.XtraEditors.TextEdit();
             this.btn_ThemKH = new System.Windows.Forms.Button();
             this.txt_DenNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TuNgay = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_TimKiemKH = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Xoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Sua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Xoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKhoHang.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -99,8 +100,8 @@
             this.gC_DanhSach.MainView = this.gridView1;
             this.gC_DanhSach.Name = "gC_DanhSach";
             this.gC_DanhSach.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btn_Sua,
-            this.btn_Xoa,
+            this.Sua,
+            this.Xoa,
             this.repositoryItemButtonEdit1});
             this.gC_DanhSach.Size = new System.Drawing.Size(917, 323);
             this.gC_DanhSach.TabIndex = 0;
@@ -110,94 +111,98 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6});
+            this.StockCode,
+            this.StockName,
+            this.PhoneNumber,
+            this.Address,
+            this.btn_Xoa,
+            this.btn_Sua});
             this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
             // 
-            // gridColumn1
+            // StockCode
             // 
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "Mã kho";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 100;
+            this.StockCode.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockCode.AppearanceHeader.Options.UseFont = true;
+            this.StockCode.Caption = "Mã kho";
+            this.StockCode.FieldName = "StockCode";
+            this.StockCode.Name = "StockCode";
+            this.StockCode.Visible = true;
+            this.StockCode.VisibleIndex = 0;
+            this.StockCode.Width = 100;
             // 
-            // gridColumn2
+            // StockName
             // 
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.Caption = "Tên kho";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 150;
+            this.StockName.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockName.AppearanceHeader.Options.UseFont = true;
+            this.StockName.Caption = "Tên kho";
+            this.StockName.FieldName = "StockName";
+            this.StockName.Name = "StockName";
+            this.StockName.Visible = true;
+            this.StockName.VisibleIndex = 1;
+            this.StockName.Width = 150;
             // 
-            // gridColumn3
+            // PhoneNumber
             // 
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.Caption = "Số điện thoại";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 168;
+            this.PhoneNumber.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumber.AppearanceHeader.Options.UseFont = true;
+            this.PhoneNumber.Caption = "Số điện thoại";
+            this.PhoneNumber.FieldName = "PhoneNumber";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Visible = true;
+            this.PhoneNumber.VisibleIndex = 2;
+            this.PhoneNumber.Width = 168;
             // 
-            // gridColumn4
+            // Address
             // 
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.Caption = "Địa chỉ";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 300;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn5.Caption = "Xóa ";
-            this.gridColumn5.ColumnEdit = this.btn_Xoa;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 84;
+            this.Address.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.AppearanceHeader.Options.UseFont = true;
+            this.Address.Caption = "Địa chỉ";
+            this.Address.FieldName = "Address";
+            this.Address.Name = "Address";
+            this.Address.Visible = true;
+            this.Address.VisibleIndex = 3;
+            this.Address.Width = 300;
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.AutoHeight = false;
-            serializableAppearanceObject9.Options.UseImage = true;
-            this.btn_Xoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btn_Xoa.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa.AppearanceHeader.Options.UseFont = true;
+            this.btn_Xoa.Caption = "Xóa ";
+            this.btn_Xoa.ColumnEdit = this.Xoa;
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btn_Xoa.Visible = true;
+            this.btn_Xoa.VisibleIndex = 4;
+            this.btn_Xoa.Width = 84;
             // 
-            // gridColumn6
+            // Xoa
             // 
-            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn6.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn6.Caption = "Sửa";
-            this.gridColumn6.ColumnEdit = this.btn_Sua;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 92;
+            this.Xoa.AutoHeight = false;
+            serializableAppearanceObject1.Options.UseImage = true;
+            this.Xoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.Xoa.Name = "Xoa";
+            this.Xoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // btn_Sua
             // 
-            this.btn_Sua.AutoHeight = false;
-            serializableAppearanceObject13.Options.UseImage = true;
-            this.btn_Sua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btn_Sua.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sua.AppearanceHeader.Options.UseFont = true;
+            this.btn_Sua.Caption = "Sửa";
+            this.btn_Sua.ColumnEdit = this.Sua;
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btn_Sua.Visible = true;
+            this.btn_Sua.VisibleIndex = 5;
+            this.btn_Sua.Width = 92;
+            // 
+            // Sua
+            // 
+            this.Sua.AutoHeight = false;
+            serializableAppearanceObject5.Options.UseImage = true;
+            this.Sua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.Sua.Name = "Sua";
+            this.Sua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -208,7 +213,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textEdit1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txt_MaKhoHang);
             this.groupBox1.Controls.Add(this.btn_ThemKH);
             this.groupBox1.Controls.Add(this.txt_DenNgay);
             this.groupBox1.Controls.Add(this.label2);
@@ -222,13 +228,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // textEdit1
+            // txt_MaKhoHang
             // 
-            this.textEdit1.EditValue = "Mã / Tên / Địa chỉ kho hàng";
-            this.textEdit1.Location = new System.Drawing.Point(51, 40);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(438, 22);
-            this.textEdit1.TabIndex = 9;
+            this.txt_MaKhoHang.EditValue = "Mã / Tên / Địa chỉ kho hàng";
+            this.txt_MaKhoHang.Location = new System.Drawing.Point(188, 40);
+            this.txt_MaKhoHang.Name = "txt_MaKhoHang";
+            this.txt_MaKhoHang.Size = new System.Drawing.Size(438, 22);
+            this.txt_MaKhoHang.TabIndex = 9;
             // 
             // btn_ThemKH
             // 
@@ -258,7 +264,7 @@
             // 
             // txt_TuNgay
             // 
-            this.txt_TuNgay.Location = new System.Drawing.Point(119, 82);
+            this.txt_TuNgay.Location = new System.Drawing.Point(86, 81);
             this.txt_TuNgay.Name = "txt_TuNgay";
             this.txt_TuNgay.Size = new System.Drawing.Size(200, 23);
             this.txt_TuNgay.TabIndex = 5;
@@ -266,7 +272,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 86);
+            this.label1.Location = new System.Drawing.Point(15, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 4;
@@ -281,6 +287,15 @@
             this.btn_TimKiemKH.Text = "Tìm kiếm";
             this.btn_TimKiemKH.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Nhập thông tin kho hàng:";
+            // 
             // WareHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -293,12 +308,12 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Xoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Sua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Xoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKhoHang.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,15 +331,16 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraGrid.GridControl gC_DanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_Xoa;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_Sua;
+        private DevExpress.XtraGrid.Columns.GridColumn StockCode;
+        private DevExpress.XtraGrid.Columns.GridColumn StockName;
+        private DevExpress.XtraGrid.Columns.GridColumn PhoneNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn Address;
+        private DevExpress.XtraGrid.Columns.GridColumn btn_Xoa;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit Xoa;
+        private DevExpress.XtraGrid.Columns.GridColumn btn_Sua;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit Sua;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_MaKhoHang;
+        private System.Windows.Forms.Label label3;
     }
 }

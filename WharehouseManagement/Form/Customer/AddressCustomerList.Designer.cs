@@ -29,6 +29,7 @@ namespace StockManagement.Form.Customer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddressCustomerList));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -210,6 +211,7 @@ namespace StockManagement.Form.Customer
             this.Controls.Add(this.cbb_PhuongXa);
             this.Controls.Add(this.cbb_QuanHuyen);
             this.Controls.Add(this.cbb_TinhThanhPho);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AddressCustomerList.IconOptions.Image")));
             this.Name = "AddressCustomerList";
             this.Text = "Danh sách địa chỉ khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

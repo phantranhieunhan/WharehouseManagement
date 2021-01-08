@@ -32,16 +32,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lb_MaSP = new System.Windows.Forms.Label();
             this.lb_TenSP = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lb_TongSoLuong = new System.Windows.Forms.Label();
+            this.btn_ChapNhan = new System.Windows.Forms.Button();
             this.Gc_ProductOnStock = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaxQuanlity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MinQuanlity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lb_TongSoLuong = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Gc_ProductOnStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,67 +84,6 @@
             this.lb_TenSP.TabIndex = 3;
             this.lb_TenSP.Text = "Đậu phộng rang";
             // 
-            // Gc_ProductOnStock
-            // 
-            this.Gc_ProductOnStock.Location = new System.Drawing.Point(43, 66);
-            this.Gc_ProductOnStock.MainView = this.gridView1;
-            this.Gc_ProductOnStock.Name = "Gc_ProductOnStock";
-            this.Gc_ProductOnStock.Size = new System.Drawing.Size(708, 281);
-            this.Gc_ProductOnStock.TabIndex = 4;
-            this.Gc_ProductOnStock.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
-            this.gridView1.GridControl = this.Gc_ProductOnStock;
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã Kho";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 77;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên Kho";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 182;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Cảnh báo Max";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 162;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Cảnh báo Min";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 153;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Số lượng";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 111;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -164,31 +103,99 @@
             this.lb_TongSoLuong.TabIndex = 6;
             this.lb_TongSoLuong.Text = "90";
             // 
-            // button1
+            // btn_ChapNhan
             // 
-            this.button1.Location = new System.Drawing.Point(579, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Chấp nhận với số lượng này";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ChapNhan.Location = new System.Drawing.Point(579, 363);
+            this.btn_ChapNhan.Name = "btn_ChapNhan";
+            this.btn_ChapNhan.Size = new System.Drawing.Size(197, 40);
+            this.btn_ChapNhan.TabIndex = 7;
+            this.btn_ChapNhan.Text = "Chấp nhận với số lượng này";
+            this.btn_ChapNhan.UseVisualStyleBackColor = true;
+            // 
+            // Gc_ProductOnStock
+            // 
+            this.Gc_ProductOnStock.Location = new System.Drawing.Point(43, 63);
+            this.Gc_ProductOnStock.MainView = this.gridView1;
+            this.Gc_ProductOnStock.Name = "Gc_ProductOnStock";
+            this.Gc_ProductOnStock.Size = new System.Drawing.Size(733, 282);
+            this.Gc_ProductOnStock.TabIndex = 8;
+            this.Gc_ProductOnStock.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.MaxQuanlity,
+            this.MinQuanlity,
+            this.gridColumn5});
+            this.gridView1.GridControl = this.Gc_ProductOnStock;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã kho";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên kho";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 94;
+            // 
+            // MaxQuanlity
+            // 
+            this.MaxQuanlity.Caption = "Canh báo Max";
+            this.MaxQuanlity.FieldName = "MaxQuanlity";
+            this.MaxQuanlity.MinWidth = 25;
+            this.MaxQuanlity.Name = "MaxQuanlity";
+            this.MaxQuanlity.Visible = true;
+            this.MaxQuanlity.VisibleIndex = 2;
+            this.MaxQuanlity.Width = 94;
+            // 
+            // MinQuanlity
+            // 
+            this.MinQuanlity.Caption = "Canh báo Min";
+            this.MinQuanlity.FieldName = "MinQuanlity";
+            this.MinQuanlity.MinWidth = 25;
+            this.MinQuanlity.Name = "MinQuanlity";
+            this.MinQuanlity.Visible = true;
+            this.MinQuanlity.VisibleIndex = 3;
+            this.MinQuanlity.Width = 94;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Số lượng";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 94;
             // 
             // SalesOrderProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 422);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Gc_ProductOnStock);
+            this.Controls.Add(this.btn_ChapNhan);
             this.Controls.Add(this.lb_TongSoLuong);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Gc_ProductOnStock);
             this.Controls.Add(this.lb_TenSP);
             this.Controls.Add(this.lb_MaSP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SalesOrderProductDetail";
             this.Text = "Chi tiết đơn đặt hàng mua hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gc_ProductOnStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,15 +208,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_MaSP;
         private System.Windows.Forms.Label lb_TenSP;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_TongSoLuong;
+        private System.Windows.Forms.Button btn_ChapNhan;
         private DevExpress.XtraGrid.GridControl Gc_ProductOnStock;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn MaxQuanlity;
+        private DevExpress.XtraGrid.Columns.GridColumn MinQuanlity;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lb_TongSoLuong;
-        private System.Windows.Forms.Button button1;
     }
 }

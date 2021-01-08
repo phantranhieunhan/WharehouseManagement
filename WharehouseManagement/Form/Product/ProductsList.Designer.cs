@@ -44,6 +44,7 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -206,6 +207,7 @@
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_timkiem.Controls.Add(this.label1);
             this.btn_timkiem.Controls.Add(this.simpleButton2);
             this.btn_timkiem.Controls.Add(this.btn_them);
             this.btn_timkiem.Controls.Add(this.textEdit1);
@@ -241,11 +243,20 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(26, 62);
+            this.textEdit1.Location = new System.Drawing.Point(183, 50);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(478, 22);
             this.textEdit1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 34);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nhập thông tin \r\n sản phẩm:";
             // 
             // ProductsList
             // 
@@ -263,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gC_DanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.btn_timkiem.ResumeLayout(false);
+            this.btn_timkiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -286,5 +298,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton btn_them;
         private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.Label label1;
     }
 }

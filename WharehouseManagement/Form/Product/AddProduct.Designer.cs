@@ -92,7 +92,7 @@
             // textEdit4
             // 
             this.textEdit4.EditValue = "Cân nặng";
-            this.textEdit4.Location = new System.Drawing.Point(11, 256);
+            this.textEdit4.Location = new System.Drawing.Point(22, 256);
             this.textEdit4.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(245, 22);
@@ -109,7 +109,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(20, 157);
+            this.labelControl1.Location = new System.Drawing.Point(22, 157);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(64, 17);

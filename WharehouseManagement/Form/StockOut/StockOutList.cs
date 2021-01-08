@@ -28,5 +28,10 @@ namespace StockManagement.Form.StockOut
             AddStockOut f = new AddStockOut();
             f.Show();
         }
+
+        private void txt_TenKhachHang_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

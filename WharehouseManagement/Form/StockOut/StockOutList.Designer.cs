@@ -124,6 +124,9 @@
             this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit12 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbb_DenNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.cbb_TuNgay = new System.Windows.Forms.DateTimePicker();
@@ -779,7 +782,7 @@
             this.tab_HoanThanh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_HoanThanh.Name = "tab_HoanThanh";
             this.tab_HoanThanh.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_HoanThanh.Size = new System.Drawing.Size(3234, 844);
+            this.tab_HoanThanh.Size = new System.Drawing.Size(1902, 861);
             this.tab_HoanThanh.TabIndex = 4;
             this.tab_HoanThanh.Text = "Hoàn thành";
             this.tab_HoanThanh.UseVisualStyleBackColor = true;
@@ -795,7 +798,7 @@
             this.gC_HoanThanh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8,
             this.repositoryItemButtonEdit7});
-            this.gC_HoanThanh.Size = new System.Drawing.Size(3224, 836);
+            this.gC_HoanThanh.Size = new System.Drawing.Size(1892, 853);
             this.gC_HoanThanh.TabIndex = 2;
             this.gC_HoanThanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -914,7 +917,7 @@
             this.tab_GiaoHangThatBai.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_GiaoHangThatBai.Name = "tab_GiaoHangThatBai";
             this.tab_GiaoHangThatBai.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_GiaoHangThatBai.Size = new System.Drawing.Size(3234, 851);
+            this.tab_GiaoHangThatBai.Size = new System.Drawing.Size(1902, 861);
             this.tab_GiaoHangThatBai.TabIndex = 5;
             this.tab_GiaoHangThatBai.Text = "Giao hàng thất bại";
             this.tab_GiaoHangThatBai.UseVisualStyleBackColor = true;
@@ -930,7 +933,7 @@
             this.gC_GiaoHangThatBai.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit10,
             this.repositoryItemButtonEdit9});
-            this.gC_GiaoHangThatBai.Size = new System.Drawing.Size(3224, 843);
+            this.gC_GiaoHangThatBai.Size = new System.Drawing.Size(1892, 853);
             this.gC_GiaoHangThatBai.TabIndex = 2;
             this.gC_GiaoHangThatBai.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1049,7 +1052,7 @@
             this.tab_DonBiHuy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DonBiHuy.Name = "tab_DonBiHuy";
             this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DonBiHuy.Size = new System.Drawing.Size(3234, 851);
+            this.tab_DonBiHuy.Size = new System.Drawing.Size(1902, 861);
             this.tab_DonBiHuy.TabIndex = 6;
             this.tab_DonBiHuy.Text = "Đơn bị hủy";
             this.tab_DonBiHuy.UseVisualStyleBackColor = true;
@@ -1065,7 +1068,7 @@
             this.gC_DonBiHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit12,
             this.repositoryItemButtonEdit11});
-            this.gC_DonBiHuy.Size = new System.Drawing.Size(3224, 843);
+            this.gC_DonBiHuy.Size = new System.Drawing.Size(1892, 853);
             this.gC_DonBiHuy.TabIndex = 2;
             this.gC_DonBiHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -1181,6 +1184,9 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cbb_DenNgay);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbb_TuNgay);
@@ -1199,6 +1205,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(939, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Người xử lý:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(378, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tên khách hàng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Mã đơn:";
+            // 
             // cbb_DenNgay
             // 
             this.cbb_DenNgay.Location = new System.Drawing.Point(775, 126);
@@ -1210,7 +1243,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(639, 126);
+            this.label2.Location = new System.Drawing.Point(699, 131);
             this.label2.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
@@ -1219,7 +1252,7 @@
             // 
             // cbb_TuNgay
             // 
-            this.cbb_TuNgay.Location = new System.Drawing.Point(185, 126);
+            this.cbb_TuNgay.Location = new System.Drawing.Point(112, 131);
             this.cbb_TuNgay.Margin = new System.Windows.Forms.Padding(9, 6, 9, 6);
             this.cbb_TuNgay.Name = "cbb_TuNgay";
             this.cbb_TuNgay.Size = new System.Drawing.Size(340, 23);
@@ -1228,7 +1261,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 126);
+            this.label1.Location = new System.Drawing.Point(46, 131);
             this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
@@ -1238,7 +1271,7 @@
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Them.Location = new System.Drawing.Point(1747, 109);
+            this.btn_Them.Location = new System.Drawing.Point(1787, 108);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(120, 40);
@@ -1250,7 +1283,7 @@
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TimKiem.Location = new System.Drawing.Point(1747, 44);
+            this.btn_TimKiem.Location = new System.Drawing.Point(1787, 46);
             this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
@@ -1260,32 +1293,34 @@
             // 
             // cbb_NguoiXuLy
             // 
-            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(938, 53);
+            this.cbb_NguoiXuLy.Location = new System.Drawing.Point(1031, 55);
             this.cbb_NguoiXuLy.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cbb_NguoiXuLy.Name = "cbb_NguoiXuLy";
             this.cbb_NguoiXuLy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbb_NguoiXuLy.Properties.NullText = "Người xử lý";
-            this.cbb_NguoiXuLy.Size = new System.Drawing.Size(370, 22);
+            this.cbb_NguoiXuLy.Size = new System.Drawing.Size(308, 22);
             this.cbb_NguoiXuLy.TabIndex = 2;
             // 
             // txt_TenKhachHang
             // 
-            this.txt_TenKhachHang.Location = new System.Drawing.Point(506, 53);
+            this.txt_TenKhachHang.EditValue = "";
+            this.txt_TenKhachHang.Location = new System.Drawing.Point(498, 55);
             this.txt_TenKhachHang.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txt_TenKhachHang.Name = "txt_TenKhachHang";
             this.txt_TenKhachHang.Properties.NullText = "Tên khách hàng";
             this.txt_TenKhachHang.Size = new System.Drawing.Size(405, 22);
             this.txt_TenKhachHang.TabIndex = 1;
+            this.txt_TenKhachHang.EditValueChanged += new System.EventHandler(this.txt_TenKhachHang_EditValueChanged);
             // 
             // txt_MaDon
             // 
-            this.txt_MaDon.EditValue = "Mã đơn";
-            this.txt_MaDon.Location = new System.Drawing.Point(67, 53);
+            this.txt_MaDon.EditValue = "";
+            this.txt_MaDon.Location = new System.Drawing.Point(112, 55);
             this.txt_MaDon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txt_MaDon.Name = "txt_MaDon";
             this.txt_MaDon.Properties.NullText = "txt_MaDon";
-            this.txt_MaDon.Size = new System.Drawing.Size(405, 22);
+            this.txt_MaDon.Size = new System.Drawing.Size(231, 22);
             this.txt_MaDon.TabIndex = 0;
             // 
             // StockOutList
@@ -1453,5 +1488,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn cbb_PhuongThucGiaoHang;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit PhuongThucGiaoHang;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

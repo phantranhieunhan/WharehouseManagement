@@ -39,7 +39,7 @@
             this.lb_MaSP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ChapNhan = new System.Windows.Forms.Button();
             this.lb_TongSoLuong = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -145,14 +145,14 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã sản phẩm:";
             // 
-            // button1
+            // btn_ChapNhan
             // 
-            this.button1.Location = new System.Drawing.Point(546, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 40);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Chấp nhận với số lượng này";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ChapNhan.Location = new System.Drawing.Point(546, 344);
+            this.btn_ChapNhan.Name = "btn_ChapNhan";
+            this.btn_ChapNhan.Size = new System.Drawing.Size(202, 40);
+            this.btn_ChapNhan.TabIndex = 15;
+            this.btn_ChapNhan.Text = "Chấp nhận với số lượng này";
+            this.btn_ChapNhan.UseVisualStyleBackColor = true;
             // 
             // lb_TongSoLuong
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.lb_MaSP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ChapNhan);
             this.Controls.Add(this.lb_TongSoLuong);
             this.Controls.Add(this.label5);
             this.Name = "PurchaseOrderProductDetail";
@@ -208,7 +208,7 @@
         private System.Windows.Forms.Label lb_MaSP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ChapNhan;
         private System.Windows.Forms.Label lb_TongSoLuong;
         private System.Windows.Forms.Label label5;
     }
