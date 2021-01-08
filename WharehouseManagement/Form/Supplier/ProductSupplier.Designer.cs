@@ -54,6 +54,8 @@
             // 
             // gc_danhsachSPNCC
             // 
+            this.gc_danhsachSPNCC.Appearance.BackColor = System.Drawing.Color.LimeGreen;
+            this.gc_danhsachSPNCC.Appearance.Options.UseBackColor = true;
             this.gc_danhsachSPNCC.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gc_danhsachSPNCC.AppearanceCaption.Options.UseFont = true;
             this.gc_danhsachSPNCC.AutoSize = true;
@@ -104,6 +106,8 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.FieldName = "Mã SP NCC";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -111,6 +115,8 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.FieldName = "Mã SP";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -118,6 +124,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.FieldName = "Mã NCC";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -125,6 +133,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.FieldName = "Chất lượng cao";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -132,6 +142,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.FieldName = "Chất lượng thấp";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -154,6 +166,8 @@
             // btn_timkiem
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_timkiem.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_timkiem.Appearance.Options.UseBackColor = true;
             this.btn_timkiem.Location = new System.Drawing.Point(644, 51);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
@@ -163,6 +177,8 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_them.Appearance.Options.UseBackColor = true;
             this.btn_them.Location = new System.Drawing.Point(508, 51);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(120, 40);

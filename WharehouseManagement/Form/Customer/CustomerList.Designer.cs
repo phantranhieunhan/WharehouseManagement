@@ -134,6 +134,8 @@
             // 
             // CustomerCode
             // 
+            this.CustomerCode.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.CustomerCode.AppearanceHeader.Options.UseBackColor = true;
             this.CustomerCode.Caption = "Mã KH";
             this.CustomerCode.FieldName = "CustomerCode";
             this.CustomerCode.MinWidth = 25;
@@ -144,6 +146,8 @@
             // 
             // FullName
             // 
+            this.FullName.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.FullName.AppearanceHeader.Options.UseBackColor = true;
             this.FullName.Caption = "Tên KH";
             this.FullName.FieldName = "FullName";
             this.FullName.MinWidth = 25;
@@ -154,6 +158,8 @@
             // 
             // Birthday
             // 
+            this.Birthday.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.Birthday.AppearanceHeader.Options.UseBackColor = true;
             this.Birthday.Caption = "Ngày sinh";
             this.Birthday.FieldName = "Birthday";
             this.Birthday.MinWidth = 25;
@@ -164,6 +170,8 @@
             // 
             // NumberPhone
             // 
+            this.NumberPhone.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.NumberPhone.AppearanceHeader.Options.UseBackColor = true;
             this.NumberPhone.Caption = "Số điện thoại";
             this.NumberPhone.FieldName = "NumberPhone";
             this.NumberPhone.MinWidth = 25;
@@ -174,6 +182,8 @@
             // 
             // Email
             // 
+            this.Email.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.Email.AppearanceHeader.Options.UseBackColor = true;
             this.Email.Caption = "Email";
             this.Email.FieldName = "Email";
             this.Email.MinWidth = 25;
@@ -184,6 +194,8 @@
             // 
             // thieune
             // 
+            this.thieune.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.thieune.AppearanceHeader.Options.UseBackColor = true;
             this.thieune.Caption = "Địa chỉ";
             this.thieune.FieldName = "CreatedDate";
             this.thieune.MinWidth = 25;
@@ -194,6 +206,8 @@
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.Caption = "Nhóm";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
@@ -202,6 +216,8 @@
             // 
             // btn_Sua
             // 
+            this.btn_Sua.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Sua.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Sua.Caption = "Sửa";
             this.btn_Sua.ColumnEdit = this.Sua;
             this.btn_Sua.MinWidth = 25;
@@ -221,6 +237,8 @@
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Xoa.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Xoa.Caption = "Xóa";
             this.btn_Xoa.ColumnEdit = this.Xoa;
             this.btn_Xoa.MinWidth = 25;
@@ -264,22 +282,24 @@
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_TimKiem.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_TimKiem.Location = new System.Drawing.Point(704, 50);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
             this.btn_TimKiem.TabIndex = 2;
             this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.UseVisualStyleBackColor = false;
             // 
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(827, 49);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(75, 23);
             this.btn_Them.TabIndex = 1;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // txt_MaNhom
             // 

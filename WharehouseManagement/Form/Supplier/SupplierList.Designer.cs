@@ -55,6 +55,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.groupBox2);
@@ -92,6 +94,35 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gridView1.Appearance.CustomizationFormHint.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.CustomizationFormHint.Options.UseBackColor = true;
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupFooter.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupRow.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.HeaderPanel.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.HeaderPanel.BackColor2 = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
+            this.gridView1.Appearance.RowSeparator.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView1.Appearance.TopNewRow.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.TopNewRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.VertLine.BackColor = System.Drawing.Color.Transparent;
+            this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
@@ -106,7 +137,11 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.Transparent;
+            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Mã NCC";
             this.gridColumn1.MinWidth = 25;
@@ -117,7 +152,9 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "Tên NCC";
             this.gridColumn2.MinWidth = 25;
@@ -128,7 +165,9 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Số điện thoại";
             this.gridColumn3.MinWidth = 25;
@@ -139,7 +178,9 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Địa chỉ";
             this.gridColumn4.MinWidth = 25;
@@ -150,7 +191,9 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Mã số thuế";
             this.gridColumn5.MinWidth = 25;
@@ -161,7 +204,9 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Email";
             this.gridColumn6.MinWidth = 25;
@@ -172,7 +217,9 @@
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.Caption = "delete";
             this.gridColumn7.MinWidth = 25;
@@ -183,7 +230,9 @@
             // 
             // gridColumn8
             // 
+            this.gridColumn8.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.Caption = "edit";
             this.gridColumn8.MinWidth = 25;
@@ -196,12 +245,13 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btn_timkiem);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.textEdit1);
-            this.groupBox1.Location = new System.Drawing.Point(5, 31);
+            this.groupBox1.Location = new System.Drawing.Point(5, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(842, 93);
+            this.groupBox1.Size = new System.Drawing.Size(842, 102);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -209,6 +259,8 @@
             // btn_timkiem
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_timkiem.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_timkiem.Appearance.Options.UseBackColor = true;
             this.btn_timkiem.Location = new System.Drawing.Point(691, 26);
             this.btn_timkiem.Name = "btn_timkiem";
             this.btn_timkiem.Size = new System.Drawing.Size(120, 40);
@@ -218,6 +270,8 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_them.Appearance.Options.UseBackColor = true;
             this.btn_them.Location = new System.Drawing.Point(555, 26);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(120, 40);

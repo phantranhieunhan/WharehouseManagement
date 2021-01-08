@@ -33,6 +33,7 @@
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.btn_CaiDat = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TaiKhoan = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_EmployeeList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -65,7 +66,6 @@
             this.lb_HoTen = new DevExpress.XtraEditors.LabelControl();
             this.lb_NgaySinh = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -105,6 +105,16 @@
             this.btn_TaiKhoan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoan.ImageOptions.LargeImage")));
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barSubItem1.Caption = "Cài đặt";
+            this.barSubItem1.Id = 0;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
+            // 
             // btn_Setting
             // 
             this.btn_Setting.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
@@ -121,7 +131,6 @@
             this.btn_EmployeeList,
             this.btn_TypeEmployee,
             this.btn_Decentralization});
-            this.btn_Employee.Expanded = true;
             this.btn_Employee.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
@@ -168,7 +177,6 @@
             this.btn_Customer.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_CustomerGroup,
             this.btn_CustomerList});
-            this.btn_Customer.Expanded = true;
             this.btn_Customer.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
@@ -312,6 +320,8 @@
             // 
             // btn_SaleOrder
             // 
+            this.btn_SaleOrder.Appearance.Disabled.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SaleOrder.Appearance.Disabled.Options.UseBackColor = true;
             this.btn_SaleOrder.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
@@ -331,25 +341,47 @@
             // 
             // accordionControl1
             // 
-            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.accordionControl1.Appearance.AccordionControl.BackColor2 = System.Drawing.Color.Teal;
+            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.accordionControl1.Appearance.AccordionControl.BackColor2 = System.Drawing.Color.LightSeaGreen;
             this.accordionControl1.Appearance.AccordionControl.BorderColor = System.Drawing.Color.White;
             this.accordionControl1.Appearance.AccordionControl.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
             this.accordionControl1.Appearance.AccordionControl.Options.UseBorderColor = true;
             this.accordionControl1.Appearance.AccordionControl.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Disabled.BackColor = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.Group.Disabled.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Disabled.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Group.Disabled.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Hovered.BackColor = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.Group.Hovered.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Hovered.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Group.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Normal.BackColor = System.Drawing.Color.Green;
             this.accordionControl1.Appearance.Group.Normal.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Normal.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Group.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Pressed.BackColor = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Pressed.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Group.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.Hint.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.Hint.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Disabled.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.Item.Disabled.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Item.Hovered.BackColor = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Item.Hovered.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Item.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Normal.BackColor = System.Drawing.Color.LightSeaGreen;
             this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Item.Normal.Options.UseBackColor = true;
             this.accordionControl1.Appearance.Item.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Pressed.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.Item.Pressed.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Disabled.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.ItemWithContainer.Disabled.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.BackColor = System.Drawing.Color.Transparent;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.Options.UseBackColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_Order,
@@ -384,6 +416,11 @@
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.panelControl1.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Appearance.Options.UseBorderColor = true;
             this.panelControl1.Controls.Add(this.lb_UserCode);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl8);
@@ -448,16 +485,6 @@
             this.labelControl1.Size = new System.Drawing.Size(58, 17);
             this.labelControl1.TabIndex = 53;
             this.labelControl1.Text = "Chức vụ:";
-            // 
-            // barSubItem1
-            // 
-            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barSubItem1.Caption = "Cài đặt";
-            this.barSubItem1.Id = 0;
-            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
-            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
-            this.barSubItem1.Name = "barSubItem1";
-            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
             // 
             // FormMain
             // 

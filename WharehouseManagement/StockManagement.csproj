@@ -421,6 +421,12 @@
     <EmbeddedResource Include="Form\Stock\WareHouse.resx">
       <DependentUpon>WareHouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\AddProductSupplier.resx">
+      <DependentUpon>AddProductSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Supplier\SupplierList.resx">
       <DependentUpon>SupplierList.cs</DependentUpon>
     </EmbeddedResource>

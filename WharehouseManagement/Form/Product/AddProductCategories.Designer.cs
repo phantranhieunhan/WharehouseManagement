@@ -44,6 +44,8 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
             this.simpleButton1.Enabled = false;
             this.simpleButton1.Location = new System.Drawing.Point(542, 407);
             this.simpleButton1.Name = "simpleButton1";

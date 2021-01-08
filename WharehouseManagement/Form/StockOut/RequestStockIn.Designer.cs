@@ -111,6 +111,8 @@ namespace StockManagement.Form.StockOut
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "STT";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
@@ -120,6 +122,8 @@ namespace StockManagement.Form.StockOut
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.Caption = "Mã SP";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
@@ -129,6 +133,8 @@ namespace StockManagement.Form.StockOut
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Tên SP";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
@@ -138,6 +144,8 @@ namespace StockManagement.Form.StockOut
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Yêu cầu";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
@@ -147,6 +155,8 @@ namespace StockManagement.Form.StockOut
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.Caption = "Kho nhập ";
             this.gridColumn5.ColumnEdit = this.cbb_KhoNhap;
             this.gridColumn5.MinWidth = 25;
@@ -164,6 +174,8 @@ namespace StockManagement.Form.StockOut
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.Caption = "Số lượng";
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
@@ -173,12 +185,13 @@ namespace StockManagement.Form.StockOut
             // 
             // btn_YeuCauNhapKho
             // 
+            this.btn_YeuCauNhapKho.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_YeuCauNhapKho.Location = new System.Drawing.Point(527, 520);
             this.btn_YeuCauNhapKho.Name = "btn_YeuCauNhapKho";
             this.btn_YeuCauNhapKho.Size = new System.Drawing.Size(140, 40);
             this.btn_YeuCauNhapKho.TabIndex = 5;
             this.btn_YeuCauNhapKho.Text = "Yêu cầu nhập kho";
-            this.btn_YeuCauNhapKho.UseVisualStyleBackColor = true;
+            this.btn_YeuCauNhapKho.UseVisualStyleBackColor = false;
             // 
             // RequestStockIn
             // 

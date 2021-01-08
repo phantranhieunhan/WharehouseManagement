@@ -91,12 +91,13 @@
             // 
             // btn_Them
             // 
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(565, 486);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(75, 23);
             this.btn_Them.TabIndex = 5;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // AddStockOut
             // 

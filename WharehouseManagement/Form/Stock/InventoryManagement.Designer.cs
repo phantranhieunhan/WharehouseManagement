@@ -94,21 +94,23 @@
             // 
             // btn_XuatFile
             // 
+            this.btn_XuatFile.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_XuatFile.Location = new System.Drawing.Point(641, 30);
             this.btn_XuatFile.Name = "btn_XuatFile";
             this.btn_XuatFile.Size = new System.Drawing.Size(120, 40);
             this.btn_XuatFile.TabIndex = 3;
             this.btn_XuatFile.Text = "Xuất file";
-            this.btn_XuatFile.UseVisualStyleBackColor = true;
+            this.btn_XuatFile.UseVisualStyleBackColor = false;
             // 
             // btn_TimKiemTK
             // 
+            this.btn_TimKiemTK.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_TimKiemTK.Location = new System.Drawing.Point(796, 30);
             this.btn_TimKiemTK.Name = "btn_TimKiemTK";
             this.btn_TimKiemTK.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiemTK.TabIndex = 2;
             this.btn_TimKiemTK.Text = "Tìm kiếm";
-            this.btn_TimKiemTK.UseVisualStyleBackColor = true;
+            this.btn_TimKiemTK.UseVisualStyleBackColor = false;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -137,7 +139,9 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "edit";
             this.gridColumn4.Name = "gridColumn4";
@@ -147,7 +151,9 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Cảnh báo Max";
             this.gridColumn3.Name = "gridColumn3";
@@ -157,7 +163,9 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "Tên hàng";
             this.gridColumn2.Name = "gridColumn2";
@@ -167,7 +175,9 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Mã hàng";
             this.gridColumn1.Name = "gridColumn1";
@@ -194,6 +204,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.Caption = "Cảnh báo Min";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -202,6 +214,8 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.Caption = "edit";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -210,6 +224,8 @@
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.Caption = "Tổng tồn";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
@@ -218,6 +234,8 @@
             // 
             // gridColumn8
             // 
+            this.gridColumn8.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn8.Caption = "Kho 1";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
@@ -226,6 +244,8 @@
             // 
             // gridColumn9
             // 
+            this.gridColumn9.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn9.Caption = "Kho 2";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
@@ -234,6 +254,8 @@
             // 
             // gridColumn10
             // 
+            this.gridColumn10.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn10.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn10.Caption = "Kho 3";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
@@ -242,6 +264,8 @@
             // 
             // gridColumn11
             // 
+            this.gridColumn11.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn11.Caption = "Kho 4";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;

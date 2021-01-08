@@ -283,6 +283,8 @@
             // 
             // SaleOrderId
             // 
+            this.SaleOrderId.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.SaleOrderId.AppearanceHeader.Options.UseBackColor = true;
             this.SaleOrderId.Caption = "Mã order";
             this.SaleOrderId.FieldName = "SaleOrderId";
             this.SaleOrderId.MinWidth = 43;
@@ -293,6 +295,8 @@
             // 
             // StockOutId
             // 
+            this.StockOutId.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.StockOutId.AppearanceHeader.Options.UseBackColor = true;
             this.StockOutId.Caption = "Mã phiếu";
             this.StockOutId.FieldName = "StockOutId";
             this.StockOutId.MinWidth = 43;
@@ -303,6 +307,8 @@
             // 
             // StockOutType
             // 
+            this.StockOutType.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.StockOutType.AppearanceHeader.Options.UseBackColor = true;
             this.StockOutType.Caption = "Kho xử lý";
             this.StockOutType.FieldName = "StockOutType";
             this.StockOutType.MinWidth = 43;
@@ -313,6 +319,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Mục đích";
             this.gridColumn3.MinWidth = 43;
             this.gridColumn3.Name = "gridColumn3";
@@ -322,6 +330,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Ngày đặt";
             this.gridColumn4.MinWidth = 43;
             this.gridColumn4.Name = "gridColumn4";
@@ -331,6 +341,8 @@
             // 
             // CreatedBy
             // 
+            this.CreatedBy.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.CreatedBy.AppearanceHeader.Options.UseBackColor = true;
             this.CreatedBy.Caption = "Người xử lý";
             this.CreatedBy.FieldName = "CreatedBy";
             this.CreatedBy.MinWidth = 43;
@@ -341,6 +353,8 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.Caption = "Ngày cập nhật";
             this.gridColumn6.MinWidth = 43;
             this.gridColumn6.Name = "gridColumn6";
@@ -350,6 +364,8 @@
             // 
             // btn_Action
             // 
+            this.btn_Action.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Action.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Action.Caption = "Hành động";
             this.btn_Action.ColumnEdit = this.btn_HuyPhieu;
             this.btn_Action.MinWidth = 43;
@@ -1238,25 +1254,27 @@
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(1747, 109);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(120, 40);
             this.btn_Them.TabIndex = 4;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_TimKiem.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_TimKiem.Location = new System.Drawing.Point(1747, 44);
             this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 3;
             this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.UseVisualStyleBackColor = false;
             // 
             // cbb_NguoiXuLy
             // 

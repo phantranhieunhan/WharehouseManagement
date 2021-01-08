@@ -44,12 +44,13 @@ namespace StockManagement.Form.StockIn
             // 
             // btn_Them
             // 
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(553, 489);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(75, 23);
             this.btn_Them.TabIndex = 11;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // txt_LyDo
             // 

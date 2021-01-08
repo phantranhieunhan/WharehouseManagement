@@ -104,6 +104,8 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "STT";
             this.gridColumn1.FieldName = "STT";
             this.gridColumn1.MinWidth = 43;
@@ -114,6 +116,8 @@
             // 
             // ProductCategoryCode
             // 
+            this.ProductCategoryCode.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.ProductCategoryCode.AppearanceHeader.Options.UseBackColor = true;
             this.ProductCategoryCode.Caption = "Mã mục";
             this.ProductCategoryCode.FieldName = "Mã mục";
             this.ProductCategoryCode.FieldNameSortGroup = "ProductCategoryCode";
@@ -125,6 +129,8 @@
             // 
             // ProductCategoryName
             // 
+            this.ProductCategoryName.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.ProductCategoryName.AppearanceHeader.Options.UseBackColor = true;
             this.ProductCategoryName.Caption = "Tên mục";
             this.ProductCategoryName.FieldName = "ProductCategoryName";
             this.ProductCategoryName.MinWidth = 43;
@@ -135,6 +141,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Ngày tạo";
             this.gridColumn4.FieldName = "Ngày tạo";
             this.gridColumn4.MinWidth = 43;
@@ -162,6 +170,8 @@
             // btn_timkiem
             // 
             this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_timkiem.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_timkiem.Appearance.Options.UseBackColor = true;
             this.btn_timkiem.Location = new System.Drawing.Point(1349, 50);
             this.btn_timkiem.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_timkiem.Name = "btn_timkiem";
@@ -172,6 +182,8 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_them.Appearance.Options.UseBackColor = true;
             this.btn_them.Location = new System.Drawing.Point(1181, 50);
             this.btn_them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_them.Name = "btn_them";

@@ -86,12 +86,13 @@ namespace StockManagement.Form.Employee
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_TimKiem.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_TimKiem.Location = new System.Drawing.Point(807, 41);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 2;
             this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.UseVisualStyleBackColor = false;
             // 
             // txt_MaNhom
             // 
@@ -124,6 +125,8 @@ namespace StockManagement.Form.Employee
             // 
             // UserId
             // 
+            this.UserId.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.UserId.AppearanceHeader.Options.UseBackColor = true;
             this.UserId.Caption = "Mã nhân viên";
             this.UserId.FieldName = "UserId";
             this.UserId.MinWidth = 25;
@@ -134,6 +137,8 @@ namespace StockManagement.Form.Employee
             // 
             // FullName
             // 
+            this.FullName.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.FullName.AppearanceHeader.Options.UseBackColor = true;
             this.FullName.Caption = "Tên nhân viên";
             this.FullName.FieldName = "FullName";
             this.FullName.MinWidth = 25;
@@ -144,6 +149,8 @@ namespace StockManagement.Form.Employee
             // 
             // UserName
             // 
+            this.UserName.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.UserName.AppearanceHeader.Options.UseBackColor = true;
             this.UserName.Caption = "Tên đăng nhập";
             this.UserName.FieldName = "UserName";
             this.UserName.MinWidth = 25;
@@ -154,6 +161,8 @@ namespace StockManagement.Form.Employee
             // 
             // IdentityCard
             // 
+            this.IdentityCard.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.IdentityCard.AppearanceHeader.Options.UseBackColor = true;
             this.IdentityCard.Caption = "CMND";
             this.IdentityCard.FieldName = "IdentityCard";
             this.IdentityCard.MinWidth = 25;
@@ -164,6 +173,8 @@ namespace StockManagement.Form.Employee
             // 
             // Address
             // 
+            this.Address.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.Address.AppearanceHeader.Options.UseBackColor = true;
             this.Address.Caption = "Địa chỉ";
             this.Address.FieldName = "Address";
             this.Address.MinWidth = 25;
@@ -174,6 +185,8 @@ namespace StockManagement.Form.Employee
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Ngày sinh";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
@@ -183,6 +196,8 @@ namespace StockManagement.Form.Employee
             // 
             // CellPhone
             // 
+            this.CellPhone.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.CellPhone.AppearanceHeader.Options.UseBackColor = true;
             this.CellPhone.Caption = "Số điện thoại";
             this.CellPhone.FieldName = "CellPhone";
             this.CellPhone.MinWidth = 25;
@@ -193,6 +208,8 @@ namespace StockManagement.Form.Employee
             // 
             // Email
             // 
+            this.Email.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.Email.AppearanceHeader.Options.UseBackColor = true;
             this.Email.Caption = "Email";
             this.Email.FieldName = "Email";
             this.Email.MinWidth = 25;
@@ -203,6 +220,8 @@ namespace StockManagement.Form.Employee
             // 
             // Gender
             // 
+            this.Gender.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.Gender.AppearanceHeader.Options.UseBackColor = true;
             this.Gender.Caption = "Giới tính";
             this.Gender.FieldName = "Gender";
             this.Gender.MinWidth = 25;
@@ -213,6 +232,8 @@ namespace StockManagement.Form.Employee
             // 
             // MaritalStatus
             // 
+            this.MaritalStatus.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.MaritalStatus.AppearanceHeader.Options.UseBackColor = true;
             this.MaritalStatus.Caption = "Tình trạng hôn nhân";
             this.MaritalStatus.FieldName = "MaritalStatus";
             this.MaritalStatus.MinWidth = 25;
@@ -223,6 +244,8 @@ namespace StockManagement.Form.Employee
             // 
             // Avatar
             // 
+            this.Avatar.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.Avatar.AppearanceHeader.Options.UseBackColor = true;
             this.Avatar.Caption = "Hình đại diện";
             this.Avatar.FieldName = "Avatar";
             this.Avatar.MinWidth = 25;
@@ -233,6 +256,8 @@ namespace StockManagement.Form.Employee
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.Caption = "Loại NV";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
@@ -242,6 +267,8 @@ namespace StockManagement.Form.Employee
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Xoa.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Xoa.Caption = "Xóa";
             this.btn_Xoa.ColumnEdit = this.btnXoa;
             this.btn_Xoa.MinWidth = 25;
@@ -261,6 +288,8 @@ namespace StockManagement.Form.Employee
             // 
             // btn_Sua
             // 
+            this.btn_Sua.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Sua.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Sua.Caption = "Sửa";
             this.btn_Sua.ColumnEdit = this.btnSua;
             this.btn_Sua.MinWidth = 25;
@@ -280,6 +309,8 @@ namespace StockManagement.Form.Employee
             // 
             // btn_ChiTiet
             // 
+            this.btn_ChiTiet.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_ChiTiet.AppearanceHeader.Options.UseBackColor = true;
             this.btn_ChiTiet.Caption = "Chi tiết";
             this.btn_ChiTiet.ColumnEdit = this.btnChitiet;
             this.btn_ChiTiet.MinWidth = 25;
@@ -355,12 +386,13 @@ namespace StockManagement.Form.Employee
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(943, 41);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(120, 40);
             this.btn_Them.TabIndex = 1;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // EmployeeList
             // 

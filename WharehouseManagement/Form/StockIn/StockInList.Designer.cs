@@ -225,6 +225,8 @@ namespace StockManagement.Form.StockIn
             // 
             // PurchaseOrderId
             // 
+            this.PurchaseOrderId.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.PurchaseOrderId.AppearanceHeader.Options.UseBackColor = true;
             this.PurchaseOrderId.Caption = "Mã order";
             this.PurchaseOrderId.FieldName = "PurchaseOrderId";
             this.PurchaseOrderId.MinWidth = 25;
@@ -235,6 +237,8 @@ namespace StockManagement.Form.StockIn
             // 
             // StockInCode
             // 
+            this.StockInCode.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.StockInCode.AppearanceHeader.Options.UseBackColor = true;
             this.StockInCode.Caption = "Mã phiếu";
             this.StockInCode.FieldName = "StockInId";
             this.StockInCode.MinWidth = 25;
@@ -245,6 +249,8 @@ namespace StockManagement.Form.StockIn
             // 
             // StockInType
             // 
+            this.StockInType.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.StockInType.AppearanceHeader.Options.UseBackColor = true;
             this.StockInType.Caption = "Kho xử lý";
             this.StockInType.FieldName = "StockInType";
             this.StockInType.MinWidth = 25;
@@ -255,6 +261,8 @@ namespace StockManagement.Form.StockIn
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Mục đích";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
@@ -264,6 +272,8 @@ namespace StockManagement.Form.StockIn
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Ngày đặt";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
@@ -273,6 +283,8 @@ namespace StockManagement.Form.StockIn
             // 
             // CreatedBy
             // 
+            this.CreatedBy.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.CreatedBy.AppearanceHeader.Options.UseBackColor = true;
             this.CreatedBy.Caption = "Người xử lý";
             this.CreatedBy.FieldName = "CreatedBy";
             this.CreatedBy.MinWidth = 25;
@@ -283,6 +295,8 @@ namespace StockManagement.Form.StockIn
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.Caption = "Ngày cập nhật";
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
@@ -292,6 +306,8 @@ namespace StockManagement.Form.StockIn
             // 
             // btn_Action
             // 
+            this.btn_Action.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Action.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Action.Caption = "Hành động";
             this.btn_Action.ColumnEdit = this.btn_HuyPhieu;
             this.btn_Action.MinWidth = 25;
@@ -320,7 +336,7 @@ namespace StockManagement.Form.StockIn
             this.tab_DangKiemTra.Location = new System.Drawing.Point(4, 25);
             this.tab_DangKiemTra.Name = "tab_DangKiemTra";
             this.tab_DangKiemTra.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DangKiemTra.Size = new System.Drawing.Size(1089, 394);
+            this.tab_DangKiemTra.Size = new System.Drawing.Size(1095, 448);
             this.tab_DangKiemTra.TabIndex = 1;
             this.tab_DangKiemTra.Text = "Đang kiểm tra";
             this.tab_DangKiemTra.UseVisualStyleBackColor = true;
@@ -334,7 +350,7 @@ namespace StockManagement.Form.StockIn
             this.gC_DangKiemTra.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit1});
-            this.gC_DangKiemTra.Size = new System.Drawing.Size(1083, 388);
+            this.gC_DangKiemTra.Size = new System.Drawing.Size(1089, 442);
             this.gC_DangKiemTra.TabIndex = 2;
             this.gC_DangKiemTra.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -450,7 +466,7 @@ namespace StockManagement.Form.StockIn
             this.tab_HoanThanh.Location = new System.Drawing.Point(4, 25);
             this.tab_HoanThanh.Name = "tab_HoanThanh";
             this.tab_HoanThanh.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_HoanThanh.Size = new System.Drawing.Size(1089, 394);
+            this.tab_HoanThanh.Size = new System.Drawing.Size(1095, 448);
             this.tab_HoanThanh.TabIndex = 2;
             this.tab_HoanThanh.Text = "Hoàn thành";
             this.tab_HoanThanh.UseVisualStyleBackColor = true;
@@ -464,7 +480,7 @@ namespace StockManagement.Form.StockIn
             this.gC_HoanThanh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4,
             this.repositoryItemButtonEdit3});
-            this.gC_HoanThanh.Size = new System.Drawing.Size(1083, 388);
+            this.gC_HoanThanh.Size = new System.Drawing.Size(1089, 442);
             this.gC_HoanThanh.TabIndex = 2;
             this.gC_HoanThanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -580,7 +596,7 @@ namespace StockManagement.Form.StockIn
             this.tab_PhieuBiLoiHang.Location = new System.Drawing.Point(4, 25);
             this.tab_PhieuBiLoiHang.Name = "tab_PhieuBiLoiHang";
             this.tab_PhieuBiLoiHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PhieuBiLoiHang.Size = new System.Drawing.Size(1089, 394);
+            this.tab_PhieuBiLoiHang.Size = new System.Drawing.Size(1095, 448);
             this.tab_PhieuBiLoiHang.TabIndex = 3;
             this.tab_PhieuBiLoiHang.Text = "Phiếu bị lỗi hàng";
             this.tab_PhieuBiLoiHang.UseVisualStyleBackColor = true;
@@ -594,7 +610,7 @@ namespace StockManagement.Form.StockIn
             this.gC_PhieuBiLoiHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6,
             this.repositoryItemButtonEdit5});
-            this.gC_PhieuBiLoiHang.Size = new System.Drawing.Size(1083, 388);
+            this.gC_PhieuBiLoiHang.Size = new System.Drawing.Size(1089, 442);
             this.gC_PhieuBiLoiHang.TabIndex = 2;
             this.gC_PhieuBiLoiHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -710,7 +726,7 @@ namespace StockManagement.Form.StockIn
             this.tab_DonBiHuy.Location = new System.Drawing.Point(4, 25);
             this.tab_DonBiHuy.Name = "tab_DonBiHuy";
             this.tab_DonBiHuy.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DonBiHuy.Size = new System.Drawing.Size(1089, 394);
+            this.tab_DonBiHuy.Size = new System.Drawing.Size(1095, 448);
             this.tab_DonBiHuy.TabIndex = 4;
             this.tab_DonBiHuy.Text = "Đơn bị hủy";
             this.tab_DonBiHuy.UseVisualStyleBackColor = true;
@@ -724,7 +740,7 @@ namespace StockManagement.Form.StockIn
             this.gC_DonBiHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8,
             this.repositoryItemButtonEdit7});
-            this.gC_DonBiHuy.Size = new System.Drawing.Size(1083, 388);
+            this.gC_DonBiHuy.Size = new System.Drawing.Size(1089, 442);
             this.gC_DonBiHuy.TabIndex = 2;
             this.gC_DonBiHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -889,23 +905,25 @@ namespace StockManagement.Form.StockIn
             // btn_Them
             // 
             this.btn_Them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(960, 81);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(120, 40);
             this.btn_Them.TabIndex = 4;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_TimKiem
             // 
             this.btn_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_TimKiem.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_TimKiem.Location = new System.Drawing.Point(960, 28);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiem.TabIndex = 3;
             this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.UseVisualStyleBackColor = false;
             // 
             // cbb_NguoiXuLy
             // 

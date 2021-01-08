@@ -131,12 +131,13 @@
             // btn_ThemKH
             // 
             this.btn_ThemKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_ThemKH.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_ThemKH.Location = new System.Drawing.Point(1005, 80);
             this.btn_ThemKH.Name = "btn_ThemKH";
             this.btn_ThemKH.Size = new System.Drawing.Size(120, 40);
             this.btn_ThemKH.TabIndex = 8;
             this.btn_ThemKH.Text = "Thêm";
-            this.btn_ThemKH.UseVisualStyleBackColor = true;
+            this.btn_ThemKH.UseVisualStyleBackColor = false;
             this.btn_ThemKH.Click += new System.EventHandler(this.btn_ThemKH_Click);
             // 
             // txt_DenNgay
@@ -174,12 +175,13 @@
             // btn_TimKiemKH
             // 
             this.btn_TimKiemKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_TimKiemKH.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_TimKiemKH.Location = new System.Drawing.Point(1005, 33);
             this.btn_TimKiemKH.Name = "btn_TimKiemKH";
             this.btn_TimKiemKH.Size = new System.Drawing.Size(120, 40);
             this.btn_TimKiemKH.TabIndex = 2;
             this.btn_TimKiemKH.Text = "Tìm kiếm";
-            this.btn_TimKiemKH.UseVisualStyleBackColor = true;
+            this.btn_TimKiemKH.UseVisualStyleBackColor = false;
             // 
             // groupControl1
             // 
@@ -257,6 +259,8 @@
             // 
             // PurchaseOrderCode
             // 
+            this.PurchaseOrderCode.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.PurchaseOrderCode.AppearanceHeader.Options.UseBackColor = true;
             this.PurchaseOrderCode.Caption = "Mã đơn";
             this.PurchaseOrderCode.FieldName = "PurchaseOrderCode";
             this.PurchaseOrderCode.Name = "PurchaseOrderCode";
@@ -266,6 +270,8 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.Caption = "Khách hàng";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -274,6 +280,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Mặt hàng";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -282,6 +290,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Tổng tiền";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -290,6 +300,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.Caption = "Ngày đặt";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -298,6 +310,8 @@
             // 
             // CreatedBy
             // 
+            this.CreatedBy.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.CreatedBy.AppearanceHeader.Options.UseBackColor = true;
             this.CreatedBy.Caption = "Người xử lý";
             this.CreatedBy.FieldName = "CreatedBy";
             this.CreatedBy.Name = "CreatedBy";
@@ -307,6 +321,8 @@
             // 
             // btn_Action
             // 
+            this.btn_Action.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.btn_Action.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Action.Caption = "Hành động";
             this.btn_Action.Name = "btn_Action";
             this.btn_Action.Visible = true;
@@ -324,7 +340,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1063, 324);
+            this.tabPage2.Size = new System.Drawing.Size(1140, 335);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đã tiếp nhận";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -335,7 +351,7 @@
             this.gridControl2.Location = new System.Drawing.Point(3, 3);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1057, 318);
+            this.gridControl2.Size = new System.Drawing.Size(1134, 329);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -414,7 +430,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1063, 324);
+            this.tabPage3.Size = new System.Drawing.Size(1140, 335);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Yêu cầu xuất kho";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -424,7 +440,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1063, 324);
+            this.tabPage4.Size = new System.Drawing.Size(1140, 335);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Đơn bị hủy";
             this.tabPage4.UseVisualStyleBackColor = true;

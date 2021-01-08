@@ -90,12 +90,13 @@ namespace StockManagement.Form.Customer
             // 
             // btn_ChiTiet
             // 
+            this.btn_ChiTiet.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_ChiTiet.Location = new System.Drawing.Point(505, 124);
             this.btn_ChiTiet.Name = "btn_ChiTiet";
             this.btn_ChiTiet.Size = new System.Drawing.Size(120, 40);
             this.btn_ChiTiet.TabIndex = 44;
             this.btn_ChiTiet.Text = "Chi tiết";
-            this.btn_ChiTiet.UseVisualStyleBackColor = true;
+            this.btn_ChiTiet.UseVisualStyleBackColor = false;
             // 
             // cbb_DiaChi
             // 
@@ -124,6 +125,7 @@ namespace StockManagement.Form.Customer
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.Location = new System.Drawing.Point(91, 80);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
@@ -156,12 +158,13 @@ namespace StockManagement.Form.Customer
             // 
             // btn_Luu
             // 
+            this.btn_Luu.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Luu.Location = new System.Drawing.Point(489, 356);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(120, 40);
             this.btn_Luu.TabIndex = 35;
             this.btn_Luu.Text = "Lưu lại";
-            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.UseVisualStyleBackColor = false;
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // txt_MaKhachHang
@@ -186,6 +189,8 @@ namespace StockManagement.Form.Customer
             // 
             this.textEdit1.Location = new System.Drawing.Point(272, 234);
             this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.textEdit1.Size = new System.Drawing.Size(143, 116);
             this.textEdit1.TabIndex = 48;

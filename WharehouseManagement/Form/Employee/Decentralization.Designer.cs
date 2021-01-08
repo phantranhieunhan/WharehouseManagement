@@ -216,6 +216,8 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "Mã nhân viên";
             this.gridColumn1.FieldName = "UserCode";
             this.gridColumn1.MinWidth = 25;
@@ -225,6 +227,8 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.Caption = "Tên nhân viên";
             this.gridColumn2.FieldName = "FullName";
             this.gridColumn2.MinWidth = 25;
@@ -243,6 +247,8 @@
             // 
             // bandedGridColumn1
             // 
+            this.bandedGridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn1.Caption = "Bán hàng";
             this.bandedGridColumn1.ColumnEdit = this.repositoryItemCheckEdit16;
             this.bandedGridColumn1.FieldName = "btn_SaleOrder";
@@ -258,6 +264,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.Caption = "Mua hàng";
             this.gridColumn3.ColumnEdit = this.repositoryItemCheckEdit17;
             this.gridColumn3.FieldName = "btn_PurchaseOrder";
@@ -284,6 +292,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.Caption = "Nhập kho";
             this.gridColumn5.ColumnEdit = this.repositoryItemCheckEdit4;
             this.gridColumn5.FieldName = "btn_StockIn";
@@ -299,6 +309,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "Xuất kho";
             this.gridColumn4.ColumnEdit = this.repositoryItemCheckEdit2;
             this.gridColumn4.FieldName = "btn_StockOut";
@@ -314,6 +326,8 @@
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn7.Caption = "Danh sách KH";
             this.gridColumn7.ColumnEdit = this.repositoryItemCheckEdit7;
             this.gridColumn7.FieldName = "btn_WarehouseList";
@@ -329,6 +343,8 @@
             // 
             // bandedGridColumn3
             // 
+            this.bandedGridColumn3.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn3.Caption = "Tồn kho";
             this.bandedGridColumn3.ColumnEdit = this.repositoryItemCheckEdit8;
             this.bandedGridColumn3.FieldName = "btn_InventoryManagement";
@@ -353,6 +369,8 @@
             // 
             // bandedGridColumn2
             // 
+            this.bandedGridColumn2.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn2.Caption = "Danh Sách SP";
             this.bandedGridColumn2.ColumnEdit = this.repositoryItemCheckEdit5;
             this.bandedGridColumn2.FieldName = "btn_ProductList";
@@ -368,6 +386,8 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.Caption = "Danh mục SP";
             this.gridColumn6.ColumnEdit = this.repositoryItemCheckEdit6;
             this.gridColumn6.FieldName = "btn_ProductPortfolio";
@@ -392,6 +412,8 @@
             // 
             // gridColumn8
             // 
+            this.gridColumn8.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn8.Caption = "Danh Sách NCC";
             this.gridColumn8.ColumnEdit = this.repositoryItemCheckEdit9;
             this.gridColumn8.FieldName = "btn_SupplierList";
@@ -407,6 +429,8 @@
             // 
             // bandedGridColumn4
             // 
+            this.bandedGridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn4.Caption = "Cung cấp hàng";
             this.bandedGridColumn4.ColumnEdit = this.repositoryItemCheckEdit10;
             this.bandedGridColumn4.FieldName = "btn_SupplierProduct";
@@ -431,6 +455,8 @@
             // 
             // gridColumn9
             // 
+            this.gridColumn9.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn9.Caption = "Danh Sách KH";
             this.gridColumn9.ColumnEdit = this.repositoryItemCheckEdit11;
             this.gridColumn9.FieldName = "btn_CustomerList";
@@ -446,6 +472,8 @@
             // 
             // bandedGridColumn5
             // 
+            this.bandedGridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn5.Caption = "Nhóm KH";
             this.bandedGridColumn5.ColumnEdit = this.repositoryItemCheckEdit12;
             this.bandedGridColumn5.FieldName = "btn_CustomerGroup";
@@ -471,6 +499,8 @@
             // 
             // gridColumn11
             // 
+            this.gridColumn11.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn11.Caption = "Danh Sách NV";
             this.gridColumn11.ColumnEdit = this.repositoryItemCheckEdit13;
             this.gridColumn11.FieldName = "btn_EmployeeList";
@@ -486,6 +516,8 @@
             // 
             // bandedGridColumn6
             // 
+            this.bandedGridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn6.Caption = "Loại NV";
             this.bandedGridColumn6.ColumnEdit = this.repositoryItemCheckEdit14;
             this.bandedGridColumn6.FieldName = "btn_TypeEmployee";
@@ -501,6 +533,8 @@
             // 
             // bandedGridColumn7
             // 
+            this.bandedGridColumn7.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn7.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn7.Caption = "Phân quyền";
             this.bandedGridColumn7.ColumnEdit = this.repositoryItemCheckEdit15;
             this.bandedGridColumn7.FieldName = "btn_Decentralization";
@@ -528,6 +562,8 @@
             // 
             // gridColumn10
             // 
+            this.gridColumn10.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn10.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn10.Caption = "Báo cáo 1";
             this.gridColumn10.FieldName = "btn_Report1";
             this.gridColumn10.MinWidth = 25;
@@ -537,6 +573,8 @@
             // 
             // bandedGridColumn11
             // 
+            this.bandedGridColumn11.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn11.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn11.Caption = "Báo cáo 2";
             this.bandedGridColumn11.FieldName = "btn_Report2";
             this.bandedGridColumn11.MinWidth = 25;
@@ -546,6 +584,8 @@
             // 
             // bandedGridColumn10
             // 
+            this.bandedGridColumn10.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn10.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn10.Caption = "Báo cáo 3";
             this.bandedGridColumn10.FieldName = "btn_Report3";
             this.bandedGridColumn10.MinWidth = 25;
@@ -555,6 +595,8 @@
             // 
             // bandedGridColumn9
             // 
+            this.bandedGridColumn9.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn9.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn9.Caption = "Báo cáo 4";
             this.bandedGridColumn9.FieldName = "btn_Report4";
             this.bandedGridColumn9.MinWidth = 25;
@@ -564,6 +606,8 @@
             // 
             // bandedGridColumn8
             // 
+            this.bandedGridColumn8.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn8.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn8.Caption = "Báo cáo 5";
             this.bandedGridColumn8.FieldName = "btn_Report5";
             this.bandedGridColumn8.MinWidth = 25;
@@ -585,6 +629,8 @@
             // 
             // bandedGridColumn16
             // 
+            this.bandedGridColumn16.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn16.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn16.Caption = "Cài đặt 1";
             this.bandedGridColumn16.FieldName = "btn_Setting1";
             this.bandedGridColumn16.MinWidth = 25;
@@ -594,6 +640,8 @@
             // 
             // bandedGridColumn15
             // 
+            this.bandedGridColumn15.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn15.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn15.Caption = "Cài đặt 2";
             this.bandedGridColumn15.FieldName = "btn_Setting2";
             this.bandedGridColumn15.MinWidth = 25;
@@ -603,6 +651,8 @@
             // 
             // bandedGridColumn14
             // 
+            this.bandedGridColumn14.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn14.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn14.Caption = "Cài đặt 3";
             this.bandedGridColumn14.FieldName = "btn_Setting3";
             this.bandedGridColumn14.MinWidth = 25;
@@ -612,6 +662,8 @@
             // 
             // bandedGridColumn13
             // 
+            this.bandedGridColumn13.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn13.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn13.Caption = "Cài đặt 4";
             this.bandedGridColumn13.FieldName = "btn_Setting4";
             this.bandedGridColumn13.MinWidth = 25;
@@ -621,6 +673,8 @@
             // 
             // bandedGridColumn12
             // 
+            this.bandedGridColumn12.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.bandedGridColumn12.AppearanceHeader.Options.UseBackColor = true;
             this.bandedGridColumn12.Caption = "Cài đặt 5";
             this.bandedGridColumn12.FieldName = "btn_Setting5";
             this.bandedGridColumn12.MinWidth = 25;

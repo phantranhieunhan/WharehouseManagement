@@ -110,21 +110,23 @@
             // 
             // btn_Them
             // 
+            this.btn_Them.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Them.Location = new System.Drawing.Point(479, 206);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(75, 23);
             this.btn_Them.TabIndex = 8;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // btn_Sua
             // 
+            this.btn_Sua.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Sua.Location = new System.Drawing.Point(581, 206);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(75, 23);
             this.btn_Sua.TabIndex = 9;
             this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.UseVisualStyleBackColor = false;
             // 
             // AddWareHouse
             // 

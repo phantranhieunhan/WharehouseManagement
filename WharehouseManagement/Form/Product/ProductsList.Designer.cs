@@ -113,7 +113,9 @@
             // 
             // ProductCode
             // 
+            this.ProductCode.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.ProductCode.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductCode.AppearanceHeader.Options.UseBackColor = true;
             this.ProductCode.AppearanceHeader.Options.UseFont = true;
             this.ProductCode.Caption = "Mã sản phẩm";
             this.ProductCode.FieldName = "ProductCode";
@@ -125,7 +127,9 @@
             // 
             // ProductName
             // 
+            this.ProductName.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.ProductName.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.ProductName.AppearanceHeader.Options.UseBackColor = true;
             this.ProductName.AppearanceHeader.Options.UseFont = true;
             this.ProductName.Caption = "Tên sản phẩm";
             this.ProductName.FieldName = "ProductName";
@@ -137,7 +141,9 @@
             // 
             // Price
             // 
+            this.Price.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.Price.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.Price.AppearanceHeader.Options.UseBackColor = true;
             this.Price.AppearanceHeader.Options.UseFont = true;
             this.Price.Caption = "Giá bán";
             this.Price.FieldName = "Price";
@@ -149,7 +155,9 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Số lượng";
             this.gridColumn4.MinWidth = 43;
@@ -160,7 +168,9 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Danh mục";
             this.gridColumn5.MinWidth = 43;
@@ -171,7 +181,9 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Ngày tạo";
             this.gridColumn6.MinWidth = 43;
@@ -182,7 +194,9 @@
             // 
             // btn_Sua
             // 
+            this.btn_Sua.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btn_Sua.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.btn_Sua.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Sua.AppearanceHeader.Options.UseFont = true;
             this.btn_Sua.Caption = "edit";
             this.btn_Sua.MinWidth = 43;
@@ -193,7 +207,9 @@
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btn_Xoa.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.btn_Xoa.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Xoa.AppearanceHeader.Options.UseFont = true;
             this.btn_Xoa.Caption = "delete";
             this.btn_Xoa.MinWidth = 43;
@@ -221,6 +237,8 @@
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
             this.simpleButton2.Location = new System.Drawing.Point(1182, 53);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton2.Name = "simpleButton2";
@@ -231,6 +249,8 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_them.Appearance.Options.UseBackColor = true;
             this.btn_them.Location = new System.Drawing.Point(1040, 53);
             this.btn_them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_them.Name = "btn_them";

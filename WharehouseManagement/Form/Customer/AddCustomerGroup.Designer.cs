@@ -46,12 +46,13 @@ namespace StockManagement.Form.Customer
             // 
             // btn_Luu
             // 
+            this.btn_Luu.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Luu.Location = new System.Drawing.Point(482, 155);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(120, 40);
             this.btn_Luu.TabIndex = 5;
             this.btn_Luu.Text = "Lưu lại";
-            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.UseVisualStyleBackColor = false;
             // 
             // txt_MaNhom
             // 

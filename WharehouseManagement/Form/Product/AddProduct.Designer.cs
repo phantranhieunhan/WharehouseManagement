@@ -64,6 +64,8 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
             this.simpleButton1.Location = new System.Drawing.Point(678, 529);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.simpleButton1.Name = "simpleButton1";

@@ -296,15 +296,17 @@ namespace StockManagement.Form.Employee
             // 
             // btn_Luu
             // 
+            this.btn_Luu.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Luu.Location = new System.Drawing.Point(165, 492);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(120, 40);
             this.btn_Luu.TabIndex = 73;
             this.btn_Luu.Text = "Lưu lại";
-            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox2.Controls.Add(this.labelControl13);
             this.groupBox2.Controls.Add(this.labelControl14);
             this.groupBox2.Controls.Add(this.pictureBox1);
@@ -356,6 +358,7 @@ namespace StockManagement.Form.Employee
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Snow;
             this.pictureBox1.Location = new System.Drawing.Point(6, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 205);
