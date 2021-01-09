@@ -23,5 +23,9 @@ namespace StockManagement.Data
         public Nullable<decimal> Status { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string CreatedBy { get; set; }
+        public System.Guid CustomerId { get; set; }
+        public string CustomerCode { get; set; }
+        public System.Guid ProductId { get; set; }
+        public string ProductCode { get; set; }
     }
 }

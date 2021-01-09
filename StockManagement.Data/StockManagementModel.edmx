@@ -447,10 +447,16 @@ warning 6002: The table/view 'StockManagement.dbo.vw_SaleOrder' does not have a 
         <EntityType Name="vw_SaleOrder">
           <Key>
             <PropertyRef Name="SaleOrderDetailId" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="SaleOrderDetailId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="SaleOrderCode" Type="varchar" MaxLength="50" />
+          <Property Name="CustomerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CustomerCode" Type="varchar" MaxLength="50" />
           <Property Name="Customer" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
           <Property Name="QuanlityOfCustomer" Type="numeric" Precision="18" Scale="0" />
           <Property Name="TotalAmount" Type="money" />
@@ -1041,7 +1047,11 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             <DefiningQuery>SELECT 
     [vw_SaleOrder].[SaleOrderDetailId] AS [SaleOrderDetailId], 
     [vw_SaleOrder].[SaleOrderCode] AS [SaleOrderCode], 
+    [vw_SaleOrder].[CustomerId] AS [CustomerId], 
+    [vw_SaleOrder].[CustomerCode] AS [CustomerCode], 
     [vw_SaleOrder].[Customer] AS [Customer], 
+    [vw_SaleOrder].[ProductId] AS [ProductId], 
+    [vw_SaleOrder].[ProductCode] AS [ProductCode], 
     [vw_SaleOrder].[ProductName] AS [ProductName], 
     [vw_SaleOrder].[QuanlityOfCustomer] AS [QuanlityOfCustomer], 
     [vw_SaleOrder].[TotalAmount] AS [TotalAmount], 
@@ -1740,6 +1750,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
         <EntityType Name="vw_SaleOrder">
           <Key>
             <PropertyRef Name="SaleOrderDetailId" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="SaleOrderDetailId" Type="Guid" Nullable="false" />
           <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -1750,6 +1762,10 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerId" Type="Guid" Nullable="false" />
+          <Property Name="CustomerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductId" Type="Guid" Nullable="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="vw_SaleOrderDetail">
           <Key>
@@ -2898,6 +2914,10 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="vw_SaleOrder">
             <EntityTypeMapping TypeName="StockManagementModel.vw_SaleOrder">
               <MappingFragment StoreEntitySet="vw_SaleOrder">
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
                 <ScalarProperty Name="SaleOrderCode" ColumnName="SaleOrderCode" />
                 <ScalarProperty Name="Customer" ColumnName="Customer" />

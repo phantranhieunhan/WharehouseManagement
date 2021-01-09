@@ -255,7 +255,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1103, 572);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "Đặt hàng bán hàng";
+            this.groupControl1.Text = "Đặt hàng mua hàng";
             // 
             // groupBox3
             // 
