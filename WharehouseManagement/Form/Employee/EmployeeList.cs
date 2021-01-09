@@ -27,5 +27,11 @@ namespace StockManagement.Form.Employee
         {
             
         }
+
+        private void btnChitiet_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            EmployeeDetail employeeDetail = new EmployeeDetail();
+            employeeDetail.Show();
+        }
     }
 }

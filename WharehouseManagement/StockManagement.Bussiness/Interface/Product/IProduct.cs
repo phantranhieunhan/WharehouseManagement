@@ -9,6 +9,10 @@ namespace StockManagement.Business
 {
     public interface IProduct:IRepository<Product>
     {
-        List<vw_ProductOnStockDetail> GetProductOnStock(Guid productId);
+        List<vw_ProductOnStock> GetProductOnStock();
+        List<vw_ProductOnStockDetail> GetProductOnStockDetail(Guid productId);
+        List<vw_ProductOnStockDetail> GetProductOnStockDetail();
+        List<ProductType> GetProductTypes();
+        List<vw_Product> GetProducts();
     }
 }

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using StockManagement.Data;
+using StockManagement.Business;
+
 namespace StockManagement.Form.Customer
 {
     public partial class CustomerList : DevExpress.XtraEditors.XtraUserControl
@@ -16,11 +19,19 @@ namespace StockManagement.Form.Customer
         public CustomerList()
         {
             InitializeComponent();
+            InitData();
         }
-
+        ICustomer customerBO = new CustomerBO();
         public void InitData()
         {
-            
+            gridControl1.DataSource = customerBO.GetAll();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            AddCustomerList addCustomerList = new AddCustomerList();
+
+            addCustomerList.Show();
         }
     }
 }

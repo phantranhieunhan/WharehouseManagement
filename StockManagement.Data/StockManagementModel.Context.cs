@@ -27,6 +27,7 @@ namespace StockManagement.Data
     
         public virtual DbSet<AddressCustomer> AddressCustomer { get; set; }
         public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<district> district { get; set; }
         public virtual DbSet<GroupCustomer> GroupCustomer { get; set; }
         public virtual DbSet<GroupMember> GroupMember { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
@@ -35,6 +36,7 @@ namespace StockManagement.Data
         public virtual DbSet<ProductOnStock> ProductOnStock { get; set; }
         public virtual DbSet<ProductType> ProductType { get; set; }
         public virtual DbSet<ProductUnit> ProductUnit { get; set; }
+        public virtual DbSet<province> province { get; set; }
         public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
         public virtual DbSet<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         public virtual DbSet<SaleOrder> SaleOrder { get; set; }
@@ -53,9 +55,13 @@ namespace StockManagement.Data
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserPermission> UserPermission { get; set; }
         public virtual DbSet<UserType> UserType { get; set; }
-        public virtual DbSet<vw_UserPermission> vw_UserPermission { get; set; }
-        public virtual DbSet<vw_SaleOrder> vw_SaleOrder { get; set; }
+        public virtual DbSet<ward> ward { get; set; }
+        public virtual DbSet<vw_AddressCustomer> vw_AddressCustomer { get; set; }
         public virtual DbSet<vw_ProductOnStock> vw_ProductOnStock { get; set; }
         public virtual DbSet<vw_ProductOnStockDetail> vw_ProductOnStockDetail { get; set; }
+        public virtual DbSet<vw_SaleOrder> vw_SaleOrder { get; set; }
+        public virtual DbSet<vw_SaleOrderDetail> vw_SaleOrderDetail { get; set; }
+        public virtual DbSet<vw_UserPermission> vw_UserPermission { get; set; }
+        public virtual DbSet<vw_Product> vw_Product { get; set; }
     }
 }

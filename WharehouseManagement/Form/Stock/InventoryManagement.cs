@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using StockManagement.Data;
+using StockManagement.Business;
 
 namespace StockManagement.Form.Stock
 {
@@ -16,6 +18,12 @@ namespace StockManagement.Form.Stock
         public InventoryManagement()
         {
             InitializeComponent();
+            GetInit();
+        }
+        private void GetInit()
+        {
+            IProduct productBO = new ProductBO();
+            gC_DanhSach.DataSource = productBO.GetProductOnStockDetail();
         }
     }
 }

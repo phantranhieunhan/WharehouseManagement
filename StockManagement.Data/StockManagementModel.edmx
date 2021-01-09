@@ -33,6 +33,15 @@
           <Property Name="Note" Type="nvarchar" MaxLength="255" />
           <Property Name="Avatar" Type="varchar" MaxLength="1024" />
         </EntityType>
+        <EntityType Name="district">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="45" />
+          <Property Name="type" Type="nvarchar" MaxLength="45" />
+          <Property Name="province_id" Type="char" MaxLength="6" />
+        </EntityType>
         <EntityType Name="GroupCustomer">
           <Key>
             <PropertyRef Name="GroupCustomerId" />
@@ -116,6 +125,14 @@
           <Property Name="ProductUnitId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ProductUnitCode" Type="char" MaxLength="50" />
           <Property Name="ProductUnitName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="province">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="55" />
+          <Property Name="type" Type="nvarchar" MaxLength="45" />
         </EntityType>
         <EntityType Name="PurchaseOrder">
           <Key>
@@ -261,8 +278,9 @@
           <Property Name="SupplierName" Type="nvarchar" MaxLength="255" />
           <Property Name="Address" Type="nvarchar" MaxLength="255" />
           <Property Name="TaxCode" Type="varchar" MaxLength="50" />
-          <Property Name="PhoneNumber" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
         </EntityType>
         <EntityType Name="SupplierProduct">
           <Key>
@@ -347,6 +365,54 @@
           <Property Name="UserTypeCode" Type="varchar" MaxLength="50" />
           <Property Name="UserTypeName" Type="nvarchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="ward">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="55" />
+          <Property Name="type" Type="nvarchar" MaxLength="45" />
+          <Property Name="district_id" Type="char" MaxLength="6" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'StockManagement.dbo.vw_AddressCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_AddressCustomer">
+          <Key>
+            <PropertyRef Name="AddressCustomerId" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="ProvinceId" />
+            <PropertyRef Name="DistrictId" />
+            <PropertyRef Name="WardId" />
+          </Key>
+          <Property Name="AddressCustomerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CustomerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CustomerCode" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProvinceId" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="ProvinceName" Type="nvarchar" MaxLength="55" />
+          <Property Name="DistrictId" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="DistrictName" Type="nvarchar" MaxLength="45" />
+          <Property Name="WardId" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="WardName" Type="nvarchar" MaxLength="55" />
+          <Property Name="Detail" Type="nvarchar" MaxLength="255" />
+          <Property Name="FullAddress" Type="nvarchar" MaxLength="157" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'StockManagement.dbo.vw_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Picture" Type="text" />
+          <Property Name="ProductTypeId" Type="uniqueidentifier" />
+          <Property Name="ProductTypeName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProductUnitId" Type="uniqueidentifier" />
+          <Property Name="ProductUnitName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'StockManagement.dbo.vw_ProductOnStock' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_ProductOnStock">
@@ -391,6 +457,21 @@ warning 6002: The table/view 'StockManagement.dbo.vw_SaleOrder' does not have a 
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'StockManagement.dbo.vw_SaleOrderDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_SaleOrderDetail">
+          <Key>
+            <PropertyRef Name="SaleOrderDetailId" />
+          </Key>
+          <Property Name="SaleOrderDetailId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductId" Type="uniqueidentifier" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="SaleOrderId" Type="uniqueidentifier" />
+          <Property Name="QuanlityAvailable" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="QuanlityOfCustomer" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -875,6 +956,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
         <EntityContainer Name="StockManagementModelStoreContainer">
           <EntitySet Name="AddressCustomer" EntityType="Self.AddressCustomer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="district" EntityType="Self.district" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupMember" EntityType="Self.GroupMember" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permission" EntityType="Self.Permission" Schema="dbo" store:Type="Tables" />
@@ -883,6 +965,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySet Name="ProductOnStock" EntityType="Self.ProductOnStock" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductType" EntityType="Self.ProductType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductUnit" EntityType="Self.ProductUnit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="province" EntityType="Self.province" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PurchaseOrder" EntityType="Self.PurchaseOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PurchaseOrderDetail" EntityType="Self.PurchaseOrderDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SaleOrder" EntityType="Self.SaleOrder" Schema="dbo" store:Type="Tables" />
@@ -901,6 +984,36 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserPermission" EntityType="Self.UserPermission" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ward" EntityType="Self.ward" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_AddressCustomer" EntityType="Self.vw_AddressCustomer" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_AddressCustomer].[AddressCustomerId] AS [AddressCustomerId], 
+    [vw_AddressCustomer].[CustomerId] AS [CustomerId], 
+    [vw_AddressCustomer].[CustomerCode] AS [CustomerCode], 
+    [vw_AddressCustomer].[FullName] AS [FullName], 
+    [vw_AddressCustomer].[ProvinceId] AS [ProvinceId], 
+    [vw_AddressCustomer].[ProvinceName] AS [ProvinceName], 
+    [vw_AddressCustomer].[DistrictId] AS [DistrictId], 
+    [vw_AddressCustomer].[DistrictName] AS [DistrictName], 
+    [vw_AddressCustomer].[WardId] AS [WardId], 
+    [vw_AddressCustomer].[WardName] AS [WardName], 
+    [vw_AddressCustomer].[Detail] AS [Detail], 
+    [vw_AddressCustomer].[FullAddress] AS [FullAddress]
+    FROM [dbo].[vw_AddressCustomer] AS [vw_AddressCustomer]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_Product" EntityType="Self.vw_Product" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_Product].[ProductId] AS [ProductId], 
+    [vw_Product].[ProductCode] AS [ProductCode], 
+    [vw_Product].[ProductName] AS [ProductName], 
+    [vw_Product].[Price] AS [Price], 
+    [vw_Product].[Picture] AS [Picture], 
+    [vw_Product].[ProductTypeId] AS [ProductTypeId], 
+    [vw_Product].[ProductTypeName] AS [ProductTypeName], 
+    [vw_Product].[ProductUnitId] AS [ProductUnitId], 
+    [vw_Product].[ProductUnitName] AS [ProductUnitName]
+    FROM [dbo].[vw_Product] AS [vw_Product]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="vw_ProductOnStock" EntityType="Self.vw_ProductOnStock" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_ProductOnStock].[ProductId] AS [ProductId], 
@@ -936,6 +1049,18 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
     [vw_SaleOrder].[CreatedDate] AS [CreatedDate], 
     [vw_SaleOrder].[CreatedBy] AS [CreatedBy]
     FROM [dbo].[vw_SaleOrder] AS [vw_SaleOrder]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_SaleOrderDetail" EntityType="Self.vw_SaleOrderDetail" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_SaleOrderDetail].[SaleOrderDetailId] AS [SaleOrderDetailId], 
+    [vw_SaleOrderDetail].[ProductId] AS [ProductId], 
+    [vw_SaleOrderDetail].[ProductCode] AS [ProductCode], 
+    [vw_SaleOrderDetail].[ProductName] AS [ProductName], 
+    [vw_SaleOrderDetail].[SaleOrderId] AS [SaleOrderId], 
+    [vw_SaleOrderDetail].[QuanlityAvailable] AS [QuanlityAvailable], 
+    [vw_SaleOrderDetail].[QuanlityOfCustomer] AS [QuanlityOfCustomer], 
+    [vw_SaleOrderDetail].[Status] AS [Status]
+    FROM [dbo].[vw_SaleOrderDetail] AS [vw_SaleOrderDetail]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_UserPermission" EntityType="Self.vw_UserPermission" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1155,6 +1280,15 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="GroupMember" Relationship="Self.FK_GROUPMEM_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="GroupMember" />
           <NavigationProperty Name="SaleOrder" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="Customer" ToRole="SaleOrder" />
         </EntityType>
+        <EntityType Name="district">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="province_id" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+        </EntityType>
         <EntityType Name="GroupCustomer">
           <Key>
             <PropertyRef Name="GroupCustomerId" />
@@ -1230,9 +1364,9 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="StockId" Type="Guid" />
           <Property Name="MinQuanlity" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="MaxQuanlity" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="RecentQuanlity" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCTO_RELATIONS_PRODUCT" FromRole="ProductOnStock" ToRole="Product" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_PRODUCTO_RELATIONS_STOCK" FromRole="ProductOnStock" ToRole="Stock" />
-          <Property Name="RecentQuanlity" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="ProductType">
           <Key>
@@ -1255,6 +1389,14 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="ProductUnitCode" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="ProductUnitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PRODUCT_RELATIONS_PRODUCTU" FromRole="ProductUnit" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="province">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="PurchaseOrder">
           <Key>
@@ -1301,12 +1443,12 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="DiscountPercent" Type="Double" />
           <Property Name="IsPay" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedPerson" Type="Guid" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_SALEORDE_RELATIONS_CUSTOMER" FromRole="SaleOrder" ToRole="Customer" />
           <NavigationProperty Name="User" Relationship="Self.FK_SALEORDE_CREATEDBY_USER" FromRole="SaleOrder" ToRole="User" />
           <NavigationProperty Name="SaleOrderDetail" Relationship="Self.FK_SALEORDE_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="SaleOrderDetail" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SALEORDE" FromRole="SaleOrder" ToRole="StockOut" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdatedPerson" Type="Guid" />
         </EntityType>
         <EntityType Name="SaleOrderDetail">
           <Key>
@@ -1439,8 +1581,9 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="SupplierName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
           <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="PurchaseOrder" />
           <NavigationProperty Name="StockOut" Relationship="Self.FK_STOCKOUT_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="StockOut" />
           <NavigationProperty Name="SupplierProduct" Relationship="Self.FK_SUPPLIER_RELATIONS_SUPPLIER" FromRole="Supplier" ToRole="SupplierProduct" />
@@ -1538,6 +1681,88 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="UserTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="User" Relationship="Self.FK_USER_RELATIONS_USERTYPE" FromRole="UserType" ToRole="User" />
+        </EntityType>
+        <EntityType Name="ward">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="district_id" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vw_AddressCustomer">
+          <Key>
+            <PropertyRef Name="AddressCustomerId" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="ProvinceId" />
+            <PropertyRef Name="DistrictId" />
+            <PropertyRef Name="WardId" />
+          </Key>
+          <Property Name="AddressCustomerId" Type="Guid" Nullable="false" />
+          <Property Name="CustomerId" Type="Guid" Nullable="false" />
+          <Property Name="CustomerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ProvinceId" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ProvinceName" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="DistrictId" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DistrictName" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="WardId" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="WardName" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="Detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FullAddress" Type="String" MaxLength="157" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_ProductOnStock">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Guid" Nullable="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TotalQuanlity" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="SearchString" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_ProductOnStockDetail">
+          <Key>
+            <PropertyRef Name="ProductOnStockId" />
+          </Key>
+          <Property Name="ProductOnStockId" Type="Guid" Nullable="false" />
+          <Property Name="ProductId" Type="Guid" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="StockCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StockName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecentQuanlity" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MaxQuanlity" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MinQuanlity" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SearchString" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_SaleOrder">
+          <Key>
+            <PropertyRef Name="SaleOrderDetailId" />
+          </Key>
+          <Property Name="SaleOrderDetailId" Type="Guid" Nullable="false" />
+          <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Customer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="QuanlityOfCustomer" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_SaleOrderDetail">
+          <Key>
+            <PropertyRef Name="SaleOrderDetailId" />
+          </Key>
+          <Property Name="SaleOrderDetailId" Type="Guid" Nullable="false" />
+          <Property Name="ProductId" Type="Guid" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SaleOrderId" Type="Guid" />
+          <Property Name="QuanlityAvailable" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuanlityOfCustomer" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="vw_UserPermission">
           <Key>
@@ -2020,6 +2245,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
         <EntityContainer Name="StockManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AddressCustomer" EntityType="Self.AddressCustomer" />
           <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <EntitySet Name="district" EntityType="Self.district" />
           <EntitySet Name="GroupCustomer" EntityType="Self.GroupCustomer" />
           <EntitySet Name="GroupMember" EntityType="Self.GroupMember" />
           <EntitySet Name="Permission" EntityType="Self.Permission" />
@@ -2028,6 +2254,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySet Name="ProductOnStock" EntityType="Self.ProductOnStock" />
           <EntitySet Name="ProductType" EntityType="Self.ProductType" />
           <EntitySet Name="ProductUnit" EntityType="Self.ProductUnit" />
+          <EntitySet Name="province" EntityType="Self.province" />
           <EntitySet Name="PurchaseOrder" EntityType="Self.PurchaseOrder" />
           <EntitySet Name="PurchaseOrderDetail" EntityType="Self.PurchaseOrderDetail" />
           <EntitySet Name="SaleOrder" EntityType="Self.SaleOrder" />
@@ -2046,6 +2273,12 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySet Name="User" EntityType="Self.User" />
           <EntitySet Name="UserPermission" EntityType="Self.UserPermission" />
           <EntitySet Name="UserType" EntityType="Self.UserType" />
+          <EntitySet Name="ward" EntityType="Self.ward" />
+          <EntitySet Name="vw_AddressCustomer" EntityType="Self.vw_AddressCustomer" />
+          <EntitySet Name="vw_ProductOnStock" EntityType="Self.vw_ProductOnStock" />
+          <EntitySet Name="vw_ProductOnStockDetail" EntityType="Self.vw_ProductOnStockDetail" />
+          <EntitySet Name="vw_SaleOrder" EntityType="Self.vw_SaleOrder" />
+          <EntitySet Name="vw_SaleOrderDetail" EntityType="Self.vw_SaleOrderDetail" />
           <EntitySet Name="vw_UserPermission" EntityType="Self.vw_UserPermission" />
           <AssociationSet Name="FK_ADDRESSC_RELATIONS_CUSTOMER" Association="Self.FK_ADDRESSC_RELATIONS_CUSTOMER">
             <End Role="Customer" EntitySet="Customer" />
@@ -2195,48 +2428,21 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             <End Role="User" EntitySet="User" />
             <End Role="UserPermission" EntitySet="UserPermission" />
           </AssociationSet>
-          <EntitySet Name="vw_SaleOrder" EntityType="StockManagementModel.vw_SaleOrder" />
-          <EntitySet Name="vw_ProductOnStock" EntityType="StockManagementModel.vw_ProductOnStock" />
-          <EntitySet Name="vw_ProductOnStockDetail" EntityType="StockManagementModel.vw_ProductOnStockDetail" />
+          <EntitySet Name="vw_Product" EntityType="StockManagementModel.vw_Product" />
         </EntityContainer>
-        <EntityType Name="vw_SaleOrder">
-          <Key>
-            <PropertyRef Name="SaleOrderDetailId" />
-          </Key>
-          <Property Name="SaleOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Customer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="QuanlityOfCustomer" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="SaleOrderDetailId" Type="Guid" Nullable="false" />
-          <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-        </EntityType>
-        <EntityType Name="vw_ProductOnStock">
+        <EntityType Name="vw_Product">
           <Key>
             <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="ProductId" Type="Guid" Nullable="false" />
           <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="TotalQuanlity" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="SearchString" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="vw_ProductOnStockDetail">
-          <Key>
-            <PropertyRef Name="ProductOnStockId" />
-          </Key>
-          <Property Name="ProductOnStockId" Type="Guid" Nullable="false" />
-          <Property Name="ProductId" Type="Guid" />
-          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="StockCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="StockName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="RecentQuanlity" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="MaxQuanlity" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="MinQuanlity" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="SearchString" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductTypeId" Type="Guid" />
+          <Property Name="ProductTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ProductUnitId" Type="Guid" />
+          <Property Name="ProductUnitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2271,6 +2477,16 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
                 <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="district">
+            <EntityTypeMapping TypeName="StockManagementModel.district">
+              <MappingFragment StoreEntitySet="district">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="province_id" ColumnName="province_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2337,12 +2553,12 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="ProductOnStock">
             <EntityTypeMapping TypeName="StockManagementModel.ProductOnStock">
               <MappingFragment StoreEntitySet="ProductOnStock">
-                <ScalarProperty Name="RecentQuanlity" ColumnName="RecentQuanlity" />
                 <ScalarProperty Name="ProductOnStockId" ColumnName="ProductOnStockId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="StockId" ColumnName="StockId" />
                 <ScalarProperty Name="MinQuanlity" ColumnName="MinQuanlity" />
                 <ScalarProperty Name="MaxQuanlity" ColumnName="MaxQuanlity" />
+                <ScalarProperty Name="RecentQuanlity" ColumnName="RecentQuanlity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2363,6 +2579,15 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
                 <ScalarProperty Name="ProductUnitId" ColumnName="ProductUnitId" />
                 <ScalarProperty Name="ProductUnitCode" ColumnName="ProductUnitCode" />
                 <ScalarProperty Name="ProductUnitName" ColumnName="ProductUnitName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="province">
+            <EntityTypeMapping TypeName="StockManagementModel.province">
+              <MappingFragment StoreEntitySet="province">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="type" ColumnName="type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2394,8 +2619,6 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="SaleOrder">
             <EntityTypeMapping TypeName="StockManagementModel.SaleOrder">
               <MappingFragment StoreEntitySet="SaleOrder">
-                <ScalarProperty Name="UpdatedPerson" ColumnName="UpdatedPerson" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
@@ -2407,6 +2630,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
                 <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
                 <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
                 <ScalarProperty Name="IsPay" ColumnName="IsPay" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedPerson" ColumnName="UpdatedPerson" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2523,6 +2748,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
                 <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2614,6 +2840,90 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ward">
+            <EntityTypeMapping TypeName="StockManagementModel.ward">
+              <MappingFragment StoreEntitySet="ward">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="district_id" ColumnName="district_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_AddressCustomer">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_AddressCustomer">
+              <MappingFragment StoreEntitySet="vw_AddressCustomer">
+                <ScalarProperty Name="AddressCustomerId" ColumnName="AddressCustomerId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+                <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="WardId" ColumnName="WardId" />
+                <ScalarProperty Name="WardName" ColumnName="WardName" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ProductOnStock">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_ProductOnStock">
+              <MappingFragment StoreEntitySet="vw_ProductOnStock">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="TotalQuanlity" ColumnName="TotalQuanlity" />
+                <ScalarProperty Name="SearchString" ColumnName="SearchString" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ProductOnStockDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_ProductOnStockDetail">
+              <MappingFragment StoreEntitySet="vw_ProductOnStockDetail">
+                <ScalarProperty Name="ProductOnStockId" ColumnName="ProductOnStockId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+                <ScalarProperty Name="StockName" ColumnName="StockName" />
+                <ScalarProperty Name="RecentQuanlity" ColumnName="RecentQuanlity" />
+                <ScalarProperty Name="MaxQuanlity" ColumnName="MaxQuanlity" />
+                <ScalarProperty Name="MinQuanlity" ColumnName="MinQuanlity" />
+                <ScalarProperty Name="SearchString" ColumnName="SearchString" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_SaleOrder">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_SaleOrder">
+              <MappingFragment StoreEntitySet="vw_SaleOrder">
+                <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
+                <ScalarProperty Name="SaleOrderCode" ColumnName="SaleOrderCode" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="QuanlityOfCustomer" ColumnName="QuanlityOfCustomer" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_SaleOrderDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_SaleOrderDetail">
+              <MappingFragment StoreEntitySet="vw_SaleOrderDetail">
+                <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
+                <ScalarProperty Name="QuanlityAvailable" ColumnName="QuanlityAvailable" />
+                <ScalarProperty Name="QuanlityOfCustomer" ColumnName="QuanlityOfCustomer" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="vw_UserPermission">
             <EntityTypeMapping TypeName="StockManagementModel.vw_UserPermission">
               <MappingFragment StoreEntitySet="vw_UserPermission">
@@ -2649,45 +2959,18 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="vw_SaleOrder">
-            <EntityTypeMapping TypeName="StockManagementModel.vw_SaleOrder">
-              <MappingFragment StoreEntitySet="vw_SaleOrder">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
-                <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
-                <ScalarProperty Name="QuanlityOfCustomer" ColumnName="QuanlityOfCustomer" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-                <ScalarProperty Name="Customer" ColumnName="Customer" />
-                <ScalarProperty Name="SaleOrderCode" ColumnName="SaleOrderCode" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="vw_ProductOnStock">
-            <EntityTypeMapping TypeName="StockManagementModel.vw_ProductOnStock">
-              <MappingFragment StoreEntitySet="vw_ProductOnStock">
-                <ScalarProperty Name="SearchString" ColumnName="SearchString" />
-                <ScalarProperty Name="TotalQuanlity" ColumnName="TotalQuanlity" />
+          <EntitySetMapping Name="vw_Product">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_Product">
+              <MappingFragment StoreEntitySet="vw_Product">
+                <ScalarProperty Name="ProductUnitName" ColumnName="ProductUnitName" />
+                <ScalarProperty Name="ProductUnitId" ColumnName="ProductUnitId" />
+                <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="vw_ProductOnStockDetail">
-            <EntityTypeMapping TypeName="StockManagementModel.vw_ProductOnStockDetail">
-              <MappingFragment StoreEntitySet="vw_ProductOnStockDetail">
-                <ScalarProperty Name="SearchString" ColumnName="SearchString" />
-                <ScalarProperty Name="MinQuanlity" ColumnName="MinQuanlity" />
-                <ScalarProperty Name="MaxQuanlity" ColumnName="MaxQuanlity" />
-                <ScalarProperty Name="RecentQuanlity" ColumnName="RecentQuanlity" />
-                <ScalarProperty Name="StockName" ColumnName="StockName" />
-                <ScalarProperty Name="StockCode" ColumnName="StockCode" />
-                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="ProductOnStockId" ColumnName="ProductOnStockId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2706,7 +2989,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

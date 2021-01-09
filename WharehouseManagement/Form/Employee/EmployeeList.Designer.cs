@@ -121,6 +121,7 @@ namespace StockManagement.Form.Employee
             this.btn_ChiTiet});
             this.gridView1.GridControl = this.gC_DanhSach;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
             // UserId
             // 
@@ -130,7 +131,7 @@ namespace StockManagement.Form.Employee
             this.UserId.Name = "UserId";
             this.UserId.Visible = true;
             this.UserId.VisibleIndex = 0;
-            this.UserId.Width = 67;
+            this.UserId.Width = 139;
             // 
             // FullName
             // 
@@ -140,7 +141,7 @@ namespace StockManagement.Form.Employee
             this.FullName.Name = "FullName";
             this.FullName.Visible = true;
             this.FullName.VisibleIndex = 1;
-            this.FullName.Width = 96;
+            this.FullName.Width = 170;
             // 
             // UserName
             // 
@@ -150,7 +151,7 @@ namespace StockManagement.Form.Employee
             this.UserName.Name = "UserName";
             this.UserName.Visible = true;
             this.UserName.VisibleIndex = 2;
-            this.UserName.Width = 114;
+            this.UserName.Width = 166;
             // 
             // IdentityCard
             // 
@@ -160,7 +161,7 @@ namespace StockManagement.Form.Employee
             this.IdentityCard.Name = "IdentityCard";
             this.IdentityCard.Visible = true;
             this.IdentityCard.VisibleIndex = 3;
-            this.IdentityCard.Width = 67;
+            this.IdentityCard.Width = 132;
             // 
             // Address
             // 
@@ -170,7 +171,7 @@ namespace StockManagement.Form.Employee
             this.Address.Name = "Address";
             this.Address.Visible = true;
             this.Address.VisibleIndex = 7;
-            this.Address.Width = 92;
+            this.Address.Width = 176;
             // 
             // gridColumn3
             // 
@@ -179,7 +180,7 @@ namespace StockManagement.Form.Employee
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
-            this.gridColumn3.Width = 74;
+            this.gridColumn3.Width = 186;
             // 
             // CellPhone
             // 
@@ -189,7 +190,7 @@ namespace StockManagement.Form.Employee
             this.CellPhone.Name = "CellPhone";
             this.CellPhone.Visible = true;
             this.CellPhone.VisibleIndex = 5;
-            this.CellPhone.Width = 93;
+            this.CellPhone.Width = 150;
             // 
             // Email
             // 
@@ -199,7 +200,7 @@ namespace StockManagement.Form.Employee
             this.Email.Name = "Email";
             this.Email.Visible = true;
             this.Email.VisibleIndex = 6;
-            this.Email.Width = 83;
+            this.Email.Width = 188;
             // 
             // Gender
             // 
@@ -209,7 +210,7 @@ namespace StockManagement.Form.Employee
             this.Gender.Name = "Gender";
             this.Gender.Visible = true;
             this.Gender.VisibleIndex = 8;
-            this.Gender.Width = 64;
+            this.Gender.Width = 83;
             // 
             // MaritalStatus
             // 
@@ -219,7 +220,7 @@ namespace StockManagement.Form.Employee
             this.MaritalStatus.Name = "MaritalStatus";
             this.MaritalStatus.Visible = true;
             this.MaritalStatus.VisibleIndex = 9;
-            this.MaritalStatus.Width = 64;
+            this.MaritalStatus.Width = 182;
             // 
             // Avatar
             // 
@@ -229,7 +230,7 @@ namespace StockManagement.Form.Employee
             this.Avatar.Name = "Avatar";
             this.Avatar.Visible = true;
             this.Avatar.VisibleIndex = 10;
-            this.Avatar.Width = 64;
+            this.Avatar.Width = 188;
             // 
             // gridColumn7
             // 
@@ -238,17 +239,18 @@ namespace StockManagement.Form.Employee
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 11;
-            this.gridColumn7.Width = 46;
+            this.gridColumn7.Width = 195;
             // 
             // btn_Xoa
             // 
             this.btn_Xoa.Caption = "Xóa";
             this.btn_Xoa.ColumnEdit = this.btnXoa;
+            this.btn_Xoa.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.btn_Xoa.MinWidth = 25;
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Visible = true;
-            this.btn_Xoa.VisibleIndex = 12;
-            this.btn_Xoa.Width = 94;
+            this.btn_Xoa.VisibleIndex = 14;
+            this.btn_Xoa.Width = 65;
             // 
             // btnXoa
             // 
@@ -263,11 +265,12 @@ namespace StockManagement.Form.Employee
             // 
             this.btn_Sua.Caption = "Sửa";
             this.btn_Sua.ColumnEdit = this.btnSua;
+            this.btn_Sua.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.btn_Sua.MinWidth = 25;
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Visible = true;
             this.btn_Sua.VisibleIndex = 13;
-            this.btn_Sua.Width = 94;
+            this.btn_Sua.Width = 61;
             // 
             // btnSua
             // 
@@ -282,11 +285,12 @@ namespace StockManagement.Form.Employee
             // 
             this.btn_ChiTiet.Caption = "Chi tiết";
             this.btn_ChiTiet.ColumnEdit = this.btnChitiet;
+            this.btn_ChiTiet.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.btn_ChiTiet.MinWidth = 25;
             this.btn_ChiTiet.Name = "btn_ChiTiet";
             this.btn_ChiTiet.Visible = true;
-            this.btn_ChiTiet.VisibleIndex = 14;
-            this.btn_ChiTiet.Width = 94;
+            this.btn_ChiTiet.VisibleIndex = 12;
+            this.btn_ChiTiet.Width = 124;
             // 
             // btnChitiet
             // 
@@ -296,6 +300,7 @@ namespace StockManagement.Form.Employee
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnChitiet.Name = "btnChitiet";
             this.btnChitiet.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnChitiet.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnChitiet_ButtonClick);
             // 
             // gC_DanhSach
             // 

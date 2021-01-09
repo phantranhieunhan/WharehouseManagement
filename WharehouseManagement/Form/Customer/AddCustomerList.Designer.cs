@@ -29,55 +29,54 @@ namespace StockManagement.Form.Customer
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_LastUpdate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_ChiTiet = new System.Windows.Forms.Button();
             this.cbb_DiaChi = new DevExpress.XtraEditors.LookUpEdit();
             this.txt_Email = new DevExpress.XtraEditors.TextEdit();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_CreatedDate = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Birthday = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_SDT = new DevExpress.XtraEditors.TextEdit();
             this.txt_TenKhachHang = new DevExpress.XtraEditors.TextEdit();
             this.btn_Luu = new System.Windows.Forms.Button();
             this.txt_MaKhachHang = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.cb_GroupCustomer = new DevExpress.XtraEditors.LookUpEdit();
+            this.stockManagementDataSet = new StockManagement.StockManagementDataSet();
+            this.groupCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupCustomerTableAdapter = new StockManagement.StockManagementDataSetTableAdapters.GroupCustomerTableAdapter();
+            this.stockManagementDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addressCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addressCustomerTableAdapter = new StockManagement.StockManagementDataSetTableAdapters.AddressCustomerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Email.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKhachHang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_GroupCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCustomerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressCustomerBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 286);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 17);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Upload hình ảnh:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(333, 178);
+            this.label3.Location = new System.Drawing.Point(304, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.Size = new System.Drawing.Size(119, 17);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Cập nhật:";
+            this.label3.Text = "Cập nhật lần cuối:";
             // 
-            // dateTimePicker3
+            // dtp_LastUpdate
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(409, 178);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker3.TabIndex = 46;
+            this.dtp_LastUpdate.Location = new System.Drawing.Point(409, 178);
+            this.dtp_LastUpdate.Name = "dtp_LastUpdate";
+            this.dtp_LastUpdate.Size = new System.Drawing.Size(200, 23);
+            this.dtp_LastUpdate.TabIndex = 46;
             // 
             // label2
             // 
@@ -96,6 +95,7 @@ namespace StockManagement.Form.Customer
             this.btn_ChiTiet.TabIndex = 44;
             this.btn_ChiTiet.Text = "Chi tiết";
             this.btn_ChiTiet.UseVisualStyleBackColor = true;
+            this.btn_ChiTiet.Click += new System.EventHandler(this.btn_ChiTiet_Click);
             // 
             // cbb_DiaChi
             // 
@@ -103,7 +103,10 @@ namespace StockManagement.Form.Customer
             this.cbb_DiaChi.Name = "cbb_DiaChi";
             this.cbb_DiaChi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbb_DiaChi.Properties.DataSource = this.stockManagementDataSet;
+            this.cbb_DiaChi.Properties.DisplayMember = "AddressCustomerId";
             this.cbb_DiaChi.Properties.NullText = "Nhóm";
+            this.cbb_DiaChi.Properties.ValueMember = "AddressCustomerId";
             this.cbb_DiaChi.Size = new System.Drawing.Size(491, 22);
             this.cbb_DiaChi.TabIndex = 43;
             // 
@@ -115,19 +118,19 @@ namespace StockManagement.Form.Customer
             this.txt_Email.Size = new System.Drawing.Size(173, 22);
             this.txt_Email.TabIndex = 41;
             // 
-            // dateTimePicker2
+            // dtp_CreatedDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(101, 178);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 40;
+            this.dtp_CreatedDate.Location = new System.Drawing.Point(101, 178);
+            this.dtp_CreatedDate.Name = "dtp_CreatedDate";
+            this.dtp_CreatedDate.Size = new System.Drawing.Size(200, 23);
+            this.dtp_CreatedDate.TabIndex = 40;
             // 
-            // dateTimePicker1
+            // dtp_Birthday
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(91, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 39;
+            this.dtp_Birthday.Location = new System.Drawing.Point(91, 80);
+            this.dtp_Birthday.Name = "dtp_Birthday";
+            this.dtp_Birthday.Size = new System.Drawing.Size(200, 23);
+            this.dtp_Birthday.TabIndex = 39;
             // 
             // label1
             // 
@@ -162,6 +165,7 @@ namespace StockManagement.Form.Customer
             this.btn_Luu.TabIndex = 35;
             this.btn_Luu.Text = "Lưu lại";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // txt_MaKhachHang
             // 
@@ -171,77 +175,107 @@ namespace StockManagement.Form.Customer
             this.txt_MaKhachHang.Size = new System.Drawing.Size(162, 22);
             this.txt_MaKhachHang.TabIndex = 34;
             // 
-            // textEdit3
+            // cb_GroupCustomer
             // 
-            this.textEdit3.Location = new System.Drawing.Point(493, 82);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cb_GroupCustomer.Location = new System.Drawing.Point(493, 82);
+            this.cb_GroupCustomer.Name = "cb_GroupCustomer";
+            this.cb_GroupCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit3.Properties.NullText = "Nhóm";
-            this.textEdit3.Size = new System.Drawing.Size(125, 22);
-            this.textEdit3.TabIndex = 42;
+            this.cb_GroupCustomer.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupCustomerCode", "Mã nhóm"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupCustomerName", "Tên nhóm")});
+            this.cb_GroupCustomer.Properties.DataSource = this.groupCustomerBindingSource;
+            this.cb_GroupCustomer.Properties.DisplayMember = "GroupCustomerName";
+            this.cb_GroupCustomer.Properties.NullText = "Nhóm";
+            this.cb_GroupCustomer.Properties.ValueMember = "GroupCustomerId";
+            this.cb_GroupCustomer.Size = new System.Drawing.Size(125, 22);
+            this.cb_GroupCustomer.TabIndex = 42;
             // 
-            // textEdit1
+            // stockManagementDataSet
             // 
-            this.textEdit1.Location = new System.Drawing.Point(307, 238);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.textEdit1.Size = new System.Drawing.Size(143, 116);
-            this.textEdit1.TabIndex = 48;
-            this.textEdit1.TabStop = true;
+            this.stockManagementDataSet.DataSetName = "StockManagementDataSet";
+            this.stockManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupCustomerBindingSource
+            // 
+            this.groupCustomerBindingSource.DataMember = "GroupCustomer";
+            this.groupCustomerBindingSource.DataSource = this.stockManagementDataSet;
+            // 
+            // groupCustomerTableAdapter
+            // 
+            this.groupCustomerTableAdapter.ClearBeforeFill = true;
+            // 
+            // stockManagementDataSetBindingSource
+            // 
+            this.stockManagementDataSetBindingSource.DataSource = this.stockManagementDataSet;
+            this.stockManagementDataSetBindingSource.Position = 0;
+            // 
+            // addressCustomerBindingSource
+            // 
+            this.addressCustomerBindingSource.DataMember = "AddressCustomer";
+            this.addressCustomerBindingSource.DataSource = this.stockManagementDataSetBindingSource;
+            // 
+            // addressCustomerTableAdapter
+            // 
+            this.addressCustomerTableAdapter.ClearBeforeFill = true;
             // 
             // AddCustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 408);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dtp_LastUpdate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_ChiTiet);
             this.Controls.Add(this.cbb_DiaChi);
             this.Controls.Add(this.txt_Email);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_CreatedDate);
+            this.Controls.Add(this.dtp_Birthday);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.txt_TenKhachHang);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.txt_MaKhachHang);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.cb_GroupCustomer);
             this.Name = "AddCustomerList";
             this.Text = "Thêm khách hàng";
+            this.Load += new System.EventHandler(this.AddCustomerList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbb_DiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Email.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKhachHang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_GroupCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCustomerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressCustomerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtp_LastUpdate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_ChiTiet;
         private DevExpress.XtraEditors.LookUpEdit cbb_DiaChi;
         private DevExpress.XtraEditors.TextEdit txt_Email;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_CreatedDate;
+        private System.Windows.Forms.DateTimePicker dtp_Birthday;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txt_SDT;
         private DevExpress.XtraEditors.TextEdit txt_TenKhachHang;
         private System.Windows.Forms.Button btn_Luu;
         private DevExpress.XtraEditors.TextEdit txt_MaKhachHang;
-        private DevExpress.XtraEditors.LookUpEdit textEdit3;
-        private DevExpress.XtraEditors.PictureEdit textEdit1;
+        private DevExpress.XtraEditors.LookUpEdit cb_GroupCustomer;
+        private StockManagementDataSet stockManagementDataSet;
+        private System.Windows.Forms.BindingSource groupCustomerBindingSource;
+        private StockManagementDataSetTableAdapters.GroupCustomerTableAdapter groupCustomerTableAdapter;
+        private System.Windows.Forms.BindingSource stockManagementDataSetBindingSource;
+        private System.Windows.Forms.BindingSource addressCustomerBindingSource;
+        private StockManagementDataSetTableAdapters.AddressCustomerTableAdapter addressCustomerTableAdapter;
     }
 }

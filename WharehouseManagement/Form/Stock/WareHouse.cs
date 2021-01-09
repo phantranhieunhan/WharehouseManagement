@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using StockManagement.Data;
+using StockManagement.Business;
+
 namespace StockManagement.Form.Stock
 {
     public partial class WareHouse : DevExpress.XtraEditors.XtraUserControl
@@ -16,6 +19,12 @@ namespace StockManagement.Form.Stock
         public WareHouse()
         {
             InitializeComponent();
+            GetInit();
+        }
+        IStock stockBO = new StockBO();
+        private void GetInit()
+        {
+            gC_DanhSach.DataSource = stockBO.GetStockList();
         }
 
         private void btn_ThemKH_Click(object sender, EventArgs e)

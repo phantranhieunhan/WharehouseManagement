@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace StockManagement.Form.Orders
+namespace StockManagement.Form.Employee
 {
-    public partial class SaleOrderProductDetail : DevExpress.XtraEditors.XtraForm
+    public partial class EmployeeDetail : DevExpress.XtraEditors.XtraForm
     {
-        public SaleOrderProductDetail()
+        public EmployeeDetail()
         {
             InitializeComponent();
         }
+
     }
 }

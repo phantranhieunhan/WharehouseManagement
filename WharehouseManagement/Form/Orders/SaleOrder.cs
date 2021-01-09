@@ -19,6 +19,7 @@ namespace StockManagement.Form.Orders
         public SaleOrder()
         {
             InitializeComponent();//nhấn f12
+            GetInit();
         }
         private void GetInit()
         {
@@ -32,6 +33,16 @@ namespace StockManagement.Form.Orders
         {
             SaleOrderAdd f = new SaleOrderAdd();
             f.Show();
+        }
+
+        private void buttonRecieve_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -53,7 +53,7 @@ namespace StockManagement.Form.Orders
                 Data.vw_ProductOnStock vw_ProductOnStock = (Data.vw_ProductOnStock)lud_Product.GetSelectedDataRow();
 
                 IProduct productBO = new ProductBO();
-                List<vw_ProductOnStockDetail> productOnStockDetailList = productBO.GetProductOnStock(vw_ProductOnStock.ProductId);
+                List<vw_ProductOnStockDetail> productOnStockDetailList = productBO.GetProductOnStockDetail(vw_ProductOnStock.ProductId);
 
                 ProductOnStockDetail salesOrderProductDetail = new ProductOnStockDetail();
                 salesOrderProductDetail = new ProductOnStockDetail(productOnStockDetailList);

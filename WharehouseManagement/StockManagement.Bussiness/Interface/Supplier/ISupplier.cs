@@ -8,8 +8,10 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public class CustomerList:Repository<Customer>, ICustomerList
+    public interface ISupplier:IRepository<Supplier>
     {
+        List<Supplier> GetSuppliers(bool isActive);
+        List<SupplierProduct> GetSupplierProducts(bool isActive);
 
     }
 }

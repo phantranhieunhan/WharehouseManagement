@@ -25,6 +25,16 @@ namespace StockManagement.Business
 
             }
         }
+
+        public void AddSaleOrder(SaleOrder saleOrder)
+        {
+            using (var db = new StockManagementEntities())
+            {
+                db.SaleOrder.Add(saleOrder);
+                db.SaveChanges();
+            }
+        }
+
         //public List<vw_ProductOnStockDetail> GetProductOnStockByUser()
         //{
 

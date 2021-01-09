@@ -144,11 +144,11 @@
     <Compile Include="Form\Employee\EmployeeList.Designer.cs">
       <DependentUpon>EmployeeList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Employee\Form_DataEmployee.cs">
+    <Compile Include="Form\Employee\EmployeeDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Employee\Form_DataEmployee.Designer.cs">
-      <DependentUpon>Form_DataEmployee.cs</DependentUpon>
+    <Compile Include="Form\Employee\EmployeeDetail.Designer.cs">
+      <DependentUpon>EmployeeDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Employee\RegisterAccount.cs">
       <SubType>Form</SubType>
@@ -191,12 +191,6 @@
     </Compile>
     <Compile Include="Form\Orders\SaleOrderAdd.Designer.cs">
       <DependentUpon>SaleOrderAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Orders\SaleOrderProductDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Orders\SaleOrderProductDetail.Designer.cs">
-      <DependentUpon>SaleOrderProductDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Orders\PurchaseOrder.cs">
       <SubType>UserControl</SubType>
@@ -348,8 +342,8 @@
     <EmbeddedResource Include="Form\Employee\EmployeeList.resx">
       <DependentUpon>EmployeeList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Employee\Form_DataEmployee.resx">
-      <DependentUpon>Form_DataEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Employee\EmployeeDetail.resx">
+      <DependentUpon>EmployeeDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Employee\RegisterAccount.resx">
       <DependentUpon>RegisterAccount.cs</DependentUpon>
@@ -368,9 +362,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\SaleOrderAdd.resx">
       <DependentUpon>SaleOrderAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Orders\SaleOrderProductDetail.resx">
-      <DependentUpon>SaleOrderProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
@@ -416,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\WareHouse.resx">
       <DependentUpon>WareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Supplier\SupplierList.resx">
       <DependentUpon>SupplierList.cs</DependentUpon>
