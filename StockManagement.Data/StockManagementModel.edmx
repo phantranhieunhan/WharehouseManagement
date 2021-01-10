@@ -145,6 +145,8 @@
           <Property Name="PurchaseOrderCode" Type="varchar" MaxLength="50" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
           <Property Name="IsPay" Type="bit" />
+          <Property Name="TotalAmount" Type="money" />
+          <Property Name="CreatedDate" Type="datetime" />
         </EntityType>
         <EntityType Name="PurchaseOrderDetail">
           <Key>
@@ -154,8 +156,8 @@
           <Property Name="PurchaseOrderId" Type="uniqueidentifier" />
           <Property Name="ProductId" Type="uniqueidentifier" />
           <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="QualityPurchase" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="QualityAvalible" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="QuanlityPurchase" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="QuanlityAvalible" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="SaleOrder">
           <Key>
@@ -443,6 +445,48 @@ warning 6002: The table/view 'StockManagement.dbo.vw_ProductOnStockDetail' does 
           <Property Name="SearchString" Type="nvarchar" MaxLength="4000" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'StockManagement.dbo.vw_PurchaseOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_PurchaseOrder">
+          <Key>
+            <PropertyRef Name="PurchaseOrderDetailId" />
+            <PropertyRef Name="SupplierId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="PurchaseOrderDetailId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PurchaseOrderCode" Type="varchar" MaxLength="50" />
+          <Property Name="SupplierId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SupplierCode" Type="varchar" MaxLength="50" />
+          <Property Name="SupplierName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="QuanlityPurchase" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="QuanlityAvalible" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="TotalAmount" Type="money" />
+          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="UserCode" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'StockManagement.dbo.vw_PurchaseOrderDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_PurchaseOrderDetail">
+          <Key>
+            <PropertyRef Name="PurchaseOrderDetailId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="PurchaseOrderDetailId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="PurchaseOrderId" Type="uniqueidentifier" />
+          <Property Name="Price" Type="money" />
+          <Property Name="QuanlityAvalible" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="QuanlityPurchase" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Status" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'StockManagement.dbo.vw_SaleOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_SaleOrder">
           <Key>
@@ -474,6 +518,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_SaleOrderDetail' does not h
           <Property Name="ProductId" Type="uniqueidentifier" />
           <Property Name="ProductCode" Type="varchar" MaxLength="50" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="money" />
           <Property Name="SaleOrderId" Type="uniqueidentifier" />
           <Property Name="QuanlityAvailable" Type="numeric" Precision="18" Scale="0" />
           <Property Name="QuanlityOfCustomer" Type="numeric" Precision="18" Scale="0" />
@@ -1043,6 +1088,39 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
     [vw_ProductOnStockDetail].[SearchString] AS [SearchString]
     FROM [dbo].[vw_ProductOnStockDetail] AS [vw_ProductOnStockDetail]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="vw_PurchaseOrder" EntityType="Self.vw_PurchaseOrder" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_PurchaseOrder].[PurchaseOrderDetailId] AS [PurchaseOrderDetailId], 
+    [vw_PurchaseOrder].[PurchaseOrderCode] AS [PurchaseOrderCode], 
+    [vw_PurchaseOrder].[SupplierId] AS [SupplierId], 
+    [vw_PurchaseOrder].[SupplierCode] AS [SupplierCode], 
+    [vw_PurchaseOrder].[SupplierName] AS [SupplierName], 
+    [vw_PurchaseOrder].[ProductId] AS [ProductId], 
+    [vw_PurchaseOrder].[ProductCode] AS [ProductCode], 
+    [vw_PurchaseOrder].[ProductName] AS [ProductName], 
+    [vw_PurchaseOrder].[QuanlityPurchase] AS [QuanlityPurchase], 
+    [vw_PurchaseOrder].[QuanlityAvalible] AS [QuanlityAvalible], 
+    [vw_PurchaseOrder].[TotalAmount] AS [TotalAmount], 
+    [vw_PurchaseOrder].[Status] AS [Status], 
+    [vw_PurchaseOrder].[CreatedBy] AS [CreatedBy], 
+    [vw_PurchaseOrder].[UserCode] AS [UserCode], 
+    [vw_PurchaseOrder].[UserName] AS [UserName], 
+    [vw_PurchaseOrder].[CreatedDate] AS [CreatedDate]
+    FROM [dbo].[vw_PurchaseOrder] AS [vw_PurchaseOrder]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_PurchaseOrderDetail" EntityType="Self.vw_PurchaseOrderDetail" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_PurchaseOrderDetail].[PurchaseOrderDetailId] AS [PurchaseOrderDetailId], 
+    [vw_PurchaseOrderDetail].[ProductId] AS [ProductId], 
+    [vw_PurchaseOrderDetail].[ProductCode] AS [ProductCode], 
+    [vw_PurchaseOrderDetail].[ProductName] AS [ProductName], 
+    [vw_PurchaseOrderDetail].[PurchaseOrderId] AS [PurchaseOrderId], 
+    [vw_PurchaseOrderDetail].[Price] AS [Price], 
+    [vw_PurchaseOrderDetail].[QuanlityAvalible] AS [QuanlityAvalible], 
+    [vw_PurchaseOrderDetail].[QuanlityPurchase] AS [QuanlityPurchase], 
+    [vw_PurchaseOrderDetail].[Status] AS [Status]
+    FROM [dbo].[vw_PurchaseOrderDetail] AS [vw_PurchaseOrderDetail]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="vw_SaleOrder" EntityType="Self.vw_SaleOrder" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_SaleOrder].[SaleOrderDetailId] AS [SaleOrderDetailId], 
@@ -1066,6 +1144,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
     [vw_SaleOrderDetail].[ProductId] AS [ProductId], 
     [vw_SaleOrderDetail].[ProductCode] AS [ProductCode], 
     [vw_SaleOrderDetail].[ProductName] AS [ProductName], 
+    [vw_SaleOrderDetail].[Price] AS [Price], 
     [vw_SaleOrderDetail].[SaleOrderId] AS [SaleOrderId], 
     [vw_SaleOrderDetail].[QuanlityAvailable] AS [QuanlityAvailable], 
     [vw_SaleOrderDetail].[QuanlityOfCustomer] AS [QuanlityOfCustomer], 
@@ -1424,6 +1503,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <NavigationProperty Name="Supplier" Relationship="Self.FK_PURCHASE_RELATIONS_SUPPLIER" FromRole="PurchaseOrder" ToRole="Supplier" />
           <NavigationProperty Name="User" Relationship="Self.FK_PURCHASE_RELATIONS_USER" FromRole="PurchaseOrder" ToRole="User" />
           <NavigationProperty Name="StockIn" Relationship="Self.FK_STOCKIN_RELATIONS_PURCHASE" FromRole="PurchaseOrder" ToRole="StockIn" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="PurchaseOrderDetail">
           <Key>
@@ -1433,10 +1514,10 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="PurchaseOrderId" Type="Guid" />
           <Property Name="ProductId" Type="Guid" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="QualityPurchase" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="QualityAvalible" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Product" Relationship="Self.FK_PURCHASE_RELATIONS_PRODUCT" FromRole="PurchaseOrderDetail" ToRole="Product" />
           <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PURCHASE_RELATIONS_PURCHASE" FromRole="PurchaseOrderDetail" ToRole="PurchaseOrder" />
+          <Property Name="QuanlityPurchase" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuanlityAvalible" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="SaleOrder">
           <Key>
@@ -1779,6 +1860,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="QuanlityAvailable" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="QuanlityOfCustomer" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="vw_UserPermission">
           <Key>
@@ -2445,6 +2527,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
             <End Role="UserPermission" EntitySet="UserPermission" />
           </AssociationSet>
           <EntitySet Name="vw_Product" EntityType="StockManagementModel.vw_Product" />
+          <EntitySet Name="vw_PurchaseOrder" EntityType="StockManagementModel.vw_PurchaseOrder" />
+          <EntitySet Name="vw_PurchaseOrderDetail" EntityType="StockManagementModel.vw_PurchaseOrderDetail" />
         </EntityContainer>
         <EntityType Name="vw_Product">
           <Key>
@@ -2459,6 +2543,44 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <Property Name="ProductTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ProductUnitId" Type="Guid" />
           <Property Name="ProductUnitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_PurchaseOrder">
+          <Key>
+            <PropertyRef Name="PurchaseOrderDetailId" />
+            <PropertyRef Name="SupplierId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="PurchaseOrderDetailId" Type="Guid" Nullable="false" />
+          <Property Name="PurchaseOrderCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SupplierId" Type="Guid" Nullable="false" />
+          <Property Name="SupplierCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SupplierName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ProductId" Type="Guid" Nullable="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuanlityPurchase" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuanlityAvalible" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vw_PurchaseOrderDetail">
+          <Key>
+            <PropertyRef Name="PurchaseOrderDetailId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="PurchaseOrderDetailId" Type="Guid" Nullable="false" />
+          <Property Name="ProductId" Type="Guid" Nullable="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PurchaseOrderId" Type="Guid" />
+          <Property Name="Status" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuanlityAvalible" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuanlityPurchase" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2610,6 +2732,8 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="PurchaseOrder">
             <EntityTypeMapping TypeName="StockManagementModel.PurchaseOrder">
               <MappingFragment StoreEntitySet="PurchaseOrder">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
                 <ScalarProperty Name="StockId" ColumnName="StockId" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
@@ -2623,13 +2747,13 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="PurchaseOrderDetail">
             <EntityTypeMapping TypeName="StockManagementModel.PurchaseOrderDetail">
               <MappingFragment StoreEntitySet="PurchaseOrderDetail">
+                <ScalarProperty Name="QuanlityAvalible" ColumnName="QuanlityAvalible" />
+                <ScalarProperty Name="QuanlityPurchase" ColumnName="QuanlityPurchase" />
                 <ScalarProperty Name="PurchaseOrderDetailId" ColumnName="PurchaseOrderDetailId" />
                 <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="QualityPurchase" ColumnName="QualityPurchase" />
-                <ScalarProperty Name="QualityAvalible" ColumnName="QualityAvalible" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SaleOrder">
@@ -2933,6 +3057,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
           <EntitySetMapping Name="vw_SaleOrderDetail">
             <EntityTypeMapping TypeName="StockManagementModel.vw_SaleOrderDetail">
               <MappingFragment StoreEntitySet="vw_SaleOrderDetail">
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="SaleOrderDetailId" ColumnName="SaleOrderDetailId" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
@@ -2994,6 +3119,43 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vw_PurchaseOrder">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_PurchaseOrder">
+              <MappingFragment StoreEntitySet="vw_PurchaseOrder">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="QuanlityAvalible" ColumnName="QuanlityAvalible" />
+                <ScalarProperty Name="QuanlityPurchase" ColumnName="QuanlityPurchase" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="PurchaseOrderCode" ColumnName="PurchaseOrderCode" />
+                <ScalarProperty Name="PurchaseOrderDetailId" ColumnName="PurchaseOrderDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_PurchaseOrderDetail">
+            <EntityTypeMapping TypeName="StockManagementModel.vw_PurchaseOrderDetail">
+              <MappingFragment StoreEntitySet="vw_PurchaseOrderDetail">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="QuanlityPurchase" ColumnName="QuanlityPurchase" />
+                <ScalarProperty Name="QuanlityAvalible" ColumnName="QuanlityAvalible" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="PurchaseOrderDetailId" ColumnName="PurchaseOrderDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -3009,7 +3171,7 @@ warning 6002: The table/view 'StockManagement.dbo.vw_UserPermission' does not ha
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

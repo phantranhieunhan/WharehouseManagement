@@ -13,16 +13,20 @@ using StockManagement.Business;
 
 namespace StockManagement.Form.Orders
 {
-    public partial class PerchaseOrderAdd : DevExpress.XtraEditors.XtraForm
+    public partial class PurchaseOrderAdd : DevExpress.XtraEditors.XtraForm
     {
-        public PerchaseOrderAdd()
+        public PurchaseOrderAdd()
         {
             InitializeComponent();
             GetInit();
         }
-
+        Data.PurchaseOrder purchaseOrder = new Data.PurchaseOrder();
+        List<Data.PurchaseOrderDetail> purchaseOrderDetailList = new List<Data.PurchaseOrderDetail>();
+        List<vw_PurchaseOrderDetail> vw_PurchaseOrderDetailList = new List<vw_PurchaseOrderDetail>();
         public void GetInit()
         {
+            purchaseOrder.PurchaseOrderId = Guid.NewGuid();
+
             using (var db = new StockManagementEntities())
             {
                 List<Data.Supplier> supplierList = db.Supplier.ToList();
@@ -44,6 +48,8 @@ namespace StockManagement.Form.Orders
 
                 
             }
+            Gc_ListProduct.DataSource = vw_PurchaseOrderDetailList;
+
         }
 
         private void btn_Info_MouseHover(object sender, EventArgs e)
@@ -73,6 +79,40 @@ namespace StockManagement.Form.Orders
                 spinEditQuanlity.Properties.MaxValue = Convert.ToInt32(vw_ProductOnStock.TotalQuanlity);
                 spinEditQuanlity.Properties.MinValue = 0;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            vw_PurchaseOrderDetail vw_PurchaseOrderDetail = new vw_PurchaseOrderDetail();
+            if (!String.IsNullOrEmpty(txt_MaDon.Text) || lud_Product.EditValue != null)
+            {
+                vw_PurchaseOrderDetail.PurchaseOrderDetailId = Guid.NewGuid();
+                Data.vw_ProductOnStock vw_ProductOnStock = (Data.vw_ProductOnStock)lud_Product.GetSelectedDataRow();
+                vw_PurchaseOrderDetail.ProductId = vw_ProductOnStock.ProductId;
+                vw_PurchaseOrderDetail.ProductCode = vw_ProductOnStock.ProductCode;
+                vw_PurchaseOrderDetail.ProductName = vw_ProductOnStock.ProductName;
+                vw_PurchaseOrderDetail.QuanlityPurchase = spinEditQuanlity.Value;
+                vw_PurchaseOrderDetail.Status = 1;
+                vw_PurchaseOrderDetail.PurchaseOrderId = purchaseOrder.PurchaseOrderId;
+                vw_PurchaseOrderDetailList.Add(vw_PurchaseOrderDetail);
+                Gc_ListProduct.RefreshDataSource();
+
+
+                PurchaseOrderDetail purchaseOrderDetail = new PurchaseOrderDetail();
+                purchaseOrderDetail.PurchaseOrderDetailId = vw_PurchaseOrderDetail.PurchaseOrderDetailId;
+                purchaseOrderDetail.PurchaseOrderId = vw_PurchaseOrderDetail.PurchaseOrderId;
+                purchaseOrderDetail.Status = vw_PurchaseOrderDetail.Status;
+                purchaseOrderDetail.ProductId = vw_PurchaseOrderDetail.ProductId;
+                purchaseOrderDetail.QuanlityAvalible = vw_PurchaseOrderDetail.QuanlityAvalible;
+                purchaseOrderDetail.QuanlityPurchase = vw_PurchaseOrderDetail.QuanlityPurchase;
+
+                purchaseOrderDetailList.Add(purchaseOrderDetail);
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải nhập mã đặt hàng trước");
+            }
+
         }
     }
 }

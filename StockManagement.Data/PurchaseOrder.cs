@@ -28,6 +28,8 @@ namespace StockManagement.Data
         public string PurchaseOrderCode { get; set; }
         public Nullable<decimal> Status { get; set; }
         public Nullable<bool> IsPay { get; set; }
+        public Nullable<decimal> TotalAmount { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }

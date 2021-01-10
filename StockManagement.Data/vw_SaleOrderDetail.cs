@@ -22,5 +22,6 @@ namespace StockManagement.Data
         public Nullable<decimal> QuanlityAvailable { get; set; }
         public Nullable<decimal> QuanlityOfCustomer { get; set; }
         public Nullable<decimal> Status { get; set; }
+        public Nullable<decimal> Price { get; set; }
     }
 }

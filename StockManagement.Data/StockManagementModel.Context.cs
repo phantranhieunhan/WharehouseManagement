@@ -63,5 +63,7 @@ namespace StockManagement.Data
         public virtual DbSet<vw_SaleOrderDetail> vw_SaleOrderDetail { get; set; }
         public virtual DbSet<vw_UserPermission> vw_UserPermission { get; set; }
         public virtual DbSet<vw_Product> vw_Product { get; set; }
+        public virtual DbSet<vw_PurchaseOrder> vw_PurchaseOrder { get; set; }
+        public virtual DbSet<vw_PurchaseOrderDetail> vw_PurchaseOrderDetail { get; set; }
     }
 }

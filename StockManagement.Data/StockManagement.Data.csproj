@@ -183,6 +183,12 @@
     <Compile Include="vw_ProductOnStockDetail.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="vw_PurchaseOrder.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_PurchaseOrderDetail.cs">
+      <DependentUpon>StockManagementModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="vw_SaleOrder.cs">
       <DependentUpon>StockManagementModel.tt</DependentUpon>
     </Compile>

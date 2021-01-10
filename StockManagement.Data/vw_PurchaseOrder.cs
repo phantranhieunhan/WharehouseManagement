@@ -12,16 +12,23 @@ namespace StockManagement.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class PurchaseOrderDetail
+    public partial class vw_PurchaseOrder
     {
         public System.Guid PurchaseOrderDetailId { get; set; }
-        public Nullable<System.Guid> PurchaseOrderId { get; set; }
-        public Nullable<System.Guid> ProductId { get; set; }
+        public string PurchaseOrderCode { get; set; }
+        public System.Guid SupplierId { get; set; }
+        public string SupplierCode { get; set; }
+        public string SupplierName { get; set; }
+        public System.Guid ProductId { get; set; }
+        public string ProductCode { get; set; }
+        public string ProductName { get; set; }
+        public Nullable<decimal> TotalAmount { get; set; }
         public Nullable<decimal> Status { get; set; }
         public Nullable<decimal> QuanlityPurchase { get; set; }
         public Nullable<decimal> QuanlityAvalible { get; set; }
-    
-        public virtual Product Product { get; set; }
-        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        public Nullable<System.Guid> CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public string UserCode { get; set; }
+        public string UserName { get; set; }
     }
 }

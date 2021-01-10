@@ -68,6 +68,7 @@
             this.btn_Xoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btn_Sua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.bt_Save = new System.Windows.Forms.Button();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NameCustom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
@@ -331,6 +332,7 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
+            this.gridColumn6,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
@@ -352,7 +354,7 @@
             this.gridColumn1.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 103;
             // 
             // gridColumn2
@@ -367,7 +369,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 281;
             // 
             // gridColumn3
@@ -380,7 +382,7 @@
             this.gridColumn3.FieldName = "QuanlityOfCustomer";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 182;
             // 
             // gridColumn4
@@ -394,7 +396,7 @@
             this.gridColumn4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn4.ImageOptions.Image")));
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 4;
             this.gridColumn4.Width = 124;
             // 
             // repositoryItemButtonEdit1
@@ -417,7 +419,7 @@
             this.gridColumn5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn5.ImageOptions.Image")));
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             this.gridColumn5.Width = 123;
             // 
             // btn_Xoa
@@ -453,6 +455,16 @@
             this.bt_Save.Text = "Save";
             this.bt_Save.UseVisualStyleBackColor = true;
             this.bt_Save.Click += new System.EventHandler(this.save_Click);
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Giá bán";
+            this.gridColumn6.FieldName = "Price";
+            this.gridColumn6.MinWidth = 25;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 0;
+            this.gridColumn6.Width = 94;
             // 
             // SaleOrderAdd
             // 
@@ -521,5 +533,6 @@
         private DevExpress.XtraEditors.SpinEdit spinEditQuanlity;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         public DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

@@ -7,13 +7,13 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public class PuschaseOrderBO : Repository<PurchaseOrder>, IPurchaseOrder
+    public class PurchaseOrderBO : Repository<PurchaseOrder>, IPurchaseOrder
     {
-        public List<vw_SaleOrder> GetData(int status)
+        public List<vw_PurchaseOrder> GetData(int status)
         {
             using (var db = new StockManagementEntities())
             {
-                return db.vw_SaleOrder.Where(s => s.Status == status).ToList();
+                return db.vw_PurchaseOrder.Where(s => s.Status == status).ToList();
             }
             
         }
