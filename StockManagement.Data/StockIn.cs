@@ -31,6 +31,7 @@ namespace StockManagement.Data
         public Nullable<System.DateTime> AccountingDate { get; set; }
         public Nullable<double> PercentComplete { get; set; }
         public string ReasonReturn { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
     
         public virtual PurchaseOrder PurchaseOrder { get; set; }
         public virtual Stock Stock { get; set; }

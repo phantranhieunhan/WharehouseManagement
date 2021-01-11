@@ -27,5 +27,10 @@ namespace StockManagement.Data
         public string CustomerCode { get; set; }
         public System.Guid ProductId { get; set; }
         public string ProductCode { get; set; }
+        public string ShipAddress { get; set; }
+        public System.Guid AddressCustomerId { get; set; }
+        public string FullAddress { get; set; }
+        public Nullable<decimal> NumberPhone { get; set; }
+        public System.Guid SaleOrderId { get; set; }
     }
 }

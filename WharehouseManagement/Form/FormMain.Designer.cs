@@ -29,14 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.btn_CaiDat = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btn_Setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Employee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_EmployeeList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_TypeEmployee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Decentralization = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Report = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Customer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_CustomerGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_CustomerList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -64,7 +69,6 @@
             this.lb_NgaySinh = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -73,28 +77,34 @@
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btn_CaiDat,
+            this.barSubItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1145, 35);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1299, 37);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barSubItem1);
             // 
-            // buttonEdit1
+            // btn_CaiDat
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(164, 92);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEdit1.Size = new System.Drawing.Size(125, 22);
-            this.buttonEdit1.TabIndex = 2;
+            this.btn_CaiDat.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btn_CaiDat.Caption = "barButtonItem1";
+            this.btn_CaiDat.Id = 0;
+            this.btn_CaiDat.Name = "btn_CaiDat";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barSubItem1.Caption = "Cài đặt";
+            this.barSubItem1.Id = 0;
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
             // 
             // btn_Setting
             // 
-            this.btn_Setting.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.btn_Setting.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Setting.ImageOptions.Image")));
             this.btn_Setting.Name = "btn_Setting";
             this.btn_Setting.Text = "Cài đặt";
             // 
@@ -104,7 +114,7 @@
             this.btn_EmployeeList,
             this.btn_TypeEmployee,
             this.btn_Decentralization});
-            this.btn_Employee.Expanded = true;
+            this.btn_Employee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Employee.ImageOptions.Image")));
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Text = "Nhân viên";
             // 
@@ -131,15 +141,38 @@
             // 
             // btn_Report
             // 
+            this.btn_Report.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement1,
+            this.accordionControlElement2,
+            this.accordionControlElement3});
+            this.btn_Report.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Report.ImageOptions.Image")));
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Text = "Báo cáo";
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "Báo cáo nhập kho";
+            // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2.Text = "Báo cáo xuất kho";
+            // 
+            // accordionControlElement3
+            // 
+            this.accordionControlElement3.Name = "accordionControlElement3";
+            this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement3.Text = "Báo cáo hàng tồn kho";
             // 
             // btn_Customer
             // 
             this.btn_Customer.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_CustomerGroup,
             this.btn_CustomerList});
-            this.btn_Customer.Expanded = true;
+            this.btn_Customer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Customer.ImageOptions.Image")));
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Text = "Khách hàng";
             // 
@@ -162,7 +195,7 @@
             this.btn_Supplier.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_SupplierList,
             this.btn_SupplierProduct});
-            this.btn_Supplier.Expanded = true;
+            this.btn_Supplier.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Supplier.ImageOptions.Image")));
             this.btn_Supplier.Name = "btn_Supplier";
             this.btn_Supplier.Text = "Nhà cung cấp";
             // 
@@ -187,7 +220,7 @@
             this.btn_InventoryManagement,
             this.btn_StockIn,
             this.btn_StockOut});
-            this.btn_Warehouse.Expanded = true;
+            this.btn_Warehouse.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Warehouse.ImageOptions.Image")));
             this.btn_Warehouse.Name = "btn_Warehouse";
             this.btn_Warehouse.Text = "Kho hàng";
             // 
@@ -224,7 +257,7 @@
             this.btn_Product.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_ProductCatagory,
             this.btn_ProductList});
-            this.btn_Product.Expanded = true;
+            this.btn_Product.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Product.ImageOptions.Image")));
             this.btn_Product.Name = "btn_Product";
             this.btn_Product.Text = "Sản phẩm";
             // 
@@ -244,15 +277,14 @@
             // 
             // btn_Order
             // 
+            this.btn_Order.Appearance.Disabled.BackColor = System.Drawing.Color.Black;
+            this.btn_Order.Appearance.Disabled.Options.UseBackColor = true;
+            this.btn_Order.Appearance.Normal.BackColor = System.Drawing.Color.Green;
+            this.btn_Order.Appearance.Normal.Options.UseBackColor = true;
             this.btn_Order.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_SaleOrder,
             this.btn_PurchaseOrder});
-            this.btn_Order.Expanded = true;
-            this.btn_Order.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.btn_Order.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Order.ImageOptions.Image")));
             this.btn_Order.Name = "btn_Order";
             this.btn_Order.Text = "Đơn hàng";
             // 
@@ -277,8 +309,8 @@
             // 
             // accordionControl1
             // 
-            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.accordionControl1.Appearance.AccordionControl.BackColor2 = System.Drawing.Color.Teal;
+            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.accordionControl1.Appearance.AccordionControl.BackColor2 = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.AccordionControl.BorderColor = System.Drawing.Color.White;
             this.accordionControl1.Appearance.AccordionControl.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
@@ -288,8 +320,15 @@
             this.accordionControl1.Appearance.Group.Disabled.Options.UseFont = true;
             this.accordionControl1.Appearance.Group.Hovered.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Group.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Normal.BackColor = System.Drawing.Color.Green;
+            this.accordionControl1.Appearance.Group.Normal.BackColor2 = System.Drawing.Color.Teal;
+            this.accordionControl1.Appearance.Group.Normal.BorderColor = System.Drawing.Color.Transparent;
             this.accordionControl1.Appearance.Group.Normal.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Normal.ForeColor = System.Drawing.Color.Cornsilk;
+            this.accordionControl1.Appearance.Group.Normal.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.Group.Normal.Options.UseBorderColor = true;
             this.accordionControl1.Appearance.Group.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Normal.Options.UseForeColor = true;
             this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Group.Pressed.Options.UseFont = true;
             this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -306,29 +345,29 @@
             this.btn_Report,
             this.btn_Employee,
             this.btn_Setting});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 35);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 37);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.NormalWidth = 260;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(325, 590);
+            this.accordionControl1.Size = new System.Drawing.Size(325, 662);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // fluentDesignFormContainer1
             // 
-            this.fluentDesignFormContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.fluentDesignFormContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fluentDesignFormContainer1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.fluentDesignFormContainer1.Appearance.Options.UseBackColor = true;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(331, 81);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(814, 544);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(968, 618);
             this.fluentDesignFormContainer1.TabIndex = 3;
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.lb_UserCode);
             this.panelControl1.Controls.Add(this.labelControl10);
@@ -338,7 +377,7 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Location = new System.Drawing.Point(331, 41);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(811, 34);
+            this.panelControl1.Size = new System.Drawing.Size(965, 34);
             this.panelControl1.TabIndex = 4;
             // 
             // lb_UserCode
@@ -403,20 +442,19 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 625);
+            this.ClientSize = new System.Drawing.Size(1299, 699);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.accordionControl1);
-            this.Controls.Add(this.buttonEdit1);
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FormMain.IconOptions.Image")));
             this.Name = "FormMain";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "FormMain";
+            this.Text = "QUẢN LÝ BÁN HÀNG";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -427,7 +465,6 @@
 
         #endregion
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_Order;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_SaleOrder;
@@ -460,5 +497,10 @@
         private DevExpress.XtraEditors.LabelControl lb_HoTen;
         private DevExpress.XtraEditors.LabelControl lb_NgaySinh;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraBars.BarButtonItem btn_CaiDat;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
     }
 }

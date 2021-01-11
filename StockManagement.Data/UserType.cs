@@ -23,6 +23,8 @@ namespace StockManagement.Data
         public System.Guid UserTypeId { get; set; }
         public string UserTypeCode { get; set; }
         public string UserTypeName { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<System.Guid> CreatedBy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> User { get; set; }

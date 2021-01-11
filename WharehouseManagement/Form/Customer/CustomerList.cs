@@ -24,7 +24,7 @@ namespace StockManagement.Form.Customer
         ICustomer customerBO = new CustomerBO();
         public void InitData()
         {
-            gridControl1.DataSource = customerBO.GetAll();
+            gC_DanhSach.DataSource = customerBO.GetAll();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockManagement.Business;
 
 namespace StockManagement.Form.Employee
 {
@@ -16,6 +17,12 @@ namespace StockManagement.Form.Employee
         public TypeEmployee()
         {
             InitializeComponent();
+            GetInit();
+        }
+        IUser userBO = new UserBO();
+        public void GetInit()
+        {
+            gC_DanhSach.DataSource = userBO.GetUserTypes();
         }
     }
 }

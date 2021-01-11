@@ -20,7 +20,6 @@ namespace StockManagement.Form.Orders
         {
             InitializeComponent();
             GetInit();
-
         }
         Data.SaleOrder saleOrder = new Data.SaleOrder();
         List<SaleOrderDetail> saleOrderDetailList = new List<SaleOrderDetail>();
@@ -65,7 +64,6 @@ namespace StockManagement.Form.Orders
 
         private void btn_Info_EditValueChanged(object sender, EventArgs e)
         {
-            string abc = cbb_TenKH.SelectedText.ToString();
             ProductOnStockDetail f = new ProductOnStockDetail();
             f.Show();
 

@@ -10,5 +10,7 @@ namespace StockManagement.Business
     public interface IUser:IRepository<User>
     {
         //User GetUser(Guid userId);
+
+        List<UserType> GetUserTypes();
     }
 }

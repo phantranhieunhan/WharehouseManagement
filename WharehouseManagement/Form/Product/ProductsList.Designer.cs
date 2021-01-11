@@ -83,8 +83,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gridControl1);
             this.groupBox2.Location = new System.Drawing.Point(9, 206);
@@ -123,13 +123,15 @@
             this.btn_Xoa,
             this.btn_Sua});
             this.gridView1.DetailHeight = 503;
-            this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.True;
             // 
             // ProductCode
             // 
+            this.ProductCode.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.ProductCode.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductCode.AppearanceHeader.Options.UseBackColor = true;
             this.ProductCode.AppearanceHeader.Options.UseFont = true;
             this.ProductCode.Caption = "Mã sản phẩm";
             this.ProductCode.FieldName = "ProductCode";
@@ -138,11 +140,13 @@
             this.ProductCode.OptionsColumn.AllowEdit = false;
             this.ProductCode.Visible = true;
             this.ProductCode.VisibleIndex = 0;
-            this.ProductCode.Width = 127;
+            this.ProductCode.Width = 116;
             // 
             // ProductName
             // 
+            this.ProductName.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.ProductName.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.ProductName.AppearanceHeader.Options.UseBackColor = true;
             this.ProductName.AppearanceHeader.Options.UseFont = true;
             this.ProductName.Caption = "Tên sản phẩm";
             this.ProductName.FieldName = "ProductName";
@@ -150,11 +154,13 @@
             this.ProductName.Name = "ProductName";
             this.ProductName.Visible = true;
             this.ProductName.VisibleIndex = 1;
-            this.ProductName.Width = 178;
+            this.ProductName.Width = 162;
             // 
             // Price
             // 
+            this.Price.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.Price.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.Price.AppearanceHeader.Options.UseBackColor = true;
             this.Price.AppearanceHeader.Options.UseFont = true;
             this.Price.Caption = "Giá bán";
             this.Price.FieldName = "Price";
@@ -162,21 +168,25 @@
             this.Price.Name = "Price";
             this.Price.Visible = true;
             this.Price.VisibleIndex = 2;
-            this.Price.Width = 149;
+            this.Price.Width = 152;
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "Đơn vị";
             this.gridColumn1.FieldName = "ProductUnitName";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 3;
-            this.gridColumn1.Width = 185;
+            this.gridColumn1.Width = 141;
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Danh mục";
             this.gridColumn5.FieldName = "ProductTypeName";
@@ -184,19 +194,22 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 115;
+            this.gridColumn5.Width = 190;
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btn_Xoa.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.btn_Xoa.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Xoa.AppearanceHeader.Options.UseFont = true;
             this.btn_Xoa.Caption = "delete";
             this.btn_Xoa.ColumnEdit = this.btn_Delete;
+            this.btn_Xoa.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.btn_Xoa.MinWidth = 43;
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Visible = true;
-            this.btn_Xoa.VisibleIndex = 6;
-            this.btn_Xoa.Width = 43;
+            this.btn_Xoa.VisibleIndex = 5;
+            this.btn_Xoa.Width = 79;
             // 
             // btn_Delete
             // 
@@ -209,15 +222,18 @@
             // 
             // btn_Sua
             // 
+            this.btn_Sua.AppearanceHeader.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btn_Sua.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.btn_Sua.AppearanceHeader.Options.UseBackColor = true;
             this.btn_Sua.AppearanceHeader.Options.UseFont = true;
             this.btn_Sua.Caption = "edit";
             this.btn_Sua.ColumnEdit = this.btn_Edit;
+            this.btn_Sua.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.btn_Sua.MinWidth = 43;
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Visible = true;
-            this.btn_Sua.VisibleIndex = 5;
-            this.btn_Sua.Width = 43;
+            this.btn_Sua.VisibleIndex = 6;
+            this.btn_Sua.Width = 69;
             // 
             // btn_Edit
             // 
@@ -230,7 +246,7 @@
             // 
             // btn_timkiem
             // 
-            this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_timkiem.Controls.Add(this.simpleButton2);
             this.btn_timkiem.Controls.Add(this.btn_them);
@@ -247,7 +263,9 @@
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Location = new System.Drawing.Point(643, 66);
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Location = new System.Drawing.Point(640, 42);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(161, 42);
@@ -257,7 +275,9 @@
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(405, 62);
+            this.btn_them.Appearance.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_them.Appearance.Options.UseBackColor = true;
+            this.btn_them.Location = new System.Drawing.Point(408, 42);
             this.btn_them.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(161, 42);

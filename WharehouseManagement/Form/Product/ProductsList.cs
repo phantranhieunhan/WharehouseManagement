@@ -21,8 +21,25 @@ namespace StockManagement.Form.Product
             GetInit();
         }
         IProduct productBO = new ProductBO();
+        
         private void GetInit()
         {
+            //FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+            //if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    string message = "Thành công!";
+            //    string title = "Lưu file";
+            //    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            //    DialogResult result = MessageBox.Show(message, title, buttons);
+            //    if (result == DialogResult.Yes)
+            //    {
+            //        System.Diagnostics.Process.Start(folderBrowserDialog1.SelectedPath + "bao_cao_thuc_tap.docx");
+            //    }
+            //    else
+            //    {
+                    
+            //    }
+            //}
             gridControl1.DataSource = productBO.GetProducts();
         }
         private void btn_them_Click(object sender, EventArgs e)

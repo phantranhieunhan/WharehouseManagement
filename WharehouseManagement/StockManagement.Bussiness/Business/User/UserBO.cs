@@ -81,5 +81,13 @@ namespace StockManagement.Business
                 throw;
             }
         }
+
+        public List<UserType> GetUserTypes()
+        {
+            using (var db = new StockManagementEntities())
+            {
+                return db.UserType.ToList();
+            }
+        }
     }
 }

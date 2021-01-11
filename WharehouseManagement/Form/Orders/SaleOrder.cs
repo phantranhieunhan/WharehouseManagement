@@ -21,9 +21,10 @@ namespace StockManagement.Form.Orders
             InitializeComponent();//nhấn f12
             GetInit();
         }
+        ISaleOrder saleOrderBO = new SaleOrderBO();
         private void GetInit()
         {
-            ISaleOrder saleOrderBO = new SaleOrderBO();
+
             List<vw_SaleOrder> vw_SaleOrders = saleOrderBO.GetData(1);
             gC_DanhSachDonMoi.DataSource = vw_SaleOrders;
         }
@@ -44,8 +45,36 @@ namespace StockManagement.Form.Orders
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TabControl newSender = (TabControl)sender;
-            int selectedIndex = newSender.SelectedIndex;
+            RequestData();
+
+        }
+        
+        private void bt_requireStockOut_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            vw_SaleOrder vw_Sale = (vw_SaleOrder)gridView2.GetFocusedRow();
+            List<vw_SaleOrder> vw_SaleOrderList = saleOrderBO.GetData(2).Where(x => x.SaleOrderId == vw_Sale.SaleOrderId).ToList();
+
+            
+            RequireStockOut requireStockOut = new RequireStockOut(vw_SaleOrderList);
+            requireStockOut.Show();
+        }
+
+        private void buttonRecieve_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            UpdateStatus(gridView1, 2);
+            RequestData();
+        }
+        private bool UpdateStatus( DevExpress.XtraGrid.Views.Grid.GridView gridView, int status)
+        {
+            vw_SaleOrder vw_Sale = (vw_SaleOrder)gridView.GetFocusedRow();
+            Data.SaleOrder saleOrder = saleOrderBO.GetByID(vw_Sale.SaleOrderId);
+            saleOrder.Status = status;
+
+            return saleOrderBO.Update(saleOrder);
+        }
+        private void RequestData()
+        {
+            int selectedIndex = tabControl.SelectedIndex;
             if (selectedIndex >= 0 && selectedIndex <= 3)
             {
                 ISaleOrder saleOrderBO = new SaleOrderBO();
@@ -70,7 +99,19 @@ namespace StockManagement.Form.Orders
                     gC_DanhSachDonHuy.DataSource = vw_SaleOrders;
                 }
             }
+        }
 
+        private void bt_require_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+            UpdateStatus(gridView2, 3);
+            RequestData();
+        }
+
+        private void bt_cancel_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            UpdateStatus(gridView2, 4);
+            RequestData();
         }
     }
 }

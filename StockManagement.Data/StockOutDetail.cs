@@ -17,6 +17,8 @@ namespace StockManagement.Data
         public System.Guid StockOutDetailId { get; set; }
         public Nullable<System.Guid> StockOutId { get; set; }
         public Nullable<decimal> Quanlity { get; set; }
+        public Nullable<System.Guid> ProductId { get; set; }
+        public Nullable<decimal> Status { get; set; }
     
         public virtual StockOut StockOut { get; set; }
     }

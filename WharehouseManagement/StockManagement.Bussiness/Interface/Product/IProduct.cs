@@ -14,5 +14,6 @@ namespace StockManagement.Business
         List<vw_ProductOnStockDetail> GetProductOnStockDetail();
         List<ProductType> GetProductTypes();
         List<vw_Product> GetProducts();
+        bool UpdateProductOnStock(vw_StockIn stockIn);
     }
 }

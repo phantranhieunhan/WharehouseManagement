@@ -32,5 +32,31 @@ namespace StockManagement.Form.Stock
             AddWareHouse f = new AddWareHouse();
             f.Show();
         }
+
+        private void btn_Sua_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            Data.Stock stock =(Data.Stock) gridView1.GetFocusedRow();
+            AddWareHouse addWareHouse = new AddWareHouse(stock);
+            addWareHouse.Show();
+        }
+
+        private void btn_Xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            Data.Stock stock = (Data.Stock)gridView1.GetFocusedRow();
+            string message = "Bạn có muốn xóa " +stock.StockName + " không?";
+            string title = "Cảnh báo";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                stockBO.Delete(stock);
+                gC_DanhSach.DataSource = stockBO.GetStockList();
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

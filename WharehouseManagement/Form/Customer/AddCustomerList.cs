@@ -68,9 +68,9 @@ namespace StockManagement.Form.Customer
         private void AddCustomerList_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stockManagementDataSet.AddressCustomer' table. You can move, or remove it, as needed.
-            this.addressCustomerTableAdapter.Fill(this.stockManagementDataSet.AddressCustomer);
+           // this.addressCustomerTableAdapter.Fill(this.stockManagementDataSet.AddressCustomer);
             // TODO: This line of code loads data into the 'stockManagementDataSet.GroupCustomer' table. You can move, or remove it, as needed.
-            this.groupCustomerTableAdapter.Fill(this.stockManagementDataSet.GroupCustomer);
+            //this.groupCustomerTableAdapter.Fill(this.stockManagementDataSet.GroupCustomer);
 
         }
     }

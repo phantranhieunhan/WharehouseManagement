@@ -70,6 +70,7 @@ namespace StockManagement.Form.Orders
                     gC_DanhSachDonHuy.DataSource = vw_PurchaseOrderList;
                 }
             }
+
         }
     }
 }

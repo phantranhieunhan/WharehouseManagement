@@ -42,15 +42,29 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=5.5.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.5.0\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Scaffolding.EntityFramework.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.3.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.3.6\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="Scrypt, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Scrypt.NET.1.3.0\lib\net20\Scrypt.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,21 +77,32 @@
     <Compile Include="Business\Order\PurchaseOrderBO.cs" />
     <Compile Include="Business\Order\SaleOrderBO.cs" />
     <Compile Include="Business\Product\ProductBO.cs" />
+    <Compile Include="Business\Product\ProductTypeBO.cs" />
+    <Compile Include="Business\StockInBO.cs" />
+    <Compile Include="Business\StockOutBO.cs" />
     <Compile Include="Business\Stock\StockBO.cs" />
     <Compile Include="Business\Supplier\SupplierBO.cs" />
     <Compile Include="Business\User\UserBO.cs" />
     <Compile Include="Business\Customer\CustomerBO.cs" />
     <Compile Include="Business\User\DecentralizationBO.cs" />
     <Compile Include="Interface\Customer\ICustomer.cs" />
+    <Compile Include="Interface\IStockIn.cs" />
+    <Compile Include="Interface\IStockOut.cs" />
     <Compile Include="Interface\Order\IPurchaseOrder.cs" />
     <Compile Include="Interface\Order\ISaleOrder.cs" />
     <Compile Include="Interface\Product\IProduct.cs" />
+    <Compile Include="Interface\Product\IProductType.cs" />
     <Compile Include="Interface\Stock\IStock.cs" />
     <Compile Include="Interface\Supplier\ISupplier.cs" />
     <Compile Include="Interface\User\IDecentralization.cs" />
     <Compile Include="Interface\User\IUser.cs" />
+    <Compile Include="Model\RequireStockOut.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DapperHelper.cs" />
+    <Compile Include="Utils\Enum.cs" />
+    <Compile Include="Utils\ExcelHelp.cs" />
+    <Compile Include="Utils\ExcelHelper2.cs" />
+    <Compile Include="Utils\Logger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

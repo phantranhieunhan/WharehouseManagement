@@ -8,6 +8,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using StockManagement.Business;
+using StockManagement.Data;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace StockManagement.Form.Product
 {
@@ -16,6 +20,22 @@ namespace StockManagement.Form.Product
         public AddProduct()
         {
             InitializeComponent();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            using (var db = new StockManagementEntities())
+            {
+                byte[] bytes;
+                MemoryStream ms = new MemoryStream();
+                pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
+
+                bytes = ms.ToArray();
+                Data.Product product = new Data.Product();
+                product.ProductId = Guid.NewGuid();
+                
+                //db.Product.Add()
+            }
         }
     }
 }

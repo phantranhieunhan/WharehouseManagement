@@ -7,7 +7,7 @@ using StockManagement.Data;
 
 namespace StockManagement.Business
 {
-    public class ProductBO:Repository<Product>, IProduct
+    public class ProductBO : Repository<Product>, IProduct
     {
         public List<vw_ProductOnStockDetail> GetProductOnStockDetail(Guid productId)
         {
@@ -45,13 +45,57 @@ namespace StockManagement.Business
                 List<ProductType> productTypes = db.ProductType.ToList();
                 return productTypes;
             }
-        } 
+        }
         public List<vw_Product> GetProducts()
         {
             using (var db = new StockManagementEntities())
             {
                 List<vw_Product> vw_ProductList = db.vw_Product.ToList();
                 return vw_ProductList;
+            }
+        }
+
+        //public bool AddProductType(ProductType productType)
+        //{
+        //    try
+        //    {
+        //        using (var db = new StockManagementEntities())
+        //        {
+        //            db.ProductType.Add(productType);
+        //            db.SaveChanges();
+        //            return true;
+        //        }
+
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return false;
+        //    }
+        //}
+        public bool UpdateProductOnStock(vw_StockIn stockIn)
+        {
+            try
+            {
+                using (var db = new StockManagementEntities())
+                {
+                    List<StockInDetail> stockInDetailList = db.StockInDetail.Where(x => x.StockInId == stockIn.StockInId).ToList();
+                    if (stockInDetailList.Count() == 0)
+                    {
+                        ///TODO: stockin đợi có data 
+                    }
+                    foreach (StockInDetail stockInDetail in stockInDetailList)
+                    {
+                        db.ProductOnStock.Where(x => x.StockId == stockIn.ToStock && x.ProductId == stockInDetail.ProductId).FirstOrDefault().RecentQuanlity+= stockInDetail.Quanlity;
+                    }
+                    db.SaveChanges();
+                    return true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                return false;
             }
         }
     }

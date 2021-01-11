@@ -150,12 +150,6 @@
     <Compile Include="Form\Employee\EmployeeDetail.Designer.cs">
       <DependentUpon>EmployeeDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Employee\RegisterAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Employee\RegisterAccount.Designer.cs">
-      <DependentUpon>RegisterAccount.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\Employee\TypeEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +173,12 @@
     </Compile>
     <Compile Include="Form\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Orders\RequireStockOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Orders\RequireStockOut.Designer.cs">
+      <DependentUpon>RequireStockOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Orders\SaleOrder.cs">
       <SubType>UserControl</SubType>
@@ -233,6 +233,12 @@
     </Compile>
     <Compile Include="Form\Product\ProductCategory.Designer.cs">
       <DependentUpon>ProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\StockIn\AddStockIn.cs">
       <SubType>Form</SubType>
@@ -345,9 +351,6 @@
     <EmbeddedResource Include="Form\Employee\EmployeeDetail.resx">
       <DependentUpon>EmployeeDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Employee\RegisterAccount.resx">
-      <DependentUpon>RegisterAccount.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\Employee\TypeEmployee.resx">
       <DependentUpon>TypeEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Orders\RequireStockOut.resx">
+      <DependentUpon>RequireStockOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Orders\SaleOrder.resx">
       <DependentUpon>SaleOrder.cs</DependentUpon>
@@ -384,6 +390,9 @@
     <EmbeddedResource Include="Form\Product\ProductCategory.resx">
       <DependentUpon>ProductCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\StockIn\AddStockIn.resx">
       <DependentUpon>AddStockIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Stock\WareHouse.resx">
       <DependentUpon>WareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Supplier\AddProductSupplier.resx">
+      <DependentUpon>AddProductSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Supplier\AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
@@ -457,7 +469,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\Authentication\" />
-    <Folder Include="Form\Report\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StockManagement.Data\StockManagement.Data.csproj">
